@@ -13,6 +13,8 @@
 		F00DDDD4287C82480062AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00DDDD2287C82480062AA1E /* Main.storyboard */; };
 		F00DDDD6287C824A0062AA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00DDDD5287C824A0062AA1E /* Assets.xcassets */; };
 		F00DDDD9287C824A0062AA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00DDDD7287C824A0062AA1E /* LaunchScreen.storyboard */; };
+		F00DDDEF287C93B70062AA1E /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = F00DDDEE287C93B70062AA1E /* TinyConstraints */; };
+		F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F00DDE00287C9B310062AA1E /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		F00DDDD5287C824A0062AA1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F00DDDD8287C824A0062AA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F00DDDDA287C824A0062AA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00DDE00287C9B310062AA1E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00DDDEF287C93B70062AA1E /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,96 @@
 		F00DDDCB287C82480062AA1E /* Starter Project */ = {
 			isa = PBXGroup;
 			children = (
+				F00DDDE6287C82DD0062AA1E /* Files */,
+				F00DDDE1287C82B80062AA1E /* Models */,
+				F00DDDE2287C82BD0062AA1E /* UI */,
+				F00DDDE5287C82D00062AA1E /* Coordinators */,
+				F00DDDE0287C82AC0062AA1E /* RootViewController */,
 				F00DDDCC287C82480062AA1E /* AppDelegate.swift */,
 				F00DDDCE287C82480062AA1E /* SceneDelegate.swift */,
-				F00DDDD0287C82480062AA1E /* ViewController.swift */,
 				F00DDDD2287C82480062AA1E /* Main.storyboard */,
 				F00DDDD5287C824A0062AA1E /* Assets.xcassets */,
 				F00DDDD7287C824A0062AA1E /* LaunchScreen.storyboard */,
 				F00DDDDA287C824A0062AA1E /* Info.plist */,
+				F00DDE00287C9B310062AA1E /* .swiftlint.yml */,
 			);
 			path = "Starter Project";
+			sourceTree = "<group>";
+		};
+		F00DDDE0287C82AC0062AA1E /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F00DDDD0287C82480062AA1E /* ViewController.swift */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		F00DDDE1287C82B80062AA1E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F00DDDEC287C937B0062AA1E /* States */,
+				F00DDDEB287C93710062AA1E /* Notifications */,
+				F00DDDEA287C936D0062AA1E /* Constants */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F00DDDE2287C82BD0062AA1E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F00DDDE4287C82C50062AA1E /* Components */,
+				F00DDDE3287C82C10062AA1E /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F00DDDE3287C82C10062AA1E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F00DDDE4287C82C50062AA1E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F00DDDE5287C82D00062AA1E /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		F00DDDE6287C82DD0062AA1E /* Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		F00DDDEA287C936D0062AA1E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F00DDDEB287C93710062AA1E /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		F00DDDEC287C937B0062AA1E /* States */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +162,16 @@
 				F00DDDC5287C82480062AA1E /* Sources */,
 				F00DDDC6287C82480062AA1E /* Frameworks */,
 				F00DDDC7287C82480062AA1E /* Resources */,
+				F00DDDF5287C95E80062AA1E /* Run Script */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Starter Project";
+			packageProductDependencies = (
+				F00DDDEE287C93B70062AA1E /* TinyConstraints */,
+			);
 			productName = "Starter Project";
 			productReference = F00DDDC9287C82480062AA1E /* Starter Project.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +200,9 @@
 				Base,
 			);
 			mainGroup = F00DDDC0287C82480062AA1E;
+			packageReferences = (
+				F00DDDED287C93B70062AA1E /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = F00DDDCA287C82480062AA1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */,
 				F00DDDD9287C824A0062AA1E /* LaunchScreen.storyboard in Resources */,
 				F00DDDD6287C824A0062AA1E /* Assets.xcassets in Resources */,
 				F00DDDD4287C82480062AA1E /* Main.storyboard in Resources */,
@@ -132,6 +225,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F00DDDF5287C95E80062AA1E /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F00DDDC5287C82480062AA1E /* Sources */ = {
@@ -358,6 +472,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F00DDDED287C93B70062AA1E /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F00DDDEE287C93B70062AA1E /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F00DDDED287C93B70062AA1E /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F00DDDC1287C82480062AA1E /* Project object */;
 }
