@@ -16,6 +16,7 @@
 		F00DDDEF287C93B70062AA1E /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = F00DDDEE287C93B70062AA1E /* TinyConstraints */; };
 		F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F00DDE00287C9B310062AA1E /* .swiftlint.yml */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
+		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		F00DDDDA287C824A0062AA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00DDE00287C9B310062AA1E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
+		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		F00DDDE5287C82D00062AA1E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				F0A96624287DFF6E000E5FCD /* LanguageCoordinator */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -161,6 +164,14 @@
 				F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */,
 			);
 			path = Debugging;
+			sourceTree = "<group>";
+		};
+		F0A96624287DFF6E000E5FCD /* LanguageCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */,
+			);
+			path = LanguageCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
+				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

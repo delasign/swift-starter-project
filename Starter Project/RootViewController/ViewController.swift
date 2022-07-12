@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         hello()
+        setupCoordinators()
     }
 
     func hello() {
@@ -25,7 +26,9 @@ class ViewController: UIViewController {
         case false:
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Hello World.")
         }
-
     }
 
+    func setupCoordinators() {
+        LanguageCoordinator.shared.initialize()
+    }
 }
