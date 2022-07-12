@@ -15,6 +15,7 @@
 		F00DDDD9287C824A0062AA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00DDDD7287C824A0062AA1E /* LaunchScreen.storyboard */; };
 		F00DDDEF287C93B70062AA1E /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = F00DDDEE287C93B70062AA1E /* TinyConstraints */; };
 		F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F00DDE00287C9B310062AA1E /* .swiftlint.yml */; };
+		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		F00DDDD8287C824A0062AA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F00DDDDA287C824A0062AA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00DDE00287C9B310062AA1E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F0A96620287DF211000E5FCD /* Debugging */,
 				F00DDDEC287C937B0062AA1E /* States */,
 				F00DDDEB287C93710062AA1E /* Notifications */,
 				F00DDDEA287C936D0062AA1E /* Constants */,
@@ -150,6 +153,14 @@
 			children = (
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		F0A96620287DF211000E5FCD /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */,
+			);
+			path = Debugging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
+				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

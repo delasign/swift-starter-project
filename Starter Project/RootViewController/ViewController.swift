@@ -9,14 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    static let identifier: String = "[ViewController]"
+    private let helloWorldDidSucceed: Bool = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let const: Int = 1
         hello()
     }
 
     func hello() {
+        switch helloWorldDidSucceed {
+        case true:
+            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Hello World.")
+        case false:
+            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Hello World.")
+        }
 
     }
 
