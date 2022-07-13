@@ -91,7 +91,6 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F0A96620287DF211000E5FCD /* Debugging */,
 				F00DDDEC287C937B0062AA1E /* States */,
 				F00DDDEB287C93710062AA1E /* Notifications */,
 				F00DDDEA287C936D0062AA1E /* Constants */,
@@ -140,6 +139,7 @@
 		F00DDDEA287C936D0062AA1E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -156,14 +156,6 @@
 			children = (
 			);
 			path = States;
-			sourceTree = "<group>";
-		};
-		F0A96620287DF211000E5FCD /* Debugging */ = {
-			isa = PBXGroup;
-			children = (
-				F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */,
-			);
-			path = Debugging;
 			sourceTree = "<group>";
 		};
 		F0A96624287DFF6E000E5FCD /* LanguageCoordinator */ = {
