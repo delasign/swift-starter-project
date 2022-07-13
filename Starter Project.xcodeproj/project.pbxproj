@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F008FC99287F440400B2495D /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC98287F440400B2495D /* en.json */; };
+		F008FC9B287F441500B2495D /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC9A287F441500B2495D /* es.json */; };
+		F008FC9D287F453200B2495D /* UIContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FC9C287F453200B2495D /* UIContent.swift */; };
+		F008FC9F287F464900B2495D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FC9E287F464900B2495D /* Language.swift */; };
+		F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCA0287F480000B2495D /* LanguageCoordinator+Generate.swift */; };
+		F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCA2287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift */; };
 		F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DDDCC287C82480062AA1E /* AppDelegate.swift */; };
 		F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DDDCE287C82480062AA1E /* SceneDelegate.swift */; };
 		F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DDDD0287C82480062AA1E /* ViewController.swift */; };
@@ -20,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F008FC98287F440400B2495D /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
+		F008FC9A287F441500B2495D /* es.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
+		F008FC9C287F453200B2495D /* UIContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContent.swift; sourceTree = "<group>"; };
+		F008FC9E287F464900B2495D /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		F008FCA0287F480000B2495D /* LanguageCoordinator+Generate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageCoordinator+Generate.swift"; sourceTree = "<group>"; };
+		F008FCA2287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageCoordinator+SetCurrentLanguage.swift"; sourceTree = "<group>"; };
 		F00DDDC9287C82480062AA1E /* Starter Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Starter Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00DDDCC287C82480062AA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F00DDDCE287C82480062AA1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +57,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F008FC95287F432D00B2495D /* LanguageContent */ = {
+			isa = PBXGroup;
+			children = (
+				F008FC96287F435800B2495D /* Strings */,
+				F008FC97287F435F00B2495D /* Content */,
+			);
+			path = LanguageContent;
+			sourceTree = "<group>";
+		};
+		F008FC96287F435800B2495D /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				F008FC98287F440400B2495D /* en.json */,
+				F008FC9A287F441500B2495D /* es.json */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		F008FC97287F435F00B2495D /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				F008FC9C287F453200B2495D /* UIContent.swift */,
+				F008FC9E287F464900B2495D /* Language.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		F00DDDC0287C82480062AA1E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +133,7 @@
 				F00DDDEC287C937B0062AA1E /* States */,
 				F00DDDEB287C93710062AA1E /* Notifications */,
 				F00DDDEA287C936D0062AA1E /* Constants */,
+				F008FC95287F432D00B2495D /* LanguageContent */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */,
+				F008FCA0287F480000B2495D /* LanguageCoordinator+Generate.swift */,
+				F008FCA2287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift */,
 			);
 			path = LanguageCoordinator;
 			sourceTree = "<group>";
@@ -231,8 +273,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F008FC99287F440400B2495D /* en.json in Resources */,
 				F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */,
 				F00DDDD9287C824A0062AA1E /* LaunchScreen.storyboard in Resources */,
+				F008FC9B287F441500B2495D /* es.json in Resources */,
 				F00DDDD6287C824A0062AA1E /* Assets.xcassets in Resources */,
 				F00DDDD4287C82480062AA1E /* Main.storyboard in Resources */,
 			);
@@ -267,10 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
+				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
+				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
+				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,
+				F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
