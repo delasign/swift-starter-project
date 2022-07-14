@@ -53,6 +53,8 @@ class LanguageCoordinator: NSObject {
         }
     }
 
+    // MARK: Lifecycle
+
     func initialize() {
         debugPrint("\(LanguageCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Initializing.")
         // Generate Languages

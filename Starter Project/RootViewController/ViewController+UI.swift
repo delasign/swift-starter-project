@@ -18,8 +18,6 @@ extension ViewController {
     private func setupLabel() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            // Allow the label to use constraints
-            self.label.translatesAutoresizingMaskIntoConstraints = false
             // Add to subview
             self.view.addSubview(self.label)
             // Center in view

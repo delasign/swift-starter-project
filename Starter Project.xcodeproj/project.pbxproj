@@ -14,6 +14,10 @@
 		F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCA0287F480000B2495D /* LanguageCoordinator+Generate.swift */; };
 		F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCA2287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift */; };
 		F008FCA5287F736F00B2495D /* ViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCA4287F736F00B2495D /* ViewController+UI.swift */; };
+		F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCA7287FA68900B2495D /* Styleguide.swift */; };
+		F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCA9287FA6CC00B2495D /* Colors.swift */; };
+		F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */; };
+		F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008FCAD287FA97A00B2495D /* Fonts.swift */; };
 		F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DDDCC287C82480062AA1E /* AppDelegate.swift */; };
 		F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DDDCE287C82480062AA1E /* SceneDelegate.swift */; };
 		F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00DDDD0287C82480062AA1E /* ViewController.swift */; };
@@ -34,6 +38,10 @@
 		F008FCA0287F480000B2495D /* LanguageCoordinator+Generate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageCoordinator+Generate.swift"; sourceTree = "<group>"; };
 		F008FCA2287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageCoordinator+SetCurrentLanguage.swift"; sourceTree = "<group>"; };
 		F008FCA4287F736F00B2495D /* ViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UI.swift"; sourceTree = "<group>"; };
+		F008FCA7287FA68900B2495D /* Styleguide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styleguide.swift; sourceTree = "<group>"; };
+		F008FCA9287FA6CC00B2495D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+FirstStyle.swift"; sourceTree = "<group>"; };
+		F008FCAD287FA97A00B2495D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		F00DDDC9287C82480062AA1E /* Starter Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Starter Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00DDDCC287C82480062AA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F00DDDCE287C82480062AA1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +92,15 @@
 				F008FC9E287F464900B2495D /* Language.swift */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		F008FCA6287FA5E200B2495D /* Styleguide */ = {
+			isa = PBXGroup;
+			children = (
+				F008FCA7287FA68900B2495D /* Styleguide.swift */,
+				F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */,
+			);
+			path = Styleguide;
 			sourceTree = "<group>";
 		};
 		F00DDDC0287C82480062AA1E = {
@@ -167,6 +184,7 @@
 		F00DDDE5287C82D00062AA1E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				F008FCA6287FA5E200B2495D /* Styleguide */,
 				F0A96624287DFF6E000E5FCD /* LanguageCoordinator */,
 			);
 			path = Coordinators;
@@ -183,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */,
+				F008FCA9287FA6CC00B2495D /* Colors.swift */,
+				F008FCAD287FA97A00B2495D /* Fonts.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -313,11 +333,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
+				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
+				F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
+				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,

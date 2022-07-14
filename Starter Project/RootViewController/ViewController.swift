@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     // MARK: Variables
     static let identifier: String = "[ViewController]"
     // MARK: UI
-    let label: UILabel = UILabel()
+    let label: UILabel = Styleguide.createFirstStyleLabel()
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
