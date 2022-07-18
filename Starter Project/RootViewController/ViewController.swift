@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     // MARK: Variables
     static let identifier: String = "[ViewController]"
     // MARK: UI
-    let label: UILabel = Styleguide.createFirstStyleLabel()
+    let label: UILabel = Styleguide.createAttributedStyle()
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             // This can range from refreshing your application or could be used to send a notification to complete specific updates at chosen locations within your application.
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) content sample : \(currentContent.sample)")
             // Update Label Text
-            self.label.text = currentContent.sample.sampleString
+            self.label.attributedText = Styleguide.attributedText(text: currentContent.sample.sampleString)
         }
     }
 }

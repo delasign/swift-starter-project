@@ -14,7 +14,7 @@ extension Styleguide {
         let label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = colors.white
-        label.font = UIFont(name: fonts.HelveticaNeue, size: 18)
+        label.font = UIFont(name: fonts.HelveticaNeue, size: 40)
         return label
     }
 }
