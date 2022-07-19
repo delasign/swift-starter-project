@@ -10,14 +10,27 @@ import UIKit
 class ViewController: UIViewController {
     // MARK: Variables
     static let identifier: String = "[ViewController]"
+    static var safeAreaInsets: UIEdgeInsets = .zero
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedStyle()
+    let customView: CustomUIView = CustomUIView()
+    var customViewTopConstraint﻿: NSLayoutConstraint?
+    var customViewRightConstraint﻿: NSLayoutConstraint?
+    var customViewBottomConstraint﻿: NSLayoutConstraint?
+    var customViewLeftConstraint﻿: NSLayoutConstraint?
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        ViewController.safeAreaInsets = self.view.safeAreaInsets
         self.setupCoordinators()
         self.setupUI()
+    }
+
+    override func viewSafeAreaInsetsDidChange() {
+        ViewController.safeAreaInsets = self.view.safeAreaInsets
+        debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Safe Area Insets: \(ViewController.safeAreaInsets)")
+        self.updateConstraints()
     }
 
     // MARK: Setup Functionality
@@ -33,8 +46,14 @@ class ViewController: UIViewController {
             // Carry out your content update functionality here.
             // This can range from refreshing your application or could be used to send a notification to complete specific updates at chosen locations within your application.
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) content sample : \(currentContent.sample)")
-            // Update Label Text
-            self.label.attributedText = Styleguide.attributedText(text: currentContent.sample.sampleString)
+            // Send the Notification
+            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.notificationSent) Sent OnContentUpdate!")
+            NotificationCenter.default.post(
+                name: SystemNotifications.onContentUpdate,
+                object: nil,
+                userInfo: ["customVariable": currentContent.sample.sampleString]
+            )
+
         }
     }
 }
