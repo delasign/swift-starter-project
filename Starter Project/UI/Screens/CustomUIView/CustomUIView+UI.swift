@@ -30,11 +30,8 @@ extension CustomUIView {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.addSubview(self.imageView)
-            self.imageView.topToBottom(of: self.label, offset: 20)
-            self.imageView.centerX(to: self)
-            self.imageView.width(250)
-            self.imageView.height(250)
-            self.imageView.contentMode = .right
+            self.imageView.edgesToSuperview()
+            self.imageView.contentMode = .scaleAspectFit
             self.imageView.layer.borderColor = UIColor.red.cgColor
             self.imageView.layer.borderWidth = 1
             self.imageView.layer.masksToBounds = true
