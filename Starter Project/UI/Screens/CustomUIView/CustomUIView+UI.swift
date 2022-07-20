@@ -21,7 +21,8 @@ extension CustomUIView {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.addSubview(self.label)
-            self.label.centerInSuperview()
+            self.labelCenterConstraint = self.label.centerY(to: self)
+            self.label.centerX(to: self)
         }
     }
 
