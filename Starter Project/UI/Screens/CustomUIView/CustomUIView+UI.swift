@@ -38,7 +38,7 @@ extension CustomUIView {
             self.imageView.layer.borderColor = UIColor.red.cgColor
             self.imageView.layer.borderWidth = 1
             self.imageView.layer.masksToBounds = true
-            self.imageView.layer.backgroundColor = .white
+            self.imageView.backgroundColor = .white
         }
     }
 
