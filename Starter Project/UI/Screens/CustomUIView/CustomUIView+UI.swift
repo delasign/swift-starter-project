@@ -34,6 +34,11 @@ extension CustomUIView {
             self.imageView.centerX(to: self)
             self.imageView.width(250)
             self.imageView.height(250)
+            self.imageView.contentMode = .right
+            self.imageView.layer.borderColor = UIColor.red.cgColor
+            self.imageView.layer.borderWidth = 1
+            self.imageView.layer.masksToBounds = true
+            self.imageView.layer.backgroundColor = .white
         }
     }
 
