@@ -39,6 +39,7 @@
 		F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F5E28884732002AF19B /* UIScrollView+UpdateContent.swift */; };
 		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */; };
+		F0397F6928888C0D002AF19B /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* UIImages.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		F0397F5E28884732002AF19B /* UIScrollView+UpdateContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UpdateContent.swift"; sourceTree = "<group>"; };
 		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSafeAreaInsets.swift; sourceTree = "<group>"; };
+		F0397F6828888C0D002AF19B /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +249,7 @@
 				F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */,
 				F008FCA9287FA6CC00B2495D /* Colors.swift */,
 				F008FCAD287FA97A00B2495D /* Fonts.swift */,
+				F0397F6828888C0D002AF19B /* UIImages.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
+				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
