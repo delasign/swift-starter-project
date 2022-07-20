@@ -14,6 +14,7 @@ extension CustomUIView {
     // This can be called refreshUI if your app removes and adds content periodically.
     func setupUI() {
         self.setupLabel()
+        self.setupImageView()
     }
 
     // MARK: UI Setup Functionality
@@ -22,6 +23,17 @@ extension CustomUIView {
             guard let self = self else { return }
             self.addSubview(self.label)
             self.label.centerInSuperview()
+        }
+    }
+
+    private func setupImageView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.addSubview(self.imageView)
+            self.imageView.topToBottom(of: self.label, offset: 20)
+            self.imageView.centerX(to: self)
+            self.imageView.width(250)
+            self.imageView.height(250)
         }
     }
 
