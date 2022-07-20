@@ -14,14 +14,13 @@ extension CustomUIView {
     func onStateUpdate() {
 
     }
-    
+
     // updateLayoutConstraints should be called when a view changes orientation or resizes. This function should hold the changes in constraints across breakpoints.
     func updateLayoutConstraints() {
         DispatchQueue.main.async { [weak self] in
             guard let _ = self else { return}
         }
     }
-    
 
     // onContentUpdate should be called when the LanguageCoordinator updates content.
     func onContentUpdate() {
@@ -34,4 +33,6 @@ extension CustomUIView {
             debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }
+
+    
 }

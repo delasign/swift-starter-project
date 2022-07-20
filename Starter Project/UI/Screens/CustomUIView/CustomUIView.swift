@@ -32,7 +32,7 @@ class CustomUIView: UIView {
     override func removeFromSuperview() {
         super.removeFromSuperview()
     }
-    
+
     // viewWillTransition should be called when the view resizes or changes orientation.
     func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 

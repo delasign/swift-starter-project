@@ -36,6 +36,8 @@
 		F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F552885EEC8002AF19B /* CustomUIView+Update.swift */; };
 		F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F5728861611002AF19B /* SystemNotifications.swift */; };
 		F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F59288741CA002AF19B /* ViewController+Update.swift */; };
+		F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F5E28884732002AF19B /* UIScrollView+UpdateContent.swift */; };
+		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		F0397F552885EEC8002AF19B /* CustomUIView+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Update.swift"; sourceTree = "<group>"; };
 		F0397F5728861611002AF19B /* SystemNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemNotifications.swift; sourceTree = "<group>"; };
 		F0397F59288741CA002AF19B /* ViewController+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Update.swift"; sourceTree = "<group>"; };
+		F0397F5E28884732002AF19B /* UIScrollView+UpdateContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UpdateContent.swift"; sourceTree = "<group>"; };
+		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +161,7 @@
 		F00DDDCB287C82480062AA1E /* Starter Project */ = {
 			isa = PBXGroup;
 			children = (
+				F0397F5B288846E6002AF19B /* Utils */,
 				F00DDDE6287C82DD0062AA1E /* Files */,
 				F00DDDE1287C82B80062AA1E /* Models */,
 				F00DDDE2287C82BD0062AA1E /* UI */,
@@ -257,6 +262,31 @@
 			children = (
 			);
 			path = States;
+			sourceTree = "<group>";
+		};
+		F0397F5B288846E6002AF19B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F0397F5D288846F7002AF19B /* ScrollView */,
+				F0397F5C288846F2002AF19B /* Fonts */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F0397F5C288846F2002AF19B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F0397F60288847BC002AF19B /* PrintSystemFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F0397F5D288846F7002AF19B /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				F0397F5E28884732002AF19B /* UIScrollView+UpdateContent.swift */,
+			);
+			path = ScrollView;
 			sourceTree = "<group>";
 		};
 		F0A96624287DFF6E000E5FCD /* LanguageCoordinator */ = {
@@ -384,7 +414,9 @@
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
+				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
+				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
