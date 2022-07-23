@@ -40,6 +40,9 @@
 		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */; };
 		F0397F6928888C0D002AF19B /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* UIImages.swift */; };
+		F0816705288CAE2900157FAD /* Styleguide+HeadlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0816704288CAE2900157FAD /* Styleguide+HeadlineStyle.swift */; };
+		F0816707288CAF6500157FAD /* Styleguide+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0816706288CAF6500157FAD /* Styleguide+TextStyle.swift */; };
+		F0816709288CB24C00157FAD /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0816708288CB24C00157FAD /* UIConstants.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +82,9 @@
 		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSafeAreaInsets.swift; sourceTree = "<group>"; };
 		F0397F6828888C0D002AF19B /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
+		F0816704288CAE2900157FAD /* Styleguide+HeadlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+HeadlineStyle.swift"; sourceTree = "<group>"; };
+		F0816706288CAF6500157FAD /* Styleguide+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+TextStyle.swift"; sourceTree = "<group>"; };
+		F0816708288CB24C00157FAD /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +148,8 @@
 				F008FCA7287FA68900B2495D /* Styleguide.swift */,
 				F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */,
 				F008FCD52885AF9F00B2495D /* Styleguide+AttributedStyle.swift */,
+				F0816704288CAE2900157FAD /* Styleguide+HeadlineStyle.swift */,
+				F0816706288CAF6500157FAD /* Styleguide+TextStyle.swift */,
 			);
 			path = Styleguide;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 				F008FCA9287FA6CC00B2495D /* Colors.swift */,
 				F008FCAD287FA97A00B2495D /* Fonts.swift */,
 				F0397F6828888C0D002AF19B /* UIImages.swift */,
+				F0816708288CB24C00157FAD /* UIConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -418,15 +427,18 @@
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,
+				F0816707288CAF6500157FAD /* Styleguide+TextStyle.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
+				F0816705288CAE2900157FAD /* Styleguide+HeadlineStyle.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
+				F0816709288CB24C00157FAD /* UIConstants.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
