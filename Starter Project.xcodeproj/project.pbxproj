@@ -40,6 +40,7 @@
 		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */; };
 		F0397F6928888C0D002AF19B /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* UIImages.swift */; };
+		F08ED17F28AADC05009BDD46 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08ED17E28AADC05009BDD46 /* CarouselCell.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
@@ -80,6 +81,7 @@
 		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSafeAreaInsets.swift; sourceTree = "<group>"; };
 		F0397F6828888C0D002AF19B /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
+		F08ED17E28AADC05009BDD46 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		F008F4D82885BA8400E4841B /* CustomUIView */ = {
 			isa = PBXGroup;
 			children = (
+				F08ED17C28AADBEB009BDD46 /* Components */,
 				F008F4D92885BA8D00E4841B /* CustomUIView.swift */,
 				F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */,
 				F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */,
@@ -306,6 +309,22 @@
 			path = Constraints;
 			sourceTree = "<group>";
 		};
+		F08ED17C28AADBEB009BDD46 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F08ED17D28AADBF3009BDD46 /* CarouselCell */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F08ED17D28AADBF3009BDD46 /* CarouselCell */ = {
+			isa = PBXGroup;
+			children = (
+				F08ED17E28AADC05009BDD46 /* CarouselCell.swift */,
+			);
+			path = CarouselCell;
+			sourceTree = "<group>";
+		};
 		F0A96624287DFF6E000E5FCD /* LanguageCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +446,7 @@
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
+				F08ED17F28AADC05009BDD46 /* CarouselCell.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */,

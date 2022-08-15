@@ -15,8 +15,8 @@ class CustomUIView: UIView {
     var carousel: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = kPadding/2
-        layout.minimumInteritemSpacing = kPadding/2
+        layout.minimumLineSpacing = kPadding / 2
+        layout.minimumInteritemSpacing = kPadding / 2
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
@@ -31,7 +31,7 @@ class CustomUIView: UIView {
         // Before calling your setup functions, call any visual functionality that may be required:
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .black
+        self.backgroundColor = .white
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
