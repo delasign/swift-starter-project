@@ -12,7 +12,17 @@ class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedStyle()
+    var carousel: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = kPadding/2
+        layout.minimumInteritemSpacing = kPadding/2
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+
+        return collectionView
+    }()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {

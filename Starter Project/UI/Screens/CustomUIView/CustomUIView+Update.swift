@@ -29,7 +29,6 @@ extension CustomUIView {
                 debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
                 return
             }
-            self.label.attributedText = Styleguide.attributedText(text: currentContent.sample.sampleString)
             debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }
