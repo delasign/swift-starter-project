@@ -40,4 +40,42 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         return cell
     }
     
+    // MARK: Visual Parameters
+        /*
+            This function determines the size of the cell for each given indexPath (i.e. section and row).
+         */
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 300, height: 300)
+        }
+        
+        /*
+            This function determines the insets (also known as padding) for the collectionview.
+         */
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(
+                top: 0,
+                left: kPadding,
+                bottom: 0,
+                right: kPadding
+            )
+        }
+        
+        /*
+            This function determines the spacing between items within a section.
+         */
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return kPadding/2
+        }
+        
+        /*
+            This function determines the spacing between sections.
+         */
+
+        func collectionView(_ collectionView: UICollectionView, layout
+                                collectionViewLayout: UICollectionViewLayout,
+                            minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+
+            return kPadding
+        }
 }
