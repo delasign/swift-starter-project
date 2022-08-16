@@ -17,6 +17,7 @@ class CarouselCell: UICollectionViewCell {
     // MARK: Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.setupUI()
     }
 
     required init?(coder aDecoder: NSCoder) {
