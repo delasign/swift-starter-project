@@ -14,7 +14,7 @@ class CustomUIView: UIView {
     // MARK: UI
     var carousel: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+        layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = kPadding / 2
         layout.minimumInteritemSpacing = kPadding / 2
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
@@ -41,6 +41,13 @@ class CustomUIView: UIView {
     // This is the function that gets called when you remove your view from its superview.
     override func removeFromSuperview() {
         super.removeFromSuperview()
+    }
+
+    // This function gets called everytime a layout occurs either to this view or a subview of this view.
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // Invalidate the carousel to make it lay itself out again.
+        self.carousel.collectionViewLayout.invalidateLayout()
     }
 
     // viewWillTransition should be called when the view resizes or changes orientation.
