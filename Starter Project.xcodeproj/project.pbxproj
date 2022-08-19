@@ -46,6 +46,7 @@
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0C79C4428AF5FBB00C1DCAF /* CustomUIView+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4328AF5FBB00C1DCAF /* CustomUIView+ScrollView.swift */; };
+		F0C79C4728AF7A0F00C1DCAF /* CarouselIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4628AF7A0F00C1DCAF /* CarouselIndicator.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C4328AF5FBB00C1DCAF /* CustomUIView+ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+ScrollView.swift"; sourceTree = "<group>"; };
+		F0C79C4628AF7A0F00C1DCAF /* CarouselIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselIndicator.swift; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -320,6 +322,7 @@
 		F08ED17C28AADBEB009BDD46 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F0C79C4528AF7A0000C1DCAF /* CarouselIndicator */,
 				F08ED17D28AADBF3009BDD46 /* CarouselCell */,
 			);
 			path = Components;
@@ -342,6 +345,14 @@
 				F008FCA2287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift */,
 			);
 			path = LanguageCoordinator;
+			sourceTree = "<group>";
+		};
+		F0C79C4528AF7A0000C1DCAF /* CarouselIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				F0C79C4628AF7A0F00C1DCAF /* CarouselIndicator.swift */,
+			);
+			path = CarouselIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +462,7 @@
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
+				F0C79C4728AF7A0F00C1DCAF /* CarouselIndicator.swift in Sources */,
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F08ED18528ABEF5C009BDD46 /* CustomUIView+CollectionView.swift in Sources */,
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
