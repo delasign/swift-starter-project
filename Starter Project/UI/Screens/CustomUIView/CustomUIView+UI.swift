@@ -67,10 +67,10 @@ extension CustomUIView {
                 indicator.layer.cornerRadius = 4
                 // Add it to the indicator array
                 self.indicators.append(indicator)
-                
                 // Setup the callback
                 indicator.onRelease = { [weak self] in
                     guard let self = self else { return }
+                    self.snapToPositon(index: indicatorIndex)
                 }
             }
         }

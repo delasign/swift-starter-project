@@ -72,7 +72,7 @@ extension CustomUIView {
         }
     }
 
-    private func snapToPositon(index: Int) {
+    func snapToPositon(index: Int) {
         // Set the current index to the new index
         self.currentIndex = index
         // Scroll to the new index
