@@ -42,6 +42,7 @@
 		F0397F6928888C0D002AF19B /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* UIImages.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
+		F0C79C4B28AFFE0900C1DCAF /* Styleguide+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4A28AFFE0900C1DCAF /* Styleguide+Header.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		F0397F6828888C0D002AF19B /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
+		F0C79C4A28AFFE0900C1DCAF /* Styleguide+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+Header.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +146,7 @@
 				F008FCA7287FA68900B2495D /* Styleguide.swift */,
 				F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */,
 				F008FCD52885AF9F00B2495D /* Styleguide+AttributedStyle.swift */,
+				F0C79C4A28AFFE0900C1DCAF /* Styleguide+Header.swift */,
 			);
 			path = Styleguide;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
+				F0C79C4B28AFFE0900C1DCAF /* Styleguide+Header.swift in Sources */,
 				F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */,
 				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,
 				F008FCA5287F736F00B2495D /* ViewController+UI.swift in Sources */,
