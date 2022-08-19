@@ -60,7 +60,7 @@ extension CustomUIView {
                  */
                 let scrollToIndex = Int(floor(index))
                 if scrollToIndex < 0 {
-
+                    self.snapToPositon(index: 0)
                 } else {
                     self.snapToPositon(index: scrollToIndex)
                 }
