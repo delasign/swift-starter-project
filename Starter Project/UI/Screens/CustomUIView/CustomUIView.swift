@@ -11,6 +11,7 @@ import UIKit
 class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
+    var currentIndex: Int = 0
     // MARK: UI
     var carousel: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
