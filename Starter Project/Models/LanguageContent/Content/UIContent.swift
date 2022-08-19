@@ -11,6 +11,8 @@ import UIKit
 struct UIContent: Codable {
     struct Sample: Codable {
         let sampleString: String
+        let sectionATitle: String
+        let sectionBTitle: String
     }
 
     let sample: Sample

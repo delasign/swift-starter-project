@@ -1,5 +1,7 @@
 {
     "sample": {
-        "sampleString": "A sample string"
+        "sampleString": "A sample string",
+        "sectionATitle": "Section A Title",
+        "sectionBTitle": "Section B Title",
     }
 }
