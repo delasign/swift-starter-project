@@ -42,7 +42,7 @@ extension CustomUIView {
          Determine where to snap to
          If the absolute value of the delta is larger than 0.25 consider a movement valid.
          */
-        if abs(delta) > 0.25 && delta > 0 {
+        if abs(delta) > 0.25 {
             if delta > 0 {
                 /*
                  Snap to index + 1 unless its larger than the number of cards available - 1 (4) - as 0 counts as a card.
