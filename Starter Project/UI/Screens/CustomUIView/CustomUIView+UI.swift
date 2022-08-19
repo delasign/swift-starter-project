@@ -70,6 +70,7 @@ extension CustomUIView {
                 // Setup the callback
                 indicator.onRelease = { [weak self] in
                     guard let self = self else { return }
+                    // When a user taps the indicator, and onRelease is called, snap to the position of this indicator.
                     self.snapToPositon(index: indicatorIndex)
                 }
             }
