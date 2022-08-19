@@ -24,6 +24,8 @@ class CustomUIView: UIView {
 
         return collectionView
     }()
+    let scrollIndicator: UIStackView = UIStackView()
+    var indicators: [CarouselIndicator] = [CarouselIndicator]()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
