@@ -11,6 +11,8 @@ import UIKit
 class CarouselIndicator: UIView {
     // MARK: Variables
     static let identifier: String = "[CarouselIndicator]"
+    // Declare the callback for when the cell is touched.
+    var onRelease: (()->())?
     // MARK: UI
     // MARK: Lifecycle
     
@@ -22,7 +24,7 @@ class CarouselIndicator: UIView {
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.backgroundColor = .black
         // MARK: Functionality Setup
-        
+        self.setupGestures()
     }
     
     // This is the function that gets called when you remove your view from its superview.

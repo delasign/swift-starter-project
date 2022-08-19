@@ -47,6 +47,7 @@
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0C79C4428AF5FBB00C1DCAF /* CustomUIView+ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4328AF5FBB00C1DCAF /* CustomUIView+ScrollView.swift */; };
 		F0C79C4728AF7A0F00C1DCAF /* CarouselIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4628AF7A0F00C1DCAF /* CarouselIndicator.swift */; };
+		F0C79C4928AF7C8700C1DCAF /* CarouselIndicator+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4828AF7C8700C1DCAF /* CarouselIndicator+Gestures.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C4328AF5FBB00C1DCAF /* CustomUIView+ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+ScrollView.swift"; sourceTree = "<group>"; };
 		F0C79C4628AF7A0F00C1DCAF /* CarouselIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselIndicator.swift; sourceTree = "<group>"; };
+		F0C79C4828AF7C8700C1DCAF /* CarouselIndicator+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselIndicator+Gestures.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C79C4628AF7A0F00C1DCAF /* CarouselIndicator.swift */,
+				F0C79C4828AF7C8700C1DCAF /* CarouselIndicator+Gestures.swift */,
 			);
 			path = CarouselIndicator;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
+				F0C79C4928AF7C8700C1DCAF /* CarouselIndicator+Gestures.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
