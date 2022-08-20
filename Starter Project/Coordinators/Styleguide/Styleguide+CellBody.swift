@@ -26,7 +26,7 @@ extension Styleguide {
     static func attributedCellBodyText(text: String) -> NSMutableAttributedString {
         // Paragraph Style
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .center
+        paragraphStyle.alignment = .left
         paragraphStyle.lineSpacing = 1
         // Attributed Text
         let attributes: [NSAttributedString.Key: Any] = [

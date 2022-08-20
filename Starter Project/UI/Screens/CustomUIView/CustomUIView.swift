@@ -16,7 +16,7 @@ class CustomUIView: UIView {
         case A
         case B
     }
-    
+
     // MARK: UI
     // Declare your UICollectionView
     let collectionView: UICollectionView = {
@@ -34,7 +34,7 @@ class CustomUIView: UIView {
     let sections: [Sections] = [.A, .B]
     let numberOfCellsInSectionA: Int = 5
     let numberOfCellsInSectionB: Int = 10
-    
+
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
@@ -43,7 +43,7 @@ class CustomUIView: UIView {
         // Before calling your setup functions, call any visual functionality that may be required:
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .black
+        self.backgroundColor = .white
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
@@ -53,6 +53,13 @@ class CustomUIView: UIView {
     // This is the function that gets called when you remove your view from its superview.
     override func removeFromSuperview() {
         super.removeFromSuperview()
+    }
+
+    // This function gets called everytime a layout occurs either to this view or a subview of this view.
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // Invalidate the carousel to make it lay itself out again.
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
 
     // viewWillTransition should be called when the view resizes or changes orientation.

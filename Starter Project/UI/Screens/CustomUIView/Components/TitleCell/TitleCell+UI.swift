@@ -18,7 +18,7 @@ extension TitleCell {
             guard let self = self else { return }
             self.addSubview(self.label)
             self.label.centerY(to: self)
-            self.label.left(to: self, offset: kPadding)
+            self.label.left(to: self)
         }
     }
 }

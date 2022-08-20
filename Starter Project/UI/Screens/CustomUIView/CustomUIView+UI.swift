@@ -24,8 +24,8 @@ extension CustomUIView {
             self.addSubview(self.collectionView)
             // Setup the constraints
             self.collectionView.top(to: self, offset: kPadding)
-            self.collectionView.left(to: self, offset: kPadding)
-            self.collectionView.right(to: self, offset: kPadding)
+            self.collectionView.left(to: self)
+            self.collectionView.right(to: self)
             self.collectionView.bottom(to: self)
             // Register the cells
             self.collectionView.register(TitleCell.self, forCellWithReuseIdentifier: TitleCell.identifier)

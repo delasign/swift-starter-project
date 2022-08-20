@@ -14,7 +14,7 @@ extension SectionBCell {
         setupTitleLabel()
         setupBodyLabel()
     }
-    
+
     private func setupImageView() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -26,7 +26,7 @@ extension SectionBCell {
             self.imageView.widthToHeight(of: self)
         }
     }
-    
+
     private func setupTitleLabel() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -35,13 +35,14 @@ extension SectionBCell {
             self.titleLabel.top(to: self)
         }
     }
-    
+
     private func setupBodyLabel() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.addSubview(self.bodyLabel)
-            self.bodyLabel.topToBottom(of: self.titleLabel, offset: kPadding)
+            self.bodyLabel.topToBottom(of: self.titleLabel, offset: kPadding / 2)
             self.bodyLabel.left(to: self.titleLabel)
+            self.bodyLabel.right(to: self, offset: -kPadding)
         }
     }
 }

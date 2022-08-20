@@ -9,18 +9,18 @@ import Foundation
 import UIKit
 
 extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
+
     // MARK: Number of Sections & Items
     /*
-        This function determines the number of sections in your collectionview.
-        It's not required & it defaults to 1.
+     This function determines the number of sections in your collectionview.
+     It's not required & it defaults to 1.
      */
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.sections.count
     }
     /*
-        This function determines the number of items in your collectionview.
-        It's required and there is no default.
+     This function determines the number of items in your collectionview.
+     It's required and there is no default.
      */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch self.sections[section] {
@@ -30,12 +30,12 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
             return self.numberOfCellsInSectionB
         }
     }
-    
+
     // MARK: Cell
     /*
-        This function gets called everytime a cell needs to be rendered.
-        When the cell gets 'reused' it will first call 'prepareForReuse' - which is where you should clear your cell.
-        Once it's reused, in this function, you can call functionality to tweak it to your desired visual.
+     This function gets called everytime a cell needs to be rendered.
+     When the cell gets 'reused' it will first call 'prepareForReuse' - which is where you should clear your cell.
+     Once it's reused, in this function, you can call functionality to tweak it to your desired visual.
      */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.row {
@@ -50,7 +50,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
             }
         }
     }
-    
+
     func titleCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCell.identifier, for: indexPath) as? TitleCell else {
             return UICollectionViewCell()
@@ -71,10 +71,10 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
             // Update the cell
             cell.update(text: text)
         }
-        
+
         return cell
     }
-    
+
     func sectionACell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SectionACell.identifier, for: indexPath) as? SectionACell else {
             return UICollectionViewCell()
@@ -83,7 +83,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         cell.update(image: SampleImages.placeholder)
         return cell
     }
-    
+
     func sectionBCell(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SectionBCell.identifier, for: indexPath) as? SectionBCell else {
             return UICollectionViewCell()
@@ -98,47 +98,49 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         }
         return cell
     }
-    
+
     // MARK: Visual Parameters
     /*
-        This function determines the size of the cell for each given indexPath (i.e. section and row).
+     This function determines the size of the cell for each given indexPath (i.e. section and row).
      */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Determine the frame
         let collectionViewFrame: CGRect = collectionView.frame
+        let measuredWidth = collectionViewFrame.width
         // Change the width based on the row and section.
         switch indexPath.row {
         case 0:
             // Title cells are as width as the collectionview and 40px height
-            return CGSize(width: collectionViewFrame.width, height: 40)
+            return CGSize(width: measuredWidth, height: 40)
         default:
             // The dimension changes based on the section.
             let dimension: CGFloat
             switch self.sections[indexPath.section] {
             case .A:
-                dimension = collectionViewFrame.width / 3
+                dimension = (measuredWidth - 4 * kPadding) / 3
+                return CGSize(width: dimension, height: dimension)
             case .B:
-                dimension = collectionViewFrame.width
+                dimension = measuredWidth
+                return CGSize(width: dimension, height: 100)
             }
-            
-            return CGSize(width: dimension, height: dimension)
+
         }
     }
 
     /*
-        This function determines the insets (also known as padding) for the collectionview.
+     This function determines the insets (also known as padding) for the collectionview.
      */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(
             top: 0,
-            left: 0,
+            left: kPadding,
             bottom: 0,
-            right: 0
+            right: kPadding
         )
     }
 
     /*
-        This function determines the spacing between items within a section.
+     This function determines the spacing between items within a section.
      */
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -146,7 +148,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
     }
 
     /*
-        This function determines the spacing between sections.
+     This function determines the spacing between sections.
      */
 
     func collectionView(_ collectionView: UICollectionView, layout
@@ -155,4 +157,5 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
 
         return kPadding
     }
+
 }
