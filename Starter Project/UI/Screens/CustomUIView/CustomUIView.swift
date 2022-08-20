@@ -11,8 +11,30 @@ import UIKit
 class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
+    // This enum is used to identify sections, for our sections array, which is later used in the +CollectionView extension.
+    enum Sections {
+        case A
+        case B
+    }
+    
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedStyle()
+    // Declare your UICollectionView
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = kPadding
+        layout.minimumInteritemSpacing = kPadding
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+
+        return collectionView
+    }()
+    // Declare the number of sections & their cells.
+    let sections: [Sections] = [.A, .B]
+    let numberOfCellsInSectionA: Int = 5
+    let numberOfCellsInSectionB: Int = 10
+    
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
