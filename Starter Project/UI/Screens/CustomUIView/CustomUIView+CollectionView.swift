@@ -98,4 +98,61 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         }
         return cell
     }
+    
+    // MARK: Visual Parameters
+    /*
+        This function determines the size of the cell for each given indexPath (i.e. section and row).
+     */
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Determine the frame
+        let collectionViewFrame: CGRect = collectionView.frame
+        // Change the width based on the row and section.
+        switch indexPath.row {
+        case 0:
+            // Title cells are as width as the collectionview and 40px height
+            return CGSize(width: collectionViewFrame.width, height: 40)
+        default:
+            // The dimension changes based on the section.
+            let dimension: CGFloat
+            switch self.sections[indexPath.section] {
+            case .A:
+                dimension = collectionViewFrame.width / 3
+            case .B:
+                dimension = collectionViewFrame.width
+            }
+            
+            return CGSize(width: dimension, height: dimension)
+        }
+    }
+
+    /*
+        This function determines the insets (also known as padding) for the collectionview.
+     */
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0
+        )
+    }
+
+    /*
+        This function determines the spacing between items within a section.
+     */
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return kPadding
+    }
+
+    /*
+        This function determines the spacing between sections.
+     */
+
+    func collectionView(_ collectionView: UICollectionView, layout
+                            collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+
+        return kPadding
+    }
 }
