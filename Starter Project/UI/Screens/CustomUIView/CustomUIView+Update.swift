@@ -29,6 +29,8 @@ extension CustomUIView {
                 debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
                 return
             }
+            // Reload the CollectionView to consider the content update.
+            self.collectionView.reloadData()
             debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }
