@@ -54,6 +54,7 @@
 		F0C79C6128B0C47400C1DCAF /* SectionBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6028B0C47400C1DCAF /* SectionBCell.swift */; };
 		F0C79C6328B0C5AA00C1DCAF /* SectionBCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6228B0C5AA00C1DCAF /* SectionBCell+UI.swift */; };
 		F0C79C6528B0C71A00C1DCAF /* SectionBCell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6428B0C71A00C1DCAF /* SectionBCell+Update.swift */; };
+		F0C79C6728B0CEA600C1DCAF /* CustomUIView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6628B0CEA600C1DCAF /* CustomUIView+CollectionView.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		F0C79C6028B0C47400C1DCAF /* SectionBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBCell.swift; sourceTree = "<group>"; };
 		F0C79C6228B0C5AA00C1DCAF /* SectionBCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionBCell+UI.swift"; sourceTree = "<group>"; };
 		F0C79C6428B0C71A00C1DCAF /* SectionBCell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionBCell+Update.swift"; sourceTree = "<group>"; };
+		F0C79C6628B0CEA600C1DCAF /* CustomUIView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+CollectionView.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				F008F4D92885BA8D00E4841B /* CustomUIView.swift */,
 				F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */,
 				F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */,
+				F0C79C6628B0CEA600C1DCAF /* CustomUIView+CollectionView.swift */,
 				F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */,
 				F0397F512885EEAD002AF19B /* CustomUIView+Touches.swift */,
 				F0397F532885EEB5002AF19B /* CustomUIView+Animations.swift */,
@@ -510,6 +513,7 @@
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
+				F0C79C6728B0CEA600C1DCAF /* CustomUIView+CollectionView.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F0C79C5C28B0C0C500C1DCAF /* SectionACell+UI.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
