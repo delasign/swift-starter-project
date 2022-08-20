@@ -58,8 +58,10 @@ class CustomUIView: UIView {
     // This function gets called everytime a layout occurs either to this view or a subview of this view.
     override func layoutSubviews() {
         super.layoutSubviews()
-        // Invalidate the carousel to make it lay itself out again.
-        self.collectionView.collectionViewLayout.invalidateLayout()
+        DispatchQueue.main.async {
+            // Invalidate the carousel to make it lay itself out again.
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }
     }
 
     // viewWillTransition should be called when the view resizes or changes orientation.

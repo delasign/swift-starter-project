@@ -117,7 +117,8 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
             let dimension: CGFloat
             switch self.sections[indexPath.section] {
             case .A:
-                dimension = (measuredWidth - 4 * kPadding) / 3
+                // Please note that the -1 is used as otherwise it won't work on rotation.
+                dimension = (measuredWidth - 2 * kPadding - 1) / 3
                 return CGSize(width: dimension, height: dimension)
             case .B:
                 dimension = measuredWidth
@@ -132,10 +133,10 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
      */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(
-            top: 0,
-            left: kPadding,
+            top: kPadding,
+            left: 0,
             bottom: 0,
-            right: kPadding
+            right: 0
         )
     }
 
