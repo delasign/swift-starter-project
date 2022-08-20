@@ -43,6 +43,7 @@
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0C79C4B28AFFE0900C1DCAF /* Styleguide+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4A28AFFE0900C1DCAF /* Styleguide+Header.swift */; };
+		F0C79C4D28B0B79E00C1DCAF /* Styleguide+CellTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C4C28B0B79D00C1DCAF /* Styleguide+CellTitle.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C4A28AFFE0900C1DCAF /* Styleguide+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+Header.swift"; sourceTree = "<group>"; };
+		F0C79C4C28B0B79D00C1DCAF /* Styleguide+CellTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+CellTitle.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */,
 				F008FCD52885AF9F00B2495D /* Styleguide+AttributedStyle.swift */,
 				F0C79C4A28AFFE0900C1DCAF /* Styleguide+Header.swift */,
+				F0C79C4C28B0B79D00C1DCAF /* Styleguide+CellTitle.swift */,
 			);
 			path = Styleguide;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
+				F0C79C4D28B0B79E00C1DCAF /* Styleguide+CellTitle.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
