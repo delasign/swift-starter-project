@@ -12,15 +12,13 @@ extension SectionACell {
     func setupUI() {
         setupImageView()
     }
-    
+
     private func setupImageView() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.imageView.translatesAutoresizingMaskIntoConstraints = false
-            self.addSubview(self.label)
-            self.label.centerY(to: self)
-            self.label.left(to: self, offset: kPadding)
+            self.addSubview(self.imageView)
+            self.imageView.edgesToSuperview()
         }
     }
 }
-

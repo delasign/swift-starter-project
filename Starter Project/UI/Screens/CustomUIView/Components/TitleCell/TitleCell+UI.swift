@@ -12,11 +12,10 @@ extension TitleCell {
     func setupUI() {
         setupLabel()
     }
-    
+
     private func setupLabel() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.label.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(self.label)
             self.label.centerY(to: self)
             self.label.left(to: self, offset: kPadding)
