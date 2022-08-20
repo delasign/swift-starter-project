@@ -13,6 +13,8 @@ struct UIContent: Codable {
         let sampleString: String
         let sectionATitle: String
         let sectionBTitle: String
+        let sampleCellTitle: String
+        let sampleCellBody: String
     }
 
     let sample: Sample

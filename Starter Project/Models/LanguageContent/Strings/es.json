@@ -3,5 +3,7 @@
         "sampleString": "Una muestra de un string",
         "sectionATitle": "Título de la sección A",
         "sectionBTitle": "Título de la sección B",
+        "sampleCellTitle": "Título",
+        "sampleCellBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor quam justo."
     }
 }
