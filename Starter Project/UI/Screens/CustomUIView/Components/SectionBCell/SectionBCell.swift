@@ -1,5 +1,5 @@
 //
-//  TitleCell.swift
+//  SectionBCell.swift
 //  Starter Project
 //
 //  Created by Oscar de la Hera Gomez on 8/20/22.
@@ -8,11 +8,13 @@
 import Foundation
 import UIKit
 
-class TitleCell: UICollectionViewCell {
+class SectionBCell: UICollectionViewCell {
     // MARK: Variables
-    static var identifier: String = "TitleCell"
+    static var identifier: String = "SectionBCell"
     // MARK: UI
-    let label: UILabel = Styleguide.createHeaderStyle()
+    let imageView: UIImageView = UIImageView()
+    let titleLabel: UILabel = Styleguide.createCellTitleStyle()
+    let bodyLabel: UILabel = Styleguide.createCellBodyStyle()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
@@ -34,6 +36,8 @@ class TitleCell: UICollectionViewCell {
     // This is where you should remove any views that aren't constant, as well as deallocate data, images or text.
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.label.text = ""
+        self.imageView.image = nil
+        self.titleLabel.text = ""
+        self.bodyLabel.text = ""
     }
 }

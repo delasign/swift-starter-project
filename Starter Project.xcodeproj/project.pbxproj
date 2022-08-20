@@ -51,6 +51,9 @@
 		F0C79C5A28B0C01A00C1DCAF /* SectionACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C5928B0C01A00C1DCAF /* SectionACell.swift */; };
 		F0C79C5C28B0C0C500C1DCAF /* SectionACell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C5B28B0C0C500C1DCAF /* SectionACell+UI.swift */; };
 		F0C79C5E28B0C33200C1DCAF /* SectionACell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C5D28B0C33200C1DCAF /* SectionACell+Update.swift */; };
+		F0C79C6128B0C47400C1DCAF /* SectionBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6028B0C47400C1DCAF /* SectionBCell.swift */; };
+		F0C79C6328B0C5AA00C1DCAF /* SectionBCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6228B0C5AA00C1DCAF /* SectionBCell+UI.swift */; };
+		F0C79C6528B0C71A00C1DCAF /* SectionBCell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6428B0C71A00C1DCAF /* SectionBCell+Update.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +103,9 @@
 		F0C79C5928B0C01A00C1DCAF /* SectionACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionACell.swift; sourceTree = "<group>"; };
 		F0C79C5B28B0C0C500C1DCAF /* SectionACell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionACell+UI.swift"; sourceTree = "<group>"; };
 		F0C79C5D28B0C33200C1DCAF /* SectionACell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionACell+Update.swift"; sourceTree = "<group>"; };
+		F0C79C6028B0C47400C1DCAF /* SectionBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBCell.swift; sourceTree = "<group>"; };
+		F0C79C6228B0C5AA00C1DCAF /* SectionBCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionBCell+UI.swift"; sourceTree = "<group>"; };
+		F0C79C6428B0C71A00C1DCAF /* SectionBCell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionBCell+Update.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -343,6 +349,7 @@
 			children = (
 				F0C79C5128B0BA3300C1DCAF /* TitleCell */,
 				F0C79C5828B0C00D00C1DCAF /* SectionACell */,
+				F0C79C5F28B0C3EE00C1DCAF /* SectionBCell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -365,6 +372,16 @@
 				F0C79C5D28B0C33200C1DCAF /* SectionACell+Update.swift */,
 			);
 			path = SectionACell;
+			sourceTree = "<group>";
+		};
+		F0C79C5F28B0C3EE00C1DCAF /* SectionBCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0C79C6028B0C47400C1DCAF /* SectionBCell.swift */,
+				F0C79C6228B0C5AA00C1DCAF /* SectionBCell+UI.swift */,
+				F0C79C6428B0C71A00C1DCAF /* SectionBCell+Update.swift */,
+			);
+			path = SectionBCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +494,7 @@
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
 				F0C79C4D28B0B79E00C1DCAF /* Styleguide+CellTitle.swift in Sources */,
+				F0C79C6328B0C5AA00C1DCAF /* SectionBCell+UI.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
@@ -498,12 +516,14 @@
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
+				F0C79C6528B0C71A00C1DCAF /* SectionBCell+Update.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
 				F0C79C4B28AFFE0900C1DCAF /* Styleguide+Header.swift in Sources */,
 				F0C79C5A28B0C01A00C1DCAF /* SectionACell.swift in Sources */,
 				F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */,
+				F0C79C6128B0C47400C1DCAF /* SectionBCell.swift in Sources */,
 				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,
 				F008FCA5287F736F00B2495D /* ViewController+UI.swift in Sources */,
 				F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */,
