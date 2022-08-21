@@ -37,6 +37,9 @@ class ViewController: UIViewController {
 
     func setupCoordinators() {
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Setting Up Coordinators.")
+        // DataCoordinator
+        DataCoordinator.shared.initialize()
+        // LanguageCoordinator
         LanguageCoordinator.shared.initialize()
         LanguageCoordinator.shared.onContentUpdate = { [weak self] in
             guard let self = self, let currentContent = LanguageCoordinator.shared.currentContent else {
