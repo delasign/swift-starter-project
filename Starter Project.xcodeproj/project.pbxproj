@@ -44,6 +44,7 @@
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
+		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
+		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */,
+				F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
