@@ -36,5 +36,4 @@ extension CustomUIView {
             self.collectionView.dataSource = self
         }
     }
-
 }
