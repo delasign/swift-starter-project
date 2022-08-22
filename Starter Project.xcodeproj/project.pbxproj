@@ -46,6 +46,10 @@
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
 		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
 		F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7028B269DE00C1DCAF /* NetworkError.swift */; };
+		F0C79C7428B26B3D00C1DCAF /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0C79C7328B26B3D00C1DCAF /* Configuration.plist */; };
+		F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7528B26D1400C1DCAF /* Configuration.swift */; };
+		F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7728B26E6800C1DCAF /* ConfigurationKeys.swift */; };
+		F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7928B2719500C1DCAF /* Configuration+Get.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +94,10 @@
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F0C79C7028B269DE00C1DCAF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		F0C79C7328B26B3D00C1DCAF /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		F0C79C7528B26D1400C1DCAF /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		F0C79C7728B26E6800C1DCAF /* ConfigurationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKeys.swift; sourceTree = "<group>"; };
+		F0C79C7928B2719500C1DCAF /* Configuration+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+Get.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C79C6B28B2649F00C1DCAF /* API */,
+				F0C79C7228B26B2700C1DCAF /* Configuration */,
 				F00DDDEC287C937B0062AA1E /* States */,
 				F00DDDEB287C93710062AA1E /* Notifications */,
 				F00DDDEA287C936D0062AA1E /* Constants */,
@@ -344,6 +353,17 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		F0C79C7228B26B2700C1DCAF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F0C79C7328B26B3D00C1DCAF /* Configuration.plist */,
+				F0C79C7528B26D1400C1DCAF /* Configuration.swift */,
+				F0C79C7928B2719500C1DCAF /* Configuration+Get.swift */,
+				F0C79C7728B26E6800C1DCAF /* ConfigurationKeys.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +431,7 @@
 			files = (
 				F008FC99287F440400B2495D /* en.json in Resources */,
 				F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */,
+				F0C79C7428B26B3D00C1DCAF /* Configuration.plist in Resources */,
 				F00DDDD9287C824A0062AA1E /* LaunchScreen.storyboard in Resources */,
 				F008FC9B287F441500B2495D /* es.json in Resources */,
 				F00DDDD6287C824A0062AA1E /* Assets.xcassets in Resources */,
@@ -456,15 +477,18 @@
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
+				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
 				F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */,
+				F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
+				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,

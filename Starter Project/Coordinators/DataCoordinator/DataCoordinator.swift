@@ -13,10 +13,12 @@ class DataCoordinator: NSObject {
     // MARK: Variables
     static let identifier: String = "[DataCoordinator]"
     static let shared: DataCoordinator = DataCoordinator()
+    let configuration: Configuration = Configuration()
 
     // MARK: Lifecycle
-
     func initialize() {
-        debugPrint("\(LanguageCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Initializing... \(DebuggingIdentifiers.actionOrEventInProgress)")
+        debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Initializing... \(DebuggingIdentifiers.actionOrEventInProgress)")
+        // Intialize configuration
+        self.configuration.initialize()
     }
 }
