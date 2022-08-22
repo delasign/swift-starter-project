@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         // LanguageCoordinator
         LanguageCoordinator.shared.initialize()
         LanguageCoordinator.shared.onContentUpdate = { [weak self] in
-            guard let self = self, let currentContent = LanguageCoordinator.shared.currentContent else {
+            guard let _ = self, let currentContent = LanguageCoordinator.shared.currentContent else {
                 debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Could not update current content - as current content does not exist.")
                 return
             }
