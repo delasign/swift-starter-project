@@ -33,7 +33,7 @@ struct APIClient {
      get
      This method is used to make GET calls with no body.
      */
-    private func get<Response: Decodable>(_: Response.Type, path: String, completion: @escaping ((Result<Response, Error>) -> Void)) {
+    func get<Response: Decodable>(_: Response.Type, path: String, completion: @escaping ((Result<Response, Error>) -> Void)) {
         debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) get \(DebuggingIdentifiers.actionOrEventInProgress)")
         // Check that the URL exists and that it's not a local file.
         if configuration.url == nil || configuration.url?.isFileURL ?? true {
@@ -89,7 +89,7 @@ struct APIClient {
      makeAPICall
      This method is used to make all types of calls with a body and a response.
      */
-    private func makeAPICall<Body: Encodable, Response: Decodable>(method: HTTPMethod, item: Body, path: String, resultType: Response.Type, completion: @escaping (Result<Response, Error>) -> Void) {
+    func makeAPICall<Body: Encodable, Response: Decodable>(method: HTTPMethod, item: Body, path: String, resultType: Response.Type, completion: @escaping (Result<Response, Error>) -> Void) {
         debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) makeAPICall \(DebuggingIdentifiers.actionOrEventInProgress)")
         // Check that there's a URL
         guard let baseURL = configuration.url else {
@@ -149,7 +149,7 @@ struct APIClient {
      loadLocal
      This is similar to that which we used for the LanguageCoordinator and is used to load local resources.
      */
-    private func loadLocal<T: Decodable>(resource: String, completion: @escaping ((Result<T, Error>) -> Void)) {
+    func loadLocal<T: Decodable>(resource: String, completion: @escaping ((Result<T, Error>) -> Void)) {
         do {
             if let loadedData = loadLocalResource(name: resource) {
                 let data = try JSONDecoder().decode(T.self, from: loadedData)
