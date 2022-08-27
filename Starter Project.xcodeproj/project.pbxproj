@@ -53,6 +53,7 @@
 		F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7B28B35BC500C1DCAF /* APIClient.swift */; };
 		F0C79C8C28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C8B28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift */; };
 		F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C8D28BA8EEC00C1DCAF /* APIRequestHeader.swift */; };
+		F0C79C9028BA99A400C1DCAF /* DataCoordinator+swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C8F28BA99A400C1DCAF /* DataCoordinator+swift.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		F0C79C7B28B35BC500C1DCAF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F0C79C8B28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasdaqTimeSeriesData.swift; sourceTree = "<group>"; };
 		F0C79C8D28BA8EEC00C1DCAF /* APIRequestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHeader.swift; sourceTree = "<group>"; };
+		F0C79C8F28BA99A400C1DCAF /* DataCoordinator+swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataCoordinator+swift.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */,
+				F0C79C8F28BA99A400C1DCAF /* DataCoordinator+swift.swift */,
 			);
 			path = DataCoordinator;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
 				F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */,
+				F0C79C9028BA99A400C1DCAF /* DataCoordinator+swift.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
