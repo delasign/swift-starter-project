@@ -1,5 +1,5 @@
 //
-//  DataCoordinator+swift.swift
+//  DataCoordinator+API.swift
 //  Starter Project
 //
 //  Created by Oscar de la Hera Gomez on 8/27/22.
@@ -22,7 +22,7 @@ extension DataCoordinator {
                 debugPrint("\(DataCoordinator.identifier) getNasdaqDataLinkTimeSeries \(DebuggingIdentifiers.actionOrEventSucceded) Succeeded to make call.")
                 break
             case let .failure(error):
-                debugPrint("\(DataCoordinator.identifier) getNasdaqDataLinkTimeSeries \(DebuggingIdentifiers.actionOrEventSucceded) Failed to make call with error.")
+                debugPrint("\(DataCoordinator.identifier) getNasdaqDataLinkTimeSeries \(DebuggingIdentifiers.actionOrEventFailed) Failed to make call with error \(error).")
                 break
             }
         }

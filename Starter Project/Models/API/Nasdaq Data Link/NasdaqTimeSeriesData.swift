@@ -36,17 +36,18 @@ struct NasdaqTimeSeriesData: Codable {
         init(from decoder: Decoder) throws {
             // Gather the container
             let container = try decoder.singleValueContainer()
-            do {
-                // Attempt to make it an float
-                self = try .float(container.decode(Float.self))
-            } catch DecodingError.typeMismatch {
-                // Attempt to make it a string
-                do {
-                    self = try .string(container.decode(String.self))
-                } catch DecodingError.typeMismatch {
-                    throw DecodingError.typeMismatch(StringOrFloatDataType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Encoded payload not of an expected type"))
-                }
+
+            if let float = try? container.decode(Float.self) {
+                self = .float(float)
+                return
             }
+
+            if let string = try? container.decode(String.self) {
+                self = .string(string)
+                return
+            }
+
+            throw DecodingError.typeMismatch(StringOrFloatDataType.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Encoded payload not of an expected type"))
         }
     }
 }
