@@ -18,14 +18,11 @@ struct APIClient {
         self.configuration = configuration
     }
 
-    // MARK: API's
-    // This is where you write your public methods for API calls.
-
     // MARK: Methods
     /*
      Here are the three methods that we provide:
-     - Retrieve Resource (GET ONLY)
-     - Upload Resource (ALL METHODS)
+     - Get Resource (GET ONLY)
+     - Make API Resource (ALL METHODS)
      - Load Local (LOCAL ONLY)
      */
 
@@ -33,7 +30,7 @@ struct APIClient {
      get
      This method is used to make GET calls with no body.
      */
-    func get<Response: Decodable>(_: Response.Type, path: String, completion: @escaping ((Result<Response, Error>) -> Void)) {
+    func get<Response: Decodable>(_: Response.Type, path: String, parameters: [URLQueryItem], requestHeaders: [APIRequestHeader], completion: @escaping ((Result<Response, Error>) -> Void)) {
         debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) get \(DebuggingIdentifiers.actionOrEventInProgress)")
         // Check that the URL exists and that it's not a local file.
         if configuration.url == nil || configuration.url?.isFileURL ?? true {
@@ -49,14 +46,29 @@ struct APIClient {
         }
         // Create the URL by adding the path to the base URL.
         let url = baseURL.appendingPathComponent(path)
+        // Create a url that allows for parameters
+        guard var urlWithComponents: URLComponents = URLComponents(string: url.absoluteString) else {
+            debugPrint("\(APIClient.identifier) get \(DebuggingIdentifiers.actionOrEventFailed) This resource could not produce a URL with components.")
+            completion(.failure(NetworkError.noConnection))
+            return
+        }
+        // Set the parameters
+        urlWithComponents.queryItems = parameters
+        // Safely create a URL with parameters
+        guard let urlWithParameters = urlWithComponents.url else {
+            debugPrint("\(APIClient.identifier) get \(DebuggingIdentifiers.actionOrEventFailed) This resource could not produce a URL with parameters.")
+            completion(.failure(NetworkError.noConnection))
+            return
+        }
         // Create your request
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: timeout)
+        var request = URLRequest(url: urlWithParameters, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: timeout)
         // Add the headers
-        // Sample header included below that assumes that the content type is 'application/json'.
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        for header in requestHeaders {
+            request.addValue(header.value, forHTTPHeaderField: header.httpHeaderField)
+        }
         // Get the session
         let session = configuration.urlSession
-        debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) get \(DebuggingIdentifiers.actionOrEventInProgress) Entering Resquest with URL \(url)")
+        debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) get \(DebuggingIdentifiers.actionOrEventInProgress) Entering Resquest with URL \(urlWithParameters)")
         // Make the API Call
         let dataTask = session.dataTask(with: request) { (responseData, _, responseError) in
             // Check if there's a response
@@ -64,7 +76,7 @@ struct APIClient {
                 // Try to decode the data.
                 do {
                     let decoded = try JSONDecoder().decode(Response.self, from: responseData)
-                    debugPrint("\(APIClient.identifier) get \(DebuggingIdentifiers.actionOrEventSucceded) Completed Resquest with URL \(url)")
+                    debugPrint("\(APIClient.identifier) get \(DebuggingIdentifiers.actionOrEventSucceded) Completed Resquest with URL \(urlWithParameters)")
                     completion(.success(decoded))
                     return
                 } catch {
@@ -89,7 +101,7 @@ struct APIClient {
      makeAPICall
      This method is used to make all types of calls with a body and a response.
      */
-    func makeAPICall<Body: Encodable, Response: Decodable>(method: HTTPMethod, item: Body, path: String, resultType: Response.Type, completion: @escaping (Result<Response, Error>) -> Void) {
+    func makeAPICall<Body: Encodable, Response: Decodable>(method: HTTPMethod, item: Body, path: String, parameters: [URLQueryItem], requestHeaders: [APIRequestHeader], resultType: Response.Type, completion: @escaping (Result<Response, Error>) -> Void) {
         debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) makeAPICall \(DebuggingIdentifiers.actionOrEventInProgress)")
         // Check that there's a URL
         guard let baseURL = configuration.url else {
@@ -105,26 +117,43 @@ struct APIClient {
         }
         // Create the URL by adding the path to the base URL.
         let url = baseURL.appendingPathComponent(path)
+        // Create a url that allows for parameters
+        guard var urlWithComponents: URLComponents = URLComponents(string: url.absoluteString) else {
+            debugPrint("\(APIClient.identifier) makeAPICall \(DebuggingIdentifiers.actionOrEventFailed) This resource could not produce a URL with components.")
+            completion(.failure(NetworkError.noConnection))
+            return
+        }
+        // Set the parameters
+        urlWithComponents.queryItems = parameters
+        // Safely create a URL with parameters
+        guard let urlWithParameters = urlWithComponents.url else {
+            debugPrint("\(APIClient.identifier) makeAPICall \(DebuggingIdentifiers.actionOrEventFailed) This resource could not produce a URL with parameters.")
+            completion(.failure(NetworkError.noConnection))
+            return
+        }
         // Create your request
-        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: timeout)
+        var request = URLRequest(url: urlWithParameters, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: timeout)
         // Add the HTTP Method.
         request.httpMethod = method.rawValue
         // Add the headers
-        // Sample header included below that assumes that the content type is 'application/json'.
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        for header in requestHeaders {
+            request.addValue(header.value, forHTTPHeaderField: header.httpHeaderField)
+        }
+        // Set the body
+        request.httpBody = body
         // Get the session
         let session = configuration.urlSession
-        debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) makeAPICall \(DebuggingIdentifiers.actionOrEventInProgress) Entering Resquest with URL \(url)")
+        debugPrint("\(APIClient.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) makeAPICall \(DebuggingIdentifiers.actionOrEventInProgress) Entering Resquest with URL \(urlWithParameters)")
         // Make the API Call
-        let dataTask = session.uploadTask(with: request, from: body) { (data, _, error) in
+        let dataTask = session.dataTask(with: request) { (responseData, _, responseError) in
             // See if there was an error
-            if let error = error {
-                debugPrint("\(APIClient.identifier) makeAPICall \(DebuggingIdentifiers.actionOrEventFailed) Failed to make API call with error : \(error).")
-                completion(.failure(error))
+            if let responseError = responseError {
+                debugPrint("\(APIClient.identifier) makeAPICall \(DebuggingIdentifiers.actionOrEventFailed) Failed to make API call with error : \(responseError).")
+                completion(.failure(responseError))
                 return
             }
             // Check that the data exists.
-            guard let data = data else {
+            guard let responseData = responseData else {
                 debugPrint("\(APIClient.identifier) makeAPICall \(DebuggingIdentifiers.actionOrEventFailed) Failed to make API call as could not determine data.")
                 completion(.failure(NetworkError.otherServerError))
                 return
@@ -132,7 +161,7 @@ struct APIClient {
             // Attempt to decode the response.
             let response: Response
             do {
-                response = try JSONDecoder().decode(Response.self, from: data)
+                response = try JSONDecoder().decode(Response.self, from: responseData)
             } catch {
                 debugPrint("\(APIClient.identifier) makeAPICall \(DebuggingIdentifiers.actionOrEventFailed) Failed to make API call with error \(error).")
                 completion(.failure(error))
