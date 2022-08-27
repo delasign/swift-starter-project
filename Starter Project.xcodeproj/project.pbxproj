@@ -51,6 +51,7 @@
 		F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7728B26E6800C1DCAF /* ConfigurationKeys.swift */; };
 		F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7928B2719500C1DCAF /* Configuration+Get.swift */; };
 		F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7B28B35BC500C1DCAF /* APIClient.swift */; };
+		F0C79C8C28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C8B28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		F0C79C7728B26E6800C1DCAF /* ConfigurationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationKeys.swift; sourceTree = "<group>"; };
 		F0C79C7928B2719500C1DCAF /* Configuration+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+Get.swift"; sourceTree = "<group>"; };
 		F0C79C7B28B35BC500C1DCAF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F0C79C8B28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasdaqTimeSeriesData.swift; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -348,6 +350,7 @@
 		F0C79C6B28B2649F00C1DCAF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				F0C79C8A28BA885B00C1DCAF /* Nasdaq Data Link */,
 				F0C79C7B28B35BC500C1DCAF /* APIClient.swift */,
 				F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */,
 				F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */,
@@ -365,6 +368,14 @@
 				F0C79C7728B26E6800C1DCAF /* ConfigurationKeys.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		F0C79C8A28BA885B00C1DCAF /* Nasdaq Data Link */ = {
+			isa = PBXGroup;
+			children = (
+				F0C79C8B28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift */,
+			);
+			path = "Nasdaq Data Link";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +501,7 @@
 				F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
+				F0C79C8C28BA8A3600C1DCAF /* NasdaqTimeSeriesData.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
