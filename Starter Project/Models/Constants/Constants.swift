@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import AVKit
 
 let kPadding: CGFloat = 20
 let kButtonDimension: CGFloat = 60
+let kAnimationTime: TimeInterval = 0.67
