@@ -13,6 +13,7 @@ class CustomUIView: UIView {
     static let identifier: String = "[CustomUIView]"
     // MARK: UI
     let label: UILabel = Styleguide.createAttributedStyle()
+    // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
