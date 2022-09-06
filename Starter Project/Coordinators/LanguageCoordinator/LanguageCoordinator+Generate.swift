@@ -18,25 +18,25 @@ extension LanguageCoordinator {
             }
         }
         self.languageContent = languageContentPackage
-        debugPrint("\(LanguageCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Gathered Content")
+        debugPrint("\(LanguageCoordinator.identifier) generateLanguageContent \(DebuggingIdentifiers.actionOrEventSucceded) Gathered Content")
     }
 
     private func gatherLanguageContent(langugeCode: String) -> UIContent? {
-        debugPrint("\(LanguageCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Generating Content for : \(langugeCode)")
+        debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventInProgress) Generating Content for : \(langugeCode)")
 
         guard let languageJSON = Bundle.main.path(forResource: langugeCode, ofType: "json") else {
-            debugPrint("\(LanguageCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content: path does nto exist")
+            debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content: path does nto exist")
             return nil
         }
 
         do {
             let jsondata = try Data(contentsOf: URL(fileURLWithPath: languageJSON), options: .mappedIfSafe)
             let data = try JSONDecoder().decode(UIContent.self, from: jsondata)
-            debugPrint("\(LanguageCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Generated Content for : \(langugeCode)")
+            debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventSucceded) Generated Content for : \(langugeCode)")
             return data
 
         } catch {
-            debugPrint("\(LanguageCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content for : \(langugeCode)")
+            debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content for : \(langugeCode)")
             return nil
         }
 
