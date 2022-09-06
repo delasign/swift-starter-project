@@ -17,7 +17,7 @@ class DataCoordinator: NSObject {
 
     // MARK: Lifecycle
     func initialize() {
-        debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Initializing... \(DebuggingIdentifiers.actionOrEventInProgress)")
+        debugPrint("\(DataCoordinator.identifier) initialize \(DebuggingIdentifiers.actionOrEventInProgress) Initializing... \(DebuggingIdentifiers.actionOrEventInProgress)")
         // Intialize configuration
         self.configuration.initialize()
     }
