@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         ViewController.safeAreaInsets = self.view.safeAreaInsets
         self.setupCoordinators()
         self.setupUI()
+        printSystemFonts()
     }
 
     override func viewSafeAreaInsetsDidChange() {
