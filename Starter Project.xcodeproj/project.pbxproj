@@ -264,6 +264,8 @@
 		F00DDDE6287C82DD0062AA1E /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0BC948628C7B63E005FFF58 /* Videos */,
+				F0BC948528C7B639005FFF58 /* Fonts */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -337,6 +339,20 @@
 				F008FCA2287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift */,
 			);
 			path = LanguageCoordinator;
+			sourceTree = "<group>";
+		};
+		F0BC948528C7B639005FFF58 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F0BC948628C7B63E005FFF58 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		F0C79C6828B25DD600C1DCAF /* DataCoordinator */ = {
