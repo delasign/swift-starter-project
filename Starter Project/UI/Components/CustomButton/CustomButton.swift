@@ -1,20 +1,22 @@
 //
-//  CustomUIView.swift
+//  CustomButton.swift
 //  Starter Project
 //
-//  Created by Oscar de la Hera Gomez on 7/18/22.
+//  Created by Oscar de la Hera Gomez on 9/7/22.
 //
 
 import Foundation
 import UIKit
 
-class CustomUIView: UIView {
+class CustomButton: UIView {
     // MARK: Variables
-    static let identifier: String = "[CustomUIView]"
+    static let identifier: String = "[CustomButton]"
     // MARK: UI
-    let button: CustomButton = CustomButton()
+    let label: UILabel = Styleguide.createCustomButtonStyle()
     // MARK: Callbacks
+    var onRelease: (() -> Void)?
     // MARK: Lifecycle
+
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,13 +27,24 @@ class CustomUIView: UIView {
         self.backgroundColor = .white
         // MARK: Functionality Setup
         self.setupUI()
-        self.setupNotifications()
-        self.setupGestures()
     }
 
     // This is the function that gets called when you remove your view from its superview.
     override func removeFromSuperview() {
         super.removeFromSuperview()
+    }
+
+    // Add the shadow functionality in the layout subviews to guarantee that it updates as the view changes size
+    override func layoutSubviews() {
+        // Shadow
+        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.shadowOpacity = 1
+        self.layer.shadowColor = Styleguide.colors.black.cgColor
+        self.layer.shadowPath = UIBezierPath(
+            roundedRect: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height),
+            cornerRadius: self.frame.height / 2).cgPath
+        self.layer.shadowOffset = CGSize(width: 0, height: 5)
+        self.layer.shadowOpacity = 0.5
     }
 
     // viewWillTransition should be called when the view resizes or changes orientation.

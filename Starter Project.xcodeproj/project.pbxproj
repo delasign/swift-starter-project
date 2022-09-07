@@ -42,6 +42,12 @@
 		F0397F6928888C0D002AF19B /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* UIImages.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
+		F0BC948A28C8D03F005FFF58 /* Styleguide+CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC948928C8D03F005FFF58 /* Styleguide+CustomButtonStyle.swift */; };
+		F0BC948D28C8D42E005FFF58 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC948C28C8D42E005FFF58 /* CustomButton.swift */; };
+		F0BC948F28C8D636005FFF58 /* CustomButton+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC948E28C8D636005FFF58 /* CustomButton+UI.swift */; };
+		F0BC949128C8DA19005FFF58 /* CustomButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC949028C8DA19005FFF58 /* CustomButton+Animations.swift */; };
+		F0BC949328C8DC83005FFF58 /* CustomButton+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC949228C8DC83005FFF58 /* CustomButton+Touches.swift */; };
+		F0BC949528C8E151005FFF58 /* CustomButton+Upda﻿te.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC949428C8E151005FFF58 /* CustomButton+Upda﻿te.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
 		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
@@ -92,6 +98,12 @@
 		F0397F6828888C0D002AF19B /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
+		F0BC948928C8D03F005FFF58 /* Styleguide+CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+CustomButtonStyle.swift"; sourceTree = "<group>"; };
+		F0BC948C28C8D42E005FFF58 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F0BC948E28C8D636005FFF58 /* CustomButton+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomButton+UI.swift"; sourceTree = "<group>"; };
+		F0BC949028C8DA19005FFF58 /* CustomButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomButton+Animations.swift"; sourceTree = "<group>"; };
+		F0BC949228C8DC83005FFF58 /* CustomButton+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomButton+Touches.swift"; sourceTree = "<group>"; };
+		F0BC949428C8E151005FFF58 /* CustomButton+Upda﻿te.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomButton+Upda﻿te.swift"; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -164,6 +176,7 @@
 				F008FCA7287FA68900B2495D /* Styleguide.swift */,
 				F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */,
 				F008FCD52885AF9F00B2495D /* Styleguide+AttributedStyle.swift */,
+				F0BC948928C8D03F005FFF58 /* Styleguide+CustomButtonStyle.swift */,
 			);
 			path = Styleguide;
 			sourceTree = "<group>";
@@ -247,6 +260,7 @@
 		F00DDDE4287C82C50062AA1E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F0BC948B28C8D426005FFF58 /* CustomButton */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -353,6 +367,18 @@
 			children = (
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		F0BC948B28C8D426005FFF58 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				F0BC948C28C8D42E005FFF58 /* CustomButton.swift */,
+				F0BC948E28C8D636005FFF58 /* CustomButton+UI.swift */,
+				F0BC949228C8DC83005FFF58 /* CustomButton+Touches.swift */,
+				F0BC949028C8DA19005FFF58 /* CustomButton+Animations.swift */,
+				F0BC949428C8E151005FFF58 /* CustomButton+Upda﻿te.swift */,
+			);
+			path = CustomButton;
 			sourceTree = "<group>";
 		};
 		F0C79C6828B25DD600C1DCAF /* DataCoordinator */ = {
@@ -490,9 +516,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
+				F0BC949328C8DC83005FFF58 /* CustomButton+Touches.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
+				F0BC948D28C8D42E005FFF58 /* CustomButton.swift in Sources */,
+				F0BC948F28C8D636005FFF58 /* CustomButton+UI.swift in Sources */,
+				F0BC948A28C8D03F005FFF58 /* Styleguide+CustomButtonStyle.swift in Sources */,
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
@@ -501,6 +531,7 @@
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
 				F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */,
+				F0BC949128C8DA19005FFF58 /* CustomButton+Animations.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
@@ -521,6 +552,7 @@
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,
+				F0BC949528C8E151005FFF58 /* CustomButton+Upda﻿te.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
 				F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */,

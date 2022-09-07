@@ -1,5 +1,8 @@
 {
     "sample": {
         "sampleString": "A sample string"
+    },
+    "buttons": {
+        "pressMe": "Press Me"
     }
 }

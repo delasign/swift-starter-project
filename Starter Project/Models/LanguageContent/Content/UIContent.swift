@@ -14,4 +14,10 @@ struct UIContent: Codable {
     }
 
     let sample: Sample
+
+    struct Buttons: Codable {
+        let pressMe: String
+    }
+
+    let buttons: Buttons
 }
