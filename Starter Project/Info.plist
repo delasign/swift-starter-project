@@ -26,5 +26,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We require the microphone to transcribe your voice.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>We require speech recognition to transcribe your voice.</string>
 </dict>
 </plist>

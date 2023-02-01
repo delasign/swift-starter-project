@@ -27,6 +27,12 @@ class ViewController: UIViewController {
         self.setupUI()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // Request Speech Authorization
+        SpeechCoordinator.shared.requestAuthorization()
+    }
+
     override func viewSafeAreaInsetsDidChange() {
         ViewController.safeAreaInsets = self.view.safeAreaInsets
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Safe Area Insets: \(ViewController.safeAreaInsets)")
@@ -58,5 +64,7 @@ class ViewController: UIViewController {
             )
 
         }
+        // Speech Coordinator
+        SpeechCoordinator.shared.initialize()
     }
 }
