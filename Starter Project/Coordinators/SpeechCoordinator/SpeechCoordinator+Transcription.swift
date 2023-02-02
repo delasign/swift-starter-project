@@ -54,7 +54,7 @@ extension SpeechCoordinator {
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
                 // Log Problem
-                debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventFailed) Audio Transcription Failed.")
+                debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventFailed) Audio Transcription Failed with error :\(error?.localizedDescription).")
             }
         }
 
@@ -68,5 +68,40 @@ extension SpeechCoordinator {
         debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventInProgress) Starting audio engine \(DebuggingIdentifiers.actionOrEventInProgress) .")
         audioEngine.prepare()
         try audioEngine.start()
+    }
+
+    public func restartAudioBuffer() {
+        debugPrint("\(SpeechCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) restartAudioBuffer \(DebuggingIdentifiers.actionOrEventInProgress).")
+        if audioEngine.isRunning {
+            debugPrint("\(SpeechCoordinator.identifier) restartAudioBuffer \(DebuggingIdentifiers.actionOrEventFailed) Audio Engine Running.")
+            self.endAudioRecording()
+            self.startAudioIntervalTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: { timer in
+                timer.invalidate()
+                self.restartAudioBuffer()
+            })
+        } else {
+            do {
+                try transcribeAudio()
+                debugPrint("\(SpeechCoordinator.identifier) restartAudioBuffer \(DebuggingIdentifiers.actionOrEventSucceded) Restarted audio buffer.")
+                self.setRestartAudioBufferTimer()
+            } catch {
+                debugPrint("\(SpeechCoordinator.identifier) restartAudioBuffer \(DebuggingIdentifiers.actionOrEventFailed) Failed to restart audio buffer with error \(error)")
+            }
+        }
+    }
+
+    private func setRestartAudioBufferTimer() {
+        debugPrint("\(SpeechCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) setRestartAudioBufferTimer \(DebuggingIdentifiers.actionOrEventInProgress).")
+        if let timer = self.audioRestartTimer, timer.isValid {
+            self.audioRestartTimer?.invalidate()
+            self.audioRestartTimer = nil
+            debugPrint("\(SpeechCoordinator.identifier) setRestartAudioBufferTimer \(DebuggingIdentifiers.actionOrEventSucceded) Restarted Timer.")
+        }
+
+        self.audioRestartTimer = Timer.scheduledTimer(withTimeInterval: self.restartTimeInterval, repeats: false, block: { timer in
+            timer.invalidate()
+            debugPrint("\(SpeechCoordinator.identifier) setRestartAudioBufferTimer \(DebuggingIdentifiers.actionOrEventSucceded) Timer triggered.")
+            self.restartAudioBuffer()
+        })
     }
 }
