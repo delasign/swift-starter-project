@@ -37,13 +37,19 @@ extension SpeechCoordinator {
         // Create a recognition task for the speech recognition session.
         // Keep a reference to the task so that it can be canceled.
         debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventInProgress) Creating Task \(DebuggingIdentifiers.actionOrEventInProgress) .")
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
+        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { [weak self] result, error in
+            guard let self = self, self.recognitionTask != nil else {
+                debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventFailed) Recognition Task does not exist. Cancelling recognition request")
+                return
+            }
             var isFinal = false
 
             if let result = result {
                 // Print the results.
                 isFinal = result.isFinal
-                debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventSucceded) Text : \(result.bestTranscription.formattedString).")
+                let transcription: String = result.bestTranscription.formattedString
+                debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventSucceded) Text : \(transcription).")
+                self.processTranscription(transcription: transcription)
             }
 
             if error != nil || isFinal {
@@ -54,6 +60,7 @@ extension SpeechCoordinator {
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
                 // Log Problem
+                debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventFailed) isFinal :\(isFinal).")
                 debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventFailed) Audio Transcription Failed with error :\(error?.localizedDescription).")
             }
         }
@@ -71,7 +78,7 @@ extension SpeechCoordinator {
     }
 
     public func restartAudioBuffer() {
-        debugPrint("\(SpeechCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) restartAudioBuffer \(DebuggingIdentifiers.actionOrEventInProgress).")
+        debugPrint("\(SpeechCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) restartAudioBuffer \(DebuggingIdentifiers.actionOrEventInProgress) Engine is running : \(audioEngine.isRunning).")
         if audioEngine.isRunning {
             debugPrint("\(SpeechCoordinator.identifier) restartAudioBuffer \(DebuggingIdentifiers.actionOrEventFailed) Audio Engine Running.")
             self.endAudioRecording()

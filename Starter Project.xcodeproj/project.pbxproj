@@ -55,6 +55,8 @@
 		F0D9BE55298AE63A00283199 /* SpeechCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9BE54298AE63A00283199 /* SpeechCoordinator.swift */; };
 		F0D9BE59298AED9500283199 /* SpeechCoordinator+Availability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9BE58298AED9500283199 /* SpeechCoordinator+Availability.swift */; };
 		F0D9BE5B298AEE3000283199 /* SpeechCoordinator+Transcription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9BE5A298AEE3000283199 /* SpeechCoordinator+Transcription.swift */; };
+		F0D9BE5E298D572400283199 /* SpeechCoordinator+Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9BE5D298D572400283199 /* SpeechCoordinator+Commands.swift */; };
+		F0D9BE61298D576700283199 /* VoiceCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D9BE60298D576700283199 /* VoiceCommands.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +110,8 @@
 		F0D9BE54298AE63A00283199 /* SpeechCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechCoordinator.swift; sourceTree = "<group>"; };
 		F0D9BE58298AED9500283199 /* SpeechCoordinator+Availability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechCoordinator+Availability.swift"; sourceTree = "<group>"; };
 		F0D9BE5A298AEE3000283199 /* SpeechCoordinator+Transcription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechCoordinator+Transcription.swift"; sourceTree = "<group>"; };
+		F0D9BE5D298D572400283199 /* SpeechCoordinator+Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeechCoordinator+Commands.swift"; sourceTree = "<group>"; };
+		F0D9BE60298D576700283199 /* VoiceCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCommands.swift; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +227,7 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F0D9BE5F298D575900283199 /* Speech */,
 				F0C79C6B28B2649F00C1DCAF /* API */,
 				F0C79C7228B26B2700C1DCAF /* Configuration */,
 				F00DDDEC287C937B0062AA1E /* States */,
@@ -399,8 +404,17 @@
 				F0D9BE54298AE63A00283199 /* SpeechCoordinator.swift */,
 				F0D9BE58298AED9500283199 /* SpeechCoordinator+Availability.swift */,
 				F0D9BE5A298AEE3000283199 /* SpeechCoordinator+Transcription.swift */,
+				F0D9BE5D298D572400283199 /* SpeechCoordinator+Commands.swift */,
 			);
 			path = SpeechCoordinator;
+			sourceTree = "<group>";
+		};
+		F0D9BE5F298D575900283199 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				F0D9BE60298D576700283199 /* VoiceCommands.swift */,
+			);
+			path = Speech;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +520,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D9BE61298D576700283199 /* VoiceCommands.swift in Sources */,
+				F0D9BE5E298D572400283199 /* SpeechCoordinator+Commands.swift in Sources */,
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,

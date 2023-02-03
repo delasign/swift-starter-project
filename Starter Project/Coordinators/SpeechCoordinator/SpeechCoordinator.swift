@@ -27,7 +27,7 @@ class SpeechCoordinator: NSObject, SFSpeechRecognizerDelegate {
     // A Timer to offset the restart of the audiobuffer - we made it a timer so we can invalidate it in the event we just want to stop the audio.
     var startAudioIntervalTimer: Timer?
     // A time interval to restart you buffer
-    let restartTimeInterval: TimeInterval = 5
+    let restartTimeInterval: TimeInterval = 60
 
     // MARK: Lifecycle
     func initialize() {
