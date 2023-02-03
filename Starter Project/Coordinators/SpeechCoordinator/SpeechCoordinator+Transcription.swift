@@ -37,7 +37,11 @@ extension SpeechCoordinator {
         // Create a recognition task for the speech recognition session.
         // Keep a reference to the task so that it can be canceled.
         debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventInProgress) Creating Task \(DebuggingIdentifiers.actionOrEventInProgress) .")
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
+        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { [weak self] result, error in
+            guard let self = self, self.recognitionTask != nil else {
+                debugPrint("\(SpeechCoordinator.identifier) transcribeAudio \(DebuggingIdentifiers.actionOrEventFailed) Recognition Task does not exist. Cancelling recognition request")
+                return
+            }
             var isFinal = false
 
             if let result = result {
