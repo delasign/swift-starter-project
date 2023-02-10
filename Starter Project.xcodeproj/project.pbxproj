@@ -29,6 +29,8 @@
 		F00DDDEF287C93B70062AA1E /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = F00DDDEE287C93B70062AA1E /* TinyConstraints */; };
 		F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = F00DDE00287C9B310062AA1E /* .swiftlint.yml */; };
 		F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */; };
+		F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */; };
+		F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */; };
 		F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */; };
 		F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */; };
 		F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */; };
@@ -80,6 +82,8 @@
 		F00DDDDA287C824A0062AA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00DDE00287C9B310062AA1E /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDeviceOrientation.swift; sourceTree = "<group>"; };
+		F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateConstraints.swift; sourceTree = "<group>"; };
+		F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateConstraints.swift; sourceTree = "<group>"; };
 		F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+UI.swift"; sourceTree = "<group>"; };
 		F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Notifications.swift"; sourceTree = "<group>"; };
 		F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Gestures.swift"; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */,
+				F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */,
+				F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */,
 			);
 			path = Constraints;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
+				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
@@ -508,6 +515,7 @@
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
+				F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */,
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
