@@ -16,6 +16,8 @@ extension ViewController {
             self.customViewRightConstraint﻿?.constant = -ViewController.safeAreaInsets.right
             self.customViewBottomConstraint﻿?.constant = -ViewController.safeAreaInsets.bottom
             self.customViewLeftConstraint﻿?.constant = ViewController.safeAreaInsets.left
+            // Update Layout Constraints
+            self.customView.updateLayoutConstraints()
 
             self.view.layoutIfNeeded()
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Constraints")

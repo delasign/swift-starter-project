@@ -11,6 +11,7 @@ extension CustomUIView {
     // The setupNotifications function should be the only publically available class in this extension.
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.onSystemUpdatedContent), name: SystemNotifications.onContentUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onOrientationChange), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     // MARK: Notification Setup Functionality
     @objc private func onSystemUpdatedContent(notification: Notification) {
@@ -20,5 +21,10 @@ extension CustomUIView {
         }
         debugPrint("\(CustomUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update with custom notification variable : \(customVariable)")
         self.onContentUpdate()
+    }
+
+    @objc func onOrientationChange() {
+        debugPrint("\(CustomUIView.identifier) onOrientationChange \(DebuggingIdentifiers.notificationRecieved) Recieved On Orientation Change with orientation : \(UIDevice.current.orientation)")
+        self.updateLayoutConstraints()
     }
 }

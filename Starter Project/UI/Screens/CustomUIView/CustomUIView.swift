@@ -13,6 +13,14 @@ class CustomUIView: UIView {
     static let identifier: String = "[CustomUIView]"
     // MARK: UI
     let label: UILabel = Styleguide.createAttributedStyle()
+    let variablePositionLabel: UILabel = Styleguide.createAttributedStyle()
+    // Declare Constraints
+    var variablePositionLabelCenterY: NSLayoutConstraint?
+    var variablePositionLabelCenterX: NSLayoutConstraint?
+    var variablePositionLabelLeftToRightOf: NSLayoutConstraint?
+    var variablePositionLabelRightToLeftOf: NSLayoutConstraint?
+    var variablePositionLabelTopToBottomOf: NSLayoutConstraint?
+    var variablePositionLabelBottomToTopOf: NSLayoutConstraint?
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
@@ -23,6 +31,8 @@ class CustomUIView: UIView {
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = .black
+        // Begin listening for orientation changes
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
