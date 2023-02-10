@@ -18,66 +18,29 @@ extension CustomUIView {
     // updateLayoutConstraints should be called when a view changes orientation or resizes. This function should hold the changes in constraints across breakpoints.
     func updateLayoutConstraints() {
         DispatchQueue.main.async { [weak self] in
-            guard let self = self,
-                  let variablePositionLabelCenterX = self.variablePositionLabelCenterX,
-                  let variablePositionLabelCenterY = self.variablePositionLabelCenterY,
-                  let variablePositionLabelRightToLeftOf = self.variablePositionLabelRightToLeftOf,
-                  let variablePositionLabelLeftToRightOf = self.variablePositionLabelLeftToRightOf,
-                  let variablePositionLabelTopToBottomOf = self.variablePositionLabelTopToBottomOf,
-                  let variablePositionLabelBottomToTopOf = self.variablePositionLabelBottomToTopOf,
-                  let interfaceOrientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
-            else { return}
-
+            guard let self = self else { return}
+            
+            debugPrint("\(CustomUIView.identifier) updateLayoutConstraints  \(DebuggingIdentifiers.actionOrEventInProgress) updateLayoutConstraints \(DebuggingIdentifiers.actionOrEventInProgress)")
+            
             // Disable all constraints
-            [variablePositionLabelCenterX, variablePositionLabelCenterY, variablePositionLabelRightToLeftOf, variablePositionLabelLeftToRightOf, variablePositionLabelTopToBottomOf, variablePositionLabelBottomToTopOf].deActivate()
-            debugPrint("\(CustomUIView.identifier)  \(DebuggingIdentifiers.actionOrEventInProgress) updateLayoutConstraints \(DebuggingIdentifiers.actionOrEventInProgress)")
-
-            var orientation = UIDevice.current.orientation
-            // Initially the orientation is unknown so we need to check based on the application window orientation.
-            if !orientation.isValidInterfaceOrientation {
-                debugPrint("\(CustomUIView.identifier)  \(DebuggingIdentifiers.actionOrEventFailed) Orientation is unknown.")
-                debugPrint("\(CustomUIView.identifier)  \(DebuggingIdentifiers.actionOrEventInProgress) Trying through the window orientation \(interfaceOrientation) \(DebuggingIdentifiers.actionOrEventInProgress)")
-                // Notice that UIDeviceOrientation.landscapeRight is assigned to UIInterfaceOrientation.landscapeLeft and UIDeviceOrientation.landscapeLeft is assigned to UIInterfaceOrientation.landscapeRight. The reason for this is that rotating the device requires rotating the content in the opposite direction.
-                // Reference : https://developer.apple.com/documentation/uikit/uiinterfaceorientation
-                switch interfaceOrientation {
-                case .portrait:
-                    debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setting orientation to portrait.")
-                    orientation = .portrait
-                    break
-                case .landscapeRight:
-                    debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setting orientation to landscape left, as UIDeviceOrientation.landscapeRight is assigned to UIInterfaceOrientation.landscapeLeft.")
-                    orientation = .landscapeLeft
-                    break
-                case .landscapeLeft:
-                    debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setting orientation to landscape right, as UIDeviceOrientation.landscapeLeft is assigned to UIInterfaceOrientation.landscapeRight.")
-                    orientation = .landscapeRight
-                    break
-                case .portraitUpsideDown:
-                    debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setting orientation to portrait upside down.")
-                    orientation = .portraitUpsideDown
-                    break
-                default:
-                    debugPrint("\(CustomUIView.identifier)  \(DebuggingIdentifiers.actionOrEventFailed) Status Bar Orientation is unknown.")
-                    break
-                }
-            }
+            deactivateConstraints(constraints: [self.variablePositionLabelCenterX, self.variablePositionLabelCenterY, self.variablePositionLabelRightToLeftOf, self.variablePositionLabelLeftToRightOf, self.variablePositionLabelTopToBottomOf, self.variablePositionLabelBottomToTopOf])
 
             // Enable the right constraints
-            switch orientation {
+            switch getDeviceOrientation() {
             case .portrait, .faceUp, .faceDown:
                 debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Applied Portrait Constraints.")
-                [variablePositionLabelCenterX, variablePositionLabelTopToBottomOf].activate()
+                activateConstraints(constraints: [self.variablePositionLabelCenterX, self.variablePositionLabelTopToBottomOf])
             case .landscapeRight:
                 debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Applied Landscape Right Constraints.")
-                [variablePositionLabelCenterY, variablePositionLabelRightToLeftOf].activate()
+                activateConstraints(constraints: [self.variablePositionLabelCenterY, self.variablePositionLabelRightToLeftOf])
                 break
             case .landscapeLeft:
                 debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Applied Landscape Left Constraints.")
-                [variablePositionLabelCenterY, variablePositionLabelLeftToRightOf].activate()
+                activateConstraints(constraints: [self.variablePositionLabelCenterY, self.variablePositionLabelLeftToRightOf])
                 break
             case .portraitUpsideDown:
                 debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Applied Portrait Up Side Down Constraints.")
-                [variablePositionLabelCenterX, variablePositionLabelBottomToTopOf].activate()
+                activateConstraints(constraints: [self.variablePositionLabelCenterX, self.variablePositionLabelBottomToTopOf])
                 break
             default:
                 debugPrint("\(CustomUIView.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Failed to apply constraints.")
