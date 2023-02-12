@@ -23,6 +23,8 @@ class CustomUIView: UIView {
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = .black
+        // Listen to Device Orientation Changes
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
