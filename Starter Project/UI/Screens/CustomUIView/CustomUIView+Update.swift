@@ -19,9 +19,9 @@ extension CustomUIView {
     func updateLayoutConstraints() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return}
-            
+
             debugPrint("\(CustomUIView.identifier) updateLayoutConstraints  \(DebuggingIdentifiers.actionOrEventInProgress) updateLayoutConstraints \(DebuggingIdentifiers.actionOrEventInProgress)")
-            
+
             // Disable all constraints
             deactivateConstraints(constraints: [self.variablePositionLabelCenterX, self.variablePositionLabelCenterY, self.variablePositionLabelRightToLeftOf, self.variablePositionLabelLeftToRightOf, self.variablePositionLabelTopToBottomOf, self.variablePositionLabelBottomToTopOf])
 
