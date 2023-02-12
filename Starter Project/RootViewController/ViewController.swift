@@ -34,6 +34,10 @@ class ViewController: UIViewController {
         self.updateConstraints()
     }
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        debugPrint("\(ViewController.identifier) viewWillTransition \(DebuggingIdentifiers.actionOrEventSucceded) transitioned to \(size) and orientation \(getDeviceOrientation())")
+    }
+
     // MARK: Setup Functionality
 
     func setupCoordinators() {
