@@ -24,7 +24,7 @@ extension CustomUIView {
     }
 
     @objc func onOrientationChange() {
-        debugPrint("\(CustomUIView.identifier) onOrientationChange \(DebuggingIdentifiers.notificationRecieved) Recieved On Orientation Change with orientation : \(UIDevice.current.orientation)")
+        debugPrint("\(CustomUIView.identifier) onOrientationChange \(DebuggingIdentifiers.notificationRecieved) Recieved On Orientation Change with orientation : \(getDeviceOrientation())")
         self.updateLayoutConstraints()
     }
 }
