@@ -84,6 +84,7 @@
 		F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDeviceOrientation.swift; sourceTree = "<group>"; };
 		F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateConstraints.swift; sourceTree = "<group>"; };
 		F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateConstraints.swift; sourceTree = "<group>"; };
+		F02E3D1029A29B050097E612 /* Offering.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Offering.storekit; sourceTree = "<group>"; };
 		F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+UI.swift"; sourceTree = "<group>"; };
 		F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Notifications.swift"; sourceTree = "<group>"; };
 		F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Gestures.swift"; sourceTree = "<group>"; };
@@ -223,6 +224,7 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F02E3D0D29A283FA0097E612 /* StoreKit */,
 				F0C79C6B28B2649F00C1DCAF /* API */,
 				F0C79C7228B26B2700C1DCAF /* Configuration */,
 				F00DDDEC287C937B0062AA1E /* States */,
@@ -309,6 +311,14 @@
 				F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */,
 			);
 			path = Orientation;
+			sourceTree = "<group>";
+		};
+		F02E3D0D29A283FA0097E612 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				F02E3D1029A29B050097E612 /* Offering.storekit */,
+			);
+			path = StoreKit;
 			sourceTree = "<group>";
 		};
 		F0397F5B288846E6002AF19B /* Utils */ = {
