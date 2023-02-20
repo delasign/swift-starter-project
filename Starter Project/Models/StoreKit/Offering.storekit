@@ -1,16 +1,92 @@
 {
   "identifier" : "871B5030",
   "nonRenewingSubscriptions" : [
-
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "C00341B2",
+      "localizations" : [
+        {
+          "description" : "Sample Non-Renewing Subscription",
+          "displayName" : "Sample Non-Renewing",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.delasign.samplenonrenewablesubscription",
+      "referenceName" : "Sample Non-Renewing Subscription",
+      "type" : "NonRenewingSubscription"
+    }
   ],
   "products" : [
-
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "ED3B6446",
+      "localizations" : [
+        {
+          "description" : "Sample Non-Consumable Description",
+          "displayName" : "Sample Non-Consumable",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.delasign.samplenonconsumable",
+      "referenceName" : "Sample Non-Consumable",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "DDE64D39",
+      "localizations" : [
+        {
+          "description" : "Sample Consumable Description",
+          "displayName" : "Sample Consumable",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.delasign.sampleconsumable",
+      "referenceName" : "Sample Consumable",
+      "type" : "Consumable"
+    }
   ],
   "settings" : {
 
   },
   "subscriptionGroups" : [
+    {
+      "id" : "9975708C",
+      "localizations" : [
 
+      ],
+      "name" : "Sample Subscription Group",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "A2054BD8",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Sample Auto Renewable Subscription.",
+              "displayName" : "Sample Auto Renewable",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.delasign.sampleautorenewablesubscription",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Sample Auto Renewable Subscription",
+          "subscriptionGroupID" : "9975708C",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
   ],
   "version" : {
     "major" : 2,
