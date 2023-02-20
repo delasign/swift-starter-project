@@ -10,6 +10,11 @@
           "description" : "Sample Non-Renewing Subscription",
           "displayName" : "Sample Non-Renewing",
           "locale" : "en_US"
+        },
+        {
+          "description" : "Muestra de una descripcion.",
+          "displayName" : "Muestra de una compra",
+          "locale" : "es_ES"
         }
       ],
       "productID" : "com.delasign.samplenonrenewablesubscription",
@@ -27,6 +32,11 @@
           "description" : "Sample Non-Consumable Description",
           "displayName" : "Sample Non-Consumable",
           "locale" : "en_US"
+        },
+        {
+          "description" : "Muestra de una descripcion.",
+          "displayName" : "Muestra de un consumible",
+          "locale" : "es_ES"
         }
       ],
       "productID" : "com.delasign.samplenonconsumable",
@@ -42,6 +52,11 @@
           "description" : "Sample Consumable Description",
           "displayName" : "Sample Consumable",
           "locale" : "en_US"
+        },
+        {
+          "description" : "Muestra de una descripcion.",
+          "displayName" : "Muestra de un consumible",
+          "locale" : "es_ES"
         }
       ],
       "productID" : "com.delasign.sampleconsumable",
@@ -77,6 +92,11 @@
               "description" : "Sample Auto Renewable Subscription.",
               "displayName" : "Sample Auto Renewable",
               "locale" : "en_US"
+            },
+            {
+              "description" : "Muestra de una descripcion.",
+              "displayName" : "Muestra de una Subscripcion",
+              "locale" : "es_ES"
             }
           ],
           "productID" : "com.delasign.sampleautorenewablesubscription",
