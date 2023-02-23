@@ -38,6 +38,8 @@ class ViewController: UIViewController {
 
     func setupCoordinators() {
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Setting Up Coordinators.")
+        // StoreKit Coordinator
+        StoreKitCoordinator.shared.initialize()
         // DataCoordinator
         DataCoordinator.shared.initialize()
         // LanguageCoordinator

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Sample Non-Consumable</key>
+	<string>com.delasign.samplenonconsumable</string>
+	<key>Sample Consumable</key>
+	<string>com.delasign.sampleconsumable</string>
+	<key>Sample Non-Renewing Subscription</key>
+	<string>com.delasign.samplenonrenewablesubscription</string>
+	<key>Sample Auto Renewable Subscription</key>
+	<string>com.delasign.sampleautorenewablesubscription</string>
+	<key>Sample Tier 2 Auto Renewable Subscription</key>
+	<string>com.delasign.sampleautorenewablesubscriptiontier2</string>
+</dict>
+</plist>

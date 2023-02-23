@@ -20,6 +20,7 @@ class Configuration: NSObject {
     // MARK: Lifecycle
 
     func initialize() {
+        debugPrint("\(Configuration.identifier) initialize \(DebuggingIdentifiers.actionOrEventInProgress) Initializing... \(DebuggingIdentifiers.actionOrEventInProgress)")
         if let plist = getPlist() {
             self.dictionary = plist
             debugPrint("\(Configuration.identifier) initialize \(DebuggingIdentifiers.actionOrEventSucceded) Succesfully initialized.")
