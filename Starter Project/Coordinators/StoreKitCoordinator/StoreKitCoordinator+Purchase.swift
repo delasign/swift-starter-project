@@ -26,7 +26,7 @@ extension StoreKitCoordinator {
             debugPrint("\(StoreKitCoordinator.identifier) purchase \(DebuggingIdentifiers.actionOrEventInProgress) Updating Product status... \(DebuggingIdentifiers.actionOrEventInProgress)")
             await updateCustomerProductStatus()
             debugPrint("\(StoreKitCoordinator.identifier) purchase \(DebuggingIdentifiers.actionOrEventSucceded) Updated product status.")
-            // Always finish a transaction.
+            // Always finish a transaction - This removes transactions from the queue and it tells Apple that the customer has recieved their items or service.
             await transaction.finish()
             debugPrint("\(StoreKitCoordinator.identifier) purchase \(DebuggingIdentifiers.actionOrEventSucceded) Finished transaction.")
             return transaction

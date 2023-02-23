@@ -22,7 +22,7 @@ extension StoreKitCoordinator {
                     // Deliver products to the user.
                     await self.updateCustomerProductStatus()
                     debugPrint("\(StoreKitCoordinator.identifier) listenForTransactions \(DebuggingIdentifiers.actionOrEventSucceded) Updated Customer Product Status.")
-                    // Always finish a transaction.
+                    // Always finish a transaction - This removes transactions from the queue and it tells Apple that the customer has recieved their items or service.
                     await transaction.finish()
                     debugPrint("\(StoreKitCoordinator.identifier) listenForTransactions \(DebuggingIdentifiers.actionOrEventSucceded) Finished Transaction.")
                 } catch {
