@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension CustomUIView {
+extension Landing {
     // MARK: Sample Update Functionality
     // onStateUpdate should be called when changing a view based on its state.
     func onStateUpdate() {
@@ -26,11 +26,14 @@ extension CustomUIView {
     func onContentUpdate() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self, let currentContent = LanguageCoordinator.shared.currentContent else {
-                debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
+                debugPrint("\(Landing.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
                 return
             }
-            self.label.attributedText = Styleguide.attributedText(text: currentContent.sample.sampleString)
-            debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
+            let colors = Styleguide.colors
+            self.tutorialLabel.attributedText = Styleguide.attributedHeaderText(text: currentContent.landing.tutorialLabel)
+            self.startButton.title.attributedText = Styleguide.attributedProductButtonText(text: currentContent.landing.start, color: colors.black)
+            self.visitOurBlogButton.title.attributedText = Styleguide.attributedProductButtonText(text: currentContent.landing.visitOurBlog, color: colors.white)
+            debugPrint("\(Landing.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }
 

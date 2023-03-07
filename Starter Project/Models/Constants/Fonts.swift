@@ -10,4 +10,5 @@ import UIKit
 
 struct Fonts {
     let HelveticaNeue: String = "HelveticaNeue"
+    let HelveticaNeueBold: String = "HelveticaNeue-Bold"
 }

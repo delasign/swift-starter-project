@@ -50,6 +50,9 @@
             ReferencedContainer = "container:Starter Project.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../../Starter Project/Models/StoreKit/Offering.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

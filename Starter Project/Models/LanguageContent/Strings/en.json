@@ -1,5 +1,48 @@
 {
-    "sample": {
-        "sampleString": "A sample string"
+    "shared": {
+        "consumables": "Consumable",
+        "nonConsumables": "Non-Consumable",
+        "nonRenewingSubscriptions": "Non-Renewing Subscription",
+        "autoRenewingSubscriptions": "Auto-Renewable Subscription",
+        "individualPlans": "Individual Plans",
+        "familyPlans": "Family Plans"
+    },
+    "landing": {
+        "tutorialLabel": "StoreKit\nTutorial",
+        "visitOurBlog": "Visit our Blog",
+        "start": "Start"
+    },
+    "offering": {
+        "header": "Store",
+        "redeemOfferCode": "Redeem Offer Code",
+        "requestARefund": "Request a Refund",
+        "restorePurchasesPrompt": "Is Stuff Missing?",
+        "restorePurchases": "Restore Purchases"
+    },
+    "refund": {
+        "header": "Request Refunds"
+    },
+    "productTile": {
+         "stock": "Stock",
+         "nonRenewingActiveUntil": "Non-Renewing Subscription active until ",
+         "autoRenewableRenewsOn": "Auto-Renewable Subscription renews on ",
+         "manageSubscription": "Manage Subscription",
+         "autoRenewableWillExpire": "Auto-Renewable Subscription will expire on ",
+         "autoRenewableWillExpireMessage": ". Activate your subscription to maintain access.",
+         "autoRenewableGracePeriod": "Auto-Renewable Subscription is in grace period and will expire on ",
+         "autoRenewableGracePeriodMessage": ". Pay for your subscription to maintain access.",
+         "claimOffer": "Claim Offer"
+    },
+    "purchaseButton": {
+        "get": "Get",
+        "refund": "Refund"
+    },
+    "notifications": {
+         "success": "You have successfully purchased",
+         "pendingPrefix": "The purchase of ",
+         "pendingSuffix": " is pending.",
+         "failedPrefix": "Failed to purchase ",
+         "failedSuffix": ".\nPlease try again.",
+         "refund": "We have requested a refund."
     }
 }

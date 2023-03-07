@@ -1,5 +1,48 @@
 {
-    "sample": {
-        "sampleString": "Una muestra de un string"
+    "shared": {
+        "consumables": "[ES] Consumable",
+        "nonConsumables": "[ES] Non-Consumable",
+        "nonRenewingSubscriptions": "[ES] Non-Renewing Subscription",
+        "autoRenewingSubscriptions": "[ES] Auto-Renewable Subscription",
+        "individualPlans": "[ES] Individual Plans",
+        "familyPlans": "[ES] Family Plans"
+    },
+    "landing": {
+        "tutorialLabel": "[ES] StoreKit\nTutorial",
+        "visitOurBlog": "[ES] Visit our Blog",
+        "start": "[ES] Start"
+    },
+    "offering": {
+        "header": "[ES] Store",
+        "redeemOfferCode": "[ES] Redeem Offer Code",
+        "requestARefund": "[ES] Request a Refund",
+        "restorePurchasesPrompt": "[ES] Is Stuff Missing?",
+        "restorePurchases": "[ES] Restore Purchases"
+    },
+    "refund": {
+        "header": "[ES] Request Refunds"
+    },
+    "productTile": {
+         "stock": "[ES] Stock",
+         "nonRenewingActiveUntil": "[ES] Non-Renewing Subscription active until ",
+         "autoRenewableRenewsOn": "[ES] Auto-Renewable Subscription renews on ",
+         "manageSubscription": "[ES] Manage Subscription",
+         "autoRenewableWillExpire": "[ES] Auto-Renewable Subscription will expire on ",
+         "autoRenewableWillExpireMessage": "[ES] . Activate your subscription to maintain access.",
+         "autoRenewableGracePeriod": "[ES] Auto-Renewable Subscription is in grace period and will expire on ",
+         "autoRenewableGracePeriodMessage": "[ES] . Pay for your subscription to maintain access.",
+         "claimOffer": "[ES] Claim Offer"
+    },
+    "purchaseButton": {
+        "get": "[ES] Get",
+        "refund": "[ES] Refund"
+    },
+    "notifications": {
+         "success": "[ES] You have successfully purchased",
+         "pendingPrefix": "[ES] The purchase of ",
+         "pendingSuffix": "[ES]  is pending.",
+         "failedPrefix": "[ES] Failed to purchase ",
+         "failedSuffix": "[ES] .\nPlease try again.",
+         "refund": "[ES] We have requested a refund."
     }
 }

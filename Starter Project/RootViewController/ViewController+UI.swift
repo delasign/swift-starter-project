@@ -20,13 +20,13 @@ extension ViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Add to subview
-            self.view.addSubview(self.customView)
+            self.view.addSubview(self.landing)
             // Edges to Superview, with Safe Area Insets
-            self.customViewTopConstraint﻿ = self.customView.top(to: self.view, offset: ViewController.safeAreaInsets.top)
-            self.customViewRightConstraint﻿ = self.customView.right(to: self.view, offset: -ViewController.safeAreaInsets.right)
-            self.customViewBottomConstraint﻿ = self.customView.bottom(to: self.view, offset: -ViewController.safeAreaInsets.bottom)
-            self.customViewLeftConstraint﻿ = self.customView.left(to: self.view, offset: ViewController.safeAreaInsets.left)
-            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup Custom View!")
+            self.landingTopConstraint﻿ = self.landing.top(to: self.view, offset: ViewController.safeAreaInsets.top)
+            self.landingRightConstraint﻿ = self.landing.right(to: self.view, offset: -ViewController.safeAreaInsets.right)
+            self.landingBottomConstraint﻿ = self.landing.bottom(to: self.view, offset: -ViewController.safeAreaInsets.bottom)
+            self.landingLeftConstraint﻿ = self.landing.left(to: self.view, offset: ViewController.safeAreaInsets.left)
+            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup landing!")
         }
     }
 }

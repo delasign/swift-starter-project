@@ -8,6 +8,14 @@
 import Foundation
 import UIKit
 
-struct SampleImages {
-    static let placeholder: String = "SudoImage"
+struct Images {
+    static let sudoImage: String = "SudoImage"
+    static let logo: String = "Logo"
+    // Symbols
+    static let back: String = "Back"
+    static let exit: String = "Exit"
+    static let pending: String = "Pending"
+    static let retry: String = "Retry"
+    static let success: String = "Success"
+    static let warning: String = "Warning"
 }

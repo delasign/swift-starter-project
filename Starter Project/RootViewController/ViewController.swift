@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     static let identifier: String = "[ViewController]"
     static var safeAreaInsets: UIEdgeInsets = .zero
     // MARK: UI
-    let customView: CustomUIView = CustomUIView()
-    var customViewTopConstraint﻿: NSLayoutConstraint?
-    var customViewRightConstraint﻿: NSLayoutConstraint?
-    var customViewBottomConstraint﻿: NSLayoutConstraint?
-    var customViewLeftConstraint﻿: NSLayoutConstraint?
+    let landing: Landing = Landing()
+    var landingTopConstraint﻿: NSLayoutConstraint?
+    var landingRightConstraint﻿: NSLayoutConstraint?
+    var landingBottomConstraint﻿: NSLayoutConstraint?
+    var landingLeftConstraint﻿: NSLayoutConstraint?
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,6 @@ class ViewController: UIViewController {
         ViewController.safeAreaInsets = self.view.safeAreaInsets
         self.setupCoordinators()
         self.setupUI()
-        getDeviceOrientation()
     }
 
     override func viewSafeAreaInsetsDidChange() {
@@ -51,14 +50,15 @@ class ViewController: UIViewController {
             }
             // Carry out your content update functionality here.
             // This can range from refreshing your application or could be used to send a notification to complete specific updates at chosen locations within your application.
-            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) content sample : \(currentContent.sample)")
+            ///
             // Send the Notification
-            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.notificationSent) Sent OnContentUpdate!")
+
             NotificationCenter.default.post(
                 name: SystemNotifications.onContentUpdate,
                 object: nil,
-                userInfo: ["customVariable": currentContent.sample.sampleString]
+                userInfo: nil
             )
+            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.notificationSent) Sent OnContentUpdate!")
 
         }
     }
