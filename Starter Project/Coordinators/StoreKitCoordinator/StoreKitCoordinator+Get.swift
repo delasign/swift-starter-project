@@ -56,6 +56,7 @@ extension StoreKitCoordinator {
             nonRenewables = sortByPrice(newNonRenewables)
 
             debugPrint("\(StoreKitCoordinator.identifier) requestProducts \(DebuggingIdentifiers.actionOrEventSucceded) Completed updating available Products.")
+            NotificationCenter.default.post(name: SystemNotifications.onStoreKitUpdate, object: nil)
 
         } catch {
             debugPrint("\(StoreKitCoordinator.identifier) requestProducts \(DebuggingIdentifiers.actionOrEventFailed) Failed product request from the App Store server: \(error).")

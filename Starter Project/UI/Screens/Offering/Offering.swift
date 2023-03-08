@@ -13,6 +13,18 @@ class Offering: UIView {
     static let identifier: String = "[Offering]"
     // MARK: UI
     let header: UILabel = Styleguide.createAttributedHeader()
+
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = kPadding
+        layout.minimumInteritemSpacing = kPadding
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+
+        return collectionView
+    }()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {

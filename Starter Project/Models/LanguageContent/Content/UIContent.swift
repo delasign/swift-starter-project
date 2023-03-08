@@ -61,6 +61,8 @@ struct UIContent: Codable {
     struct PurchaseButton: Codable {
         let get: String
         let refund: String
+        let missing: String
+        let error: String
     }
 
     let purchaseButton: PurchaseButton

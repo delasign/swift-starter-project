@@ -35,7 +35,9 @@
     },
     "purchaseButton": {
         "get": "Get",
-        "refund": "Refund"
+        "refund": "Refund",
+        "missing": "MISSING",
+        "error": "ERROR"
     },
     "notifications": {
          "success": "You have successfully purchased",
