@@ -14,17 +14,21 @@ extension NavigationButton {
     func onStateUpdate() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            let imageName: String
             switch ViewController.experienceState {
             case .landing:
                 // Do Nothing, it will be animated out
+                imageName = ""
                 break
             case .offering:
-                self.symbol.image = UIImage(named: Images.back)
+                imageName = Images.back
+
                 break
             case .refund:
-                self.symbol.image = UIImage(named: Images.exit)
+                imageName = Images.exit
                 break
             }
+            self.symbol.image = UIImage(named: imageName)?.withRenderingMode(.alwaysTemplate)
         }
     }
 }

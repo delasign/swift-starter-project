@@ -24,15 +24,17 @@ extension NavigationHeader {
             guard let self = self, let currentContent = LanguageCoordinator.shared.currentContent else {
                 return
             }
+            let copy: String
             switch ViewController.experienceState {
             case .landing, .offering:
                 // If Landing, Prep for Offering
-                self.header.attributedText = Styleguide.attributedHeaderText(text: currentContent.offering.header)
+                copy = currentContent.offering.header
                 break
             case .refund:
-                self.header.attributedText = Styleguide.attributedHeaderText(text: currentContent.refund.header)
+                copy = currentContent.refund.header
                 break
             }
+            self.header.attributedText = Styleguide.attributedHeaderText(text: copy)
             self.header.sizeToFit()
         }
     }
