@@ -119,9 +119,9 @@ extension Offering: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(
             top: 130,
-            left: 0,
+            left: kPadding,
             bottom: kPadding,
-            right: 0
+            right: kPadding
         )
     }
 
