@@ -1,13 +1,14 @@
 //
-//  Button+Touches.swift
+//  NavigationButton+Touches.swift
 //  Starter Project
 //
-//  Created by Oscar de la Hera Gomez on 7/18/22.
+//  Created by Oscar de la Hera Gomez on 3/8/23.
+//
 
 import Foundation
 import UIKit
 
-extension Button {
+extension NavigationButton {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // Code your custom touches began functionality
         onTouchdownAnimation()

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 extension Landing {
     // The setupNotifications function should be the only publically available class in this extension.
     func setupNotifications() {

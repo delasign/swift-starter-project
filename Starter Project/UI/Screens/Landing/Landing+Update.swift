@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension Landing {
-    // MARK: Sample Update Functionality
+
     // onStateUpdate should be called when changing a view based on its state.
     func onStateUpdate() {
 

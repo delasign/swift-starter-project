@@ -9,6 +9,11 @@ import Foundation
 import UIKit
 import AVKit
 
+// Visual Constants
 let kPadding: CGFloat = 20
 let kButtonDimension: CGFloat = 60
 let kAnimationTime: TimeInterval = 0.67
+// Notification Constants
+let kExperienceStateUserInfo: String = "experienceState"
+// Other
+let kdelasignBlogURL: String = "https://www.delasign.com/blog/"

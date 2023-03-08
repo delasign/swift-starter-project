@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ExperienceStates {
+enum ExperienceStates: CaseIterable {
     case landing
     case offering
     case refund

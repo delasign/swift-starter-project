@@ -1,21 +1,18 @@
 //
-//  CustomUIView.swift
+//  Offering.swift
 //  Starter Project
 //
-//  Created by Oscar de la Hera Gomez on 7/18/22.
+//  Created by Oscar de la Hera Gomez on 3/7/23.
 //
 
 import Foundation
 import UIKit
 
-class Landing: UIView {
+class Offering: UIView {
     // MARK: Variables
-    static let identifier: String = "[Landing]"
+    static let identifier: String = "[Offering]"
     // MARK: UI
-    let tutorialLabel: UILabel = Styleguide.createAttributedHeader()
-    let logo: UIImageView = UIImageView(image: UIImage(named: Images.logo))
-    let visitOurBlogButton: Button = Button(type: .primary)
-    let startButton: Button = Button(type: .secondary)
+    let header: UILabel = Styleguide.createAttributedHeader()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {

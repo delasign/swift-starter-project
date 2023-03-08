@@ -1,21 +1,21 @@
 //
-//  CustomUIView.swift
+//  NavigationHeader.swift
 //  Starter Project
 //
-//  Created by Oscar de la Hera Gomez on 7/18/22.
+//  Created by Oscar de la Hera Gomez on 3/8/23.
 //
 
 import Foundation
 import UIKit
 
-class Landing: UIView {
+class NavigationHeader: UIView {
     // MARK: Variables
-    static let identifier: String = "[Landing]"
+    static let identifier: String = "[NavigationHeader]"
     // MARK: UI
-    let tutorialLabel: UILabel = Styleguide.createAttributedHeader()
-    let logo: UIImageView = UIImageView(image: UIImage(named: Images.logo))
-    let visitOurBlogButton: Button = Button(type: .primary)
-    let startButton: Button = Button(type: .secondary)
+    let button: NavigationButton = NavigationButton()
+    let header: UILabel = Styleguide.createAttributedHeader()
+    // MARK: Callbacks
+    var onRelease: (() -> Void)?
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
@@ -25,6 +25,7 @@ class Landing: UIView {
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = Styleguide.colors.white
+        self.layer.cornerRadius = kPadding
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
