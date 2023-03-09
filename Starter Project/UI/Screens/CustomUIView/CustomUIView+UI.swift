@@ -31,6 +31,9 @@ extension CustomUIView {
             self.button.onRelease = { [weak self] in
                 guard let _ = self else { return }
                 debugPrint("\(CustomButton.identifier) setupButton \(DebuggingIdentifiers.actionOrEventSucceded) user tapped the button!")
+                if let url = URL(string: kDelasignBlogURL) {
+                    UIApplication.shared.open(url)
+                }
             }
         }
     }
