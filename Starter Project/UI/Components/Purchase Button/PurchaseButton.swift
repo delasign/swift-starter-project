@@ -33,8 +33,8 @@ class PurchaseButton: UIView {
 
     }
 
-    convenience init(type: PurchaseButtonType, product: Product? = nil) {
-        self.init(frame: .zero)
+    func configure(type: PurchaseButtonType, product: Product? = nil) {
+        removeAllViews()
         self.type = type
         if let product = product {
             self.product = product

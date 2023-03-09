@@ -103,6 +103,8 @@
 		F0DD143529B8E63F003122C8 /* PurchaseButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD143429B8E63F003122C8 /* PurchaseButton+Animations.swift */; };
 		F0DD143729B8EAAA003122C8 /* PurchaseButton+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD143629B8EAAA003122C8 /* PurchaseButton+Touches.swift */; };
 		F0DD143929B8F317003122C8 /* OfferingSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD143829B8F317003122C8 /* OfferingSections.swift */; };
+		F0DD144429BA121D003122C8 /* ProductTile+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD144329BA121D003122C8 /* ProductTile+Update.swift */; };
+		F0DD144729BA12E7003122C8 /* RemoveAllViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD144629BA12E7003122C8 /* RemoveAllViews.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +207,8 @@
 		F0DD143429B8E63F003122C8 /* PurchaseButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseButton+Animations.swift"; sourceTree = "<group>"; };
 		F0DD143629B8EAAA003122C8 /* PurchaseButton+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PurchaseButton+Touches.swift"; sourceTree = "<group>"; };
 		F0DD143829B8F317003122C8 /* OfferingSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingSections.swift; sourceTree = "<group>"; };
+		F0DD144329BA121D003122C8 /* ProductTile+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductTile+Update.swift"; sourceTree = "<group>"; };
+		F0DD144629BA12E7003122C8 /* RemoveAllViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAllViews.swift; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -438,6 +442,7 @@
 		F0397F5B288846E6002AF19B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F0DD144529BA12DE003122C8 /* UIView */,
 				F062230D29A660AE00B04939 /* StoreKit */,
 				F02DBF042996C99E00A49E88 /* Orientation */,
 				F0397F6528885D96002AF19B /* Constraints */,
@@ -621,6 +626,7 @@
 			children = (
 				F0DD142529B8D465003122C8 /* ProductTile.swift */,
 				F0DD142729B8D4F9003122C8 /* ProductTile+UI.swift */,
+				F0DD144329BA121D003122C8 /* ProductTile+Update.swift */,
 			);
 			path = "Product Tile";
 			sourceTree = "<group>";
@@ -635,6 +641,14 @@
 				F0DD143429B8E63F003122C8 /* PurchaseButton+Animations.swift */,
 			);
 			path = "Purchase Button";
+			sourceTree = "<group>";
+		};
+		F0DD144529BA12DE003122C8 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F0DD144629BA12E7003122C8 /* RemoveAllViews.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -774,6 +788,7 @@
 				F0DD140729B8AFD1003122C8 /* Refund+UI.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
+				F0DD144429BA121D003122C8 /* ProductTile+Update.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* Landing.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F07F31B329B79AD700E94DDD /* Refund.swift in Sources */,
@@ -786,6 +801,7 @@
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F07F319F29B791E600E94DDD /* Styleguide+ProductButton.swift in Sources */,
+				F0DD144729BA12E7003122C8 /* RemoveAllViews.swift in Sources */,
 				F0DD142129B8C66D003122C8 /* ViewController+Notifications.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F062231F29A66A1000B04939 /* StoreKitCoordinator+Get.swift in Sources */,

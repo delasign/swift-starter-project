@@ -110,7 +110,7 @@ extension Offering: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
         //        }
 
         // Return the size
-        return CGSize(width: collectionViewFrame.width, height: 200)
+        return CGSize(width: collectionViewFrame.width - 2 * kPadding, height: 1)
     }
 
     /*
@@ -118,7 +118,7 @@ extension Offering: UICollectionViewDelegateFlowLayout, UICollectionViewDataSour
      */
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(
-            top: 130,
+            top: section == 0 ? 130 : kPadding,
             left: kPadding,
             bottom: kPadding,
             right: kPadding

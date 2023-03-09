@@ -19,6 +19,7 @@ class Offering: UIView {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = kPadding
         layout.minimumInteritemSpacing = kPadding
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white

@@ -119,9 +119,14 @@
           "introductoryOffer" : null,
           "localizations" : [
             {
-              "description" : "",
-              "displayName" : "",
+              "description" : "Sample Tier 2 Auto Renewable Description",
+              "displayName" : "Sample Tier 2 Auto Renewable",
               "locale" : "en_US"
+            },
+            {
+              "description" : "Descripcion de una Subscripcion II",
+              "displayName" : "Muestra de una Subscripcion II",
+              "locale" : "es_ES"
             }
           ],
           "productID" : "com.delasign.sampleautorenewablesubscriptiontier2",
