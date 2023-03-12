@@ -16,7 +16,7 @@ class CustomUIView: UIView {
     }
     // MARK: UI
     var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
+    var dataSource: UICollectionViewDiffableDataSource<Sections, Int>!
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
