@@ -29,7 +29,8 @@ extension CustomUIView {
                 debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
                 return
             }
-            self.label.attributedText = Styleguide.attributedText(text: currentContent.sample.sampleString)
+            // Reload the data of the collectionview in order to be able to access the labels.
+            self.collectionView.reloadData()
             debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }

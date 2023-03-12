@@ -54,8 +54,7 @@ class ViewController: UIViewController {
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.notificationSent) Sent OnContentUpdate!")
             NotificationCenter.default.post(
                 name: SystemNotifications.onContentUpdate,
-                object: nil,
-                userInfo: ["customVariable": currentContent.sample.sampleString]
+                object: nil
             )
 
         }

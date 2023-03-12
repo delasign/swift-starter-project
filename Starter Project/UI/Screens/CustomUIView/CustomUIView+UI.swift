@@ -13,15 +13,25 @@ extension CustomUIView {
     // The setupUI function should be the only publically available class in this extension.
     // This can be called refreshUI if your app removes and adds content periodically.
     func setupUI() {
-        self.setupLabel()
+        self.setupCollectionView()
     }
 
     // MARK: UI Setup Functionality
-    private func setupLabel() {
+    private func setupCollectionView() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.addSubview(self.label)
-            self.label.centerInSuperview()
+            // Add the UICollectionView to the View
+            self.addSubview(self.collectionView)
+            // Setup the constraints
+            self.collectionView.top(to: self)
+            self.collectionView.left(to: self, offset: kPadding)
+            self.collectionView.right(to: self, offset: -kPadding)
+            self.collectionView.bottom(to: self)
+            // Register the cells
+            self.collectionView.register(DynamicLabelCell﻿.self, forCellWithReuseIdentifier: DynamicLabelCell﻿.identifier)
+            // Set the delegate & datasource
+            self.collectionView.delegate = self
+            self.collectionView.dataSource = self
         }
     }
 

@@ -56,6 +56,10 @@
 		F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7B28B35BC500C1DCAF /* APIClient.swift */; };
 		F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C8D28BA8EEC00C1DCAF /* APIRequestHeader.swift */; };
 		F0DD144A29BA1688003122C8 /* RemoveAllViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD144929BA1688003122C8 /* RemoveAllViews.swift */; };
+		F0DD144D29BDFAD0003122C8 /* DynamicLabelCell﻿.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD144C29BDFAD0003122C8 /* DynamicLabelCell﻿.swift */; };
+		F0DD145129BDFD31003122C8 /* DynamicLabelCell﻿+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD145029BDFD31003122C8 /* DynamicLabelCell﻿+UI.swift */; };
+		F0DD145329BE020C003122C8 /* DynamicLabelCell﻿+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD145229BE020C003122C8 /* DynamicLabelCell﻿+Update.swift */; };
+		F0DD145529BE053E003122C8 /* CustomUIView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD145429BE053E003122C8 /* CustomUIView+CollectionView.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +114,10 @@
 		F0C79C7B28B35BC500C1DCAF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F0C79C8D28BA8EEC00C1DCAF /* APIRequestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHeader.swift; sourceTree = "<group>"; };
 		F0DD144929BA1688003122C8 /* RemoveAllViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAllViews.swift; sourceTree = "<group>"; };
+		F0DD144C29BDFAD0003122C8 /* DynamicLabelCell﻿.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicLabelCell﻿.swift"; sourceTree = "<group>"; };
+		F0DD145029BDFD31003122C8 /* DynamicLabelCell﻿+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicLabelCell﻿+UI.swift"; sourceTree = "<group>"; };
+		F0DD145229BE020C003122C8 /* DynamicLabelCell﻿+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicLabelCell﻿+Update.swift"; sourceTree = "<group>"; };
+		F0DD145429BE053E003122C8 /* CustomUIView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+CollectionView.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +139,7 @@
 				F008F4D92885BA8D00E4841B /* CustomUIView.swift */,
 				F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */,
 				F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */,
+				F0DD145429BE053E003122C8 /* CustomUIView+CollectionView.swift */,
 				F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */,
 				F0397F512885EEAD002AF19B /* CustomUIView+Touches.swift */,
 				F0397F532885EEB5002AF19B /* CustomUIView+Animations.swift */,
@@ -255,6 +264,7 @@
 		F00DDDE4287C82C50062AA1E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F0DD144B29BDFABD003122C8 /* DynamicLabelCell﻿ */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -414,6 +424,16 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		F0DD144B29BDFABD003122C8 /* DynamicLabelCell﻿ */ = {
+			isa = PBXGroup;
+			children = (
+				F0DD144C29BDFAD0003122C8 /* DynamicLabelCell﻿.swift */,
+				F0DD145029BDFD31003122C8 /* DynamicLabelCell﻿+UI.swift */,
+				F0DD145229BE020C003122C8 /* DynamicLabelCell﻿+Update.swift */,
+			);
+			path = "DynamicLabelCell﻿";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -529,6 +549,7 @@
 				F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */,
 				F0DD144A29BA1688003122C8 /* RemoveAllViews.swift in Sources */,
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
+				F0DD144D29BDFAD0003122C8 /* DynamicLabelCell﻿.swift in Sources */,
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
 				F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */,
@@ -542,16 +563,19 @@
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
+				F0DD145129BDFD31003122C8 /* DynamicLabelCell﻿+UI.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
+				F0DD145529BE053E003122C8 /* CustomUIView+CollectionView.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
 				F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 				F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
+				F0DD145329BE020C003122C8 /* DynamicLabelCell﻿+Update.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
