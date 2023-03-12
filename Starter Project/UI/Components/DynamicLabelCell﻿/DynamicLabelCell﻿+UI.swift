@@ -38,7 +38,7 @@ extension DynamicLabelCell﻿ {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.contentView.addSubview(self.labelII)
-            self.labelII.topToBottom(of: self.labelI, offset: kPadding)
+            self.labelIITopConstraint = self.labelII.topToBottom(of: self.labelI, offset: kPadding)
             self.labelII.left(to: self.contentView, offset: kPadding)
             self.labelII.right(to: self.contentView, offset: -kPadding)
         }
@@ -48,9 +48,10 @@ extension DynamicLabelCell﻿ {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.contentView.addSubview(self.labelIII)
-            self.labelIII.topToBottom(of: self.labelII, offset: kPadding)
+            self.labelIIITopConstraint = self.labelIII.topToBottom(of: self.labelII, offset: kPadding)
             self.labelIII.left(to: self.contentView, offset: kPadding)
             self.labelIII.right(to: self.contentView, offset: -kPadding)
+            self.labelIII.bottom(to: self.contentView, offset: -kPadding)
         }
     }
 }

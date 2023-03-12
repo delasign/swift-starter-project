@@ -18,21 +18,17 @@ extension CustomUIView {
 
     // MARK: UI Setup Functionality
     private func setupCollectionView() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            // Add the UICollectionView to the View
-            self.addSubview(self.collectionView)
-            // Setup the constraints
-            self.collectionView.top(to: self)
-            self.collectionView.left(to: self, offset: kPadding)
-            self.collectionView.right(to: self, offset: -kPadding)
-            self.collectionView.bottom(to: self)
-            // Register the cells
-            self.collectionView.register(DynamicLabelCell﻿.self, forCellWithReuseIdentifier: DynamicLabelCell﻿.identifier)
-            // Set the delegate & datasource
-            self.collectionView.delegate = self
-            self.collectionView.dataSource = self
-        }
+        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createLayout())
+        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.collectionView.backgroundColor = Styleguide.colors.white
+        // Add the UICollectionView to the View
+        self.addSubview(self.collectionView)
+        // Setup the constraints
+        self.collectionView.top(to: self)
+        self.collectionView.left(to: self, offset: kPadding)
+        self.collectionView.right(to: self, offset: -kPadding)
+        self.collectionView.bottom(to: self)
+        // Register the cells
+        self.collectionView?.register(DynamicLabelCell﻿.self, forCellWithReuseIdentifier: DynamicLabelCell﻿.identifier)
     }
-
 }

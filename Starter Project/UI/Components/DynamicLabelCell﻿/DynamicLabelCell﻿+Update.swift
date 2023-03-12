@@ -15,12 +15,21 @@ extension DynamicLabelCell﻿ {
     func update(labelI: String, labelII: String, labelIII: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
+            // Update labels + size to fit
             self.labelI.attributedText = Styleguide.attributedText(text: labelI)
             self.labelI.sizeToFit()
+
             self.labelII.attributedText = Styleguide.attributedText(text: labelII)
             self.labelII.sizeToFit()
+
             self.labelIII.attributedText = Styleguide.attributedText(text: labelIII)
             self.labelIII.sizeToFit()
+
+            // Update constraints + layout
+            self.labelIITopConstraint?.constant = labelII == "" ? 0 : kPadding
+            self.labelIIITopConstraint?.constant = labelIII == "" ? 0 : kPadding
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
         }
     }
 }

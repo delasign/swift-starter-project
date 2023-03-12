@@ -26,12 +26,12 @@ extension Styleguide {
     static func attributedText(text: String) -> NSMutableAttributedString {
         // Paragraph Style
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .center
+        paragraphStyle.alignment = .left
         paragraphStyle.lineSpacing = 1
         // Attributed Text
         let attributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.foregroundColor: Styleguide.colors.white,
-            NSAttributedString.Key.font: UIFont(name: fonts.HelveticaNeue, size: 28) ?? "",
+            NSAttributedString.Key.foregroundColor: Styleguide.colors.black,
+            NSAttributedString.Key.font: UIFont(name: fonts.HelveticaNeue, size: 12) ?? "",
             NSAttributedString.Key.paragraphStyle: paragraphStyle
         ]
         return NSMutableAttributedString(string: text, attributes: attributes)
