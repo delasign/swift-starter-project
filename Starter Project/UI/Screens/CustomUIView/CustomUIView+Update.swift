@@ -30,7 +30,6 @@ extension CustomUIView {
                 return
             }
             // Reload the data of the collectionview in order to be able to access the labels.
-            //            self.collectionView.reloadData()
             self.collectionView.collectionViewLayout.invalidateLayout()
             debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }

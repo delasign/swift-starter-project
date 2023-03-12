@@ -139,6 +139,7 @@
 				F008F4D92885BA8D00E4841B /* CustomUIView.swift */,
 				F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */,
 				F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */,
+				F0DD145429BE053E003122C8 /* CustomUIView+CollectionView.swift */,
 				F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */,
 				F0397F512885EEAD002AF19B /* CustomUIView+Touches.swift */,
 				F0397F532885EEB5002AF19B /* CustomUIView+Animations.swift */,
@@ -271,7 +272,6 @@
 		F00DDDE5287C82D00062AA1E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				F0DD145429BE053E003122C8 /* CustomUIView+CollectionView.swift */,
 				F0C79C6828B25DD600C1DCAF /* DataCoordinator */,
 				F008FCA6287FA5E200B2495D /* Styleguide */,
 				F0A96624287DFF6E000E5FCD /* LanguageCoordinator */,
