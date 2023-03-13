@@ -1,20 +1,21 @@
 //
-//  CustomUIView+Notifications.swift
+//  DynamicUIView+Notifications.swift
 //  Starter Project
 //
-//  Created by Oscar de la Hera Gomez on 7/18/22.
+//  Created by Oscar de la Hera Gomez on 3/13/23.
 //
 
 import Foundation
-import UIKit
-extension CustomUIView {
+
+extension DynamicUIView {
     // The setupNotifications function should be the only publically available class in this extension.
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.onSystemUpdatedContent), name: SystemNotifications.onContentUpdate, object: nil)
     }
     // MARK: Notification Setup Functionality
     @objc private func onSystemUpdatedContent(notification: Notification) {
-        debugPrint("\(CustomUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update.")
-        self.onContentUpdate()
+        debugPrint("\(DynamicUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update.")
+        // Update View
+        self.update()
     }
 }

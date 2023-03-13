@@ -1,5 +1,7 @@
 {
     "sample": {
-        "sampleString": "Una muestra de un string"
+        "sampleString": "[ES] Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "sampleStringII": "[ES] Sed accumsan quam eget enim interdum, eget suscipit dolor eleifend.",
+        "sampleStringIII": "[ES] Mauris accumsan tincidunt dui eget iaculis. Suspendisse finibus gravida erat, sit amet tincidunt nibh efficitur non."
     }
 }

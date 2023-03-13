@@ -1,18 +1,20 @@
 //
-//  CustomUIView.swift
+//  DynamicUIView.swift
 //  Starter Project
 //
-//  Created by Oscar de la Hera Gomez on 7/18/22.
+//  Created by Oscar de la Hera Gomez on 3/13/23.
 //
-
 import Foundation
 import UIKit
 
-class CustomUIView: UIView {
+class DynamicUIView: UIView {
     // MARK: Variables
-    static let identifier: String = "[CustomUIView]"
+    static let identifier: String = "[DynamicUIView]"
+    var count: Int = 0
     // MARK: UI
-    let dynamicUIView: DynamicUIView = DynamicUIView()
+    let label: UILabel = Styleguide.createAttributedStyle()
+    var widthConstraint: NSLayoutConstraint?
+    var heighConstraint: NSLayoutConstraint?
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
@@ -22,11 +24,10 @@ class CustomUIView: UIView {
         // Before calling your setup functions, call any visual functionality that may be required:
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .white
+        self.backgroundColor = .black
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
-        self.setupGestures()
     }
 
     // This is the function that gets called when you remove your view from its superview.
