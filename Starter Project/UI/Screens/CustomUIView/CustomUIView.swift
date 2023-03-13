@@ -11,8 +11,16 @@ import UIKit
 class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
+    enum Sections {
+        case TitleA
+        case A
+        case TitleB
+        case B
+    }
+    static let CollectionViewSections: [Sections] = [.TitleA, .A, .TitleB, .B]
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedStyle()
+    var collectionView: UICollectionView!
+    var dataSource: UICollectionViewDiffableDataSource<Sections, Int>!
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
@@ -22,11 +30,12 @@ class CustomUIView: UIView {
         // Before calling your setup functions, call any visual functionality that may be required:
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .black
+        self.backgroundColor = .white
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
         self.setupGestures()
+        self.configureDataSource()
     }
 
     // This is the function that gets called when you remove your view from its superview.

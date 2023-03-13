@@ -43,6 +43,19 @@
 		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */; };
 		F0397F6928888C0D002AF19B /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* UIImages.swift */; };
+		F0A0389E29BF6CC300D607D2 /* Styleguide+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0389D29BF6CC300D607D2 /* Styleguide+Header.swift */; };
+		F0A038A029BF6D5C00D607D2 /* Styleguide+CellTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0389F29BF6D5C00D607D2 /* Styleguide+CellTitle.swift */; };
+		F0A038A229BF6D9C00D607D2 /* Styleguide+CellBody.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038A129BF6D9C00D607D2 /* Styleguide+CellBody.swift .swift */; };
+		F0A038A529BF700800D607D2 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038A429BF700800D607D2 /* TitleCell.swift */; };
+		F0A038A729BF70A200D607D2 /* TitleCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038A629BF70A200D607D2 /* TitleCell+UI.swift */; };
+		F0A038A929BF70D000D607D2 /* TitleCell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038A829BF70D000D607D2 /* TitleCell+Update.swift */; };
+		F0A038AC29BF722900D607D2 /* SectionACell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038AB29BF722900D607D2 /* SectionACell.swift */; };
+		F0A038AE29BF725600D607D2 /* SectionACell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038AD29BF725600D607D2 /* SectionACell+UI.swift */; };
+		F0A038B029BF728100D607D2 /* SectionACell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038AF29BF728100D607D2 /* SectionACell+Update.swift */; };
+		F0A038B329BF748800D607D2 /* SectionBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038B229BF748800D607D2 /* SectionBCell.swift */; };
+		F0A038B529BF74B900D607D2 /* SectionBCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038B429BF74B900D607D2 /* SectionBCell+UI.swift */; };
+		F0A038B729BF74ED00D607D2 /* SectionBCell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038B629BF74ED00D607D2 /* SectionBCell+Update.swift */; };
+		F0A038B929BF785300D607D2 /* CustomUIView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A038B829BF785200D607D2 /* CustomUIView+CollectionView.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
@@ -97,6 +110,19 @@
 		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSafeAreaInsets.swift; sourceTree = "<group>"; };
 		F0397F6828888C0D002AF19B /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
+		F0A0389D29BF6CC300D607D2 /* Styleguide+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+Header.swift"; sourceTree = "<group>"; };
+		F0A0389F29BF6D5C00D607D2 /* Styleguide+CellTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+CellTitle.swift"; sourceTree = "<group>"; };
+		F0A038A129BF6D9C00D607D2 /* Styleguide+CellBody.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+CellBody.swift .swift"; sourceTree = "<group>"; };
+		F0A038A429BF700800D607D2 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		F0A038A629BF70A200D607D2 /* TitleCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitleCell+UI.swift"; sourceTree = "<group>"; };
+		F0A038A829BF70D000D607D2 /* TitleCell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TitleCell+Update.swift"; sourceTree = "<group>"; };
+		F0A038AB29BF722900D607D2 /* SectionACell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionACell.swift; sourceTree = "<group>"; };
+		F0A038AD29BF725600D607D2 /* SectionACell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionACell+UI.swift"; sourceTree = "<group>"; };
+		F0A038AF29BF728100D607D2 /* SectionACell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionACell+Update.swift"; sourceTree = "<group>"; };
+		F0A038B229BF748800D607D2 /* SectionBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBCell.swift; sourceTree = "<group>"; };
+		F0A038B429BF74B900D607D2 /* SectionBCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionBCell+UI.swift"; sourceTree = "<group>"; };
+		F0A038B629BF74ED00D607D2 /* SectionBCell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionBCell+Update.swift"; sourceTree = "<group>"; };
+		F0A038B829BF785200D607D2 /* CustomUIView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+CollectionView.swift"; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
@@ -131,6 +157,7 @@
 				F008F4D92885BA8D00E4841B /* CustomUIView.swift */,
 				F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */,
 				F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */,
+				F0A038B829BF785200D607D2 /* CustomUIView+CollectionView.swift */,
 				F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */,
 				F0397F512885EEAD002AF19B /* CustomUIView+Touches.swift */,
 				F0397F532885EEB5002AF19B /* CustomUIView+Animations.swift */,
@@ -172,6 +199,9 @@
 				F008FCA7287FA68900B2495D /* Styleguide.swift */,
 				F008FCAB287FA82B00B2495D /* Styleguide+FirstStyle.swift */,
 				F008FCD52885AF9F00B2495D /* Styleguide+AttributedStyle.swift */,
+				F0A0389D29BF6CC300D607D2 /* Styleguide+Header.swift */,
+				F0A0389F29BF6D5C00D607D2 /* Styleguide+CellTitle.swift */,
+				F0A038A129BF6D9C00D607D2 /* Styleguide+CellBody.swift .swift */,
 			);
 			path = Styleguide;
 			sourceTree = "<group>";
@@ -255,6 +285,9 @@
 		F00DDDE4287C82C50062AA1E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F0A038A329BF700400D607D2 /* TitleCell */,
+				F0A038AA29BF722000D607D2 /* SectionACell */,
+				F0A038B129BF744200D607D2 /* SectionBCell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -349,6 +382,36 @@
 				F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */,
 			);
 			path = Constraints;
+			sourceTree = "<group>";
+		};
+		F0A038A329BF700400D607D2 /* TitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0A038A429BF700800D607D2 /* TitleCell.swift */,
+				F0A038A629BF70A200D607D2 /* TitleCell+UI.swift */,
+				F0A038A829BF70D000D607D2 /* TitleCell+Update.swift */,
+			);
+			path = TitleCell;
+			sourceTree = "<group>";
+		};
+		F0A038AA29BF722000D607D2 /* SectionACell */ = {
+			isa = PBXGroup;
+			children = (
+				F0A038AB29BF722900D607D2 /* SectionACell.swift */,
+				F0A038AD29BF725600D607D2 /* SectionACell+UI.swift */,
+				F0A038AF29BF728100D607D2 /* SectionACell+Update.swift */,
+			);
+			path = SectionACell;
+			sourceTree = "<group>";
+		};
+		F0A038B129BF744200D607D2 /* SectionBCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0A038B229BF748800D607D2 /* SectionBCell.swift */,
+				F0A038B429BF74B900D607D2 /* SectionBCell+UI.swift */,
+				F0A038B629BF74ED00D607D2 /* SectionBCell+Update.swift */,
+			);
+			path = SectionBCell;
 			sourceTree = "<group>";
 		};
 		F0A96624287DFF6E000E5FCD /* LanguageCoordinator */ = {
@@ -517,14 +580,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A038A729BF70A200D607D2 /* TitleCell+UI.swift in Sources */,
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
 				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
+				F0A038B729BF74ED00D607D2 /* SectionBCell+Update.swift in Sources */,
+				F0A038B929BF785300D607D2 /* CustomUIView+CollectionView.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
+				F0A038B529BF74B900D607D2 /* SectionBCell+UI.swift in Sources */,
+				F0A038AC29BF722900D607D2 /* SectionACell.swift in Sources */,
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */,
 				F0DD144A29BA1688003122C8 /* RemoveAllViews.swift in Sources */,
@@ -532,12 +600,15 @@
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
 				F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */,
+				F0A038A229BF6D9C00D607D2 /* Styleguide+CellBody.swift .swift in Sources */,
+				F0A038A529BF700800D607D2 /* TitleCell.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */,
 				F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */,
+				F0A038A029BF6D5C00D607D2 /* Styleguide+CellTitle.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
@@ -546,16 +617,21 @@
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
+				F0A038A929BF70D000D607D2 /* TitleCell+Update.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
+				F0A0389E29BF6CC300D607D2 /* Styleguide+Header.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
 				F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */,
+				F0A038AE29BF725600D607D2 /* SectionACell+UI.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 				F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
+				F0A038B029BF728100D607D2 /* SectionACell+Update.swift in Sources */,
 				F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */,
+				F0A038B329BF748800D607D2 /* SectionBCell.swift in Sources */,
 				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,
 				F008FCA5287F736F00B2495D /* ViewController+UI.swift in Sources */,
 				F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */,

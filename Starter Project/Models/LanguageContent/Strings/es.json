@@ -1,5 +1,8 @@
 {
     "sample": {
-        "sampleString": "Una muestra de un string"
+        "sectionATitle": "[ES] Section A Title",
+        "sectionBTitle": "[ES] Section B Title",
+        "sampleCellTitle": "[ES] Title",
+        "sampleCellBody": "[ES] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor quam justo."
     }
 }

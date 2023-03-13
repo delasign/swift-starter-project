@@ -14,11 +14,7 @@ extension CustomUIView {
     }
     // MARK: Notification Setup Functionality
     @objc private func onSystemUpdatedContent(notification: Notification) {
-        guard let userInfo = notification.userInfo, let customVariable = userInfo["customVariable"] as? String else {
-            debugPrint("\(CustomUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.actionOrEventFailed) Failed to recieve notification as no userInfo exists.")
-            return
-        }
-        debugPrint("\(CustomUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update with custom notification variable : \(customVariable)")
+        debugPrint("\(CustomUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update.")
         self.onContentUpdate()
     }
 }
