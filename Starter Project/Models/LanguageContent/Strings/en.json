@@ -5,7 +5,10 @@
         "nonRenewingSubscriptions": "Non-Renewing Subscription",
         "autoRenewingSubscriptions": "Auto-Renewable Subscription",
         "individualPlans": "Individual Plans",
-        "familyPlans": "Family Plans"
+        "familyPlans": "Family Plans",
+        "requestARefund": "Request a Refund",
+        "missing": "MISSING",
+        "error": "ERROR"
     },
     "landing": {
         "tutorialLabel": "StoreKit\nTutorial",
@@ -15,7 +18,6 @@
     "offering": {
         "header": "Store",
         "redeemOfferCode": "Redeem Offer Code",
-        "requestARefund": "Request a Refund",
         "restorePurchasesPrompt": "Is Stuff Missing?",
         "restorePurchases": "Restore Purchases"
     },
@@ -23,7 +25,7 @@
         "header": "Request Refunds"
     },
     "productTile": {
-         "stock": "Stock",
+         "stock": "Stock: ",
          "nonRenewingActiveUntil": "Non-Renewing Subscription active until ",
          "autoRenewableRenewsOn": "Auto-Renewable Subscription renews on ",
          "manageSubscription": "Manage Subscription",
@@ -31,13 +33,12 @@
          "autoRenewableWillExpireMessage": ". Activate your subscription to maintain access.",
          "autoRenewableGracePeriod": "Auto-Renewable Subscription is in grace period and will expire on ",
          "autoRenewableGracePeriodMessage": ". Pay for your subscription to maintain access.",
+         "get": "Get",
+         "purchase": "Purchase",
          "claimOffer": "Claim Offer"
     },
     "purchaseButton": {
-        "get": "Get",
-        "refund": "Refund",
-        "missing": "MISSING",
-        "error": "ERROR"
+        "free": "Free"
     },
     "notifications": {
          "success": "You have successfully purchased",

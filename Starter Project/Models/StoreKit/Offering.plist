@@ -12,5 +12,9 @@
 	<string>com.delasign.sampleautorenewablesubscription</string>
 	<key>Sample Tier 2 Auto Renewable Subscription</key>
 	<string>com.delasign.sampleautorenewablesubscriptiontier2</string>
+	<key>Sample Family Sharing Subscription</key>
+	<string>com.delasign.samplefamilysharing</string>
+	<key>Sample Tier 2 Family Sharing Subscription</key>
+	<string>com.delasign.samplefamilysharingtier2</string>
 </dict>
 </plist>

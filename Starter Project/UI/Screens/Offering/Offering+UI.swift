@@ -10,20 +10,45 @@ import UIKit
 
 extension Offering {
     func setupUI() {
+        //        setupTableView()
         setupCollectionView()
     }
 
     // MARK: UI Setup Functionality
     private func setupCollectionView() {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.addSubview(self.collectionView)
-            self.collectionView.edgesToSuperview()
-            // Register the cells
-            self.collectionView.register(ProductTile.self, forCellWithReuseIdentifier: ProductTile.identifier)
-            // Set the delegate & datasource
-            self.collectionView.delegate = self
-            self.collectionView.dataSource = self
-        }
+        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createLayout())
+
+        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.collectionView.backgroundColor = Styleguide.colors.white
+        // Add the UICollectionView to the View
+        self.addSubview(self.collectionView)
+        // Setup the constraints
+        self.collectionView.top(to: self)
+        self.collectionView.left(to: self)
+        self.collectionView.right(to: self)
+        self.collectionView.bottom(to: self)
+
+        self.collectionView.contentInset = UIEdgeInsets(top: 130, left: 0, bottom: kPadding, right: 0)
     }
+
+    //    private func setupTableView() {
+    //        DispatchQueue.main.async { [weak self] in
+    //            guard let self = self else { return }
+    //            self.tableView.translatesAutoresizingMaskIntoConstraints = false
+    //            self.tableView.backgroundColor = .white
+    //            self.addSubview(self.tableView)
+    //            self.tableView.edgesToSuperview()
+    //            self.tableView.contentInset = UIEdgeInsets(top: 130, left: 0, bottom: kPadding, right: 0)
+    //            self.tableView.rowHeight = UITableView.automaticDimension
+    //            self.tableView.estimatedRowHeight = 300
+    //
+    //            // Register Cells
+    //            self.tableView.register(SectionTitleCell.self, forCellReuseIdentifier: SectionTitleCell.identifier)
+    //            self.tableView.register(SectionSubTitleCell.self, forCellReuseIdentifier: SectionSubTitleCell.identifier)
+    //            self.tableView.register(ProductTile.self, forCellReuseIdentifier: ProductTile.identifier)
+    //
+    //            self.tableView.delegate = self
+    //            self.tableView.dataSource = self
+    //        }
+    //    }
 }

@@ -73,7 +73,7 @@
       "localizations" : [
 
       ],
-      "name" : "Sample Subscription Group",
+      "name" : "Individual Plans",
       "subscriptions" : [
         {
           "adHocOffers" : [
@@ -133,6 +133,75 @@
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Sample Tier 2 Auto Renewable Subscription",
           "subscriptionGroupID" : "9975708C",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    },
+    {
+      "id" : "BADDC553",
+      "localizations" : [
+
+      ],
+      "name" : "Family Plans",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : true,
+          "groupNumber" : 1,
+          "internalID" : "BCB47E4D",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Family Sharing Tier 1 Description",
+              "displayName" : "Family Sharing Tier 1",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Descripción del plan familia",
+              "displayName" : "Plan Familia 1",
+              "locale" : "es_ES"
+            }
+          ],
+          "productID" : "com.delasign.samplefamilysharing",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Sample Family Sharing Subscription",
+          "subscriptionGroupID" : "BADDC553",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : true,
+          "groupNumber" : 2,
+          "internalID" : "B233DE2A",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Description of the second family plan",
+              "displayName" : "Family Sharing Tier 2",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Descripción del plan familia 2",
+              "displayName" : "Plan Familia 2",
+              "locale" : "es_ES"
+            }
+          ],
+          "productID" : "com.delasign.samplefamilysharingtier2",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Sample Tier 2 Family Sharing Subscription",
+          "subscriptionGroupID" : "BADDC553",
           "type" : "RecurringSubscription"
         }
       ]

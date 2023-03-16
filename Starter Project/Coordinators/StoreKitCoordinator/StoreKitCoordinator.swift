@@ -22,15 +22,18 @@ class StoreKitCoordinator: NSObject {
     // Arrays are initially empty and are filled in when we gather the products
     public var consumables: [Product] = []
     public var nonConsumables: [Product] = []
-    public var subscriptions: [Product] = []
+    public var individualSubscriptions: [Product] = []
+    public var familySubscriptions: [Product] = []
     public var nonRenewables: [Product] = []
     // Arrays that hold the purchases products
     public var purchasedConsumables: [Product] = []
     public var purchasedNonConsumables: [Product] = []
-    public var purchasedSubscriptions: [Product] = []
+    public var purchasedIndividualSubscriptions: [Product] = []
+    public var purchasedFamilySubscriptions: [Product] = []
     public var purchasedNonRenewables: [Product] = []
     // A variable to hold the Subscription Group Renewal State, if you have more than one subscription group, you will need more than one.
-    public var subscriptionGroupStatus: RenewalState?
+    public var individualSubscriptionGroupStatus: RenewalState?
+    public var familySubscriptionGroupStatus: RenewalState?
 
     // MARK: Lifecycle
     func initialize() {

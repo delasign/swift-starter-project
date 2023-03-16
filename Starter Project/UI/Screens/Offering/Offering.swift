@@ -7,25 +7,30 @@
 
 import Foundation
 import UIKit
+import StoreKit
 
 class Offering: UIView {
     // MARK: Variables
     static let identifier: String = "[Offering]"
+    static let Sections: [StoreKitOfferingSections] = [
+        .consumablesTitle,
+        .consumables,
+        .nonConsumablesTitle,
+        .nonConsumables,
+        .nonRenewingSubscriptionsTitle,
+        .nonRenewingSubscriptions,
+        .autoRenewableSubscriptionsTitle,
+        .autoRenewableSubscriptionsIndividualPlans,
+        .autoRenewableSubscriptionsFamilyPlans,
+        .offerCodesAndRefunds,
+        .restorePurchasesTitle,
+        .restorePurchases
+    ]
+    var dataSource: UICollectionViewDiffableDataSource<StoreKitOfferingSections, Int>!
     // MARK: UI
-    let header: UILabel = Styleguide.createAttributedHeader()
+    var collectionView: UICollectionView!
+    //    var tableView: UITableView = UITableView(frame: .zero, style: .plain)
 
-    let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = kPadding
-        layout.minimumInteritemSpacing = kPadding
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .white
-
-        return collectionView
-    }()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
@@ -34,10 +39,11 @@ class Offering: UIView {
         // Before calling your setup functions, call any visual functionality that may be required:
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = Styleguide.colors.white
+        self.backgroundColor = Styleguide.colors.red
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
+        self.configureDataSource()
     }
 
     // This is the function that gets called when you remove your view from its superview.

@@ -21,7 +21,7 @@ extension StoreKitCoordinator {
             return purchasedNonConsumables.contains(product)
         case .autoRenewable:
             debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventSucceded) Auto-Renewable Subscription has been purchased.")
-            return purchasedSubscriptions.contains(product)
+            return purchasedIndividualSubscriptions.contains(product) || purchasedFamilySubscriptions.contains(product)
         case .consumable:
             debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventFailed) Consumables cannot be checked off as purchased.")
             // Consumables can be purchased more than once, so never show them as purchased.

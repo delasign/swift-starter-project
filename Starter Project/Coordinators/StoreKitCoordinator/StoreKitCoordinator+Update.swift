@@ -12,7 +12,8 @@ extension StoreKitCoordinator {
     func updateCustomerProductStatus() async {
         debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventInProgress) Updating Customer Product Status... \(DebuggingIdentifiers.actionOrEventInProgress)")
         var purchasedNonConsumables: [Product] = []
-        var purchasedSubscriptions: [Product] = []
+        var purchasedIndividualSubscriptions: [Product] = []
+        var purchasedFamilySubscriptions: [Product] = []
         var purchasedNonRenewableSubscriptions: [Product] = []
 
         // Iterate through all of the user's purchased products.
@@ -52,9 +53,12 @@ extension StoreKitCoordinator {
                         debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventFailed) Non-Renewing Subscription Product Id not within the offering : \(transaction.productID).")
                     }
                 case .autoRenewable:
-                    if let subscription = subscriptions.first(where: { $0.id == transaction.productID }) {
-                        purchasedSubscriptions.append(subscription)
-                        debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Auto-Renewable Subscription added to purchased auto-renewable subscriptions.")
+                    if let subscription = individualSubscriptions.first(where: { $0.id == transaction.productID }) {
+                        purchasedIndividualSubscriptions.append(subscription)
+                        debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Individual Plan Auto-Renewable Subscription added to purchased individual auto-renewable subscriptions.")
+                    } else if let familySubscription = familySubscriptions.first(where: { $0.id == transaction.productID }) {
+                        purchasedFamilySubscriptions.append(familySubscription)
+                        debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Family Plan Auto-Renewable Subscription added to purchased family subscriptions.")
                     } else {
                         debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventFailed) Auto-Renewable Subscripton Product Id not within the offering : \(transaction.productID).")
                     }
@@ -73,7 +77,8 @@ extension StoreKitCoordinator {
         self.purchasedNonRenewables = purchasedNonRenewableSubscriptions
 
         // Update the store information with auto-renewable subscription products.
-        self.purchasedSubscriptions = purchasedSubscriptions
+        self.purchasedIndividualSubscriptions = purchasedIndividualSubscriptions
+        self.purchasedFamilySubscriptions = purchasedFamilySubscriptions
 
         debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Updated Purchased arrays.")
 
@@ -82,8 +87,10 @@ extension StoreKitCoordinator {
         // is new (never subscribed), active, or inactive (expired subscription). This app has only one subscription
         // group, so products in the subscriptions array all belong to the same group. The statuses that
         // `product.subscription.status` returns apply to the entire subscription group.
-        subscriptionGroupStatus = try? await subscriptions.first?.subscription?.status.first?.state
-        debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Updated Subscription Group Status.")
+        individualSubscriptionGroupStatus = try? await purchasedIndividualSubscriptions.first?.subscription?.status.first?.state
+        debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Updated Individual Subscription Group Status - \(individualSubscriptionGroupStatus).")
+        familySubscriptionGroupStatus = try? await purchasedFamilySubscriptions.first?.subscription?.status.first?.state
+        debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Updated Individual Subscription Group Status - \(familySubscriptionGroupStatus).")
         // Notify System
         NotificationCenter.default.post(name: SystemNotifications.onStoreKitUpdate, object: nil)
     }

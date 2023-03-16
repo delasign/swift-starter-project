@@ -13,4 +13,6 @@ enum OfferingKeys: String {
     case sampleNonRenewingSubscription = "Sample Non-Renewing Subscription"
     case sampleAutoRenewableSubscription = "Sample Auto Renewable Subscription"
     case sampleTierTwoAutoRenewableSubscription = "Sample Tier 2 Auto Renewable Subscription"
+    case sampleFamilySharingSubscription = "Sample Family Sharing Subscription"
+    case sampleTierTwoFamilySharingSubscription = "Sample Tier 2 Family Sharing Subscription"
 }

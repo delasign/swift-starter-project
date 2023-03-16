@@ -14,7 +14,7 @@ extension PurchaseButton {
     // This can be called refreshUI if your app removes and adds content periodically.
     func setupUI() {
         switch type {
-        case .get, .price, .refund:
+        case .free, .price:
             self.setupLabel()
             break
         case .pending:
@@ -52,21 +52,18 @@ extension PurchaseButton {
             let color: UIColor = Styleguide.colors.white
             let copy: String
             switch self.type {
-            case .get:
-                copy = currentContent.purchaseButton.get
-                break
-            case .refund:
-                copy = currentContent.purchaseButton.refund
+            case .free:
+                copy = currentContent.purchaseButton.free
                 break
             case .price:
                 if let product = self.product {
                     copy = product.displayPrice
                 } else {
-                    copy = currentContent.purchaseButton.missing
+                    copy = currentContent.shared.missing
                 }
                 break
             default:
-                copy = currentContent.purchaseButton.error
+                copy = currentContent.shared.error
                 break
             }
 

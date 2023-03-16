@@ -52,7 +52,8 @@ extension StoreKitCoordinator {
             // Sort each product category by price, lowest to highest, to update the store.
             consumables = sortByPrice(newConsumables)
             nonConsumables = sortByPrice(newNonConsumables)
-            subscriptions = sortByPrice(newSubscriptions)
+            individualSubscriptions = sortByPrice(newSubscriptions.filter({ !$0.isFamilyShareable }))
+            familySubscriptions = sortByPrice(newSubscriptions.filter({ $0.isFamilyShareable }))
             nonRenewables = sortByPrice(newNonRenewables)
 
             debugPrint("\(StoreKitCoordinator.identifier) requestProducts \(DebuggingIdentifiers.actionOrEventSucceded) Completed updating available Products.")

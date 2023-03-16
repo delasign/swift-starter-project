@@ -16,6 +16,9 @@ struct UIContent: Codable {
         let autoRenewingSubscriptions: String
         let individualPlans: String
         let familyPlans: String
+        let requestARefund: String
+        let missing: String
+        let error: String
     }
 
     let shared: Shared
@@ -31,7 +34,6 @@ struct UIContent: Codable {
     struct Offering: Codable {
         let header: String
         let redeemOfferCode: String
-        let requestARefund: String
         let restorePurchasesPrompt: String
         let restorePurchases: String
     }
@@ -53,16 +55,15 @@ struct UIContent: Codable {
         let autoRenewableWillExpireMessage: String
         let autoRenewableGracePeriod: String
         let autoRenewableGracePeriodMessage: String
+        let get: String
+        let purchase: String
         let claimOffer: String
     }
 
     let productTile: ProductTile
 
     struct PurchaseButton: Codable {
-        let get: String
-        let refund: String
-        let missing: String
-        let error: String
+        let free: String
     }
 
     let purchaseButton: PurchaseButton

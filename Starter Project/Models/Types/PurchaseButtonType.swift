@@ -8,10 +8,9 @@
 import Foundation
 
 enum PurchaseButtonType: CaseIterable {
-    case get
+    case free
     case price
     case pending
     case purchased
     case warning
-    case refund
 }

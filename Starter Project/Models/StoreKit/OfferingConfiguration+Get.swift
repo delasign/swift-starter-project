@@ -32,4 +32,14 @@ extension OfferingConfiguration {
     func getSampleTierTwoAutoRenewableSubscriptionId() -> String? {
         return getOfferingIdForKey(key: OfferingKeys.sampleTierTwoAutoRenewableSubscription.rawValue)
     }
+
+    // Get Sample Family Sharing Subscription Id
+    func getSampleFamilySharingSubscriptionId() -> String? {
+        return getOfferingIdForKey(key: OfferingKeys.sampleFamilySharingSubscription.rawValue)
+    }
+
+    // Get Sample Tier 2 Family Sharing Subscription
+    func getSampleTierTwoFamilySharingSubscriptionId() -> String? {
+        return getOfferingIdForKey(key: OfferingKeys.sampleTierTwoFamilySharingSubscription.rawValue)
+    }
 }

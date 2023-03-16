@@ -17,6 +17,13 @@ class ProductTile: UICollectionViewCell {
     let productTitle: UILabel = Styleguide.createAttributedProductTitle()
     let productDescription: UILabel = Styleguide.createAttributedProductDescription()
     let purchaseButton: PurchaseButton = PurchaseButton()
+
+    let productDetail: UILabel = Styleguide.createAttributedProductDetail()
+    var productDetailTopToBottomConstraint: NSLayoutConstraint?
+
+    let actionButton: Button = Button(type: .primary)
+    var actionButtonTopToBottomConstraint: NSLayoutConstraint?
+
     var product: Product?
 
     // MARK: Lifecycle
@@ -26,9 +33,10 @@ class ProductTile: UICollectionViewCell {
         self.setupUI()
         self.backgroundColor = Styleguide.colors.white
         self.layer.cornerRadius = kPadding
+        self.layer.masksToBounds = false
     }
 
-    func setup(type: ProductTileType, product: Product?) {
+    func configure(type: ProductTileType, product: Product?) {
         self.type = type
         if let product = product {
             self.product = product
@@ -54,32 +62,15 @@ class ProductTile: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        // Exhibit A - We need to cache our calculation to prevent a crash.
-
-        var maxY: CGFloat = 0
-
-        for view in self.contentView.subviews {
-            if maxY < view.frame.maxY {
-                maxY = view.frame.maxY
-            }
-        }
-
-        layoutAttributes.frame.size = CGSize(width: layoutAttributes.frame.width, height: maxY + kPadding)
-        return layoutAttributes
-    }
-
-    // viewWillTransition should be called when the view resizes or changes orientation.
-    override func willTransition(from oldLayout: UICollectionViewLayout, to newLayout: UICollectionViewLayout) {
-        super.willTransition(from: oldLayout, to: newLayout)
-    }
-
     // This is the function that gets called when your UICollectionViewCell gets reused.
     // This is where you should remove any views that aren't constant, as well as deallocate data, images or text.
     override func prepareForReuse() {
         super.prepareForReuse()
         self.productTitle.text = ""
         self.productDescription.text = ""
+        self.productDetail.text = ""
+        self.actionButton.title.text = ""
+        self.actionButton.onRelease = nil
         self.purchaseButton.onRelease = nil
         self.product = nil
     }
