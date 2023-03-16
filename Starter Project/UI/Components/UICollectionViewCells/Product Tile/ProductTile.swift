@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import StoreKit
-
 class ProductTile: UICollectionViewCell {
     // MARK: Variables
     static var identifier: String = "ProductTile"
@@ -76,6 +75,7 @@ class ProductTile: UICollectionViewCell {
             self.actionButton.title.text = ""
             self.actionButton.onRelease = nil
             self.product = nil
+            self.onRelease = nil
         }
     }
 }

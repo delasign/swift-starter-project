@@ -14,8 +14,6 @@ extension SectionTitleCell {
             guard let self = self else { return }
             self.title.attributedText = Styleguide.attributedSectionTitleText(text: text)
             self.title.sizeToFit()
-            self.setNeedsLayout()
-            self.layoutIfNeeded()
         }
     }
 }

@@ -19,7 +19,6 @@ extension SectionSubTitleCell {
             guard let self = self else { return }
             self.contentView.addSubview(self.title)
             self.title.edges(to: self.contentView, insets: UIEdgeInsets(top: kPadding, left: kPadding, bottom: kPadding, right: kPadding))
-            self.title.backgroundColor = .yellow
         }
     }
 }

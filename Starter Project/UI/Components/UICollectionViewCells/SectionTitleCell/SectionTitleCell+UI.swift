@@ -22,7 +22,6 @@ extension SectionTitleCell {
             self.title.left(to: self.contentView, offset: kPadding)
             self.title.right(to: self.contentView, offset: -kPadding)
             self.title.bottom(to: self.contentView, offset: -kPadding)
-            self.title.backgroundColor = .blue
         }
     }
 }

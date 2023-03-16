@@ -22,18 +22,23 @@ extension Offering {
             case .consumablesTitle, .nonConsumablesTitle, .nonRenewingSubscriptionsTitle, .autoRenewableSubscriptionsTitle:
                 itemHeight = .estimated(120)
                 contentInsetConstant = 0
+                break
             case .consumables, .nonConsumables, .nonRenewingSubscriptions, .autoRenewableSubscriptionsIndividualPlans, .autoRenewableSubscriptionsFamilyPlans:
                 itemHeight = .estimated(250)
                 contentInsetConstant = kPadding
+                break
             case .offerCodesAndRefunds:
-                itemHeight = .estimated(150)
+                itemHeight = .absolute(3 * kPadding + 2 * kButtonDimension)
                 contentInsetConstant = 0
+                break
             case .restorePurchasesTitle:
-                itemHeight = .estimated(150)
+                itemHeight = .estimated(120)
                 contentInsetConstant = 0
+                break
             case .restorePurchases:
-                itemHeight = .estimated(150)
+                itemHeight = .absolute(kButtonDimension)
                 contentInsetConstant = 0
+                break
             }
 
             // Item
@@ -96,6 +101,8 @@ extension Offering {
             case .autoRenewableSubscriptionsTitle:
                 title = currentContent.shared.autoRenewingSubscriptions
                 break
+            case .restorePurchasesTitle:
+                title = currentContent.offering.restorePurchasesPrompt
             default:
                 // This should never occur
                 title = currentContent.shared.error
@@ -176,8 +183,48 @@ extension Offering {
                 cell.update(type: type, product: product)
                 cell.setNeedsLayout()
                 cell.layoutIfNeeded()
+                // Callbacks
+                cell.onRelease = { [weak self] in
+                    guard let _ = self else { return }
+                    debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName)")
+                }
+            }
+        }
+
+        /// RedeemOfferCell
+        let OfferCodesAndRefundsCellRegistration = UICollectionView.CellRegistration
+        <OfferCodesAndRefundsCell, Int> { (cell, _, _) in
+            DispatchQueue.main.async {
+                cell.update()
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
+                // Callbacks
+                cell.onRedeemOfferCode = { [weak self] in
+                    guard let _ = self else { return }
+                    debugPrint("\(Offering.identifier) OfferCodesAndRefundsCellRegistration onRedeemOfferCode \(DebuggingIdentifiers.actionOrEventSucceded) User pressed onRedeemOfferCode.")
+                }
+
+                cell.onRequestARefund = { [weak self] in
+                    guard let _ = self else { return }
+                    debugPrint("\(Offering.identifier) OfferCodesAndRefundsCellRegistration onRequestARefund \(DebuggingIdentifiers.actionOrEventSucceded) User pressed onRequestARefund.")
+                }
             }
 
+        }
+
+        /// Restore Purchases Cell
+        let RestorePurchasesCellRegistration = UICollectionView.CellRegistration
+        <RestorePurchasesCell, Int> { (cell, _, _) in
+            DispatchQueue.main.async {
+                cell.update()
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
+                // Callbacks
+                cell.onRelease = { [weak self] in
+                    guard let _ = self else { return }
+                    debugPrint("\(Offering.identifier) RestorePurchasesCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed restore purchases.")
+                }
+            }
         }
 
         // MARK: Create the datasource and tie it to the collectionView.
@@ -186,9 +233,13 @@ extension Offering {
         <StoreKitOfferingSections, Int>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, item: Int) -> UICollectionViewCell? in
             switch Offering.Sections[indexPath.section] {
-            case .consumablesTitle, .nonConsumablesTitle, .nonRenewingSubscriptionsTitle, .autoRenewableSubscriptionsTitle:
+            case .consumablesTitle, .nonConsumablesTitle, .nonRenewingSubscriptionsTitle, .autoRenewableSubscriptionsTitle, .restorePurchasesTitle:
                 return collectionView.dequeueConfiguredReusableCell(using: SectionTitleCellRegistration, for: indexPath, item: item)
-            default:
+            case .offerCodesAndRefunds:
+                return collectionView.dequeueConfiguredReusableCell(using: OfferCodesAndRefundsCellRegistration, for: indexPath, item: item)
+            case .restorePurchases:
+                return collectionView.dequeueConfiguredReusableCell(using: RestorePurchasesCellRegistration, for: indexPath, item: item)
+            case .consumables, .nonConsumables, .nonRenewingSubscriptions, .autoRenewableSubscriptionsIndividualPlans, .autoRenewableSubscriptionsFamilyPlans:
                 return collectionView.dequeueConfiguredReusableCell(using: ProductTileCellRegistration, for: indexPath, item: item)
             }
         }
@@ -231,6 +282,10 @@ extension Offering {
         snapshot.appendItems([totalConsumablesAndNonRenewing + 3], toSection: .autoRenewableSubscriptionsTitle)
         snapshot.appendItems([Int](totalConsumablesAndNonRenewing + 4...totalIAPAndIndividualPlans + 3), toSection: .autoRenewableSubscriptionsIndividualPlans)
         snapshot.appendItems([Int](totalIAPAndIndividualPlans + 4...totalProducts + 3), toSection: .autoRenewableSubscriptionsFamilyPlans)
+        // Offer Codes & Refunds
+        snapshot.appendItems([totalProducts + 4], toSection: .offerCodesAndRefunds)
+        snapshot.appendItems([totalProducts + 5], toSection: .restorePurchasesTitle)
+        snapshot.appendItems([totalProducts + 6], toSection: .restorePurchases)
         dataSource.apply(snapshot, animatingDifferences: true)
     }
 }

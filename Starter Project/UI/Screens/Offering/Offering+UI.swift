@@ -28,7 +28,7 @@ extension Offering {
         self.collectionView.right(to: self)
         self.collectionView.bottom(to: self)
 
-        self.collectionView.contentInset = UIEdgeInsets(top: 130, left: 0, bottom: kPadding, right: 0)
+        self.collectionView.contentInset = UIEdgeInsets(top: 130, left: 0, bottom: 100, right: 0)
 
         collectionView.selfSizingInvalidation = .enabledIncludingConstraints
     }

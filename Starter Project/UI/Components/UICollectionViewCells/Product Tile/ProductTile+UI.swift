@@ -39,7 +39,6 @@ extension ProductTile {
             // Variable constraints
             self.productTitleRightToLeftOfButtonConstraint = self.productTitle.rightToLeft(of: self.transactionLabel, offset: -kPadding, isActive: true)
             self.productTitleRightToContentViewConstraint = self.productTitle.right(to: self.contentView, offset: -kPadding, isActive: false)
-            self.productTitle.backgroundColor = .red
         }
     }
 
@@ -52,7 +51,6 @@ extension ProductTile {
             self.productDescription.right(to: self.contentView, offset: -kPadding)
             // The priority for the trailing anchor must be set to 999 to avoid any auto-layout breaks
             self.productDescriptionBottomToContentViewConstraint = self.productDescription.bottom(to: self.contentView, offset: -kPadding, priority: UILayoutPriority(999), isActive: true)
-            self.productDescription.backgroundColor = .red
         }
     }
 
@@ -66,7 +64,6 @@ extension ProductTile {
             self.productDetail.right(to: self.contentView, offset: -kPadding)
             // The priority for the trailing anchor must be set to 999 to avoid any auto-layout breaks
             self.productDetailBottomConstraint = self.productDetail.bottom(to: self.contentView, offset: -kPadding, priority: UILayoutPriority(999), isActive: false)
-            self.productDetail.backgroundColor = .red
             self.productDetail.isHidden = true
         }
     }
@@ -83,11 +80,6 @@ extension ProductTile {
             // The priority for the trailing anchor must be set to 999 to avoid any auto-layout breaks
             self.actionButtonBottomConstraint = self.actionButton.bottom(to: self.contentView, offset: -kPadding, priority: UILayoutPriority(999), isActive: false)
             self.actionButton.isHidden = true
-
-            self.actionButton.onRelease = { [weak self] in
-                guard let self = self else { return }
-                self.onRelease?()
-            }
         }
     }
 

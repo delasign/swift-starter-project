@@ -117,6 +117,11 @@ extension ProductTile {
                 self.actionButton.isHidden = false
                 // Activate the Product Detail Bottom Constraint
                 activateConstraints(constraints: [self.actionButtonTopToBottomOfProductDescriptionConstraint, self.actionButtonLeftConstraint, self.actionButtonRightConstraint, self.actionButtonBottomConstraint])
+                // Add the Action Button On Release
+                self.actionButton.onRelease = { [weak self] in
+                    guard let self = self else { return }
+                    self.onRelease?()
+                }
             } else if let buttonString = buttonString, let detailString = detailString {
                 // MARK: Button & Detail
                 // Enable all Product Detail Functionality
@@ -127,6 +132,11 @@ extension ProductTile {
                 self.actionButton.isHidden = false
                 // Activate the Product Detail Bottom Constraint
                 activateConstraints(constraints: [self.actionButtonTopToBottomOfProductDetailConstraint, self.actionButtonLeftConstraint, self.actionButtonRightConstraint, self.actionButtonBottomConstraint])
+                // Add the Action Button On Release
+                self.actionButton.onRelease = { [weak self] in
+                    guard let self = self else { return }
+                    self.onRelease?()
+                }
             } else {
                 // MARK: Both are Nil
                 // Disable all Product Detail functionality
@@ -136,8 +146,6 @@ extension ProductTile {
                 // Activate the product description bottom constraint
                 activateConstraints(constraints: [self.productDescriptionBottomToContentViewConstraint])
             }
-            self.setNeedsLayout()
-            self.layoutIfNeeded()
         }
     }
 }
