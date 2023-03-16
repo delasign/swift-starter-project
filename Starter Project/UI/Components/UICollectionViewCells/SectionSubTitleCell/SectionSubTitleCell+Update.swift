@@ -10,7 +10,12 @@ import UIKit
 
 extension SectionSubTitleCell {
     func update(text: String) {
-        self.title.attributedText = Styleguide.attributedProductTitleText(text: text)
-        self.title.sizeToFit()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.title.attributedText = Styleguide.attributedProductTitleText(text: text)
+            self.title.sizeToFit()
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+        }
     }
 }

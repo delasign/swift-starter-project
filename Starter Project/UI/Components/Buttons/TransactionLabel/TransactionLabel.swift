@@ -1,5 +1,5 @@
 //
-//  PurchaseButton.swift
+//  TransactionLabel.swift
 //  Starter Project
 //
 //  Created by Oscar de la Hera Gomez on 3/8/23.
@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 import StoreKit
 
-class PurchaseButton: UIView {
+class TransactionLabel: UIView {
     // MARK: Variables
     static let identifier: String = "[PurchaseButton]"
-    var type: PurchaseButtonType = .free
+    var type: TransactionLabelType = .free
     var product: Product?
     // MARK: UI
     let label: UILabel = Styleguide.createAttributedProductButton()
     let imageView: UIImageView = UIImageView()
-    // MARK: Callbacks
-    var onRelease: (() -> Void)?
+    var imageViewWidth: NSLayoutConstraint?
+    var imageViewHeight: NSLayoutConstraint?
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
@@ -30,19 +30,20 @@ class PurchaseButton: UIView {
         self.height(kButtonDimension)
         self.width(120)
         self.layer.cornerRadius = kButtonDimension / 2
-
+        self.setupNotifications()
     }
 
-    func configure(type: PurchaseButtonType, product: Product? = nil) {
-        removeAllViews()
+    func configure(type: TransactionLabelType, product: Product? = nil) {
+        // Reset
+        self.removeAllViews()
+        // Setup
         self.type = type
         if let product = product {
             self.product = product
         }
-        self.backgroundColor = getBackgroundColor()
+        self.backgroundColor = self.getBackgroundColor()
         // MARK: Functionality Setup
         self.setupUI()
-        self.setupNotifications()
     }
 
     // This is the function that gets called when you remove your view from its superview.

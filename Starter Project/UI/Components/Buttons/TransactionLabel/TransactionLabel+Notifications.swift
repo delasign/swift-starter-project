@@ -1,5 +1,5 @@
 //
-//  PurchaseButton+Notifications.swift
+//  TransactionLabel+Notifications.swift
 //  Starter Project
 //
 //  Created by Oscar de la Hera Gomez on 3/8/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension PurchaseButton {
+extension TransactionLabel {
     // The setupNotifications function should be the only publically available class in this extension.
     func setupNotifications() {
     }

@@ -1,5 +1,5 @@
 //
-//  PurchaseButton+UI.swift
+//  TransactionLabel+UI.swift
 //  Starter Project
 //
 //  Created by Oscar de la Hera Gomez on 3/8/23.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import TinyConstraints
 
-extension PurchaseButton {
+extension TransactionLabel {
     // The setupUI function should be the only publically available class in this extension.
     // This can be called refreshUI if your app removes and adds content periodically.
     func setupUI() {
@@ -78,8 +78,17 @@ extension PurchaseButton {
             self.imageView.centerInSuperview()
             self.imageView.image = UIImage(named: image)?.withRenderingMode(.alwaysTemplate)
             self.imageView.tintColor = color
-            self.imageView.width(width)
-            self.imageView.height(height)
+            if let _ = self.imageViewWidth {
+                self.imageViewWidth?.constant = width
+            } else {
+                self.imageViewWidth = self.imageView.width(width)
+            }
+
+            if let _ = self.imageViewHeight {
+                self.imageViewHeight?.constant = height
+            } else {
+                self.imageViewHeight = self.imageView.height(height)
+            }
         }
     }
 }

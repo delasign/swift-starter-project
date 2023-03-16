@@ -82,7 +82,7 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "0.99",
+          "displayPrice" : "19.99",
           "familyShareable" : false,
           "groupNumber" : 2,
           "internalID" : "A2054BD8",
@@ -100,7 +100,7 @@
             }
           ],
           "productID" : "com.delasign.sampleautorenewablesubscription",
-          "recurringSubscriptionPeriod" : "P1M",
+          "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Sample Auto Renewable Subscription",
           "subscriptionGroupID" : "9975708C",
           "type" : "RecurringSubscription"

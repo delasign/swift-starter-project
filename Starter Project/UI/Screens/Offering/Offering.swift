@@ -29,7 +29,6 @@ class Offering: UIView {
     var dataSource: UICollectionViewDiffableDataSource<StoreKitOfferingSections, Int>!
     // MARK: UI
     var collectionView: UICollectionView!
-    //    var tableView: UITableView = UITableView(frame: .zero, style: .plain)
 
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.

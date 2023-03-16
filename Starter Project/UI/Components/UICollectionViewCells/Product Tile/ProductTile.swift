@@ -15,16 +15,27 @@ class ProductTile: UICollectionViewCell {
     var type: ProductTileType = .get
     // MARK: UI
     let productTitle: UILabel = Styleguide.createAttributedProductTitle()
+    var productTitleRightToLeftOfButtonConstraint: NSLayoutConstraint?
+    var productTitleRightToContentViewConstraint: NSLayoutConstraint?
+
     let productDescription: UILabel = Styleguide.createAttributedProductDescription()
-    let purchaseButton: PurchaseButton = PurchaseButton()
+    var productDescriptionBottomToContentViewConstraint: NSLayoutConstraint?
+
+    let transactionLabel: TransactionLabel = TransactionLabel()
 
     let productDetail: UILabel = Styleguide.createAttributedProductDetail()
-    var productDetailTopToBottomConstraint: NSLayoutConstraint?
+    var productDetailBottomConstraint: NSLayoutConstraint?
 
     let actionButton: Button = Button(type: .primary)
-    var actionButtonTopToBottomConstraint: NSLayoutConstraint?
+    var actionButtonLeftConstraint: NSLayoutConstraint?
+    var actionButtonRightConstraint: NSLayoutConstraint?
+    var actionButtonBottomConstraint: NSLayoutConstraint?
+    var actionButtonTopToBottomOfProductDetailConstraint: NSLayoutConstraint?
+    var actionButtonTopToBottomOfProductDescriptionConstraint: NSLayoutConstraint?
 
     var product: Product?
+    // MARK: Callbacks
+    var onRelease: (() -> Void)?
 
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
@@ -34,15 +45,6 @@ class ProductTile: UICollectionViewCell {
         self.backgroundColor = Styleguide.colors.white
         self.layer.cornerRadius = kPadding
         self.layer.masksToBounds = false
-    }
-
-    func configure(type: ProductTileType, product: Product?) {
-        self.type = type
-        if let product = product {
-            self.product = product
-        }
-
-        self.update()
     }
 
     override func layoutSubviews() {
@@ -66,12 +68,14 @@ class ProductTile: UICollectionViewCell {
     // This is where you should remove any views that aren't constant, as well as deallocate data, images or text.
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.productTitle.text = ""
-        self.productDescription.text = ""
-        self.productDetail.text = ""
-        self.actionButton.title.text = ""
-        self.actionButton.onRelease = nil
-        self.purchaseButton.onRelease = nil
-        self.product = nil
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.productTitle.text = ""
+            self.productDescription.text = ""
+            self.productDetail.text = ""
+            self.actionButton.title.text = ""
+            self.actionButton.onRelease = nil
+            self.product = nil
+        }
     }
 }

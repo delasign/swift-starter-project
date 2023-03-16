@@ -14,15 +14,6 @@ class Button: UIView {
     var type: ButtonType = .primary
     // MARK: UI
     let title: UILabel = Styleguide.createAttributedProductButton()
-    var heightConstraint: NSLayoutConstraint? {
-        didSet {
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                self.setNeedsLayout()
-                self.layoutIfNeeded()
-            }
-        }
-    }
     // MARK: Callbacks
     var onRelease: (() -> Void)?
     // MARK: Lifecycle
@@ -33,7 +24,7 @@ class Button: UIView {
         // Before calling your setup functions, call any visual functionality that may be required:
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.heightConstraint = self.height(kButtonDimension)
+        self.height(kButtonDimension)
         self.layer.cornerRadius = kButtonDimension / 2
     }
 

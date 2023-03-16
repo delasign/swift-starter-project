@@ -16,7 +16,25 @@ extension Offering {
             let currentSection = Offering.Sections[sectionIndex]
             // MARK: IMPORTANT - IN ORDER FOR THIS ESTIMATED LAYOUT TO WORK THE ESTIMATED HEIGHT MUST BE 0. ITS STILL BUGGY AND THIS WILL CREATE ERROR LOGS BUT IT WILL WORK
             let itemWidth: NSCollectionLayoutDimension = .fractionalWidth(1)
-            let itemHeight: NSCollectionLayoutDimension = .estimated(150)
+            let itemHeight: NSCollectionLayoutDimension
+            let contentInsetConstant: CGFloat
+            switch Offering.Sections[sectionIndex] {
+            case .consumablesTitle, .nonConsumablesTitle, .nonRenewingSubscriptionsTitle, .autoRenewableSubscriptionsTitle:
+                itemHeight = .estimated(120)
+                contentInsetConstant = 0
+            case .consumables, .nonConsumables, .nonRenewingSubscriptions, .autoRenewableSubscriptionsIndividualPlans, .autoRenewableSubscriptionsFamilyPlans:
+                itemHeight = .estimated(250)
+                contentInsetConstant = kPadding
+            case .offerCodesAndRefunds:
+                itemHeight = .estimated(150)
+                contentInsetConstant = 0
+            case .restorePurchasesTitle:
+                itemHeight = .estimated(150)
+                contentInsetConstant = 0
+            case .restorePurchases:
+                itemHeight = .estimated(150)
+                contentInsetConstant = 0
+            }
 
             // Item
             let itemSize = NSCollectionLayoutSize(widthDimension: itemWidth, heightDimension: itemHeight)
@@ -29,7 +47,8 @@ extension Offering {
             // Section
             let section = NSCollectionLayoutSection(group: group)
             section.interGroupSpacing = kPadding
-            section.contentInsets = NSDirectionalEdgeInsets(top: kPadding, leading: kPadding, bottom: kPadding, trailing: kPadding)
+
+            section.contentInsets = NSDirectionalEdgeInsets(top: contentInsetConstant, leading: contentInsetConstant, bottom: contentInsetConstant, trailing: contentInsetConstant)
 
             if currentSection == .autoRenewableSubscriptionsIndividualPlans
                 || currentSection == .autoRenewableSubscriptionsFamilyPlans {
@@ -108,16 +127,19 @@ extension Offering {
                     title = currentContent.shared.error
                     break
                 }
-                //            cell.title.attributedText = Styleguide.attributedProductTitleText(text: title)
-                cell.update(text: title)
-                cell.setNeedsLayout()
-                cell.layoutIfNeeded()
+
+                DispatchQueue.main.async {
+                    cell.update(text: title)
+                    cell.setNeedsLayout()
+                    cell.layoutIfNeeded()
+                }
             }
         }
 
         /// Product Tile Cell
         let ProductTileCellRegistration = UICollectionView.CellRegistration
         <ProductTile, Int> { (cell, indexPath, _) in
+            // Configure
             let consumables = StoreKitCoordinator.shared.consumables
             let nonConsumables = StoreKitCoordinator.shared.nonConsumables
             let nonRenewingSubscriptions = StoreKitCoordinator.shared.nonRenewables
@@ -125,28 +147,37 @@ extension Offering {
             let familySubscriptions = StoreKitCoordinator.shared.familySubscriptions
 
             let product: Product
+            let type: ProductTileType
             switch Offering.Sections[indexPath.section] {
             case .consumables:
                 product = consumables[indexPath.row]
+                type = .price
                 break
             case .nonConsumables:
                 product = nonConsumables[indexPath.row]
+                type = .get
                 break
             case .nonRenewingSubscriptions:
                 product = nonRenewingSubscriptions[indexPath.row]
+                type = .pending
                 break
             case .autoRenewableSubscriptionsIndividualPlans:
                 product = individualSubscriptions[indexPath.row]
+                type = .autoRenewablePurchased
                 break
             case .autoRenewableSubscriptionsFamilyPlans:
                 product = familySubscriptions[indexPath.row]
+                type = .expiring
                 break
             default:
                 return
             }
-            cell.configure(type: .price, product: product)
-            cell.setNeedsLayout()
-            cell.layoutIfNeeded()
+            DispatchQueue.main.async {
+                cell.update(type: type, product: product)
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
+            }
+
         }
 
         // MARK: Create the datasource and tie it to the collectionView.

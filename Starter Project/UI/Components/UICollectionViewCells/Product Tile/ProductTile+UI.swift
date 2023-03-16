@@ -12,21 +12,21 @@ extension ProductTile {
     func setupUI() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.setupPurchaseButton()
+            self.setupTransactionLabel()
             self.setupProductTitle()
             self.setupProductDescription()
-            //            self.setupProductDetail()
-            //            self.setupActionButton()
+            self.setupProductDetail()
+            self.setupActionButton()
         }
     }
 
     // MARK: UI Setup Functionality
-    private func setupPurchaseButton() {
+    private func setupTransactionLabel() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.contentView.addSubview(self.purchaseButton)
-            self.purchaseButton.top(to: self.contentView, offset: kPadding)
-            self.purchaseButton.right(to: self.contentView, offset: -kPadding)
+            self.contentView.addSubview(self.transactionLabel)
+            self.transactionLabel.top(to: self.contentView, offset: kPadding)
+            self.transactionLabel.right(to: self.contentView, offset: -kPadding)
         }
     }
 
@@ -36,8 +36,9 @@ extension ProductTile {
             self.contentView.addSubview(self.productTitle)
             self.productTitle.top(to: self.contentView, offset: kPadding)
             self.productTitle.left(to: self.contentView, offset: kPadding)
-            self.productTitle.rightToLeft(of: self.purchaseButton, offset: -kPadding)
-            self.productTitle.height(min: kButtonDimension)
+            // Variable constraints
+            self.productTitleRightToLeftOfButtonConstraint = self.productTitle.rightToLeft(of: self.transactionLabel, offset: -kPadding, isActive: true)
+            self.productTitleRightToContentViewConstraint = self.productTitle.right(to: self.contentView, offset: -kPadding, isActive: false)
             self.productTitle.backgroundColor = .red
         }
     }
@@ -49,7 +50,8 @@ extension ProductTile {
             self.productDescription.topToBottom(of: self.productTitle, offset: kPadding)
             self.productDescription.left(to: self.contentView, offset: kPadding)
             self.productDescription.right(to: self.contentView, offset: -kPadding)
-            self.productDescription.bottom(to: self.contentView, offset: -kPadding)
+            // The priority for the trailing anchor must be set to 999 to avoid any auto-layout breaks
+            self.productDescriptionBottomToContentViewConstraint = self.productDescription.bottom(to: self.contentView, offset: -kPadding, priority: UILayoutPriority(999), isActive: true)
             self.productDescription.backgroundColor = .red
         }
     }
@@ -58,11 +60,14 @@ extension ProductTile {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.contentView.addSubview(self.productDetail)
-            // Initially inactive - this suggest an offset of 0 and height is 0
-            self.productDetailTopToBottomConstraint = self.productDetail.topToBottom(of: self.productDescription, offset: 0)
+            // Initially inactive and hidden - this means the constraitns inactive.
+            self.productDetail.topToBottom(of: self.productDescription, offset: kPadding)
             self.productDetail.left(to: self.contentView, offset: kPadding)
             self.productDetail.right(to: self.contentView, offset: -kPadding)
+            // The priority for the trailing anchor must be set to 999 to avoid any auto-layout breaks
+            self.productDetailBottomConstraint = self.productDetail.bottom(to: self.contentView, offset: -kPadding, priority: UILayoutPriority(999), isActive: false)
             self.productDetail.backgroundColor = .red
+            self.productDetail.isHidden = true
         }
     }
 
@@ -70,13 +75,19 @@ extension ProductTile {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.contentView.addSubview(self.actionButton)
-            // Initially inactive and hidden = therefore the offset is 0 and height is 0
-            self.actionButtonTopToBottomConstraint = self.actionButton.topToBottom(of: self.productDetail, offset: 0)
-            self.actionButton.left(to: self.contentView, offset: kPadding)
-            self.actionButton.right(to: self.contentView, offset: -kPadding)
-            self.actionButton.bottom(to: self.contentView, offset: -kPadding)
-            self.actionButton.heightConstraint?.constant = 0
-            //            self.actionButton.isHidden = true
+            // Initially inactive and hidden = therefore the offset is 0 and height is 0 and both constraints are inactive
+            self.actionButtonTopToBottomOfProductDetailConstraint = self.actionButton.topToBottom(of: self.productDetail, offset: 0, isActive: false)
+            self.actionButtonTopToBottomOfProductDescriptionConstraint = self.actionButton.topToBottom(of: self.productDescription, offset: kPadding, isActive: false)
+            self.actionButtonLeftConstraint = self.actionButton.left(to: self.contentView, offset: kPadding, isActive: false)
+            self.actionButtonRightConstraint = self.actionButton.right(to: self.contentView, offset: -kPadding, isActive: false)
+            // The priority for the trailing anchor must be set to 999 to avoid any auto-layout breaks
+            self.actionButtonBottomConstraint = self.actionButton.bottom(to: self.contentView, offset: -kPadding, priority: UILayoutPriority(999), isActive: false)
+            self.actionButton.isHidden = true
+
+            self.actionButton.onRelease = { [weak self] in
+                guard let self = self else { return }
+                self.onRelease?()
+            }
         }
     }
 

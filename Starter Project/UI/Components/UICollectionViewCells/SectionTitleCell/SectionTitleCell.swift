@@ -31,6 +31,9 @@ class SectionTitleCell: UICollectionViewCell {
     // This is where you should remove any views that aren't constant, as well as deallocate data, images or text.
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.title.text = ""
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.title.text = ""
+        }
     }
 }
