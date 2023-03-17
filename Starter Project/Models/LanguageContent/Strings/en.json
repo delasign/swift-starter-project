@@ -22,7 +22,8 @@
         "restorePurchases": "Restore Purchases"
     },
     "refund": {
-        "header": "Request Refunds"
+        "header": "Request Refunds",
+        "noRefundsAvailable": "No refunds available."
     },
     "productTile": {
          "stock": "Stock: ",

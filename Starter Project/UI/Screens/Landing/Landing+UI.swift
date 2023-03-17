@@ -48,7 +48,7 @@ extension Landing {
             self.startButton.left(to: self, offset: kPadding)
             self.startButton.right(to: self, offset: -kPadding)
 
-            self.startButton.onRelease = { [unowned self] in
+            self.startButton.onRelease = {
                 debugPrint("\(Landing.identifier) Start Button on Release  \(DebuggingIdentifiers.actionOrEventSucceded) Updated Experience State to Offering.")
                 NotificationCenter.default.post(name: SystemNotifications.updateExperienceState, object: nil, userInfo: [kExperienceStateUserInfo: ExperienceStates.offering])
             }
@@ -65,8 +65,7 @@ extension Landing {
             self.visitOurBlogButton.left(to: self, offset: kPadding)
             self.visitOurBlogButton.right(to: self, offset: -kPadding)
 
-            self.visitOurBlogButton.onRelease = { [weak self] in
-                guard let self = self else { return}
+            self.visitOurBlogButton.onRelease = {
                 debugPrint("\(Landing.identifier) Visit our Blog Button on Release  \(DebuggingIdentifiers.actionOrEventSucceded) Opening delasign Blog")
                 if let url = URL(string: kdelasignBlogURL) {
                     UIApplication.shared.open(url)

@@ -42,6 +42,7 @@ struct UIContent: Codable {
 
     struct Refund: Codable {
         let header: String
+        let noRefundsAvailable: String
     }
 
     let refund: Refund

@@ -19,7 +19,6 @@ extension Offering {
         debugPrint("\(Offering.identifier) reloadData \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update or On StoreKit Update.")
         self.setDataSourceData()
         DispatchQueue.main.async {
-            //            self.tableView.reloadData()
             self.collectionView.reloadData()
             self.collectionView.collectionViewLayout.invalidateLayout()
         }

@@ -81,6 +81,7 @@
 		F0C484A329C3B5BA0027A14C /* OfferCodesAndRefundsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484A229C3B5BA0027A14C /* OfferCodesAndRefundsCell.swift */; };
 		F0C484A529C3B5BE0027A14C /* OfferCodesAndRefundsCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484A429C3B5BE0027A14C /* OfferCodesAndRefundsCell+UI.swift */; };
 		F0C484A729C3B5C40027A14C /* OfferCodesAndRefundsCell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484A629C3B5C40027A14C /* OfferCodesAndRefundsCell+Update.swift */; };
+		F0C484A929C3C1BA0027A14C /* Refund+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484A829C3C1BA0027A14C /* Refund+CollectionView.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
 		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
@@ -197,6 +198,7 @@
 		F0C484A229C3B5BA0027A14C /* OfferCodesAndRefundsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCodesAndRefundsCell.swift; sourceTree = "<group>"; };
 		F0C484A429C3B5BE0027A14C /* OfferCodesAndRefundsCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferCodesAndRefundsCell+UI.swift"; sourceTree = "<group>"; };
 		F0C484A629C3B5C40027A14C /* OfferCodesAndRefundsCell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferCodesAndRefundsCell+Update.swift"; sourceTree = "<group>"; };
+		F0C484A829C3C1BA0027A14C /* Refund+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Refund+CollectionView.swift"; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				F07F31B229B79AD700E94DDD /* Refund.swift */,
 				F0DD140629B8AFD1003122C8 /* Refund+UI.swift */,
 				F0DD140829B8AFD6003122C8 /* Refund+Notifications.swift */,
+				F0C484A829C3C1BA0027A14C /* Refund+CollectionView.swift */,
 			);
 			path = Refund;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				F0DD141F29B8BC4A003122C8 /* NavigationButton+Notifications.swift in Sources */,
 				F07F319D29B791E000E94DDD /* Styleguide+ProductDescription.swift in Sources */,
 				F0DD142C29B8D77A003122C8 /* TransactionLabelType.swift in Sources */,
+				F0C484A929C3C1BA0027A14C /* Refund+CollectionView.swift in Sources */,
 				F0C484A729C3B5C40027A14C /* OfferCodesAndRefundsCell+Update.swift in Sources */,
 				F07F31A629B7943800E94DDD /* Button+UI.swift in Sources */,
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,

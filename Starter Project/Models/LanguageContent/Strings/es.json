@@ -22,7 +22,8 @@
         "restorePurchases": "[ES] Restore Purchases"
     },
     "refund": {
-        "header": "[ES] Request Refunds"
+        "header": "[ES] Request Refunds",
+        "noRefundsAvailable": "[ES] No refunds available."
     },
     "productTile": {
          "stock": "[ES] Stock: ",

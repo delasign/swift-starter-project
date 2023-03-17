@@ -11,8 +11,22 @@ import UIKit
 class Refund: UIView {
     // MARK: Variables
     static let identifier: String = "[Refund]"
+    static let Sections: [StoreKitOfferingSections] = [.consumablesTitle,
+                                                       .consumables,
+                                                       .nonConsumablesTitle,
+                                                       .nonConsumables,
+                                                       .nonRenewingSubscriptionsTitle,
+                                                       .nonRenewingSubscriptions,
+                                                       .autoRenewableSubscriptionsTitle,
+                                                       .autoRenewableSubscriptionsIndividualPlansTitle,
+                                                       .autoRenewableSubscriptionsIndividualPlans,
+                                                       .autoRenewableSubscriptionsFamilyPlansTitle,
+                                                       .autoRenewableSubscriptionsFamilyPlans]
+
+    var dataSource: UICollectionViewDiffableDataSource<StoreKitOfferingSections, Int>!
     // MARK: UI
-    let header: UILabel = Styleguide.createAttributedHeader()
+    var collectionView: UICollectionView!
+    let noRefundsAvailableLabel: UILabel = Styleguide.createAttributedProductButton()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {
@@ -25,6 +39,7 @@ class Refund: UIView {
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
+        self.configureDataSource()
     }
 
     // This is the function that gets called when you remove your view from its superview.

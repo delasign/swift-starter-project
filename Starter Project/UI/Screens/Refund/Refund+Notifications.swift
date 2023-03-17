@@ -11,7 +11,29 @@ import UIKit
 extension Refund {
     // The setupNotifications function should be the only publically available class in this extension.
     func setupNotifications() {
-
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadData), name: SystemNotifications.onContentUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadData), name: SystemNotifications.onStoreKitUpdate, object: nil)
     }
     // MARK: Notification Setup Functionality
+    @objc private func reloadData() {
+        guard let currentContent = LanguageCoordinator.shared.currentContent else { return }
+        debugPrint("\(Offering.identifier) reloadData \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update or On StoreKit Update.")
+        self.setDataSourceData()
+        let skc = StoreKitCoordinator.shared
+        DispatchQueue.main.async {
+            // Hide / Show UICollectionView or Label + Reload Data
+            if skc.purchasedConsumables.isEmpty && skc.purchasedNonConsumables.isEmpty && skc.purchasedNonRenewables.isEmpty && skc.purchasedIndividualSubscriptions.isEmpty && skc.purchasedFamilySubscriptions.isEmpty {
+                self.collectionView.isHidden = true
+                self.noRefundsAvailableLabel.attributedText = Styleguide.attributedProductButtonText(text: currentContent.refund.noRefundsAvailable, color: Styleguide.colors.black)
+                self.noRefundsAvailableLabel.isHidden = false
+            } else {
+                self.collectionView.isHidden = false
+                self.noRefundsAvailableLabel.isHidden = true
+
+                self.collectionView.collectionViewLayout.invalidateLayout()
+                self.collectionView.reloadData()
+            }
+
+        }
+    }
 }

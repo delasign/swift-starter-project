@@ -15,7 +15,9 @@ enum StoreKitOfferingSections: CaseIterable {
     case nonRenewingSubscriptionsTitle
     case nonRenewingSubscriptions
     case autoRenewableSubscriptionsTitle
+    case autoRenewableSubscriptionsIndividualPlansTitle
     case autoRenewableSubscriptionsIndividualPlans
+    case autoRenewableSubscriptionsFamilyPlansTitle
     case autoRenewableSubscriptionsFamilyPlans
     case offerCodesAndRefunds
     case restorePurchasesTitle
