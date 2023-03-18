@@ -88,6 +88,7 @@
 		F0C484B129C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B029C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift */; };
 		F0C484B329C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */; };
 		F0C484B529C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */; };
+		F0C484B729C60AA60027A14C /* ProductTile+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B629C60AA60027A14C /* ProductTile+Notifications.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
 		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
@@ -211,6 +212,7 @@
 		F0C484B029C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitSubscriptionPeriodString.swift; sourceTree = "<group>"; };
 		F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitSubscriptionIntroductoryOfferPeriodString.swift; sourceTree = "<group>"; };
 		F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitIntroductoryOfferDetailString.swift; sourceTree = "<group>"; };
+		F0C484B629C60AA60027A14C /* ProductTile+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductTile+Notifications.swift"; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 			children = (
 				F0DD142529B8D465003122C8 /* ProductTile.swift */,
 				F0DD142729B8D4F9003122C8 /* ProductTile+UI.swift */,
+				F0C484B629C60AA60027A14C /* ProductTile+Notifications.swift */,
 				F0DD144329BA121D003122C8 /* ProductTile+Update.swift */,
 			);
 			path = "Product Tile";
@@ -870,6 +873,7 @@
 				F0C4848C29C0B5130027A14C /* SectionTitleCell+Update.swift in Sources */,
 				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
 				F062232729A67C9B00B04939 /* OfferingKeys.swift in Sources */,
+				F0C484B729C60AA60027A14C /* ProductTile+Notifications.swift in Sources */,
 				F0DD140C29B8B089003122C8 /* NavigationButton.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0397F4C2885EE49002AF19B /* Landing+UI.swift in Sources */,

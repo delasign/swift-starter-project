@@ -41,9 +41,9 @@ class ProductTile: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupUI()
+        self.setupNotifications()
         self.backgroundColor = Styleguide.colors.white
         self.layer.cornerRadius = kPadding
-        self.layer.masksToBounds = false
     }
 
     override func layoutSubviews() {

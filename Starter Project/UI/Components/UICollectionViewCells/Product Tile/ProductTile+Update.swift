@@ -151,6 +151,9 @@ extension ProductTile {
                 // Activate the product description bottom constraint
                 activateConstraints(constraints: [self.productDescriptionBottomToContentViewConstraint])
             }
+            // Layout to make sure that the cell resizes correctly.
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
         }
     }
 }

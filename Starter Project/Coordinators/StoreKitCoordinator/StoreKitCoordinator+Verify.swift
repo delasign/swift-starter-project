@@ -9,18 +9,18 @@ import Foundation
 import StoreKit
 
 extension StoreKitCoordinator {
-    func isPurchased(_ product: Product) async throws -> Bool {
+    func isPurchased(_ product: Product) -> Bool {
         debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventInProgress) Checking if the product is purchased... \(DebuggingIdentifiers.actionOrEventInProgress)")
         // Determine whether the user purchases a given product.
         switch product.type {
         case .nonRenewable:
-            debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventSucceded) Non-Renewing Subscription has been purchased.")
+            debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventSucceded) Non-Renewing Subscription has been purchased : \(purchasedNonRenewables.contains(product)).")
             return purchasedNonRenewables.contains(product)
         case .nonConsumable:
-            debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventSucceded) Non-Consumable has been purchased.")
+            debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventSucceded) Non-Consumable has been purchased : \(purchasedNonConsumables.contains(product)).")
             return purchasedNonConsumables.contains(product)
         case .autoRenewable:
-            debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventSucceded) Auto-Renewable Subscription has been purchased.")
+            debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventSucceded) Auto-Renewable Subscription has been purchased : \(purchasedIndividualSubscriptions.contains(product) || purchasedFamilySubscriptions.contains(product)).")
             return purchasedIndividualSubscriptions.contains(product) || purchasedFamilySubscriptions.contains(product)
         case .consumable:
             debugPrint("\(StoreKitCoordinator.identifier) isPurchased \(DebuggingIdentifiers.actionOrEventFailed) Consumables cannot be checked off as purchased.")

@@ -164,7 +164,7 @@ extension Offering {
             case .nonConsumables:
                 product = nonConsumables[indexPath.row]
                 // Non Consumables are either purchased, pending or available for purchase.
-                if skc.purchasedNonConsumables.contains(where: { $0.id == product.id }) {
+                if skc.isPurchased(product) {
                     type = .purchased
                 } else {
                     // Non Consumables always carry a price tag but can be free. If they are free, their price tag is 0.00.
@@ -174,7 +174,7 @@ extension Offering {
             case .nonRenewingSubscriptions:
                 product = nonRenewingSubscriptions[indexPath.row]
                 // Non Renewing Subscriptions are either purchased, pending or available for purchase.
-                if skc.purchasedNonRenewables.contains(where: { $0.id == product.id }) {
+                if skc.isPurchased(product) {
                     // In the case that a non-renewable has been purchased, it is active until a date.
                     type = .activeUntil
                 } else {
@@ -187,7 +187,7 @@ extension Offering {
                 // Auto Renewing Subscriptions are either purchased, in billing retry, in a grace period, expiring, pending or available for purchase.
                 // If they are available for purchase, they can have an introductory offer or a promotional offer.
                 // Promotional Offers are not covered by this tutorial.
-                if skc.purchasedIndividualSubscriptions.contains(where: { $0.id == product.id }) {
+                if skc.isPurchased(product) {
                     // In the case that an auto-renewable has been purchased, it renews periodically on a date.
                     type = .autoRenewablePurchased
                 } else {
@@ -202,7 +202,7 @@ extension Offering {
                 // Auto Renewing Subscriptions are either purchased, expiring, in billing retry, in a grace period, pending or available for purchase.
                 // If they are available for purchase, they can have an introductory offer or a promotional offer.
                 // Promotional Offers are not covered by this tutorial.
-                if skc.purchasedIndividualSubscriptions.contains(where: { $0.id == product.id }) {
+                if skc.isPurchased(product) {
                     type = .autoRenewablePurchased
                 } else {
                     // Auto-renewing subscriptions are never free, always carry a price and can come with an introductory offer (i.e. they can never be free - unless theres an introductory offer, which can be free for a period before paying a price).
@@ -218,7 +218,23 @@ extension Offering {
                 // Callbacks
                 cell.onRelease = { [weak self] in
                     guard let _ = self else { return }
-                    debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName)")
+                    debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName).")
+
+                    switch type {
+                    case .get, .price, .consumableBuy, .buySubscription, .buySubscriptionWithIntroductoryOffer:
+                        // Execute Purchase
+                        Task {
+                            do {
+                                _ = try await StoreKitCoordinator.shared.purchase(product)
+                            } catch {
+                                debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) failed to buy product : \(product.displayName). Error : \(error.localizedDescription)")
+                            }
+                        }
+                        break
+                    default:
+                        debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) Did not execute anything - [Default State].")
+                        break
+                    }
                 }
             }
 
@@ -327,7 +343,7 @@ extension Offering {
         // Snapshots must be applied on the main queue
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.dataSource.apply(snapshot, animatingDifferences: true)
+            self.dataSource.apply(snapshot, animatingDifferences: false)
         }
     }
 }
