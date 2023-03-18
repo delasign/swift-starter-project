@@ -59,6 +59,14 @@ struct UIContent: Codable {
         let get: String
         let purchase: String
         let claimOffer: String
+        let introductoryOfferPayLeadingText: String
+        let introductoryOfferPayAsYouGoLeadingPeriodText: String
+        let introductoryOfferPayAsYouGoLeadingTotalLengthText: String
+        let introductoryOfferPayUpFrontLeadingPeriodText: String
+        let introductoryOfferPostOfferPricingText: String
+        let introductoryOfferPostOfferPeriodText: String
+        let introductoryOfferFreeLeadingText: String
+        let introductoryOfferFree: String
     }
 
     let productTile: ProductTile

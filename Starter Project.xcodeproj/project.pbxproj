@@ -85,6 +85,9 @@
 		F0C484AB29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484AA29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift */; };
 		F0C484AD29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484AC29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift */; };
 		F0C484AF29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484AE29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift */; };
+		F0C484B129C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B029C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift */; };
+		F0C484B329C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */; };
+		F0C484B529C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
 		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
@@ -205,6 +208,9 @@
 		F0C484AA29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitSubscriptionPeriod.swift; sourceTree = "<group>"; };
 		F0C484AC29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitSubscriptionPeriod.swift; sourceTree = "<group>"; };
 		F0C484AE29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+TransactionLabelSmall.swift"; sourceTree = "<group>"; };
+		F0C484B029C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitSubscriptionPeriodString.swift; sourceTree = "<group>"; };
+		F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitSubscriptionIntroductoryOfferPeriodString.swift; sourceTree = "<group>"; };
+		F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitIntroductoryOfferDetailString.swift; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -516,6 +522,9 @@
 			children = (
 				F062230E29A660BD00B04939 /* StoreKitTypeAliases.swift */,
 				F0C484AA29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift */,
+				F0C484B029C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift */,
+				F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */,
+				F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
@@ -888,6 +897,7 @@
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C4849F29C3B5AF0027A14C /* RestorePurchasesCell+UI.swift in Sources */,
 				F0DD140329B8AFC5003122C8 /* Offering+UI.swift in Sources */,
+				F0C484B329C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
 				F062232929A67E1000B04939 /* OfferingConfiguration.swift in Sources */,
 				F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */,
@@ -898,6 +908,7 @@
 				F008F4DA2885BA8D00E4841B /* Landing.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F07F31B329B79AD700E94DDD /* Refund.swift in Sources */,
+				F0C484B529C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift in Sources */,
 				F008FCAC287FA82B00B2495D /* Styleguide+Header.swift in Sources */,
 				F062231B29A6673000B04939 /* StoreKitCoordinator.swift in Sources */,
 				F0C4849929C33D890027A14C /* Styleguide+ProductDetail.swift in Sources */,
@@ -928,6 +939,7 @@
 				F0C4849329C228800027A14C /* SectionSubTitleCell.swift in Sources */,
 				F0DD142829B8D4F9003122C8 /* ProductTile+UI.swift in Sources */,
 				F0A038BB29C092A800D607D2 /* OfferingCollectionViewDataType.swift in Sources */,
+				F0C484B129C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift in Sources */,
 				F07F31A129B791EB00E94DDD /* Styleguide+Alert.swift in Sources */,
 				F0DD141D29B8B981003122C8 /* NavigationHeader+Update.swift in Sources */,
 				F0DD141429B8B213003122C8 /* NavigationButton+Update.swift in Sources */,

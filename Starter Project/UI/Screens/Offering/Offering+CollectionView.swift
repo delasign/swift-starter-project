@@ -113,8 +113,6 @@ extension Offering {
             }
             DispatchQueue.main.async {
                 cell.update(text: title)
-                cell.setNeedsLayout()
-                cell.layoutIfNeeded()
             }
         }
         /// SectionSubTitleCell Supplementary Registration
@@ -140,8 +138,6 @@ extension Offering {
 
                 DispatchQueue.main.async {
                     cell.update(text: title)
-                    cell.setNeedsLayout()
-                    cell.layoutIfNeeded()
                 }
             }
         }
@@ -188,7 +184,6 @@ extension Offering {
                 break
             case .autoRenewableSubscriptionsIndividualPlans:
                 product = individualSubscriptions[indexPath.row]
-                debugPrint("PRODUCT AB : \(product.subscription?.introductoryOffer)")
                 // Auto Renewing Subscriptions are either purchased, in billing retry, in a grace period, expiring, pending or available for purchase.
                 // If they are available for purchase, they can have an introductory offer or a promotional offer.
                 // Promotional Offers are not covered by this tutorial.
@@ -220,14 +215,13 @@ extension Offering {
             }
             DispatchQueue.main.async {
                 cell.update(type: type, product: product)
-                cell.setNeedsLayout()
-                cell.layoutIfNeeded()
                 // Callbacks
                 cell.onRelease = { [weak self] in
                     guard let _ = self else { return }
                     debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName)")
                 }
             }
+
         }
 
         /// RedeemOfferCell
@@ -235,8 +229,6 @@ extension Offering {
         <OfferCodesAndRefundsCell, Int> { (cell, _, _) in
             DispatchQueue.main.async {
                 cell.update()
-                cell.setNeedsLayout()
-                cell.layoutIfNeeded()
                 // Callbacks
                 cell.onRedeemOfferCode = { [weak self] in
                     guard let _ = self else { return }
@@ -253,10 +245,8 @@ extension Offering {
                         guard let self = self else { return }
                         self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
                     })
-
                 }
             }
-
         }
 
         /// Restore Purchases Cell
@@ -264,8 +254,6 @@ extension Offering {
         <RestorePurchasesCell, Int> { (cell, _, _) in
             DispatchQueue.main.async {
                 cell.update()
-                cell.setNeedsLayout()
-                cell.layoutIfNeeded()
                 // Callbacks
                 cell.onRelease = { [weak self] in
                     guard let _ = self else { return }

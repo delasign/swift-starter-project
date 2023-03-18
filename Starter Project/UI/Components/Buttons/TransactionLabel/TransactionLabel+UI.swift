@@ -14,7 +14,7 @@ extension TransactionLabel {
     // This can be called refreshUI if your app removes and adds content periodically.
     func setupUI() {
         switch type {
-        case .free, .price, .subscriptionPrice:
+        case .free, .price, .subscriptionPrice, .introductoryOffer:
             self.setupLabel()
             break
         case .pending:
@@ -50,6 +50,7 @@ extension TransactionLabel {
             self.label.edgesToSuperview()
 
             let copy: String
+            var color: UIColor = Styleguide.colors.black
             switch self.type {
             case .free:
                 copy = currentContent.transactionLabel.free
@@ -63,43 +64,35 @@ extension TransactionLabel {
                 break
             case .subscriptionPrice:
                 if let product = self.product {
-                    let subscriptionPeriod = getStoreKitSubscriptionPeriod(product: product)
-                    switch subscriptionPeriod {
-                    case .weekly:
-                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.weekly)"
-                        break
-                    case .monthly:
-                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.monthly)"
-                        break
-                    case .everyTwoMonths:
-                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.everyTwoMonths)"
-                        break
-                    case .everyThreeMonths:
-                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.everyThreeMonths)"
-                        break
-                    case .everySixMonths:
-                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.everySixMonths)"
-                        break
-                    case .yearly:
-                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.yearly)"
-                        break
-                    case .none:
-                        copy = currentContent.shared.missing
-                        break
-                    }
+                    // Get the subscriptionPeriodString
+                    let subscriptionPeriodString = getStoreKitSubscriptionPeriodString(product: product)
+                    // Set the copy
+                    copy = "\(product.displayPrice)/\n\(subscriptionPeriodString)"
 
                 } else {
                     copy = currentContent.shared.missing
                 }
+                break
+            case .introductoryOffer:
+                color = Styleguide.colors.white
+                if let product = self.product, let introductoryOffer = product.subscription?.introductoryOffer {
+                    // Get the subscriptionPeriodString
+                    let subscriptionPeriodString = getStoreKitSubscriptionIntroductoryOfferPeriodString(product: product)
+                    // Set the copy
+                    copy = "\(introductoryOffer.displayPrice)/\n\(subscriptionPeriodString)"
+                } else {
+                    copy = currentContent.shared.missing
+                }
+                break
             default:
                 copy = currentContent.shared.error
                 break
             }
 
-            if self.type == .subscriptionPrice {
-                self.label.attributedText = Styleguide.attributedTransactionLabelTextSmall(text: copy, color: Styleguide.colors.black)
+            if self.type == .subscriptionPrice || self.type == .introductoryOffer {
+                self.label.attributedText = Styleguide.attributedTransactionLabelTextSmall(text: copy, color: color)
             } else {
-                self.label.attributedText = Styleguide.attributedLabelText(text: copy, color: Styleguide.colors.black)
+                self.label.attributedText = Styleguide.attributedLabelText(text: copy, color: color)
             }
 
         }

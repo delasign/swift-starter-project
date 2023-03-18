@@ -36,7 +36,15 @@
          "autoRenewableGracePeriodMessage": ". Pay for your subscription to maintain access.",
          "get": "Get",
          "purchase": "Purchase",
-         "claimOffer": "Claim Offer"
+         "claimOffer": "Claim Offer",
+         "introductoryOfferPayLeadingText": "Pay ",
+         "introductoryOfferPayAsYouGoLeadingPeriodText": " every ",
+         "introductoryOfferPayAsYouGoLeadingTotalLengthText": " for ",
+         "introductoryOfferPayUpFrontLeadingPeriodText": " for ",
+         "introductoryOfferPostOfferPricingText": " then ",
+         "introductoryOfferPostOfferPeriodText": " every ",
+         "introductoryOfferFreeLeadingText": "Get ",
+         "introductoryOfferFree": " free "
     },
     "transactionLabel": {
         "free": "Free",

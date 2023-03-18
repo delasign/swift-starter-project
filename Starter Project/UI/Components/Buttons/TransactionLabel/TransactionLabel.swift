@@ -67,6 +67,8 @@ class TransactionLabel: UIView {
         switch type {
         case .free, .price, .subscriptionPrice:
             return Styleguide.colors.white
+        case .introductoryOffer:
+            return Styleguide.colors.blue
         case .pending:
             return Styleguide.colors.purple
         case .purchased:

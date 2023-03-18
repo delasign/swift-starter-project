@@ -11,6 +11,7 @@ enum TransactionLabelType: CaseIterable {
     case free
     case price
     case subscriptionPrice
+    case introductoryOffer
     case pending
     case purchased
     case warning

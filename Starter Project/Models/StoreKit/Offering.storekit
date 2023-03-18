@@ -112,15 +112,15 @@
           "codeOffers" : [
 
           ],
-          "displayPrice" : "0.99",
+          "displayPrice" : "4.99",
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "279D2955",
           "introductoryOffer" : {
-            "displayPrice" : "0.99",
+            "displayPrice" : "1.99",
             "internalID" : "6E4BCC8A",
             "paymentMode" : "payUpFront",
-            "subscriptionPeriod" : "P1M"
+            "subscriptionPeriod" : "P3M"
           },
           "localizations" : [
             {

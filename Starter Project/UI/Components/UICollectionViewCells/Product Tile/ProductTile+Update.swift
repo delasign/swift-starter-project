@@ -20,10 +20,6 @@ extension ProductTile {
                 return
             }
 
-            debugPrint("PRODUCT A : \(product)")
-            debugPrint("PRODUCT AB : \(product.subscription?.subscriptionPeriod)")
-            debugPrint("PRODUCT ABC : \(getStoreKitSubscriptionPeriod(product: product))")
-
             var transactionLabelType: TransactionLabelType?
             var detailString: String?
             var buttonString: String?
@@ -46,7 +42,8 @@ extension ProductTile {
                 buttonString = currentContent.productTile.purchase
                 break
             case .buySubscriptionWithIntroductoryOffer:
-                transactionLabelType = .subscriptionPrice
+                transactionLabelType = .introductoryOffer
+                detailString = getStoreKitIntroductoryOfferDetailString(product: product)
                 buttonString = currentContent.productTile.purchase
                 break
             case .pending:
