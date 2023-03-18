@@ -57,7 +57,7 @@
 		F062232B29A67F6E00B04939 /* OfferingConfiguration+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062232A29A67F6E00B04939 /* OfferingConfiguration+Get.swift */; };
 		F07F319B29B791CE00E94DDD /* Styleguide+ProductTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319A29B791CE00E94DDD /* Styleguide+ProductTitle.swift */; };
 		F07F319D29B791E000E94DDD /* Styleguide+ProductDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319C29B791E000E94DDD /* Styleguide+ProductDescription.swift */; };
-		F07F319F29B791E600E94DDD /* Styleguide+ProductButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319E29B791E600E94DDD /* Styleguide+ProductButton.swift */; };
+		F07F319F29B791E600E94DDD /* Styleguide+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319E29B791E600E94DDD /* Styleguide+Label.swift */; };
 		F07F31A129B791EB00E94DDD /* Styleguide+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F31A029B791EB00E94DDD /* Styleguide+Alert.swift */; };
 		F07F31A429B7943300E94DDD /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F31A329B7943300E94DDD /* Button.swift */; };
 		F07F31A629B7943800E94DDD /* Button+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F31A529B7943800E94DDD /* Button+UI.swift */; };
@@ -82,6 +82,9 @@
 		F0C484A529C3B5BE0027A14C /* OfferCodesAndRefundsCell+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484A429C3B5BE0027A14C /* OfferCodesAndRefundsCell+UI.swift */; };
 		F0C484A729C3B5C40027A14C /* OfferCodesAndRefundsCell+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484A629C3B5C40027A14C /* OfferCodesAndRefundsCell+Update.swift */; };
 		F0C484A929C3C1BA0027A14C /* Refund+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484A829C3C1BA0027A14C /* Refund+CollectionView.swift */; };
+		F0C484AB29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484AA29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift */; };
+		F0C484AD29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484AC29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift */; };
+		F0C484AF29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484AE29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
 		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
@@ -174,7 +177,7 @@
 		F062232A29A67F6E00B04939 /* OfferingConfiguration+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferingConfiguration+Get.swift"; sourceTree = "<group>"; };
 		F07F319A29B791CE00E94DDD /* Styleguide+ProductTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+ProductTitle.swift"; sourceTree = "<group>"; };
 		F07F319C29B791E000E94DDD /* Styleguide+ProductDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+ProductDescription.swift"; sourceTree = "<group>"; };
-		F07F319E29B791E600E94DDD /* Styleguide+ProductButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+ProductButton.swift"; sourceTree = "<group>"; };
+		F07F319E29B791E600E94DDD /* Styleguide+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+Label.swift"; sourceTree = "<group>"; };
 		F07F31A029B791EB00E94DDD /* Styleguide+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+Alert.swift"; sourceTree = "<group>"; };
 		F07F31A329B7943300E94DDD /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		F07F31A529B7943800E94DDD /* Button+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+UI.swift"; sourceTree = "<group>"; };
@@ -199,6 +202,9 @@
 		F0C484A429C3B5BE0027A14C /* OfferCodesAndRefundsCell+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferCodesAndRefundsCell+UI.swift"; sourceTree = "<group>"; };
 		F0C484A629C3B5C40027A14C /* OfferCodesAndRefundsCell+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferCodesAndRefundsCell+Update.swift"; sourceTree = "<group>"; };
 		F0C484A829C3C1BA0027A14C /* Refund+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Refund+CollectionView.swift"; sourceTree = "<group>"; };
+		F0C484AA29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitSubscriptionPeriod.swift; sourceTree = "<group>"; };
+		F0C484AC29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitSubscriptionPeriod.swift; sourceTree = "<group>"; };
+		F0C484AE29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+TransactionLabelSmall.swift"; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -297,7 +303,8 @@
 				F07F319A29B791CE00E94DDD /* Styleguide+ProductTitle.swift */,
 				F07F319C29B791E000E94DDD /* Styleguide+ProductDescription.swift */,
 				F0C4849829C33D890027A14C /* Styleguide+ProductDetail.swift */,
-				F07F319E29B791E600E94DDD /* Styleguide+ProductButton.swift */,
+				F07F319E29B791E600E94DDD /* Styleguide+Label.swift */,
+				F0C484AE29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift */,
 				F07F31A029B791EB00E94DDD /* Styleguide+Alert.swift */,
 			);
 			path = Styleguide;
@@ -460,6 +467,7 @@
 				F062232A29A67F6E00B04939 /* OfferingConfiguration+Get.swift */,
 				F062231029A661B000B04939 /* StoreKitError.swift */,
 				F062231729A666A800B04939 /* SubscriptionTiers.swift */,
+				F0C484AC29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
@@ -507,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				F062230E29A660BD00B04939 /* StoreKitTypeAliases.swift */,
+				F0C484AA29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
@@ -868,6 +877,7 @@
 				F0DD141229B8B0A6003122C8 /* NavigationButton+Animations.swift in Sources */,
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F062230F29A660BD00B04939 /* StoreKitTypeAliases.swift in Sources */,
+				F0C484AD29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift in Sources */,
 				F0DD142629B8D465003122C8 /* ProductTile.swift in Sources */,
 				F07F319B29B791CE00E94DDD /* Styleguide+ProductTitle.swift in Sources */,
 				F0C4849729C228890027A14C /* SectionSubTitleCell+Update.swift in Sources */,
@@ -893,10 +903,11 @@
 				F0C4849929C33D890027A14C /* Styleguide+ProductDetail.swift in Sources */,
 				F07F31A829B7956200E94DDD /* ButtonType.swift in Sources */,
 				F062232529A66A3600B04939 /* StoreKitCoordinator+Update.swift in Sources */,
+				F0C484AF29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift in Sources */,
 				F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
-				F07F319F29B791E600E94DDD /* Styleguide+ProductButton.swift in Sources */,
+				F07F319F29B791E600E94DDD /* Styleguide+Label.swift in Sources */,
 				F0C484A129C3B5B50027A14C /* RestorePurchasesCell+Update.swift in Sources */,
 				F0DD144729BA12E7003122C8 /* RemoveAllViews.swift in Sources */,
 				F0DD142129B8C66D003122C8 /* ViewController+Notifications.swift in Sources */,
@@ -926,6 +937,7 @@
 				F07F31A429B7943300E94DDD /* Button.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+SectionTitle.swift in Sources */,
+				F0C484AB29C4C8750027A14C /* getStoreKitSubscriptionPeriod.swift in Sources */,
 				F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 				F0DD142329B8D38C003122C8 /* Offering+CollectionView.swift in Sources */,

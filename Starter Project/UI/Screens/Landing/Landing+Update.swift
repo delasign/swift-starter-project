@@ -31,8 +31,8 @@ extension Landing {
             }
             let colors = Styleguide.colors
             self.tutorialLabel.attributedText = Styleguide.attributedHeaderText(text: currentContent.landing.tutorialLabel)
-            self.startButton.title.attributedText = Styleguide.attributedProductButtonText(text: currentContent.landing.start, color: colors.black)
-            self.visitOurBlogButton.title.attributedText = Styleguide.attributedProductButtonText(text: currentContent.landing.visitOurBlog, color: colors.white)
+            self.startButton.title.attributedText = Styleguide.attributedLabelText(text: currentContent.landing.start, color: colors.black)
+            self.visitOurBlogButton.title.attributedText = Styleguide.attributedLabelText(text: currentContent.landing.visitOurBlog, color: colors.white)
             debugPrint("\(Landing.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }

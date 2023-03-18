@@ -13,13 +13,13 @@ extension OfferCodesAndRefundsCell {
         DispatchQueue.main.async { [weak self] in
             guard let self = self, let currentContent = LanguageCoordinator.shared.currentContent else { return }
             // Redeem Offer Code
-            self.redeemOfferCodeButton.title.attributedText = Styleguide.attributedProductButtonText(text: currentContent.offering.redeemOfferCode, color: Styleguide.colors.white)
+            self.redeemOfferCodeButton.title.attributedText = Styleguide.attributedLabelText(text: currentContent.offering.redeemOfferCode, color: Styleguide.colors.white)
             self.redeemOfferCodeButton.onRelease = { [weak self] in
                 guard let self = self else { return }
                 self.onRedeemOfferCode?()
             }
             // Request Refund
-            self.requestRefundButton.title.attributedText = Styleguide.attributedProductButtonText(text: currentContent.shared.requestARefund, color: Styleguide.colors.black)
+            self.requestRefundButton.title.attributedText = Styleguide.attributedLabelText(text: currentContent.shared.requestARefund, color: Styleguide.colors.black)
             self.requestRefundButton.onRelease = { [weak self] in
                 guard let self = self else { return }
                 self.onRequestARefund?()

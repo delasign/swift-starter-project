@@ -11,11 +11,11 @@ import StoreKit
 
 class TransactionLabel: UIView {
     // MARK: Variables
-    static let identifier: String = "[PurchaseButton]"
+    static let identifier: String = "[TransactionLabel]"
     var type: TransactionLabelType = .free
     var product: Product?
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedProductButton()
+    let label: UILabel = Styleguide.createAttributedLabel()
     let imageView: UIImageView = UIImageView()
     var imageViewWidth: NSLayoutConstraint?
     var imageViewHeight: NSLayoutConstraint?
@@ -65,8 +65,8 @@ class TransactionLabel: UIView {
 
     func getBackgroundColor() -> UIColor {
         switch type {
-        case .free, .price:
-            return Styleguide.colors.blue
+        case .free, .price, .subscriptionPrice:
+            return Styleguide.colors.white
         case .pending:
             return Styleguide.colors.purple
         case .purchased:

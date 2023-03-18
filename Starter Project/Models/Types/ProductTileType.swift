@@ -11,9 +11,8 @@ enum ProductTileType: CaseIterable {
     case get
     case price
     case consumableBuy
-    case buyMonthly
-    case buyYearly
-    case buyIntroOfferMonthly
+    case buySubscription
+    case buySubscriptionWithIntroductoryOffer
     case pending
     case purchased
     case activeUntil

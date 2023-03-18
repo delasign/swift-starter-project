@@ -171,8 +171,8 @@ extension Offering {
                 if skc.purchasedNonConsumables.contains(where: { $0.id == product.id }) {
                     type = .purchased
                 } else {
-                    // Non Consumables always carry a price tag but can be free. If they are free, their price tag is 0.00
-                    type = product.price < 0.99 ? .get : .price
+                    // Non Consumables always carry a price tag but can be free. If they are free, their price tag is 0.00.
+                    type = product.price < 0.01 ? .get : .price
                 }
                 break
             case .nonRenewingSubscriptions:
@@ -182,29 +182,37 @@ extension Offering {
                     // In the case that a non-renewable has been purchased, it is active until a date.
                     type = .activeUntil
                 } else {
-                    // Non-renewables are never free and always carry a price
+                    // Non-renewables are never free and always carry a price (i.e. they can never be free).
                     type = .price
                 }
                 break
             case .autoRenewableSubscriptionsIndividualPlans:
                 product = individualSubscriptions[indexPath.row]
+                debugPrint("PRODUCT AB : \(product.subscription?.introductoryOffer)")
                 // Auto Renewing Subscriptions are either purchased, in billing retry, in a grace period, expiring, pending or available for purchase.
+                // If they are available for purchase, they can have an introductory offer or a promotional offer.
+                // Promotional Offers are not covered by this tutorial.
                 if skc.purchasedIndividualSubscriptions.contains(where: { $0.id == product.id }) {
                     // In the case that an auto-renewable has been purchased, it renews periodically on a date.
                     type = .autoRenewablePurchased
                 } else {
-                    // Non-renewables are never free and always carry a price
-                    type = .price
+                    // Auto-renewing subscriptions are never free, always carry a price and can come with an introductory offer (i.e. they can never be free - unless theres an introductory offer, which can be free for a period before paying a price).
+                    // They can either be priced weekly, monthly, every 2 months, every 3 months, every 6 months or yearly - the formatting for the pricing is calculated in the transaction label.
+                    type = product.subscription?.introductoryOffer == nil ? .buySubscription : .buySubscriptionWithIntroductoryOffer
+
                 }
                 break
             case .autoRenewableSubscriptionsFamilyPlans:
                 product = familySubscriptions[indexPath.row]
                 // Auto Renewing Subscriptions are either purchased, expiring, in billing retry, in a grace period, pending or available for purchase.
+                // If they are available for purchase, they can have an introductory offer or a promotional offer.
+                // Promotional Offers are not covered by this tutorial.
                 if skc.purchasedIndividualSubscriptions.contains(where: { $0.id == product.id }) {
                     type = .autoRenewablePurchased
                 } else {
-                    // Non-renewables are never free and always carry a price
-                    type = .price
+                    // Auto-renewing subscriptions are never free, always carry a price and can come with an introductory offer (i.e. they can never be free - unless theres an introductory offer, which can be free for a period before paying a price).
+                    // They can either be priced weekly, monthly, every 2 months, every 3 months, every 6 months or yearly - the formatting for the pricing is calculated in the transaction label.
+                    type = product.subscription?.introductoryOffer == nil ? .buySubscription : .buySubscriptionWithIntroductoryOffer
                 }
                 break
             default:

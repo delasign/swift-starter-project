@@ -24,7 +24,7 @@ extension Refund {
             // Hide / Show UICollectionView or Label + Reload Data
             if skc.purchasedConsumables.isEmpty && skc.purchasedNonConsumables.isEmpty && skc.purchasedNonRenewables.isEmpty && skc.purchasedIndividualSubscriptions.isEmpty && skc.purchasedFamilySubscriptions.isEmpty {
                 self.collectionView.isHidden = true
-                self.noRefundsAvailableLabel.attributedText = Styleguide.attributedProductButtonText(text: currentContent.refund.noRefundsAvailable, color: Styleguide.colors.black)
+                self.noRefundsAvailableLabel.attributedText = Styleguide.attributedLabelText(text: currentContent.refund.noRefundsAvailable, color: Styleguide.colors.black)
                 self.noRefundsAvailableLabel.isHidden = false
             } else {
                 self.collectionView.isHidden = false

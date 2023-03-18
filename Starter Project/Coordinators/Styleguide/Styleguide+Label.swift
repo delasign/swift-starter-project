@@ -1,5 +1,5 @@
 //
-//  Styleguide+ProductButton.swift
+//  Styleguide+Label.swift
 //  Starter Project
 //
 //  Created by Oscar de la Hera Gomez on 3/7/23.
@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension Styleguide {
-    static func createAttributedProductButton(
+    static func createAttributedLabel(
         text: String? = nil
     ) -> UILabel {
         let label = UILabel()
@@ -17,14 +17,14 @@ extension Styleguide {
         label.numberOfLines = 0
         if let text = text {
             // Colors default to black
-            label.attributedText = self.attributedProductButtonText(text: text, color: Styleguide.colors.black)
+            label.attributedText = self.attributedLabelText(text: text, color: Styleguide.colors.black)
         }
         label.textAlignment = .center
         label.sizeToFit()
         return label
     }
 
-    static func attributedProductButtonText(text: String, color: UIColor) -> NSMutableAttributedString {
+    static func attributedLabelText(text: String, color: UIColor) -> NSMutableAttributedString {
         // Paragraph Style
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center

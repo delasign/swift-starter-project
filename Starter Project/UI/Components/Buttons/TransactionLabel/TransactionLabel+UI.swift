@@ -14,7 +14,7 @@ extension TransactionLabel {
     // This can be called refreshUI if your app removes and adds content periodically.
     func setupUI() {
         switch type {
-        case .free, .price:
+        case .free, .price, .subscriptionPrice:
             self.setupLabel()
             break
         case .pending:
@@ -49,11 +49,10 @@ extension TransactionLabel {
             self.addSubview(self.label)
             self.label.edgesToSuperview()
 
-            let color: UIColor = Styleguide.colors.white
             let copy: String
             switch self.type {
             case .free:
-                copy = currentContent.purchaseButton.free
+                copy = currentContent.transactionLabel.free
                 break
             case .price:
                 if let product = self.product {
@@ -62,12 +61,47 @@ extension TransactionLabel {
                     copy = currentContent.shared.missing
                 }
                 break
+            case .subscriptionPrice:
+                if let product = self.product {
+                    let subscriptionPeriod = getStoreKitSubscriptionPeriod(product: product)
+                    switch subscriptionPeriod {
+                    case .weekly:
+                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.weekly)"
+                        break
+                    case .monthly:
+                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.monthly)"
+                        break
+                    case .everyTwoMonths:
+                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.everyTwoMonths)"
+                        break
+                    case .everyThreeMonths:
+                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.everyThreeMonths)"
+                        break
+                    case .everySixMonths:
+                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.everySixMonths)"
+                        break
+                    case .yearly:
+                        copy = "\(product.displayPrice)/\n\(currentContent.transactionLabel.yearly)"
+                        break
+                    case .none:
+                        copy = currentContent.shared.missing
+                        break
+                    }
+
+                } else {
+                    copy = currentContent.shared.missing
+                }
             default:
                 copy = currentContent.shared.error
                 break
             }
 
-            self.label.attributedText = Styleguide.attributedProductButtonText(text: copy, color: Styleguide.colors.white)
+            if self.type == .subscriptionPrice {
+                self.label.attributedText = Styleguide.attributedTransactionLabelTextSmall(text: copy, color: Styleguide.colors.black)
+            } else {
+                self.label.attributedText = Styleguide.attributedLabelText(text: copy, color: Styleguide.colors.black)
+            }
+
         }
     }
 

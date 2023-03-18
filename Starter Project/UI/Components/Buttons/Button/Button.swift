@@ -13,7 +13,7 @@ class Button: UIView {
     static let identifier: String = "[Button]"
     var type: ButtonType = .primary
     // MARK: UI
-    let title: UILabel = Styleguide.createAttributedProductButton()
+    let title: UILabel = Styleguide.createAttributedLabel()
     // MARK: Callbacks
     var onRelease: (() -> Void)?
     // MARK: Lifecycle

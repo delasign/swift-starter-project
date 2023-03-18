@@ -20,6 +20,10 @@ extension ProductTile {
                 return
             }
 
+            debugPrint("PRODUCT A : \(product)")
+            debugPrint("PRODUCT AB : \(product.subscription?.subscriptionPeriod)")
+            debugPrint("PRODUCT ABC : \(getStoreKitSubscriptionPeriod(product: product))")
+
             var transactionLabelType: TransactionLabelType?
             var detailString: String?
             var buttonString: String?
@@ -37,8 +41,12 @@ extension ProductTile {
                 detailString = currentContent.productTile.stock + "\(0)"
                 buttonString = currentContent.productTile.purchase
                 break
-            case .buyMonthly, .buyYearly, .buyIntroOfferMonthly:
-                transactionLabelType = .price
+            case .buySubscription:
+                transactionLabelType = .subscriptionPrice
+                buttonString = currentContent.productTile.purchase
+                break
+            case .buySubscriptionWithIntroductoryOffer:
+                transactionLabelType = .subscriptionPrice
                 buttonString = currentContent.productTile.purchase
                 break
             case .pending:
@@ -113,7 +121,7 @@ extension ProductTile {
                 // Disable all Product Detail Functionality
                 self.productDetail.isHidden = true
                 // Enable relevant action button functionality
-                self.actionButton.title.attributedText = Styleguide.attributedProductButtonText(text: buttonString, color: Styleguide.colors.white)
+                self.actionButton.title.attributedText = Styleguide.attributedLabelText(text: buttonString, color: Styleguide.colors.white)
                 self.actionButton.isHidden = false
                 // Activate the Product Detail Bottom Constraint
                 activateConstraints(constraints: [self.actionButtonTopToBottomOfProductDescriptionConstraint, self.actionButtonLeftConstraint, self.actionButtonRightConstraint, self.actionButtonBottomConstraint])
@@ -128,7 +136,7 @@ extension ProductTile {
                 self.productDetail.attributedText = Styleguide.attributedProductDetailText(text: detailString)
                 self.productDetail.isHidden = false
                 // Enable relevant action button functionality
-                self.actionButton.title.attributedText = Styleguide.attributedProductButtonText(text: buttonString, color: Styleguide.colors.white)
+                self.actionButton.title.attributedText = Styleguide.attributedLabelText(text: buttonString, color: Styleguide.colors.white)
                 self.actionButton.isHidden = false
                 // Activate the Product Detail Bottom Constraint
                 activateConstraints(constraints: [self.actionButtonTopToBottomOfProductDetailConstraint, self.actionButtonLeftConstraint, self.actionButtonRightConstraint, self.actionButtonBottomConstraint])

@@ -38,8 +38,14 @@
          "purchase": "[ES] Purchase",
          "claimOffer": "[ES] Claim Offer"
     },
-    "purchaseButton": {
-        "free": "[ES] Free"
+    "transactionLabel": {
+        "free": "[ES] Free",
+        "weekly": "[ES] week",
+        "monthly": "[ES] month",
+        "everyTwoMonths": "[ES] 2 months",
+        "everyThreeMonths": "[ES] 3 months",
+        "everySixMonths": "[ES] 6 months",
+        "yearly": "[ES] year"
     },
     "notifications": {
          "success": "[ES] You have successfully purchased",

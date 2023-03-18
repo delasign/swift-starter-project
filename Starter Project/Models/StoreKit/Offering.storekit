@@ -100,7 +100,7 @@
             }
           ],
           "productID" : "com.delasign.sampleautorenewablesubscription",
-          "recurringSubscriptionPeriod" : "P1Y",
+          "recurringSubscriptionPeriod" : "P6M",
           "referenceName" : "Sample Auto Renewable Subscription",
           "subscriptionGroupID" : "9975708C",
           "type" : "RecurringSubscription"
@@ -116,7 +116,12 @@
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "279D2955",
-          "introductoryOffer" : null,
+          "introductoryOffer" : {
+            "displayPrice" : "0.99",
+            "internalID" : "6E4BCC8A",
+            "paymentMode" : "payUpFront",
+            "subscriptionPeriod" : "P1M"
+          },
           "localizations" : [
             {
               "description" : "Sample Tier 2 Auto Renewable Description",
@@ -130,7 +135,7 @@
             }
           ],
           "productID" : "com.delasign.sampleautorenewablesubscriptiontier2",
-          "recurringSubscriptionPeriod" : "P1M",
+          "recurringSubscriptionPeriod" : "P3M",
           "referenceName" : "Sample Tier 2 Auto Renewable Subscription",
           "subscriptionGroupID" : "9975708C",
           "type" : "RecurringSubscription"
@@ -169,7 +174,7 @@
             }
           ],
           "productID" : "com.delasign.samplefamilysharing",
-          "recurringSubscriptionPeriod" : "P1M",
+          "recurringSubscriptionPeriod" : "P1W",
           "referenceName" : "Sample Family Sharing Subscription",
           "subscriptionGroupID" : "BADDC553",
           "type" : "RecurringSubscription"
@@ -199,7 +204,7 @@
             }
           ],
           "productID" : "com.delasign.samplefamilysharingtier2",
-          "recurringSubscriptionPeriod" : "P1M",
+          "recurringSubscriptionPeriod" : "P2M",
           "referenceName" : "Sample Tier 2 Family Sharing Subscription",
           "subscriptionGroupID" : "BADDC553",
           "type" : "RecurringSubscription"

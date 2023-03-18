@@ -26,7 +26,7 @@ class Refund: UIView {
     var dataSource: UICollectionViewDiffableDataSource<StoreKitOfferingSections, Int>!
     // MARK: UI
     var collectionView: UICollectionView!
-    let noRefundsAvailableLabel: UILabel = Styleguide.createAttributedProductButton()
+    let noRefundsAvailableLabel: UILabel = Styleguide.createAttributedLabel()
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {

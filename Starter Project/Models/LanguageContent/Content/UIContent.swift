@@ -63,11 +63,17 @@ struct UIContent: Codable {
 
     let productTile: ProductTile
 
-    struct PurchaseButton: Codable {
+    struct TransactionLabel: Codable {
         let free: String
+        let weekly: String
+        let monthly: String
+        let everyTwoMonths: String
+        let everyThreeMonths: String
+        let everySixMonths: String
+        let yearly: String
     }
 
-    let purchaseButton: PurchaseButton
+    let transactionLabel: TransactionLabel
 
     struct Notifications: Codable {
         let success: String

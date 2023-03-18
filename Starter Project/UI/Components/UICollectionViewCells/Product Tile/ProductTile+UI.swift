@@ -73,7 +73,7 @@ extension ProductTile {
             guard let self = self else { return }
             self.contentView.addSubview(self.actionButton)
             // Initially inactive and hidden = therefore the offset is 0 and height is 0 and both constraints are inactive
-            self.actionButtonTopToBottomOfProductDetailConstraint = self.actionButton.topToBottom(of: self.productDetail, offset: 0, isActive: false)
+            self.actionButtonTopToBottomOfProductDetailConstraint = self.actionButton.topToBottom(of: self.productDetail, offset: kPadding, isActive: false)
             self.actionButtonTopToBottomOfProductDescriptionConstraint = self.actionButton.topToBottom(of: self.productDescription, offset: kPadding, isActive: false)
             self.actionButtonLeftConstraint = self.actionButton.left(to: self.contentView, offset: kPadding, isActive: false)
             self.actionButtonRightConstraint = self.actionButton.right(to: self.contentView, offset: -kPadding, isActive: false)
