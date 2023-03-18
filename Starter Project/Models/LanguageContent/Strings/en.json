@@ -23,7 +23,7 @@
     },
     "refund": {
         "header": "Request Refunds",
-        "noRefundsAvailable": "No refunds available."
+        "noRefundsAvailable": "Please purchase a product to learn about refunds."
     },
     "productTile": {
          "stock": "Stock: ",
@@ -41,7 +41,7 @@
          "introductoryOfferPayAsYouGoLeadingPeriodText": " every ",
          "introductoryOfferPayAsYouGoLeadingTotalLengthText": " for ",
          "introductoryOfferPayUpFrontLeadingPeriodText": " for ",
-         "introductoryOfferPostOfferPricingText": " then ",
+         "introductoryOfferPostOfferPricingText": " then pay ",
          "introductoryOfferPostOfferPeriodText": " every ",
          "introductoryOfferFreeLeadingText": "Get ",
          "introductoryOfferFree": " free "
@@ -57,6 +57,7 @@
     },
     "notifications": {
          "success": "You have successfully purchased",
+         "successSuffix": "",
          "pendingPrefix": "The purchase of ",
          "pendingSuffix": " is pending.",
          "failedPrefix": "Failed to purchase ",

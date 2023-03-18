@@ -35,7 +35,7 @@
         },
         {
           "description" : "Muestra de una descripcion.",
-          "displayName" : "Muestra de un consumible",
+          "displayName" : "Muestra de un no consumible",
           "locale" : "es_ES"
         }
       ],

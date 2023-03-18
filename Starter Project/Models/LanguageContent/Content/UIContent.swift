@@ -85,6 +85,7 @@ struct UIContent: Codable {
 
     struct Notifications: Codable {
         let success: String
+        let successSuffix: String
         let pendingPrefix: String
         let pendingSuffix: String
         let failedPrefix: String

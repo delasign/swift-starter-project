@@ -1,66 +1,67 @@
 {
     "shared": {
-        "consumables": "[ES] Consumable",
-        "nonConsumables": "[ES] Non-Consumable",
-        "nonRenewingSubscriptions": "[ES] Non-Renewing Subscription",
-        "autoRenewingSubscriptions": "[ES] Auto-Renewable Subscription",
-        "individualPlans": "[ES] Individual Plans",
-        "familyPlans": "[ES] Family Plans",
-        "requestARefund": "[ES] Request a Refund",
-        "missing": "[ES] MISSING",
-        "error": "[ES] ERROR"
+        "consumables": "Consumible",
+        "nonConsumables": "No Consumible",
+        "nonRenewingSubscriptions": "Suscripciónes No Renovables",
+        "autoRenewingSubscriptions": "Suscripciónes Auto Renovables",
+        "individualPlans": "Planes Individuales",
+        "familyPlans": "Planes Familiares",
+        "requestARefund": "Solicitar Devolución",
+        "missing": "Faltan Datos",
+        "error": "Error"
     },
     "landing": {
-        "tutorialLabel": "[ES] StoreKit\nTutorial",
-        "visitOurBlog": "[ES] Visit our Blog",
-        "start": "[ES] Start"
+        "tutorialLabel": "StoreKit\nTutorial",
+        "visitOurBlog": "Visite nuestro Blog",
+        "start": "Comenzar"
     },
     "offering": {
-        "header": "[ES] Store",
-        "redeemOfferCode": "[ES] Redeem Offer Code",
-        "restorePurchasesPrompt": "[ES] Is Stuff Missing?",
-        "restorePurchases": "[ES] Restore Purchases"
+        "header": "Tienda",
+        "redeemOfferCode": "Canjear Código de Oferta",
+        "restorePurchasesPrompt": "No puedes encontrar o usar las compras ?",
+        "restorePurchases": "Restaurar las compras"
     },
     "refund": {
-        "header": "[ES] Request Refunds",
-        "noRefundsAvailable": "[ES] No refunds available."
+        "header": "Pedidos y Devoluciónes",
+        "noRefundsAvailable": "Compra un producto para aprender como funcionan las devoluciónes."
     },
     "productTile": {
-         "stock": "[ES] Stock: ",
-         "nonRenewingActiveUntil": "[ES] Non-Renewing Subscription active until ",
-         "autoRenewableRenewsOn": "[ES] Auto-Renewable Subscription renews on ",
-         "manageSubscription": "[ES] Manage Subscription",
-         "autoRenewableWillExpire": "[ES] Auto-Renewable Subscription will expire on ",
-         "autoRenewableWillExpireMessage": "[ES] . Activate your subscription to maintain access.",
-         "autoRenewableGracePeriod": "[ES] Auto-Renewable Subscription is in grace period and will expire on ",
-         "autoRenewableGracePeriodMessage": "[ES] . Pay for your subscription to maintain access.",
-         "get": "[ES] Get",
-         "purchase": "[ES] Purchase",
-         "claimOffer": "[ES] Claim Offer",
-         "introductoryOfferPayLeadingText": "[ES] Pay ",
-         "introductoryOfferPayAsYouGoLeadingPeriodText": "[ES]  every ",
-         "introductoryOfferPayAsYouGoLeadingTotalLengthText": "[ES]  for ",
-         "introductoryOfferPayUpFrontLeadingPeriodText": "[ES]  for ",
-         "introductoryOfferPostOfferPricingText": "[ES]  then ",
-         "introductoryOfferPostOfferPeriodText": "[ES]  per ",
-         "introductoryOfferFreeLeadingText": "[ES] Get ",
-         "introductoryOfferFree": " [ES] free "
+         "stock": "Stock: ",
+         "nonRenewingActiveUntil": "La suscripción es válida hasta ",
+         "autoRenewableRenewsOn": "La suscripción se renueva automaticamente el dia ",
+         "manageSubscription": "Configurar Suscripción",
+         "autoRenewableWillExpire": "La suscripción expirara el dia ",
+         "autoRenewableWillExpireMessage": ". Active su suscripción para mantener el acceso.",
+         "autoRenewableGracePeriod": "La suscripción esta en un período de gracia y caducará el dia ",
+         "autoRenewableGracePeriodMessage": ". Pague su suscripción para mantener el acceso.",
+         "get": "Consigue",
+         "purchase": "Compra",
+         "claimOffer": "Utilize su Oferta",
+         "introductoryOfferPayLeadingText": "Paga ",
+         "introductoryOfferPayAsYouGoLeadingPeriodText": " cada ",
+         "introductoryOfferPayAsYouGoLeadingTotalLengthText": " para ",
+         "introductoryOfferPayUpFrontLeadingPeriodText": " para ",
+         "introductoryOfferPostOfferPricingText": " y despues paga ",
+         "introductoryOfferPostOfferPeriodText": " cada ",
+         "introductoryOfferFreeLeadingText": "Consigue ",
+         "introductoryOfferFree": " gratis "
     },
     "transactionLabel": {
-        "free": "[ES] Free",
-        "weekly": "[ES] week",
-        "monthly": "[ES] month",
-        "everyTwoMonths": "[ES] 2 months",
-        "everyThreeMonths": "[ES] 3 months",
-        "everySixMonths": "[ES] 6 months",
-        "yearly": "[ES] year"
+        "free": "Gratis",
+        "weekly": "semana",
+        "monthly": "mes",
+        "everyTwoMonths": "2 meses",
+        "everyThreeMonths": "3 meses",
+        "everySixMonths": "6 meses",
+        "yearly": "año"
     },
     "notifications": {
-         "success": "[ES] You have successfully purchased",
-         "pendingPrefix": "[ES] The purchase of ",
-         "pendingSuffix": "[ES]  is pending.",
-         "failedPrefix": "[ES] Failed to purchase ",
-         "failedSuffix": "[ES] .\nPlease try again.",
-         "refund": "[ES] We have requested a refund."
+         "success": "La compra de ",
+         "successSuffix": " se ha realizado con exito.",
+         "pendingPrefix": "La compra de ",
+         "pendingSuffix": " esta pendiente.",
+         "failedPrefix": "No se ha podido realizar la compra de ",
+         "failedSuffix": ".\Intentelo de nuevo.",
+         "refund": "Hemos solicitado una devolución."
     }
 }
