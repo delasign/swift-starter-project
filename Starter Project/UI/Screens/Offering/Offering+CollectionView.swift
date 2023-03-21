@@ -162,15 +162,20 @@ extension Offering {
                 case .consumables:
                     product = consumables[indexPath.row]
                     // Consumables are always available, and always have a price.
+                    // There are two states that can be available:
+                    // - Purchase is pending - This cannot be checked through the Swift StoreKit2 library and requires App Store Server Notifications or a custom solution to acknowledge this at load time.
+                    // - Buyable
                     type = .consumableBuy
                     break
                 case .nonConsumables:
                     product = nonConsumables[indexPath.row]
-                    // Non Consumables are either purchased, pending or available for purchase.
+                    // Non Consumables are either purchased or if not purchased, pending or available for purchase.
                     if skc.isPurchased(product) {
                         type = .purchased
                     } else {
+                        //  Purchase is pending cannot be checked through the Swift StoreKit2 library and requires App Store Server Notifications or a custom solution to acknowledge this at load time.
                         // Non Consumables always carry a price tag but can be free. If they are free, their price tag is 0.00.
+                        
                         type = product.price < 0.01 ? .get : .price
                     }
                     break
@@ -181,6 +186,7 @@ extension Offering {
                         // In the case that a non-renewable has been purchased, it is active until a date.
                         type = .activeUntil
                     } else {
+                        //  Purchase is pending cannot be checked through the Swift StoreKit2 library and requires App Store Server Notifications or a custom solution to acknowledge this at load time.
                         // Non-renewables are never free and always carry a price (i.e. they can never be free).
                         type = .price
                     }

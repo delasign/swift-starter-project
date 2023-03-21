@@ -97,7 +97,8 @@ class Offering: UIView {
                 fatalError("\(Offering.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Could not determine valid type.")
             }
         } else {
-            // In the event that it has not been purchased, there are two options:
+            // In the event that it has not been purchased, there are three options:
+            // - Purchase is pending - This cannot be checked through the Swift StoreKit2 library and requires App Store Server Notifications or a custom solution to acknowledge this at load time.
             // - Introductory offer - if one is present and a user has never bought a subscription before.
             // - Buy Subscription - All other cases.
             if product.subscription?.introductoryOffer != nil, await skc.isIntroductoryOfferValid(product: product) {

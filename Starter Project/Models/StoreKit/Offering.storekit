@@ -65,6 +65,8 @@
     }
   ],
   "settings" : {
+    "_askToBuyEnabled" : true,
+    "_billingIssuesEnabled" : true,
     "_compatibilityTimeRate" : 6,
     "_timeRate" : 15
   },

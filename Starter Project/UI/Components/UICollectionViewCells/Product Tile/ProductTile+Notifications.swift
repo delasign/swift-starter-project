@@ -6,11 +6,13 @@
 //
 import Foundation
 import UIKit
+import StoreKit
 
 extension ProductTile {
     // The setupNotifications function should be the only publically available class in this extension.
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateStatus), name: SystemNotifications.onStoreKitUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onStoreKitProductUpdate), name: SystemNotifications.onStoreKitProductUpdate, object: nil)
     }
     // MARK: Notification Setup Functionality
     @objc private func updateStatus() {
@@ -89,6 +91,22 @@ extension ProductTile {
                 default:
                     fatalError("ALL PRODUCT TYPES NOT CONSIDERED IN UPDATE FROM PURCHASED TO BUYABLE.")
                 }
+            }
+        }
+    }
+
+    @objc private func onStoreKitProductUpdate(notification: Notification) {
+        guard let userInfo = notification.userInfo, let type = userInfo[kStoreKitNotificationUpdateTypeUserInfo] as? StoreKitNotificationType, let inComingProduct = userInfo[kStoreKitNotificationUpdateProductUserInfo] as? Product, let product = self.product else {
+            debugPrint("\(ProductTile.identifier) onStoreKitProductUpdate \(DebuggingIdentifiers.notificationRecieved) Failed to process as theres no type or product.")
+            return
+        }
+
+        debugPrint("\(ProductTile.identifier) updateStatus \(DebuggingIdentifiers.notificationRecieved) Recieved On StoreKit Update with type \(type) and product \(product).")
+
+        if type == .pending, inComingProduct.id == product.id {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.update(type: .pending, product: product)
             }
         }
     }
