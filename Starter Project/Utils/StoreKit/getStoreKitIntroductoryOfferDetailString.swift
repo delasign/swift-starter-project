@@ -17,7 +17,7 @@ func getStoreKitIntroductoryOfferDetailString(product: Product) -> String {
 
         let introductoryOfferPaymentMode = introductoryOffer.paymentMode
         let introductoryOfferPrice = introductoryOffer.displayPrice
-        let introductoryOfferPeriod = getStoreKitSubscriptionIntroductoryOfferPeriodString(product: product)
+        let introductoryOfferPeriod = getStoreKitSubscriptionIntroductoryOfferPeriodString(product: product, detailString: true)
 
         let subscriptionPeriod = getStoreKitSubscriptionPeriodString(product: product)
         let subscriptionPrice = product.displayPrice

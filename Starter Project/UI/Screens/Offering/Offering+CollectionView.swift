@@ -113,6 +113,9 @@ extension Offering {
             }
             DispatchQueue.main.async {
                 cell.update(text: title)
+                // Layout to make sure that the cell resizes correctly.
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
             }
         }
         /// SectionSubTitleCell Supplementary Registration
@@ -138,6 +141,9 @@ extension Offering {
 
                 DispatchQueue.main.async {
                     cell.update(text: title)
+                    // Layout to make sure that the cell resizes correctly.
+                    cell.setNeedsLayout()
+                    cell.layoutIfNeeded()
                 }
             }
         }
@@ -145,97 +151,98 @@ extension Offering {
         /// Product Tile Cell
         let ProductTileCellRegistration = UICollectionView.CellRegistration
         <ProductTile, Int> { (cell, indexPath, _) in
-            // Configure
-            let skc = StoreKitCoordinator.shared
-            let consumables = skc.consumables
-            let nonConsumables = skc.nonConsumables
-            let nonRenewingSubscriptions = skc.nonRenewables
-            let individualSubscriptions = skc.individualSubscriptions
-            let familySubscriptions = skc.familySubscriptions
+            Task { [weak cell] in
+                guard let cell = cell else { return }
+                // Configure
+                let skc = StoreKitCoordinator.shared
+                let consumables = skc.consumables
+                let nonConsumables = skc.nonConsumables
+                let nonRenewingSubscriptions = skc.nonRenewables
+                let individualSubscriptions = skc.individualSubscriptions
+                let familySubscriptions = skc.familySubscriptions
 
-            let product: Product
-            let type: ProductTileType
-            switch Offering.Sections[indexPath.section] {
-            case .consumables:
-                product = consumables[indexPath.row]
-                // Consumables are always available, and always have a price.
-                type = .consumableBuy
-                break
-            case .nonConsumables:
-                product = nonConsumables[indexPath.row]
-                // Non Consumables are either purchased, pending or available for purchase.
-                if skc.isPurchased(product) {
-                    type = .purchased
-                } else {
-                    // Non Consumables always carry a price tag but can be free. If they are free, their price tag is 0.00.
-                    type = product.price < 0.01 ? .get : .price
-                }
-                break
-            case .nonRenewingSubscriptions:
-                product = nonRenewingSubscriptions[indexPath.row]
-                // Non Renewing Subscriptions are either purchased, pending or available for purchase.
-                if skc.isPurchased(product) {
-                    // In the case that a non-renewable has been purchased, it is active until a date.
-                    type = .activeUntil
-                } else {
-                    // Non-renewables are never free and always carry a price (i.e. they can never be free).
-                    type = .price
-                }
-                break
-            case .autoRenewableSubscriptionsIndividualPlans:
-                product = individualSubscriptions[indexPath.row]
-                // Auto Renewing Subscriptions are either purchased, in billing retry, in a grace period, expiring, pending or available for purchase.
-                // If they are available for purchase, they can have an introductory offer or a promotional offer.
-                // Promotional Offers are not covered by this tutorial.
-                if skc.isPurchased(product) {
-                    // In the case that an auto-renewable has been purchased, it renews periodically on a date.
-                    type = .autoRenewablePurchased
-                } else {
-                    // Auto-renewing subscriptions are never free, always carry a price and can come with an introductory offer (i.e. they can never be free - unless theres an introductory offer, which can be free for a period before paying a price).
-                    // They can either be priced weekly, monthly, every 2 months, every 3 months, every 6 months or yearly - the formatting for the pricing is calculated in the transaction label.
-                    type = product.subscription?.introductoryOffer == nil ? .buySubscription : .buySubscriptionWithIntroductoryOffer
+                let product: Product
+                var type: ProductTileType = .price
 
+                switch Offering.Sections[indexPath.section] {
+                case .consumables:
+                    product = consumables[indexPath.row]
+                    // Consumables are always available, and always have a price.
+                    type = .consumableBuy
+                    break
+                case .nonConsumables:
+                    product = nonConsumables[indexPath.row]
+                    // Non Consumables are either purchased, pending or available for purchase.
+                    if skc.isPurchased(product) {
+                        type = .purchased
+                    } else {
+                        // Non Consumables always carry a price tag but can be free. If they are free, their price tag is 0.00.
+                        type = product.price < 0.01 ? .get : .price
+                    }
+                    break
+                case .nonRenewingSubscriptions:
+                    product = nonRenewingSubscriptions[indexPath.row]
+                    // Non Renewing Subscriptions are either purchased, pending or available for purchase.
+                    if skc.isPurchased(product) {
+                        // In the case that a non-renewable has been purchased, it is active until a date.
+                        type = .activeUntil
+                    } else {
+                        // Non-renewables are never free and always carry a price (i.e. they can never be free).
+                        type = .price
+                    }
+                    break
+                case .autoRenewableSubscriptionsIndividualPlans:
+                    product = individualSubscriptions[indexPath.row]
+                    // Auto Renewing Subscriptions are either purchased, in billing retry, in a grace period, expiring, pending or available for purchase.
+                    // If they are available for purchase, they can have an introductory offer or a promotional offer.
+                    // Promotional Offers are not covered by this tutorial.
+                    type = await self.getSubscriptionProductTileType(product: product)
+                    break
+                case .autoRenewableSubscriptionsFamilyPlans:
+                    product = familySubscriptions[indexPath.row]
+                    // Auto Renewing Subscriptions are either purchased, expiring, in billing retry, in a grace period, pending or available for purchase.
+                    // If they are available for purchase, they can have an introductory offer or a promotional offer.
+                    // Promotional Offers are not covered by this tutorial.
+                    type = await self.getSubscriptionProductTileType(product: product)
+                    break
+                default:
+                    return
                 }
-                break
-            case .autoRenewableSubscriptionsFamilyPlans:
-                product = familySubscriptions[indexPath.row]
-                // Auto Renewing Subscriptions are either purchased, expiring, in billing retry, in a grace period, pending or available for purchase.
-                // If they are available for purchase, they can have an introductory offer or a promotional offer.
-                // Promotional Offers are not covered by this tutorial.
-                if skc.isPurchased(product) {
-                    type = .autoRenewablePurchased
-                } else {
-                    // Auto-renewing subscriptions are never free, always carry a price and can come with an introductory offer (i.e. they can never be free - unless theres an introductory offer, which can be free for a period before paying a price).
-                    // They can either be priced weekly, monthly, every 2 months, every 3 months, every 6 months or yearly - the formatting for the pricing is calculated in the transaction label.
-                    type = product.subscription?.introductoryOffer == nil ? .buySubscription : .buySubscriptionWithIntroductoryOffer
-                }
-                break
-            default:
-                return
-            }
-            DispatchQueue.main.async {
-                cell.update(type: type, product: product)
-                // Callbacks
-                cell.onRelease = { [weak self] in
-                    guard let _ = self else { return }
-                    debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName).")
+                DispatchQueue.main.async { [weak cell] in
+                    guard let cell = cell else { return }
+                    cell.update(type: type, product: product)
+                    // Layout to make sure that the cell resizes correctly.
+                    cell.setNeedsLayout()
+                    cell.layoutIfNeeded()
+                    // Callbacks
+                    cell.onRelease = { [weak self] in
+                        guard let _ = self else { return }
+                        debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName).")
 
-                    switch type {
-                    case .get, .price, .consumableBuy, .buySubscription, .buySubscriptionWithIntroductoryOffer:
-                        // Execute Purchase
-                        Task {
-                            do {
-                                _ = try await StoreKitCoordinator.shared.purchase(product)
-                            } catch {
-                                debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) failed to buy product : \(product.displayName). Error : \(error.localizedDescription)")
+                        switch type {
+                        // Allow for all types of purchasables as they can update outside of the closure. This is to avoid a situation where they can't upgrade and downgrade in a circular fashion within the same screen.
+                        case .get, .price, .consumableBuy, .buySubscription, .buySubscriptionWithIntroductoryOffer, .autoRenewablePurchased, .purchased:
+                            // Only allow those that have not been purchased
+                            guard !StoreKitCoordinator.shared.isPurchased(product) else {
+                                debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) Did not execute anything - [Product has already been purchased].")
+                                return
                             }
+                            // Execute Purchase
+                            Task {
+                                do {
+                                    _ = try await StoreKitCoordinator.shared.purchase(product)
+                                } catch {
+                                    debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) failed to buy product : \(product.displayName). Error : \(error.localizedDescription)")
+                                }
+                            }
+                            break
+                        default:
+                            debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) Did not execute anything - [Default State].")
+                            break
                         }
-                        break
-                    default:
-                        debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) Did not execute anything - [Default State].")
-                        break
                     }
                 }
+
             }
 
         }
@@ -245,6 +252,9 @@ extension Offering {
         <OfferCodesAndRefundsCell, Int> { (cell, _, _) in
             DispatchQueue.main.async {
                 cell.update()
+                // Layout to make sure that the cell resizes correctly.
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
                 // Callbacks
                 cell.onRedeemOfferCode = { [weak self] in
                     guard let _ = self else { return }
@@ -270,6 +280,9 @@ extension Offering {
         <RestorePurchasesCell, Int> { (cell, _, _) in
             DispatchQueue.main.async {
                 cell.update()
+                // Layout to make sure that the cell resizes correctly.
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
                 // Callbacks
                 cell.onRelease = { [weak self] in
                     guard let _ = self else { return }

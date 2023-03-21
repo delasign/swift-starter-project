@@ -59,4 +59,49 @@ class Offering: UIView {
     required init?(coder: NSCoder) {
         fatalError("did not instanstiate coder")
     }
+
+    // MARK: Utilities
+
+    func getSubscriptionProductTileType(product: Product) async -> ProductTileType {
+        // Auto Renewing Subscriptions are either purchased, expiring, in billing retry, in a grace period, pending or available for purchase.
+        // If they are available for purchase, they can have an introductory offer or a promotional offer.
+        // Promotional Offers are not covered by this tutorial.
+        let skc = StoreKitCoordinator.shared
+        let isPurchased = skc.isPurchased(product)
+        let status = await skc.getSubscriptionStatus(product: product)
+
+        if isPurchased {
+            // If the product is purchased it can either be:
+            // - Purchased and renewing
+            // - Expiring (i.e. user cancelled)
+            // - In Billing Grace Period
+            // - In Billing Retry
+            // - Expired - in the event that they are on the screen when the offer expires, otherwise its not purchased
+
+            switch status {
+            case .subscribed:
+                return .autoRenewablePurchased
+            case .expiring:
+                return .expiring
+            case .inBillingGracePeriod:
+                return .gracePeriod
+            case .inBillingRetryPeriod:
+                return .billingRetry
+            case .expired:
+                return .buySubscription
+            default:
+                // In the event that its none of the above, crash (This should never be hit).
+                fatalError("\(Offering.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Could not determine valid type.")
+            }
+        } else {
+            // In the event that it has not been purchased, there are two options:
+            // - Introductory offer - if one is present and a user has never bought a subscription before.
+            // - Buy Subscription - All other cases.
+            if product.subscription?.introductoryOffer != nil, await skc.isIntroductoryOfferValid(product: product) {
+                return .buySubscriptionWithIntroductoryOffer
+            } else {
+                return .buySubscription
+            }
+        }
+    }
 }

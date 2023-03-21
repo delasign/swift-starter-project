@@ -18,6 +18,7 @@ enum ProductTileType: CaseIterable {
     case activeUntil
     case autoRenewablePurchased
     case gracePeriod
+    case billingRetry
     case expiring
     case refund
     case refundSubscription

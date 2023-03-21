@@ -77,7 +77,7 @@ extension TransactionLabel {
                 color = Styleguide.colors.white
                 if let product = self.product, let introductoryOffer = product.subscription?.introductoryOffer {
                     // Get the subscriptionPeriodString
-                    let subscriptionPeriodString = getStoreKitSubscriptionIntroductoryOfferPeriodString(product: product)
+                    let subscriptionPeriodString = getStoreKitSubscriptionIntroductoryOfferPeriodString(product: product, detailString: false)
                     // Set the copy
                     copy = "\(introductoryOffer.displayPrice)/\n\(subscriptionPeriodString)"
                 } else {

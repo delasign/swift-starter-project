@@ -55,6 +55,9 @@
 		F062232729A67C9B00B04939 /* OfferingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062232629A67C9B00B04939 /* OfferingKeys.swift */; };
 		F062232929A67E1000B04939 /* OfferingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062232829A67E1000B04939 /* OfferingConfiguration.swift */; };
 		F062232B29A67F6E00B04939 /* OfferingConfiguration+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062232A29A67F6E00B04939 /* OfferingConfiguration+Get.swift */; };
+		F069FCB029C9D6C800B41052 /* StoreKitCoordinator+SubscriptionRenewalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCAF29C9D6C800B41052 /* StoreKitCoordinator+SubscriptionRenewalDate.swift */; };
+		F069FCB229C9DA8C00B41052 /* StoreKitCoordinator+SubscriptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCB129C9DA8C00B41052 /* StoreKitCoordinator+SubscriptionStatus.swift */; };
+		F069FCB429C9F19400B41052 /* StoreKitSubscriptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCB329C9F19400B41052 /* StoreKitSubscriptionStatus.swift */; };
 		F07F319B29B791CE00E94DDD /* Styleguide+ProductTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319A29B791CE00E94DDD /* Styleguide+ProductTitle.swift */; };
 		F07F319D29B791E000E94DDD /* Styleguide+ProductDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319C29B791E000E94DDD /* Styleguide+ProductDescription.swift */; };
 		F07F319F29B791E600E94DDD /* Styleguide+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319E29B791E600E94DDD /* Styleguide+Label.swift */; };
@@ -89,6 +92,7 @@
 		F0C484B329C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */; };
 		F0C484B529C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */; };
 		F0C484B729C60AA60027A14C /* ProductTile+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B629C60AA60027A14C /* ProductTile+Notifications.swift */; };
+		F0C484B929C71C5C0027A14C /* StoreKitCoordinator+IntroductoryOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C484B829C71C5C0027A14C /* StoreKitCoordinator+IntroductoryOffers.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
 		F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */; };
 		F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */; };
@@ -179,6 +183,9 @@
 		F062232629A67C9B00B04939 /* OfferingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingKeys.swift; sourceTree = "<group>"; };
 		F062232829A67E1000B04939 /* OfferingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingConfiguration.swift; sourceTree = "<group>"; };
 		F062232A29A67F6E00B04939 /* OfferingConfiguration+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferingConfiguration+Get.swift"; sourceTree = "<group>"; };
+		F069FCAF29C9D6C800B41052 /* StoreKitCoordinator+SubscriptionRenewalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreKitCoordinator+SubscriptionRenewalDate.swift"; sourceTree = "<group>"; };
+		F069FCB129C9DA8C00B41052 /* StoreKitCoordinator+SubscriptionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreKitCoordinator+SubscriptionStatus.swift"; sourceTree = "<group>"; };
+		F069FCB329C9F19400B41052 /* StoreKitSubscriptionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitSubscriptionStatus.swift; sourceTree = "<group>"; };
 		F07F319A29B791CE00E94DDD /* Styleguide+ProductTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+ProductTitle.swift"; sourceTree = "<group>"; };
 		F07F319C29B791E000E94DDD /* Styleguide+ProductDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+ProductDescription.swift"; sourceTree = "<group>"; };
 		F07F319E29B791E600E94DDD /* Styleguide+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+Label.swift"; sourceTree = "<group>"; };
@@ -213,6 +220,7 @@
 		F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitSubscriptionIntroductoryOfferPeriodString.swift; sourceTree = "<group>"; };
 		F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoreKitIntroductoryOfferDetailString.swift; sourceTree = "<group>"; };
 		F0C484B629C60AA60027A14C /* ProductTile+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductTile+Notifications.swift"; sourceTree = "<group>"; };
+		F0C484B829C71C5C0027A14C /* StoreKitCoordinator+IntroductoryOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreKitCoordinator+IntroductoryOffers.swift"; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6C28B2652900C1DCAF /* APIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		F0C79C6E28B2693E00C1DCAF /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -476,6 +484,7 @@
 				F062231029A661B000B04939 /* StoreKitError.swift */,
 				F062231729A666A800B04939 /* SubscriptionTiers.swift */,
 				F0C484AC29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift */,
+				F069FCB329C9F19400B41052 /* StoreKitSubscriptionStatus.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
@@ -540,6 +549,9 @@
 				F062232029A66A2B00B04939 /* StoreKitCoordinator+Purchase.swift */,
 				F062232229A66A3200B04939 /* StoreKitCoordinator+Verify.swift */,
 				F062232429A66A3600B04939 /* StoreKitCoordinator+Update.swift */,
+				F069FCB129C9DA8C00B41052 /* StoreKitCoordinator+SubscriptionStatus.swift */,
+				F069FCAF29C9D6C800B41052 /* StoreKitCoordinator+SubscriptionRenewalDate.swift */,
+				F0C484B829C71C5C0027A14C /* StoreKitCoordinator+IntroductoryOffers.swift */,
 			);
 			path = StoreKitCoordinator;
 			sourceTree = "<group>";
@@ -911,6 +923,7 @@
 				F0DD144429BA121D003122C8 /* ProductTile+Update.swift in Sources */,
 				F008F4DA2885BA8D00E4841B /* Landing.swift in Sources */,
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
+				F069FCB429C9F19400B41052 /* StoreKitSubscriptionStatus.swift in Sources */,
 				F07F31B329B79AD700E94DDD /* Refund.swift in Sources */,
 				F0C484B529C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift in Sources */,
 				F008FCAC287FA82B00B2495D /* Styleguide+Header.swift in Sources */,
@@ -920,6 +933,7 @@
 				F062232529A66A3600B04939 /* StoreKitCoordinator+Update.swift in Sources */,
 				F0C484AF29C5E6390027A14C /* Styleguide+TransactionLabelSmall.swift in Sources */,
 				F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */,
+				F0C484B929C71C5C0027A14C /* StoreKitCoordinator+IntroductoryOffers.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F07F319F29B791E600E94DDD /* Styleguide+Label.swift in Sources */,
@@ -938,6 +952,7 @@
 				F0DD140529B8AFCA003122C8 /* Offering+Notifications.swift in Sources */,
 				F062231D29A669ED00B04939 /* StoreKitCoordinator+Listener.swift in Sources */,
 				F0DD141729B8B31F003122C8 /* NavigationHeader.swift in Sources */,
+				F069FCB229C9DA8C00B41052 /* StoreKitCoordinator+SubscriptionStatus.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
 				F0DD143929B8F317003122C8 /* StoreKitOfferingSections.swift in Sources */,
 				F0C4849329C228800027A14C /* SectionSubTitleCell.swift in Sources */,
@@ -959,6 +974,7 @@
 				F0DD142329B8D38C003122C8 /* Offering+CollectionView.swift in Sources */,
 				F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */,
 				F0397F522885EEAD002AF19B /* Button+Touches.swift in Sources */,
+				F069FCB029C9D6C800B41052 /* StoreKitCoordinator+SubscriptionRenewalDate.swift in Sources */,
 				F062232B29A67F6E00B04939 /* OfferingConfiguration+Get.swift in Sources */,
 				F07F31B129B79AD300E94DDD /* Offering.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,

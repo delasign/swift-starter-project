@@ -27,7 +27,7 @@
     },
     "productTile": {
          "stock": "Stock: ",
-         "nonRenewingActiveUntil": "Non-Renewing Subscription active until ",
+         "nonRenewingActiveUntil": "Non-Renewing Subscription active until [date].",
          "autoRenewableRenewsOn": "Auto-Renewable Subscription renews on ",
          "manageSubscription": "Manage Subscription",
          "autoRenewableWillExpire": "Auto-Renewable Subscription will expire on ",
@@ -50,6 +50,7 @@
         "free": "Free",
         "weekly": "week",
         "monthly": "month",
+        "everyOneMonth": "1 month",
         "everyTwoMonths": "2 months",
         "everyThreeMonths": "3 months",
         "everySixMonths": "6 months",

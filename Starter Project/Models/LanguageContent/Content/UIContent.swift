@@ -75,6 +75,7 @@ struct UIContent: Codable {
         let free: String
         let weekly: String
         let monthly: String
+        let everyOneMonth: String
         let everyTwoMonths: String
         let everyThreeMonths: String
         let everySixMonths: String

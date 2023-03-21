@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import StoreKit
 
-func getStoreKitSubscriptionIntroductoryOfferPeriodString(product: Product) -> String {
+func getStoreKitSubscriptionIntroductoryOfferPeriodString(product: Product, detailString: Bool) -> String {
     if let introductoryOffer = product.subscription?.introductoryOffer, let currentContent = LanguageCoordinator.shared.currentContent {
 
         let unit = introductoryOffer.period.unit
@@ -23,7 +23,11 @@ func getStoreKitSubscriptionIntroductoryOfferPeriodString(product: Product) -> S
         case .month:
             switch value {
             case 1:
-                return currentContent.transactionLabel.monthly
+                if detailString {
+                    return currentContent.transactionLabel.everyOneMonth
+                } else {
+                    return currentContent.transactionLabel.monthly
+                }
             case 2:
                 return currentContent.transactionLabel.everyTwoMonths
             case 3:

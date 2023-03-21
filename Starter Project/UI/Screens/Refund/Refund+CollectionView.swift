@@ -13,7 +13,7 @@ extension Refund {
 
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, _) -> NSCollectionLayoutSection? in
-            let currentSection = Refund.Sections[sectionIndex]
+            let currentSection = self.dataSource.sectionIdentifier(for: sectionIndex) // Refund.Sections[sectionIndex]
             // Determine the size of each cell.
             // Please note that we have chosen to do the subscription individual plans and family plans as a section, as the layout does not re-render itself.
             let itemWidth: NSCollectionLayoutDimension = .fractionalWidth(1)
@@ -70,7 +70,7 @@ extension Refund {
             }
             let title: String
 
-            switch Refund.Sections[indexPath.section] {
+            switch self.dataSource.sectionIdentifier(for: indexPath.section) {
             case .consumablesTitle:
                 title = currentContent.shared.consumables
                 break
@@ -102,7 +102,7 @@ extension Refund {
                 }
                 let title: String
 
-                switch Refund.Sections[indexPath.section] {
+                switch self.dataSource.sectionIdentifier(for: indexPath.section) {
                 case .autoRenewableSubscriptionsIndividualPlans:
                     title = currentContent.shared.individualPlans
                     break
@@ -135,7 +135,7 @@ extension Refund {
 
             let product: Product
             let type: ProductTileType = .refund
-            switch Offering.Sections[indexPath.section] {
+            switch self.dataSource.sectionIdentifier(for: indexPath.section) {
             case .consumables:
                 product = consumables[indexPath.row]
                 break
@@ -186,10 +186,6 @@ extension Refund {
 
     func setDataSourceData() {
 
-        // MARK: Load the data
-        var snapshot = NSDiffableDataSourceSnapshot<StoreKitOfferingSections, Int>()
-        snapshot.appendSections(Refund.Sections)
-
         let consumables = StoreKitCoordinator.shared.purchasedConsumables
         let nonConsumables = StoreKitCoordinator.shared.purchasedNonConsumables
         let nonRenewingSubscriptions = StoreKitCoordinator.shared.purchasedNonRenewables
@@ -209,6 +205,36 @@ extension Refund {
         let refundNonRenewing = !nonRenewingSubscriptions.isEmpty
         let refundIndividualSubscriptions = !individualSubscriptions.isEmpty
         let refundFamilySubscriptions = !familySubscriptions.isEmpty
+
+        // MARK: Load the data
+        var snapshot = NSDiffableDataSourceSnapshot<StoreKitOfferingSections, Int>()
+        var sections: [StoreKitOfferingSections] = []
+
+        if refundConsumables {
+            sections.append(.consumablesTitle)
+            sections.append(.consumables)
+        }
+        if refundNonConsumables {
+            sections.append(.nonConsumablesTitle)
+            sections.append(.nonConsumables)
+        }
+        if refundNonRenewing {
+            sections.append(.nonRenewingSubscriptionsTitle)
+            sections.append(.nonRenewingSubscriptions)
+        }
+        if refundIndividualSubscriptions || refundFamilySubscriptions {
+            sections.append(.autoRenewableSubscriptionsTitle)
+        }
+        if refundIndividualSubscriptions {
+            sections.append(.autoRenewableSubscriptionsIndividualPlansTitle)
+            sections.append(.autoRenewableSubscriptionsIndividualPlans)
+        }
+        if refundFamilySubscriptions {
+            sections.append(.autoRenewableSubscriptionsFamilyPlansTitle)
+            sections.append(.autoRenewableSubscriptionsFamilyPlans)
+        }
+
+        snapshot.appendSections(sections)
 
         // Add Relevant Sections
         if refundConsumables {
@@ -244,7 +270,6 @@ extension Refund {
             snapshot.appendItems([totalIAPAndIndividualPlans + 5], toSection: .autoRenewableSubscriptionsFamilyPlansTitle)
             snapshot.appendItems([Int](totalIAPAndIndividualPlans + 6...totalProducts + 5), toSection: .autoRenewableSubscriptionsFamilyPlans)
         }
-
         // Snapshots must be applied on the main queue
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
