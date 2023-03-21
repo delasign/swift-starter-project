@@ -64,6 +64,9 @@
 		F069FCBD29CA085600B41052 /* StoreKitNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCBC29CA085600B41052 /* StoreKitNotificationType.swift */; };
 		F069FCBF29CA08EB00B41052 /* StoreKitProductNotification+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCBE29CA08EB00B41052 /* StoreKitProductNotification+Notifications.swift */; };
 		F069FCC129CA0E5500B41052 /* StoreKitProductNotification+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCC029CA0E5500B41052 /* StoreKitProductNotification+Animations.swift */; };
+		F069FCC529CA5CD400B41052 /* openStoreKitManageSubscriptionPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCC429CA5CD400B41052 /* openStoreKitManageSubscriptionPreferences.swift */; };
+		F069FCC729CA5EAD00B41052 /* openStoreKitRedeemOfferCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCC629CA5EAD00B41052 /* openStoreKitRedeemOfferCode.swift */; };
+		F069FCC929CA604300B41052 /* redeemStoreKitPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCC829CA604300B41052 /* redeemStoreKitPurchases.swift */; };
 		F07F319B29B791CE00E94DDD /* Styleguide+ProductTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319A29B791CE00E94DDD /* Styleguide+ProductTitle.swift */; };
 		F07F319D29B791E000E94DDD /* Styleguide+ProductDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319C29B791E000E94DDD /* Styleguide+ProductDescription.swift */; };
 		F07F319F29B791E600E94DDD /* Styleguide+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07F319E29B791E600E94DDD /* Styleguide+Label.swift */; };
@@ -198,6 +201,9 @@
 		F069FCBC29CA085600B41052 /* StoreKitNotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitNotificationType.swift; sourceTree = "<group>"; };
 		F069FCBE29CA08EB00B41052 /* StoreKitProductNotification+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreKitProductNotification+Notifications.swift"; sourceTree = "<group>"; };
 		F069FCC029CA0E5500B41052 /* StoreKitProductNotification+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreKitProductNotification+Animations.swift"; sourceTree = "<group>"; };
+		F069FCC429CA5CD400B41052 /* openStoreKitManageSubscriptionPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openStoreKitManageSubscriptionPreferences.swift; sourceTree = "<group>"; };
+		F069FCC629CA5EAD00B41052 /* openStoreKitRedeemOfferCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openStoreKitRedeemOfferCode.swift; sourceTree = "<group>"; };
+		F069FCC829CA604300B41052 /* redeemStoreKitPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redeemStoreKitPurchases.swift; sourceTree = "<group>"; };
 		F07F319A29B791CE00E94DDD /* Styleguide+ProductTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+ProductTitle.swift"; sourceTree = "<group>"; };
 		F07F319C29B791E000E94DDD /* Styleguide+ProductDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+ProductDescription.swift"; sourceTree = "<group>"; };
 		F07F319E29B791E600E94DDD /* Styleguide+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Styleguide+Label.swift"; sourceTree = "<group>"; };
@@ -549,6 +555,9 @@
 				F0C484B029C5EAEB0027A14C /* getStoreKitSubscriptionPeriodString.swift */,
 				F0C484B229C5EDC50027A14C /* getStoreKitSubscriptionIntroductoryOfferPeriodString.swift */,
 				F0C484B429C5EFC20027A14C /* getStoreKitIntroductoryOfferDetailString.swift */,
+				F069FCC429CA5CD400B41052 /* openStoreKitManageSubscriptionPreferences.swift */,
+				F069FCC629CA5EAD00B41052 /* openStoreKitRedeemOfferCode.swift */,
+				F069FCC829CA604300B41052 /* redeemStoreKitPurchases.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
@@ -923,6 +932,7 @@
 				F0C4848A29C0B50D0027A14C /* SectionTitleCell+UI.swift in Sources */,
 				F0397F4E2885EE65002AF19B /* Landing+Notifications.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
+				F069FCC529CA5CD400B41052 /* openStoreKitManageSubscriptionPreferences.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
 				F0C4848829C0B5090027A14C /* SectionTitleCell.swift in Sources */,
 				F0DD141229B8B0A6003122C8 /* NavigationButton+Animations.swift in Sources */,
@@ -932,6 +942,7 @@
 				F062230F29A660BD00B04939 /* StoreKitTypeAliases.swift in Sources */,
 				F0C484AD29C4C8A70027A14C /* StoreKitSubscriptionPeriod.swift in Sources */,
 				F0DD142629B8D465003122C8 /* ProductTile.swift in Sources */,
+				F069FCC729CA5EAD00B41052 /* openStoreKitRedeemOfferCode.swift in Sources */,
 				F07F319B29B791CE00E94DDD /* Styleguide+ProductTitle.swift in Sources */,
 				F0C4849729C228890027A14C /* SectionSubTitleCell+Update.swift in Sources */,
 				F0DD140E29B8B093003122C8 /* NavigationButton+UI.swift in Sources */,
@@ -1013,6 +1024,7 @@
 				F0DD140929B8AFD6003122C8 /* Refund+Notifications.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
 				F0DD143329B8E631003122C8 /* TransactionLabel+Notifications.swift in Sources */,
+				F069FCC929CA604300B41052 /* redeemStoreKitPurchases.swift in Sources */,
 				F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */,
 				F0DD142A29B8D512003122C8 /* ProductTileType.swift in Sources */,
 				F0DD143129B8E5E5003122C8 /* TransactionLabel+UI.swift in Sources */,

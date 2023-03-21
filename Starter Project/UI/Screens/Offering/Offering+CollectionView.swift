@@ -212,7 +212,7 @@ extension Offering {
                     cell.update(type: type, product: product)
                     // Callbacks
                     cell.onRelease = { [weak self] in
-                        guard let _ = self else { return }
+                        guard let self = self else { return }
                         debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName).")
 
                         switch type {
@@ -220,7 +220,10 @@ extension Offering {
                         case .get, .price, .consumableBuy, .buySubscription, .buySubscriptionWithIntroductoryOffer, .autoRenewablePurchased, .purchased:
                             // Only allow those that have not been purchased
                             guard !StoreKitCoordinator.shared.isPurchased(product) else {
-                                debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) Did not execute anything - [Product has already been purchased].")
+                                debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) This means that they must manage a subscription.")
+                                Task {
+                                    await self.openStoreKitManageSubscriptionPreferences()
+                                }
                                 return
                             }
                             // Execute Purchase
@@ -246,15 +249,19 @@ extension Offering {
         /// RedeemOfferCell
         let OfferCodesAndRefundsCellRegistration = UICollectionView.CellRegistration
         <OfferCodesAndRefundsCell, Int> { (cell, _, _) in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak cell] in
+                guard let cell = cell else { return }
                 cell.update()
                 // Layout to make sure that the cell resizes correctly.
                 cell.setNeedsLayout()
                 cell.layoutIfNeeded()
                 // Callbacks
                 cell.onRedeemOfferCode = { [weak self] in
-                    guard let _ = self else { return }
+                    guard let self = self else { return }
                     debugPrint("\(Offering.identifier) OfferCodesAndRefundsCellRegistration onRedeemOfferCode \(DebuggingIdentifiers.actionOrEventSucceded) User pressed onRedeemOfferCode.")
+                    Task {
+                        await self.openStoreKitRedeemOfferCode()
+                    }
                 }
 
                 cell.onRequestARefund = { [weak self] in
@@ -274,15 +281,19 @@ extension Offering {
         /// Restore Purchases Cell
         let RestorePurchasesCellRegistration = UICollectionView.CellRegistration
         <RestorePurchasesCell, Int> { (cell, _, _) in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak cell] in
+                guard let cell = cell else { return }
                 cell.update()
                 // Layout to make sure that the cell resizes correctly.
                 cell.setNeedsLayout()
                 cell.layoutIfNeeded()
                 // Callbacks
                 cell.onRelease = { [weak self] in
-                    guard let _ = self else { return }
+                    guard let self = self else { return }
                     debugPrint("\(Offering.identifier) RestorePurchasesCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed restore purchases.")
+                    Task {
+                        await self.redeemStoreKitPurchases()
+                    }
                 }
             }
         }
