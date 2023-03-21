@@ -175,7 +175,6 @@ extension Offering {
                     } else {
                         //  Purchase is pending cannot be checked through the Swift StoreKit2 library and requires App Store Server Notifications or a custom solution to acknowledge this at load time.
                         // Non Consumables always carry a price tag but can be free. If they are free, their price tag is 0.00.
-                        
                         type = product.price < 0.01 ? .get : .price
                     }
                     break
