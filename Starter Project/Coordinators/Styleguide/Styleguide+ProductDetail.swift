@@ -23,14 +23,15 @@ extension Styleguide {
         return label
     }
 
-    static func attributedProductDetailText(text: String) -> NSMutableAttributedString {
+    static func attributedProductDetailText(text: String, color: UIColor? = Styleguide.colors.black) -> NSMutableAttributedString {
+        guard let color = color else { return NSMutableAttributedString(string: "ERROR") }
         // Paragraph Style
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .left
         paragraphStyle.lineSpacing = 1
         // Attributed Text
         let attributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.foregroundColor: Styleguide.colors.black,
+            NSAttributedString.Key.foregroundColor: color,
             NSAttributedString.Key.font: UIFont(name: fonts.HelveticaNeueBold, size: 18) ?? "",
             NSAttributedString.Key.paragraphStyle: paragraphStyle
         ]

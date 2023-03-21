@@ -43,6 +43,11 @@ class ViewController: UIViewController {
     var navigationHeaderTopConstraint﻿: NSLayoutConstraint?
     var navigationHeaderRightConstraint﻿: NSLayoutConstraint?
     var navigationHeaderLeftConstraint﻿: NSLayoutConstraint?
+
+    /// StoreKitProductNotification
+    let storeKitProductNotification: StoreKitProductNotification = StoreKitProductNotification()
+    var storeKitProductNotificationTopConstraint﻿: NSLayoutConstraint?
+
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

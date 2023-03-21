@@ -15,5 +15,7 @@ let kButtonDimension: CGFloat = 60
 let kAnimationTime: TimeInterval = 0.67
 // Notification Constants
 let kExperienceStateUserInfo: String = "experienceState"
+let kStoreKitNotificationUpdateProductUserInfo: String = "product"
+let kStoreKitNotificationUpdateTypeUserInfo: String = "type"
 // Other
 let kdelasignBlogURL: String = "https://www.delasign.com/blog/"

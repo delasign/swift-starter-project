@@ -20,7 +20,6 @@ extension ProductTile {
                 return
 
             }
-
             var transactionLabelType: TransactionLabelType?
             var detailString: String?
             var buttonString: String?
@@ -68,9 +67,12 @@ extension ProductTile {
                 break
             case .gracePeriod:
                 transactionLabelType = .warning
+                detailString = currentContent.productTile.autoRenewableGracePeriod
                 break
             case .billingRetry:
                 transactionLabelType = .warning
+                detailString = currentContent.productTile.autoRenewableBillingRetry
+                buttonString = currentContent.productTile.manageSubscription
                 break
             case .expiring:
                 transactionLabelType = .warning

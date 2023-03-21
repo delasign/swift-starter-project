@@ -20,6 +20,9 @@ extension ViewController {
             updateSafeAreaInsets(topConstraint: self.refundTopConstraint﻿, rightConstraint: self.refundRightConstraint﻿, bottomConstraint: self.refundBottomConstraint﻿, leftConstraint: self.refundLeftConstraint﻿)
             /// Navigation Header
             updateSafeAreaInsets(topConstraint: self.navigationHeaderTopConstraint﻿, rightConstraint: self.navigationHeaderRightConstraint﻿, bottomConstraint: nil, leftConstraint: self.navigationHeaderLeftConstraint﻿)
+            // storeKitProductNotification
+            self.storeKitProductNotificationTopConstraint﻿?.constant = ViewController.safeAreaInsets.top
+            // Update Layout
             self.view.layoutIfNeeded()
             debugPrint("\(ViewController.identifier) updateConstraints \(DebuggingIdentifiers.actionOrEventSucceded) Updated Constraints")
         }

@@ -113,9 +113,6 @@ extension Offering {
             }
             DispatchQueue.main.async {
                 cell.update(text: title)
-                // Layout to make sure that the cell resizes correctly.
-                cell.setNeedsLayout()
-                cell.layoutIfNeeded()
             }
         }
         /// SectionSubTitleCell Supplementary Registration
@@ -141,9 +138,6 @@ extension Offering {
 
                 DispatchQueue.main.async {
                     cell.update(text: title)
-                    // Layout to make sure that the cell resizes correctly.
-                    cell.setNeedsLayout()
-                    cell.layoutIfNeeded()
                 }
             }
         }
@@ -211,9 +205,6 @@ extension Offering {
                 DispatchQueue.main.async { [weak cell] in
                     guard let cell = cell else { return }
                     cell.update(type: type, product: product)
-                    // Layout to make sure that the cell resizes correctly.
-                    cell.setNeedsLayout()
-                    cell.layoutIfNeeded()
                     // Callbacks
                     cell.onRelease = { [weak self] in
                         guard let _ = self else { return }

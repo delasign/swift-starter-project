@@ -55,7 +55,7 @@ struct UIContent: Codable {
         let autoRenewableWillExpire: String
         let autoRenewableWillExpireMessage: String
         let autoRenewableGracePeriod: String
-        let autoRenewableGracePeriodMessage: String
+        let autoRenewableBillingRetry: String
         let get: String
         let purchase: String
         let claimOffer: String

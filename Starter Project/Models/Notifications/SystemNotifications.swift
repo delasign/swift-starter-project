@@ -11,6 +11,7 @@ struct SystemNotifications {
     // Send this notification when the LanguageCoordinator content is ready or updates language.
     static let onContentUpdate: Notification.Name = Notification.Name("onContentUpdate")
     static let onStoreKitUpdate: Notification.Name = Notification.Name("onStoreKitUpdate")
+    static let onStoreKitProductUpdate: Notification.Name = Notification.Name("onStoreKitProductUpdate")
     static let updateExperienceState: Notification.Name = Notification.Name("updateExperienceState")
     static let onExperienceStateUpdate: Notification.Name = Notification.Name("onExperienceStateUpdate")
 }

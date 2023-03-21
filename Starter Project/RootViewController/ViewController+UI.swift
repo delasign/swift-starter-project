@@ -18,6 +18,8 @@ extension ViewController {
         self.setupLanding()
         // The header is at the top
         self.setupNavigationHeader()
+        // The Notification above all
+        self.setupStoreKitProductNotification()
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup UI.")
     }
     // MARK: UI Setup Functionality
@@ -81,6 +83,18 @@ extension ViewController {
             // Navigation Header is initially hidden
             self.navigationHeader.isHidden = true
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup Navigation Header!")
+        }
+    }
+
+    private func setupStoreKitProductNotification() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            // Add to subview
+            self.view.addSubview(self.storeKitProductNotification)
+            // Top and centered
+            self.storeKitProductNotificationTopConstraint﻿ = self.storeKitProductNotification.top(to: self.view, offset: ViewController.safeAreaInsets.top)
+            self.storeKitProductNotification.centerX(to: self.view)
+            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup StoreKit Product Notification!")
         }
     }
 }

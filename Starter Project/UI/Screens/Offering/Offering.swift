@@ -86,8 +86,11 @@ class Offering: UIView {
             case .inBillingGracePeriod:
                 return .gracePeriod
             case .inBillingRetryPeriod:
+                // In Billing Retry, we assume that the user has cancelled and offer them to buy a subscription.
                 return .billingRetry
             case .expired:
+                // This occurs if the user is on the screen when the subscription expires.
+                // As expirations don't trigger the listener, they will appear as purchased but expired.
                 return .buySubscription
             default:
                 // In the event that its none of the above, crash (This should never be hit).
