@@ -64,13 +64,13 @@ extension Refund {
 
         /// SectionTitleCellRegistration Cell
         let SectionTitleCellRegistration = UICollectionView.CellRegistration
-        <SectionTitleCell, Int> { (cell, indexPath, _) in
-            guard let currentContent = LanguageCoordinator.shared.currentContent else {
+        <SectionTitleCell, Int> { [weak self] (cell, indexPath, _) in
+            guard let self = self, let currentContent = LanguageCoordinator.shared.currentContent else {
                 return
             }
             let title: String
 
-            switch self.dataSource.sectionIdentifier(for: indexPath.section) {
+            switch self.activeSections[indexPath.section] {
             case .consumablesTitle:
                 title = currentContent.shared.consumables
                 break
@@ -82,12 +82,18 @@ extension Refund {
                 break
             case .autoRenewableSubscriptionsTitle:
                 title = currentContent.shared.autoRenewingSubscriptions
+            case .autoRenewableSubscriptionsIndividualPlansTitle:
+                title = currentContent.shared.individualPlans
+                break
+            case .autoRenewableSubscriptionsFamilyPlansTitle:
+                title = currentContent.shared.familyPlans
             default:
                 // This should never occur
                 title = currentContent.shared.error
                 break
             }
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak cell, weak self] in
+                guard let _ = self, let cell = cell else { return }
                 cell.update(text: title)
                 cell.setNeedsLayout()
                 cell.layoutIfNeeded()
@@ -102,11 +108,11 @@ extension Refund {
                 }
                 let title: String
 
-                switch self.dataSource.sectionIdentifier(for: indexPath.section) {
-                case .autoRenewableSubscriptionsIndividualPlans:
+                switch self.activeSections[indexPath.section] {
+                case .autoRenewableSubscriptionsIndividualPlansTitle:
                     title = currentContent.shared.individualPlans
                     break
-                case .autoRenewableSubscriptionsFamilyPlans:
+                case .autoRenewableSubscriptionsFamilyPlansTitle:
                     title = currentContent.shared.familyPlans
                     break
                 default:
@@ -115,7 +121,8 @@ extension Refund {
                     break
                 }
 
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [weak cell, weak self] in
+                    guard let _ = self, let cell = cell else { return }
                     cell.update(text: title)
                     cell.setNeedsLayout()
                     cell.layoutIfNeeded()
@@ -125,7 +132,8 @@ extension Refund {
 
         /// Product Tile Cell
         let ProductTileCellRegistration = UICollectionView.CellRegistration
-        <ProductTile, Int> { (cell, indexPath, _) in
+        <ProductTile, Int> { [weak self] (cell, indexPath, _) in
+            guard let self = self else { return }
             // Configure
             let consumables = StoreKitCoordinator.shared.purchasedConsumables
             let nonConsumables = StoreKitCoordinator.shared.purchasedNonConsumables
@@ -135,7 +143,7 @@ extension Refund {
 
             let product: Product
             let type: ProductTileType = .refund
-            switch self.dataSource.sectionIdentifier(for: indexPath.section) {
+            switch self.activeSections[indexPath.section] {
             case .consumables:
                 product = consumables[indexPath.row]
                 break
@@ -154,14 +162,18 @@ extension Refund {
             default:
                 return
             }
-            DispatchQueue.main.async {
-                cell.update(type: type, product: product)
+            DispatchQueue.main.async { [weak cell, weak self] in
+                guard let self = self, let cell = cell else { return }
+                cell.update(collectionViewType: .refund, type: type, product: product)
                 cell.setNeedsLayout()
                 cell.layoutIfNeeded()
                 // Callbacks
-                cell.onRelease = { [weak self] in
-                    guard let _ = self else { return }
+                cell.onRelease = { [weak self, weak cell] in
+                    guard let self = self, let _ = cell else { return }
                     debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName)")
+                    Task {
+                        await self.performStoreKitRefundRequest(product: product)
+                    }
                 }
             }
         }
@@ -169,9 +181,10 @@ extension Refund {
         // MARK: Create the datasource and tie it to the collectionView.
         // This is the part that ties the function above to your collectionview
         dataSource = UICollectionViewDiffableDataSource
-        <StoreKitOfferingSections, Int>(collectionView: collectionView) {
+        <StoreKitOfferingSections, Int>(collectionView: collectionView) { [weak self]
             (collectionView: UICollectionView, indexPath: IndexPath, item: Int) -> UICollectionViewCell? in
-            switch Refund.Sections[indexPath.section] {
+            guard let self = self else { return nil }
+            switch self.activeSections[indexPath.section] {
             case .consumablesTitle, .nonConsumablesTitle, .nonRenewingSubscriptionsTitle, .autoRenewableSubscriptionsTitle, .restorePurchasesTitle:
                 return collectionView.dequeueConfiguredReusableCell(using: SectionTitleCellRegistration, for: indexPath, item: item)
             case .consumables, .nonConsumables, .nonRenewingSubscriptions, .autoRenewableSubscriptionsIndividualPlans, .autoRenewableSubscriptionsFamilyPlans:
@@ -233,7 +246,8 @@ extension Refund {
             sections.append(.autoRenewableSubscriptionsFamilyPlansTitle)
             sections.append(.autoRenewableSubscriptionsFamilyPlans)
         }
-
+        // Update active Sections and Snapshot
+        self.activeSections = sections
         snapshot.appendSections(sections)
 
         // Add Relevant Sections
@@ -270,10 +284,11 @@ extension Refund {
             snapshot.appendItems([totalIAPAndIndividualPlans + 5], toSection: .autoRenewableSubscriptionsFamilyPlansTitle)
             snapshot.appendItems([Int](totalIAPAndIndividualPlans + 6...totalProducts + 5), toSection: .autoRenewableSubscriptionsFamilyPlans)
         }
-        // Snapshots must be applied on the main queue
+
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.dataSource.apply(snapshot, animatingDifferences: true)
+            // Snapshots must be applied on the main queue
+            self.dataSource.apply(snapshot, animatingDifferences: false)
         }
     }
 }

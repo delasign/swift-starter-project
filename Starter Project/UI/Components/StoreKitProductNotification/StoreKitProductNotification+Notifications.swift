@@ -10,10 +10,11 @@ import StoreKit
 extension StoreKitProductNotification {
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.onStoreKitProductNotification), name: SystemNotifications.onStoreKitProductUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onStoreKitProductNotification), name: SystemNotifications.onStoreKitProductRefundUpdate, object: nil)
     }
 
     @objc private func onStoreKitProductNotification(notification: Notification) {
-        guard let userInfo = notification.userInfo, let type = userInfo[kStoreKitNotificationUpdateTypeUserInfo] as? StoreKitNotificationType else {
+        guard let userInfo = notification.userInfo, let type = userInfo[kStoreKitNotificationTypeUserInfo] as? StoreKitNotificationType else {
             debugPrint("\(StoreKitProductNotification.identifier) onStoreKitProductNotification \(DebuggingIdentifiers.actionOrEventFailed) Failed as there is no type in the notification.")
             return
         }
@@ -21,7 +22,7 @@ extension StoreKitProductNotification {
         // Update the type
         self.type = type
         // Set the product if its there.
-        if let product = userInfo[kStoreKitNotificationUpdateProductUserInfo] as? Product {
+        if let product = userInfo[kStoreKitNotificationProductUserInfo] as? Product {
             debugPrint("\(StoreKitProductNotification.identifier) onStoreKitProductNotification \(DebuggingIdentifiers.notificationRecieved) Includes a product : \(product).")
             self.product = product
         } else {
@@ -30,4 +31,5 @@ extension StoreKitProductNotification {
         // Perform updates
         self.update()
     }
+
 }

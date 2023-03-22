@@ -117,8 +117,8 @@ extension Offering {
         }
         /// SectionSubTitleCell Supplementary Registration
         let SectionSubTitleSupplementaryRegistration = UICollectionView.SupplementaryRegistration<SectionSubTitleCell>(elementKind: SectionSubTitleCell.identifier) { (cell, _, indexPath) in
-            DispatchQueue.main.async {
-                guard let currentContent = LanguageCoordinator.shared.currentContent else {
+            DispatchQueue.main.async { [weak cell, weak self] in
+                guard let _ = self, let cell = cell, let currentContent = LanguageCoordinator.shared.currentContent else {
                     return
                 }
                 let title: String
@@ -136,9 +136,7 @@ extension Offering {
                     break
                 }
 
-                DispatchQueue.main.async {
-                    cell.update(text: title)
-                }
+                cell.update(text: title)
             }
         }
 
@@ -209,10 +207,10 @@ extension Offering {
                 }
                 DispatchQueue.main.async { [weak cell] in
                     guard let cell = cell else { return }
-                    cell.update(type: type, product: product)
+                    cell.update(collectionViewType: .offering, type: type, product: product)
                     // Callbacks
-                    cell.onRelease = { [weak self] in
-                        guard let self = self else { return }
+                    cell.onRelease = { [weak cell, weak self] in
+                        guard let self = self, let _ = cell else { return }
                         debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed the button with type : \(type) on product : \(product.displayName).")
 
                         switch type {
@@ -256,7 +254,7 @@ extension Offering {
                 cell.setNeedsLayout()
                 cell.layoutIfNeeded()
                 // Callbacks
-                cell.onRedeemOfferCode = { [weak self] in
+                cell.onRedeemOfferCode = { [unowned cell, weak self] in
                     guard let self = self else { return }
                     debugPrint("\(Offering.identifier) OfferCodesAndRefundsCellRegistration onRedeemOfferCode \(DebuggingIdentifiers.actionOrEventSucceded) User pressed onRedeemOfferCode.")
                     Task {
@@ -264,8 +262,8 @@ extension Offering {
                     }
                 }
 
-                cell.onRequestARefund = { [weak self] in
-                    guard let self = self else { return }
+                cell.onRequestARefund = { [weak cell, weak self] in
+                    guard let self = self, let _ = cell else { return }
                     debugPrint("\(Offering.identifier) OfferCodesAndRefundsCellRegistration onRequestARefund \(DebuggingIdentifiers.actionOrEventSucceded) User pressed onRequestARefund.")
                     // Send Notification
                     NotificationCenter.default.post(name: SystemNotifications.updateExperienceState, object: nil, userInfo: [kExperienceStateUserInfo: ExperienceStates.refund])
@@ -288,8 +286,8 @@ extension Offering {
                 cell.setNeedsLayout()
                 cell.layoutIfNeeded()
                 // Callbacks
-                cell.onRelease = { [weak self] in
-                    guard let self = self else { return }
+                cell.onRelease = { [weak cell, weak self] in
+                    guard let self = self, let _ = cell else { return }
                     debugPrint("\(Offering.identifier) RestorePurchasesCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) User pressed restore purchases.")
                     Task {
                         await self.redeemStoreKitPurchases()

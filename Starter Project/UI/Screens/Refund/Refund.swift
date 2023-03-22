@@ -22,6 +22,8 @@ class Refund: UIView {
                                                        .autoRenewableSubscriptionsIndividualPlans,
                                                        .autoRenewableSubscriptionsFamilyPlansTitle,
                                                        .autoRenewableSubscriptionsFamilyPlans]
+    // Create a variable to track the sections that are being used.
+    var activeSections: [StoreKitOfferingSections] = []
 
     var dataSource: UICollectionViewDiffableDataSource<StoreKitOfferingSections, Int>!
     // MARK: UI

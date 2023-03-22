@@ -62,7 +62,14 @@
          "pendingPrefix": "The purchase of ",
          "pendingSuffix": " is pending.",
          "failedPrefix": "Failed to purchase ",
-         "failedSuffix": ".\nPlease try again.",
-         "refund": "We have requested a refund."
+         "failedSuffix": ". Please try again.",
+         "refundSucceededPrefix": "The refund of ",
+         "refundSucceededSuffix": " was successful.",
+         "refundPendingPrefix": "You have requested a refund for ",
+         "refundPendingSuffix": ".",
+         "refundFailedPrefix": "Failed to request a refund for ",
+         "refundFailedSuffix": ". Please try again.",
+         "refundCancelledPrefix": "You have cancelled the refund request for ",
+         "refundCancelledSuffix": "."
     }
 }

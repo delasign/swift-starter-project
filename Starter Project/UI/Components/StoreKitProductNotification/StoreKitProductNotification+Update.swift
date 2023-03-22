@@ -42,8 +42,30 @@ extension StoreKitProductNotification {
                 imageWidth = 30
                 imageHeight = 30
                 break
-            case .refund:
-                copy = currentContent.refund
+            case .refundSucceeded:
+                guard let product = self.product else { return }
+                copy = currentContent.refundSucceededPrefix + product.displayName + currentContent.refundSucceededSuffix
+                image = Images.success
+                imageWidth = 30
+                imageHeight = 30
+                break
+            case.refundPending:
+                guard let product = self.product else { return }
+                copy = currentContent.refundPendingPrefix + product.displayName + currentContent.refundPendingSuffix
+                image = Images.pending
+                imageWidth = 30
+                imageHeight = 8
+                break
+            case .refundFailed:
+                guard let product = self.product else { return }
+                copy = currentContent.refundFailedPrefix + product.displayName + currentContent.refundFailedSuffix
+                image = Images.warning
+                imageWidth = 30
+                imageHeight = 30
+                break
+            case .refundCancelled:
+                guard let product = self.product else { return }
+                copy = currentContent.refundCancelledPrefix + product.displayName + currentContent.refundCancelledSuffix
                 image = Images.success
                 imageWidth = 30
                 imageHeight = 30

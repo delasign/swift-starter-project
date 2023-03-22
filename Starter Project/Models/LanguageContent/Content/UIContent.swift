@@ -91,7 +91,14 @@ struct UIContent: Codable {
         let pendingSuffix: String
         let failedPrefix: String
         let failedSuffix: String
-        let refund: String
+        let refundSucceededPrefix: String
+        let refundSucceededSuffix: String
+        let refundPendingPrefix: String
+        let refundPendingSuffix: String
+        let refundFailedPrefix: String
+        let refundFailedSuffix: String
+        let refundCancelledPrefix: String
+        let refundCancelledSuffix: String
     }
 
     let notifications: Notifications

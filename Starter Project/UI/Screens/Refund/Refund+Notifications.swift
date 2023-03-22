@@ -17,8 +17,8 @@ extension Refund {
     // MARK: Notification Setup Functionality
     @objc private func reloadData() {
         guard let currentContent = LanguageCoordinator.shared.currentContent else { return }
-        debugPrint("\(Offering.identifier) reloadData \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update or On StoreKit Update.")
-        self.setDataSourceData()
+        debugPrint("\(Refund.identifier) reloadData \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update or On StoreKit Update.")
+
         let skc = StoreKitCoordinator.shared
         DispatchQueue.main.async {
             // Hide / Show UICollectionView or Label + Reload Data
@@ -31,7 +31,7 @@ extension Refund {
                 self.noRefundsAvailableLabel.isHidden = true
 
                 self.collectionView.collectionViewLayout.invalidateLayout()
-                self.collectionView.reloadData()
+                self.setDataSourceData()
             }
 
         }

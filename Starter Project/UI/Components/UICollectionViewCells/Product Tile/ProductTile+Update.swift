@@ -10,8 +10,9 @@ import UIKit
 import StoreKit
 
 extension ProductTile {
-    func update(type: ProductTileType, product: Product) {
+    func update(collectionViewType: StoreKitTutorialCollectionViewType, type: ProductTileType, product: Product) {
         // Update Data Points
+        self.collectionViewType = collectionViewType
         self.type = type
         self.product = product
         // Update Visual

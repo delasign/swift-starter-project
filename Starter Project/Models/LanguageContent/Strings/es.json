@@ -62,7 +62,14 @@
          "pendingPrefix": "La compra de ",
          "pendingSuffix": " esta pendiente.",
          "failedPrefix": "No se ha podido realizar la compra de ",
-         "failedSuffix": ".\Intentelo de nuevo.",
-         "refund": "Hemos solicitado una devolución."
+         "failedSuffix": ". Intentelo de nuevo.",
+         "refundSucceededPrefix": "La solicitud de devolución ",
+         "refundSucceededSuffix": " ha tenido exito.",
+         "refundPendingPrefix": "Ha solicitado una devolución para ",
+         "refundPendingSuffix": ".",
+         "refundFailedPrefix": "Su solicitud de devolución para ",
+         "refundFailedSuffix": " ha fallado. Intentelo de nuevo.",
+         "refundCancelledPrefix": "Ha cancelado su solicitud de devolución para ",
+         "refundCancelledSuffix": "."
     }
 }

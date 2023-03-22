@@ -59,13 +59,13 @@ class StoreKitProductNotification: UIView {
 
     func getBackgroundColor() -> UIColor {
         switch type {
-        case .purchased:
+        case .purchased, .refundSucceeded:
             return Styleguide.colors.green
-        case .pending:
+        case .pending, .refundPending:
             return Styleguide.colors.purple
-        case .failed:
+        case .failed, .refundFailed:
             return Styleguide.colors.red
-        case .refund:
+        case .refundCancelled:
             return Styleguide.colors.black
         }
     }

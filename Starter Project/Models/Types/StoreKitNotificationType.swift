@@ -11,5 +11,8 @@ enum StoreKitNotificationType {
     case purchased
     case pending
     case failed
-    case refund
+    case refundPending
+    case refundFailed
+    case refundSucceeded
+    case refundCancelled
 }

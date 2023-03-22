@@ -30,8 +30,8 @@ extension StoreKitCoordinator {
             await transaction.finish()
             // Send Notification
             NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductUpdate, userInfo: [
-                kStoreKitNotificationUpdateTypeUserInfo: StoreKitNotificationType.purchased,
-                kStoreKitNotificationUpdateProductUserInfo: product
+                kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.purchased,
+                kStoreKitNotificationProductUserInfo: product
             ]))
             debugPrint("\(StoreKitCoordinator.identifier) purchase \(DebuggingIdentifiers.actionOrEventSucceded) Finished transaction.")
             return transaction
@@ -39,8 +39,8 @@ extension StoreKitCoordinator {
             debugPrint("\(StoreKitCoordinator.identifier) purchase \(DebuggingIdentifiers.actionOrEventFailed) Failed as the transaction is pending.")
             // Send Notification
             NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductUpdate, userInfo: [
-                kStoreKitNotificationUpdateTypeUserInfo: StoreKitNotificationType.pending,
-                kStoreKitNotificationUpdateProductUserInfo: product
+                kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.pending,
+                kStoreKitNotificationProductUserInfo: product
             ]))
             return nil
         case .userCancelled:
@@ -50,8 +50,8 @@ extension StoreKitCoordinator {
             debugPrint("\(StoreKitCoordinator.identifier) purchase \(DebuggingIdentifiers.actionOrEventFailed) Failed with result \(result).")
             // Send Notification
             NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductUpdate, userInfo: [
-                kStoreKitNotificationUpdateTypeUserInfo: StoreKitNotificationType.failed,
-                kStoreKitNotificationUpdateProductUserInfo: product
+                kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.failed,
+                kStoreKitNotificationProductUserInfo: product
             ]))
             return nil
         }

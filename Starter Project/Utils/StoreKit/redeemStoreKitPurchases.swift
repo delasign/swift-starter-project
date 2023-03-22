@@ -17,6 +17,5 @@ extension UIView {
         } catch {
             debugPrint("redeemStoreKitPurchases \(DebuggingIdentifiers.actionOrEventFailed) Failed to restore purchases with error : \(error).")
         }
-
     }
 }

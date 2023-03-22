@@ -37,11 +37,11 @@ extension StoreKitCoordinator {
         // Check whether the JWS passes StoreKit verification.
         switch result {
         case .unverified:
-            debugPrint("\(StoreKitCoordinator.identifier) checkVerified \(DebuggingIdentifiers.actionOrEventFailed) Not veriied.")
+            debugPrint("\(StoreKitCoordinator.identifier) checkVerified \(DebuggingIdentifiers.actionOrEventFailed) Not verified.")
             // StoreKit parses the JWS, but it fails verification.
             throw StoreError.failedVerification
         case .verified(let safe):
-            debugPrint("\(StoreKitCoordinator.identifier) checkVerified \(DebuggingIdentifiers.actionOrEventSucceded) Veriied.")
+            debugPrint("\(StoreKitCoordinator.identifier) checkVerified \(DebuggingIdentifiers.actionOrEventSucceded) Verified.")
             // The result is verified. Return the unwrapped value.
             return safe
         }

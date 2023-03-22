@@ -12,6 +12,7 @@ class ProductTile: UICollectionViewCell {
     // MARK: Variables
     static var identifier: String = "ProductTile"
     var type: ProductTileType = .get
+    var collectionViewType: StoreKitTutorialCollectionViewType = .offering
     // MARK: UI
     let productTitle: UILabel = Styleguide.createAttributedProductTitle()
     var productTitleRightToLeftOfButtonConstraint: NSLayoutConstraint?
@@ -76,6 +77,7 @@ class ProductTile: UICollectionViewCell {
             self.actionButton.onRelease = nil
             self.product = nil
             self.onRelease = nil
+            self.collectionViewType = .offering
         }
     }
 }

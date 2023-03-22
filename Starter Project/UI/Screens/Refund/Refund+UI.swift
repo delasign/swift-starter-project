@@ -20,6 +20,8 @@ extension Refund {
             guard let self = self else { return }
             self.addSubview(self.noRefundsAvailableLabel)
             self.noRefundsAvailableLabel.centerInSuperview()
+            self.noRefundsAvailableLabel.left(to: self, offset: kPadding)
+            self.noRefundsAvailableLabel.right(to: self, offset: -kPadding)
         }
     }
 
