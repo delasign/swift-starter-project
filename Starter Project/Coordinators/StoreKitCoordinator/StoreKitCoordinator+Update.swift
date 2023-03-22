@@ -84,5 +84,7 @@ extension StoreKitCoordinator {
         // `product.subscription.status` returns apply to the entire subscription group.
         subscriptionGroupStatus = try? await subscriptions.first?.subscription?.status.first?.state
         debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventSucceded) Updated Subscription Group Status.")
+        // Notify System
+        NotificationCenter.default.post(name: SystemNotifications.onStoreKitUpdate, object: nil)
     }
 }

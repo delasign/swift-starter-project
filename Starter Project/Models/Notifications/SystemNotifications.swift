@@ -10,4 +10,8 @@ import Foundation
 struct SystemNotifications {
     // Send this notification when the LanguageCoordinator content is ready or updates language.
     static let onContentUpdate: Notification.Name = Notification.Name("onContentUpdate")
+    // StoreKit
+    static let onStoreKitUpdate: Notification.Name = Notification.Name("onStoreKitUpdate")
+    static let onStoreKitProductUpdate: Notification.Name = Notification.Name("onStoreKitProductUpdate")
+    static let onStoreKitProductRefundUpdate: Notification.Name = Notification.Name("onStoreKitProductRefundUpdate")
 }
