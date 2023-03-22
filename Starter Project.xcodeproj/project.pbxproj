@@ -56,6 +56,7 @@
 		F062232729A67C9B00B04939 /* OfferingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062232629A67C9B00B04939 /* OfferingKeys.swift */; };
 		F062232929A67E1000B04939 /* OfferingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062232829A67E1000B04939 /* OfferingConfiguration.swift */; };
 		F062232B29A67F6E00B04939 /* OfferingConfiguration+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = F062232A29A67F6E00B04939 /* OfferingConfiguration+Get.swift */; };
+		F069FCD129CB58F700B41052 /* ViewController+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069FCD029CB58F700B41052 /* ViewController+Notifications.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */; };
@@ -123,6 +124,7 @@
 		F062232629A67C9B00B04939 /* OfferingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingKeys.swift; sourceTree = "<group>"; };
 		F062232829A67E1000B04939 /* OfferingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferingConfiguration.swift; sourceTree = "<group>"; };
 		F062232A29A67F6E00B04939 /* OfferingConfiguration+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OfferingConfiguration+Get.swift"; sourceTree = "<group>"; };
+		F069FCD029CB58F700B41052 /* ViewController+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Notifications.swift"; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				F00DDDD0287C82480062AA1E /* ViewController.swift */,
 				F008FCA4287F736F00B2495D /* ViewController+UI.swift */,
+				F069FCD029CB58F700B41052 /* ViewController+Notifications.swift */,
 				F0397F59288741CA002AF19B /* ViewController+Update.swift */,
 			);
 			path = RootViewController;
@@ -617,6 +620,7 @@
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 				F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
+				F069FCD129CB58F700B41052 /* ViewController+Notifications.swift in Sources */,
 				F062232B29A67F6E00B04939 /* OfferingConfiguration+Get.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,

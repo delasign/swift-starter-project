@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         ViewController.safeAreaInsets = self.view.safeAreaInsets
         self.setupCoordinators()
         self.setupUI()
+        self.setupNotifications()
         getDeviceOrientation()
     }
 
