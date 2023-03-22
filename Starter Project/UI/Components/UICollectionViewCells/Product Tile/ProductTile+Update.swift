@@ -55,7 +55,6 @@ extension ProductTile {
                 break
             case .activeUntil:
                 transactionLabelType = .purchased
-                let expirationDate = await StoreKitCoordinator.shared.getSubscriptionRenewalOrExpirationDate(product: product)
                 // Non-Renewing Dates are based on Business Logic
                 // This implies that you must remove non-renewables after they become "Not Valid" and create another one if needed, with different logic and circumstances.
                 detailString = currentContent.productTile.nonRenewingActiveUntil

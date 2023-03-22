@@ -111,7 +111,7 @@ extension ProductTile {
             }
         }
     }
-    
+
     @objc private func onStoreKitProductRefundUpdate(notification: Notification) {
         guard self.collectionViewType == .refund, let userInfo = notification.userInfo, let type = userInfo[kStoreKitNotificationTypeUserInfo] as? StoreKitNotificationType, let inComingProduct = userInfo[kStoreKitNotificationProductUserInfo] as? Product, let product = self.product else {
             debugPrint("\(ProductTile.identifier) onStoreKitProductRefundUpdate \(DebuggingIdentifiers.notificationRecieved) Failed to process as theres no type or product.")
