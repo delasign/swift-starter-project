@@ -18,7 +18,7 @@ extension ViewController {
     @objc private func onReturnToForeGround() {
         // Update StoreKit statuses everytime the app returns to the foreground
         Task {
-            StoreKitCoordinator.shared.updateCustomerProductStatus()
+            await StoreKitCoordinator.shared.updateCustomerProductStatus()
         }
     }
     
