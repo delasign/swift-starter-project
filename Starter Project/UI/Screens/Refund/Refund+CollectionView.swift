@@ -10,7 +10,7 @@ import UIKit
 import StoreKit
 
 extension Refund {
-
+    // MARK: PLEASE NOTE THAT THE UICollectionViewCompositionalLayout WITH DYNAMIC SIZING IS NOT YET READY FOR PRODUCTION AND WORKS HALF THE TIME. THIS TUTORIAL SERVES AS A MEANS TO PROVIDE A FUTURE VISION TOWARDS A FLEXIBLE COLLECTIONVIEW. IF YOU ARE TO IMPLEMENT THIS KIND OF LAYOUT IN PRODUCT, PLEASE USE A STACK VIEW WITH RESIZABLE VIEWS.
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, _) -> NSCollectionLayoutSection? in
             let currentSection = self.dataSource.sectionIdentifier(for: sectionIndex) // Refund.Sections[sectionIndex]
