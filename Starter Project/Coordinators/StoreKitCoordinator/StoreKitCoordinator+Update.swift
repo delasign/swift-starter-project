@@ -69,7 +69,7 @@ extension StoreKitCoordinator {
         debugPrint("\(StoreKitCoordinator.identifier) updateCustomerProductStatus \(DebuggingIdentifiers.actionOrEventInProgress) Updating Purchased Arrays... \(DebuggingIdentifiers.actionOrEventInProgress)")
 
         // Update the store information with the purchased products.
-        self.purchasedConsumables = purchasedNonConsumables
+        self.purchasedNonConsumables = purchasedNonConsumables
         self.purchasedNonRenewables = purchasedNonRenewableSubscriptions
 
         // Update the store information with auto-renewable subscription products.
