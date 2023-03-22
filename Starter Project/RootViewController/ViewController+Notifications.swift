@@ -16,7 +16,7 @@ extension ViewController {
     }
     // MARK: Notification Setup Functionality
     @objc private func onReturnToForeGround() {
-        // Update StoreKit statuses everytime the app returns to the foreground
+        // Update StoreKit statuses every time the app returns to the foreground
         Task {
             await StoreKitCoordinator.shared.updateCustomerProductStatus()
         }
