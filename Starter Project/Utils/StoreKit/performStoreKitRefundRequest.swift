@@ -19,37 +19,32 @@ extension UIView {
         guard case .verified(let transaction) = await Transaction.latest(for: product.id) else { return }
 
         do {
-            DispatchQueue.main.async {
-                Task {
-                    let status = try await transaction.beginRefundRequest(in: windowScene)
-                    debugPrint("performStoreKitRefundRequest \(DebuggingIdentifiers.actionOrEventSucceded) Executed refund.")
-                    // Send Refund Pending Notification
-                    NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
-                        kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundPending,
-                        kStoreKitNotificationProductUserInfo: product
-                    ]))
-                    switch status {
-                    case .userCancelled:
-                        // Send Refund Cancelled Notification
-                        NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
-                            kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundCancelled,
-                            kStoreKitNotificationProductUserInfo: product
-                        ]))
-                        break
-                    case .success:
-                        // Send Refund Succesful Notification
-                        NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
-                            kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundSucceeded,
-                            kStoreKitNotificationProductUserInfo: product
-                        ]))
-                        break
-                    @unknown default:
-                        fatalError("CRASHED AS THE APP DID NOT CONSIDER ALL STATUSES FOR A REFUND REQUEST \(status)")
-                        break
-                    }
-                }
+            let status = try await transaction.beginRefundRequest(in: windowScene)
+            debugPrint("performStoreKitRefundRequest \(DebuggingIdentifiers.actionOrEventSucceded) Executed refund.")
+            // Send Refund Pending Notification
+            NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
+                kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundPending,
+                kStoreKitNotificationProductUserInfo: product
+            ]))
+            switch status {
+            case .userCancelled:
+                // Send Refund Cancelled Notification
+                NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
+                    kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundCancelled,
+                    kStoreKitNotificationProductUserInfo: product
+                ]))
+                break
+            case .success:
+                // Send Refund Succesful Notification
+                NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
+                    kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundSucceeded,
+                    kStoreKitNotificationProductUserInfo: product
+                ]))
+                break
+            @unknown default:
+                fatalError("CRASHED AS THE APP DID NOT CONSIDER ALL STATUSES FOR A REFUND REQUEST \(status)")
+                break
             }
-
         } catch {
             NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
                 kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundFailed,

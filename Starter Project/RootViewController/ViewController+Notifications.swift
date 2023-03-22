@@ -21,7 +21,7 @@ extension ViewController {
             await StoreKitCoordinator.shared.updateCustomerProductStatus()
         }
     }
-    
+
     @objc private func updateExperienceState(notification: Notification) {
         guard let userInfo = notification.userInfo, let state = userInfo[kExperienceStateUserInfo] as? ExperienceStates else {
             debugPrint("\(Landing.identifier) updateExperienceState \(DebuggingIdentifiers.actionOrEventFailed) Update Experience State has no state.")
