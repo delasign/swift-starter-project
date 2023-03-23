@@ -45,6 +45,18 @@ extension UIView {
                 fatalError("CRASHED AS THE APP DID NOT CONSIDER ALL STATUSES FOR A REFUND REQUEST \(status)")
                 break
             }
+        } catch StoreKit.Transaction.RefundRequestError.duplicateRequest {
+            NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
+                kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundFailed,
+                kStoreKitNotificationProductUserInfo: product
+            ]))
+            debugPrint("performStoreKitRefundRequest \(DebuggingIdentifiers.actionOrEventFailed) Failed to execute refund request as it is a duplicate.")
+        } catch StoreKit.Transaction.RefundRequestError.failed {
+            NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
+                kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundFailed,
+                kStoreKitNotificationProductUserInfo: product
+            ]))
+            debugPrint("performStoreKitRefundRequest \(DebuggingIdentifiers.actionOrEventFailed) Failed to execute refund request.")
         } catch {
             NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductRefundUpdate, userInfo: [
                 kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundFailed,
