@@ -238,6 +238,11 @@ extension Offering {
                                     _ = try await StoreKitCoordinator.shared.purchase(product)
                                 } catch {
                                     debugPrint("\(Offering.identifier) ProductTileCellRegistration onRelease \(DebuggingIdentifiers.actionOrEventSucceded) failed to buy product : \(product.displayName). Error : \(error.localizedDescription)")
+                                    // Send Notification
+                                    NotificationCenter.default.post(Notification(name: SystemNotifications.onStoreKitProductUpdate, userInfo: [
+                                        kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.failed,
+                                        kStoreKitNotificationProductUserInfo: product
+                                    ]))
                                 }
                             }
                             break

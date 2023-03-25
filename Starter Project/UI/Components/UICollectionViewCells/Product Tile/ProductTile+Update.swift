@@ -77,7 +77,7 @@ extension ProductTile {
             case .expiring:
                 transactionLabelType = .warning
                 let expirationDate = await StoreKitCoordinator.shared.getSubscriptionRenewalOrExpirationDate(product: product)
-                detailString = currentContent.productTile.autoRenewableWillExpireMessage + expirationDate + currentContent.productTile.autoRenewableWillExpireMessage + "."
+                detailString = currentContent.productTile.autoRenewableWillExpire + expirationDate + currentContent.productTile.autoRenewableWillExpireMessage
                 buttonString = currentContent.productTile.claimOffer
                 break
             case .refund:
