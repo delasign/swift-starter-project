@@ -113,6 +113,8 @@ extension Offering {
             }
             DispatchQueue.main.async {
                 cell.update(text: title)
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
             }
         }
         /// SectionSubTitleCell Supplementary Registration
@@ -137,6 +139,8 @@ extension Offering {
                 }
 
                 cell.update(text: title)
+                cell.setNeedsLayout()
+                cell.layoutIfNeeded()
             }
         }
 
@@ -205,9 +209,12 @@ extension Offering {
                 default:
                     return
                 }
+
                 DispatchQueue.main.async { [weak cell] in
                     guard let cell = cell else { return }
                     cell.update(collectionViewType: .offering, type: type, product: product)
+                    cell.setNeedsLayout()
+                    cell.layoutIfNeeded()
                     // Callbacks
                     cell.onRelease = { [weak cell, weak self] in
                         guard let self = self, let _ = cell else { return }
@@ -225,7 +232,8 @@ extension Offering {
                                 return
                             }
                             // Execute Purchase
-                            Task {
+                            Task { [weak cell] in
+                                guard let _ = cell else { return }
                                 do {
                                     _ = try await StoreKitCoordinator.shared.purchase(product)
                                 } catch {

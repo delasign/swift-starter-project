@@ -66,9 +66,10 @@
   ],
   "settings" : {
     "_askToBuyEnabled" : true,
-    "_billingIssuesEnabled" : true,
-    "_compatibilityTimeRate" : 6,
-    "_timeRate" : 15
+    "_billingIssuesEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_timeRate" : 0
   },
   "subscriptionGroups" : [
     {

@@ -70,10 +70,12 @@ class ProductTile: UICollectionViewCell {
         super.prepareForReuse()
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.productTitle.text = ""
-            self.productDescription.text = ""
-            self.productDetail.text = ""
-            self.actionButton.title.text = ""
+            // As Compositional Layouts are not yet ready for production, lets make people aware that it can fail by using a string.
+            let resetString = "SHOW THIS INCASE OF FAILURE"
+            self.productTitle.text = resetString
+            self.productDescription.text = resetString
+            self.productDetail.text = resetString
+            self.actionButton.title.text = resetString
             self.actionButton.onRelease = nil
             self.product = nil
             self.onRelease = nil
