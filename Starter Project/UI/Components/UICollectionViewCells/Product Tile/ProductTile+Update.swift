@@ -21,6 +21,8 @@ extension ProductTile {
                 return
 
             }
+            let skc = StoreKitCoordinator.shared
+
             var transactionLabelType: TransactionLabelType?
             var detailString: String?
             var buttonString: String?
@@ -44,7 +46,7 @@ extension ProductTile {
                 break
             case .buySubscriptionWithIntroductoryOffer:
                 transactionLabelType = .introductoryOffer
-                detailString = getStoreKitIntroductoryOfferDetailString(product: product)
+                detailString = skc.getIntroductoryOfferDetailString(product: product)
                 buttonString = currentContent.productTile.purchase
                 break
             case .pending:
@@ -61,7 +63,7 @@ extension ProductTile {
                 break
             case .autoRenewablePurchased:
                 transactionLabelType = .purchased
-                let renewalDate = await StoreKitCoordinator.shared.getSubscriptionRenewalOrExpirationDate(product: product)
+                let renewalDate = await skc.getSubscriptionRenewalOrExpirationDate(product: product)
                 detailString = currentContent.productTile.autoRenewableRenewsOn + renewalDate + "."
                 buttonString = currentContent.productTile.manageSubscription
                 break
@@ -76,7 +78,7 @@ extension ProductTile {
                 break
             case .expiring:
                 transactionLabelType = .warning
-                let expirationDate = await StoreKitCoordinator.shared.getSubscriptionRenewalOrExpirationDate(product: product)
+                let expirationDate = await skc.getSubscriptionRenewalOrExpirationDate(product: product)
                 detailString = currentContent.productTile.autoRenewableWillExpire + expirationDate + currentContent.productTile.autoRenewableWillExpireMessage
                 buttonString = currentContent.productTile.claimOffer
                 break

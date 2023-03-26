@@ -62,7 +62,7 @@ extension UIView {
                 kStoreKitNotificationTypeUserInfo: StoreKitNotificationType.refundFailed,
                 kStoreKitNotificationProductUserInfo: product
             ]))
-            debugPrint("performStoreKitRefundRequest \(DebuggingIdentifiers.actionOrEventFailed) Failed to execute refund request with error : \(error).")
+            debugPrint("performStoreKitRefundRequest \(DebuggingIdentifiers.actionOrEventFailed) Failed to execute refund request with error \(error).")
         }
     }
 }

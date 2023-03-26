@@ -65,7 +65,7 @@ extension TransactionLabel {
             case .subscriptionPrice:
                 if let product = self.product {
                     // Get the subscriptionPeriodString
-                    let subscriptionPeriodString = getStoreKitSubscriptionPeriodString(product: product)
+                    let subscriptionPeriodString = StoreKitCoordinator.shared.getSubscriptionPeriodString(product: product)
                     // Set the copy
                     copy = "\(product.displayPrice)/\n\(subscriptionPeriodString)"
 
@@ -77,7 +77,7 @@ extension TransactionLabel {
                 color = Styleguide.colors.white
                 if let product = self.product, let introductoryOffer = product.subscription?.introductoryOffer {
                     // Get the subscriptionPeriodString
-                    let subscriptionPeriodString = getStoreKitSubscriptionIntroductoryOfferPeriodString(product: product, detailString: false)
+                    let subscriptionPeriodString = StoreKitCoordinator.shared.getSubscriptionIntroductoryOfferPeriodString(product: product, detailString: false)
                     // Set the copy
                     copy = "\(introductoryOffer.displayPrice)/\n\(subscriptionPeriodString)"
                 } else {
