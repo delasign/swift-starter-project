@@ -66,12 +66,15 @@
   ],
   "settings" : {
     "_askToBuyEnabled" : false,
-    "_billingIssuesEnabled" : true,
+    "_billingGracePeriodEnabled" : true,
+    "_billingIssuesEnabled" : false,
+    "_compatibilityTimeRate" : 6,
     "_failTransactionsEnabled" : false,
     "_locale" : "en_US",
+    "_renewalBillingIssuesEnabled" : true,
     "_storefront" : "USA",
     "_storeKitError" : 0,
-    "_timeRate" : 0
+    "_timeRate" : 15
   },
   "subscriptionGroups" : [
     {
@@ -86,7 +89,18 @@
 
           ],
           "codeOffers" : [
-
+            {
+              "eligibility" : [
+                "new",
+                "expired",
+                "existing"
+              ],
+              "internalID" : "06ABFC46",
+              "isStackable" : true,
+              "paymentMode" : "free",
+              "referenceName" : "SAMPLE",
+              "subscriptionPeriod" : "P3D"
+            }
           ],
           "displayPrice" : "19.99",
           "familyShareable" : false,

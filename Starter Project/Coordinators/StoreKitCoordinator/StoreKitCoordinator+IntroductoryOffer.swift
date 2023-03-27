@@ -65,6 +65,40 @@ extension StoreKitCoordinator {
         }
     }
 
+    func getSubscriptionIntroductoryOfferPeriod(product: Product) -> StoreKitSubscriptionPeriod {
+        if let introductoryOffer = product.subscription?.introductoryOffer {
+
+            let unit = introductoryOffer.period.unit
+            let value = introductoryOffer.period.value
+
+            switch unit {
+            case .day:
+                return .none
+            case .week:
+                return .weekly
+            case .month:
+                switch value {
+                case 1:
+                    return .monthly
+                case 2:
+                    return .everyTwoMonths
+                case 3:
+                    return .everyThreeMonths
+                case 6:
+                    return .everySixMonths
+                default:
+                    fatalError("ERROR: YOU HAVE NOT CONSIDERED ALL MONTHLY VALUES.")
+                }
+            case .year:
+                return .yearly
+            @unknown default:
+                fatalError("ERROR: YOU HAVE NOT CONSIDERED ALL SUBSCRIPTION UNITS.")
+            }
+        } else {
+            return .none
+        }
+    }
+
     func getIntroductoryOfferDetailString(product: Product) -> String {
         if let introductoryOffer = product.subscription?.introductoryOffer, let currentContent = LanguageCoordinator.shared.currentContent {
 
@@ -93,6 +127,30 @@ extension StoreKitCoordinator {
             return leadingOfferString + productTileContent.introductoryOfferPostOfferPricingText + subscriptionPrice + productTileContent.introductoryOfferPostOfferPeriodText + subscriptionPeriod + "."
         } else {
             return "ERROR"
+        }
+    }
+
+    func getIntroductoryOfferType(product: Product) -> Product.SubscriptionOffer.PaymentMode? {
+        if let introductoryOffer = product.subscription?.introductoryOffer {
+
+            let introductoryOfferPaymentMode = introductoryOffer.paymentMode
+
+            switch introductoryOfferPaymentMode {
+            case .payAsYouGo:
+                debugPrint("getIntroductoryOfferType is pay as you go.")
+                return .payAsYouGo
+            case .payUpFront:
+                debugPrint("getIntroductoryOfferType is pay up front.")
+                return .payUpFront
+            case .freeTrial:
+                debugPrint("getIntroductoryOfferType is a free trial.")
+                return .freeTrial
+            default:
+                fatalError("ERROR: YOU HAVE NOT CONSIDERED ALL INTRODUCTORY PAYMENT MODE TYPES.")
+            }
+        } else {
+            debugPrint("getIntroductoryOfferType there is no introductory offer.")
+            return nil
         }
     }
 }
