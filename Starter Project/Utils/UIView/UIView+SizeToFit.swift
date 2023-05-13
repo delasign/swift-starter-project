@@ -18,7 +18,7 @@ extension UIView {
         }
         return height
     }
-    
+
     func getWidthOfContent() -> CGFloat {
         var width: CGFloat = 0
         for view in self.subviews {

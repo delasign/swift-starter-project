@@ -31,6 +31,11 @@
 		F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */; };
 		F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */; };
 		F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */; };
+		F03961F72A0EF16900713D33 /* openURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03961F62A0EF16900713D33 /* openURL.swift */; };
+		F03961F92A0EF17100713D33 /* openSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03961F82A0EF17100713D33 /* openSettings.swift */; };
+		F03961FF2A0EF1E100713D33 /* Bundle+AppReleaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03961FE2A0EF1E100713D33 /* Bundle+AppReleaseInfo.swift */; };
+		F03962022A0EF1FF00713D33 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03962012A0EF1FF00713D33 /* UserDefaultKeys.swift */; };
+		F03962052A0EF22300713D33 /* ReviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03962042A0EF22300713D33 /* ReviewCoordinator.swift */; };
 		F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */; };
 		F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */; };
 		F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */; };
@@ -86,6 +91,11 @@
 		F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDeviceOrientation.swift; sourceTree = "<group>"; };
 		F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateConstraints.swift; sourceTree = "<group>"; };
 		F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateConstraints.swift; sourceTree = "<group>"; };
+		F03961F62A0EF16900713D33 /* openURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openURL.swift; sourceTree = "<group>"; };
+		F03961F82A0EF17100713D33 /* openSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openSettings.swift; sourceTree = "<group>"; };
+		F03961FE2A0EF1E100713D33 /* Bundle+AppReleaseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+AppReleaseInfo.swift"; sourceTree = "<group>"; };
+		F03962012A0EF1FF00713D33 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		F03962042A0EF22300713D33 /* ReviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCoordinator.swift; sourceTree = "<group>"; };
 		F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+UI.swift"; sourceTree = "<group>"; };
 		F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Notifications.swift"; sourceTree = "<group>"; };
 		F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Gestures.swift"; sourceTree = "<group>"; };
@@ -227,6 +237,7 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F03962002A0EF1F200713D33 /* UserDefaults */,
 				F0C79C6B28B2649F00C1DCAF /* API */,
 				F0C79C7228B26B2700C1DCAF /* Configuration */,
 				F00DDDEC287C937B0062AA1E /* States */,
@@ -264,6 +275,7 @@
 		F00DDDE5287C82D00062AA1E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				F03962032A0EF21A00713D33 /* ReviewCoordinator */,
 				F0C79C6828B25DD600C1DCAF /* DataCoordinator */,
 				F008FCA6287FA5E200B2495D /* Styleguide */,
 				F0A96624287DFF6E000E5FCD /* LanguageCoordinator */,
@@ -315,9 +327,44 @@
 			path = Orientation;
 			sourceTree = "<group>";
 		};
+		F03961F52A0EF16300713D33 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				F03961F62A0EF16900713D33 /* openURL.swift */,
+				F03961F82A0EF17100713D33 /* openSettings.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		F03961FD2A0EF1D300713D33 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				F03961FE2A0EF1E100713D33 /* Bundle+AppReleaseInfo.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		F03962002A0EF1F200713D33 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				F03962012A0EF1FF00713D33 /* UserDefaultKeys.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		F03962032A0EF21A00713D33 /* ReviewCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F03962042A0EF22300713D33 /* ReviewCoordinator.swift */,
+			);
+			path = ReviewCoordinator;
+			sourceTree = "<group>";
+		};
 		F0397F5B288846E6002AF19B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F03961FD2A0EF1D300713D33 /* Bundle */,
+				F03961F52A0EF16300713D33 /* UIApplication */,
 				F0DD144829BA167E003122C8 /* UIView */,
 				F02DBF042996C99E00A49E88 /* Orientation */,
 				F0397F6528885D96002AF19B /* Constraints */,
@@ -520,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03962022A0EF1FF00713D33 /* UserDefaultKeys.swift in Sources */,
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
 				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
@@ -527,6 +575,7 @@
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
+				F03962052A0EF22300713D33 /* ReviewCoordinator.swift in Sources */,
 				F00DDDD1287C82480062AA1E /* ViewController.swift in Sources */,
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */,
@@ -542,6 +591,7 @@
 				F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */,
 				F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
+				F03961F92A0EF17100713D33 /* openSettings.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
@@ -554,6 +604,7 @@
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
 				F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
+				F03961FF2A0EF1E100713D33 /* Bundle+AppReleaseInfo.swift in Sources */,
 				F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,
@@ -561,6 +612,7 @@
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
 				F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */,
 				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,
+				F03961F72A0EF16900713D33 /* openURL.swift in Sources */,
 				F008FCA5287F736F00B2495D /* ViewController+UI.swift in Sources */,
 				F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */,
 			);
