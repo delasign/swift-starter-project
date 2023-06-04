@@ -8,7 +8,7 @@
     brew install SwiftLint
     ```
 
-2.  **Open Xocde**
+2.  **Open Xcode**
 
     Open this project in Xcode
 
