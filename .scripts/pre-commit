@@ -1,8 +1,14 @@
 #!/bin/bash
 
+
+
 echo "*********************************************************"
-echo "Running git pre-commit hook. Making sure that its a valid branch... Current Branch $branch... "
+echo "Running git pre-commit hook. Making sure that its a valid branch..."
 echo "*********************************************************"
+
+# Branch
+
+$branch = $(git branch)
 
 if [ "$branch" = "dev" ]; then
   echo "You can't commit directly to dev branch"
