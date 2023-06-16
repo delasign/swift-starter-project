@@ -10,6 +10,8 @@ echo "*********************************************************"
 
 $branch = $(git branch)
 
+echo "Current Branch: $branch"
+
 if [ "$branch" = "dev" ]; then
   echo "You can't commit directly to dev branch"
   exit 1
