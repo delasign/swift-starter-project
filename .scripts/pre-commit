@@ -70,7 +70,7 @@ else
     echo "*********************************************************"
     echo "       ********************************************      "
     echo 1>&2 "SwiftLint found violations it could not fix."
-    echo "Run spotless apply in your terminal and fix the issues before trying to commit again."
+    echo "Run swiftlint --fix in your terminal and fix the issues before trying to commit again."
     echo "       ********************************************      "
     echo "*********************************************************"
     #Exit
