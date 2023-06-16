@@ -42,13 +42,15 @@ echo "*********************************************************"
 # Gather the staged files - to make sure changes are saved only for these files.
 stagedFiles=$(git diff --staged --name-only)
 
+# This line is required to make sure it works on Apple Silicon.
+export PATH="$PATH:/opt/homebrew/bin"
+
 # Type a script or drag a script file from your workspace to insert its path.
 if which swiftlint >/dev/null; then
   swiftlint autocorrect --format
 else
   echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
 fi
-
 
 status=$?
 
