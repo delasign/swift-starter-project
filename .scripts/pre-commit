@@ -3,7 +3,7 @@
 
 
 echo "*********************************************************"
-echo "Running git pre-commit hook. Making sure that its a valid branch..."
+echo "Running git pre-commit hook. Making sure that its a valid branch..." 
 echo "*********************************************************"
 
 
@@ -29,6 +29,10 @@ if [ "$branch" = "main" ]; then
   echo "You can't commit directly to main branch"
   exit 1
 fi
+
+echo ""
+echo "The branch is valid, moving onto next step..."
+echo ""
 
 
 echo "*********************************************************"
