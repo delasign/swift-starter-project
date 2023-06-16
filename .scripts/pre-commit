@@ -9,7 +9,8 @@ echo "*********************************************************"
 
 # Branch
 
-$branch=$(git branch --show-current)
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
 echo ""
 echo "Current Branch: $branch"
 echo ""
