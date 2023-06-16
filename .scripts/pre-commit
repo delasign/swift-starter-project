@@ -8,7 +8,7 @@ echo "*********************************************************"
 
 # Branch
 
-$branch = $(git branch)
+$branch=$(git branch)
 
 echo "Current Branch: $branch"
 
