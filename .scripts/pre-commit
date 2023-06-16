@@ -49,7 +49,7 @@ fi
 
 # Type a script or drag a script file from your workspace to insert its path.
 if which swiftlint >/dev/null; then
-  swiftlint --fix
+  swiftlint autocorrect --format
 else
   echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
 fi
@@ -70,7 +70,7 @@ else
     echo "*********************************************************"
     echo "       ********************************************      "
     echo 1>&2 "SwiftLint found violations it could not fix."
-    echo "Run swiftlint --fix in your terminal and fix the issues before trying to commit again."
+    echo "Run swiftlint autocorrect --format in your terminal and fix the issues before trying to commit again."
     echo "       ********************************************      "
     echo "*********************************************************"
     #Exit
