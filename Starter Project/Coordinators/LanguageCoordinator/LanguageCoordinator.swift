@@ -25,12 +25,11 @@ class LanguageCoordinator: NSObject {
         }
     }
 
-    var onContentUpdate: (() -> Void)?
     var currentContent: UIContent? {
         didSet {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.onContentUpdate?()
+                NotificationCoordinator.shared.sendOnContentUpdate()
             }
         }
     }

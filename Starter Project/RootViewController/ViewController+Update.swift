@@ -12,11 +12,15 @@ extension ViewController {
     func updateConstraints() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.customViewTopConstraint﻿?.constant = ViewController.safeAreaInsets.top
-            self.customViewRightConstraint﻿?.constant = -ViewController.safeAreaInsets.right
-            self.customViewBottomConstraint﻿?.constant = -ViewController.safeAreaInsets.bottom
-            self.customViewLeftConstraint﻿?.constant = ViewController.safeAreaInsets.left
-
+            // Create an update functionality similar to that below for all the views that use the safe area constraints.
+            // CustomUIView
+            updateSafeAreaInsets(
+                topConstraint: self.customViewTopConstraint﻿,
+                rightConstraint: self.customViewRightConstraint﻿,
+                bottomConstraint: self.customViewBottomConstraint﻿,
+                leftConstraint: self.customViewLeftConstraint﻿
+            )
+            // Layout Subviews
             self.view.layoutIfNeeded()
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Constraints")
 

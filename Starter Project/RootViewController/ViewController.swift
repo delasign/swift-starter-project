@@ -47,22 +47,5 @@ class ViewController: UIViewController {
         DataCoordinator.shared.initialize()
         // LanguageCoordinator
         LanguageCoordinator.shared.initialize()
-        LanguageCoordinator.shared.onContentUpdate = { [weak self] in
-            guard let _ = self, let currentContent = LanguageCoordinator.shared.currentContent else {
-                debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventFailed) Could not update current content - as current content does not exist.")
-                return
-            }
-            // Carry out your content update functionality here.
-            // This can range from refreshing your application or could be used to send a notification to complete specific updates at chosen locations within your application.
-            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) content sample : \(currentContent.sample)")
-            // Send the Notification
-            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.notificationSent) Sent OnContentUpdate!")
-            NotificationCenter.default.post(
-                name: SystemNotifications.onContentUpdate,
-                object: nil,
-                userInfo: ["customVariable": currentContent.sample.sampleString]
-            )
-
-        }
     }
 }

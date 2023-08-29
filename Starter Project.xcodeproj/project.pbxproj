@@ -11,6 +11,8 @@
 		F001B3712A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3702A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift */; };
 		F001B3732A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3722A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift */; };
 		F001B3752A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3742A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift */; };
+		F001B3782A9E82AB0048BD2F /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3772A9E82AB0048BD2F /* NotificationCoordinator.swift */; };
+		F001B37A2A9E82B20048BD2F /* NotificationCoordinator+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3792A9E82B20048BD2F /* NotificationCoordinator+System.swift */; };
 		F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008F4D92885BA8D00E4841B /* CustomUIView.swift */; };
 		F008FC99287F440400B2495D /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC98287F440400B2495D /* en.json */; };
 		F008FC9B287F441500B2495D /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC9A287F441500B2495D /* es.json */; };
@@ -74,6 +76,8 @@
 		F001B3702A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+GetCurrentScreenBounds.swift"; sourceTree = "<group>"; };
 		F001B3722A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+GetCurrentWindow.swift"; sourceTree = "<group>"; };
 		F001B3742A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GetBoundsWithoutSafeInsets.swift"; sourceTree = "<group>"; };
+		F001B3772A9E82AB0048BD2F /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
+		F001B3792A9E82B20048BD2F /* NotificationCoordinator+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCoordinator+System.swift"; sourceTree = "<group>"; };
 		F008F4D92885BA8D00E4841B /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		F008FC98287F440400B2495D /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
 		F008FC9A287F441500B2495D /* es.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
@@ -167,6 +171,15 @@
 				F001B3722A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift */,
 			);
 			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		F001B3762A9E82A50048BD2F /* NotificationCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F001B3772A9E82AB0048BD2F /* NotificationCoordinator.swift */,
+				F001B3792A9E82B20048BD2F /* NotificationCoordinator+System.swift */,
+			);
+			path = NotificationCoordinator;
 			sourceTree = "<group>";
 		};
 		F008F4D82885BA8400E4841B /* CustomUIView */ = {
@@ -308,6 +321,7 @@
 		F00DDDE5287C82D00062AA1E /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				F001B3762A9E82A50048BD2F /* NotificationCoordinator */,
 				F03962032A0EF21A00713D33 /* ReviewCoordinator */,
 				F0C79C6828B25DD600C1DCAF /* DataCoordinator */,
 				F008FCA6287FA5E200B2495D /* Styleguide */,
@@ -647,6 +661,7 @@
 				F03961FF2A0EF1E100713D33 /* Bundle+AppReleaseInfo.swift in Sources */,
 				F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
+				F001B3782A9E82AB0048BD2F /* NotificationCoordinator.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,
@@ -654,6 +669,7 @@
 				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,
 				F03961F72A0EF16900713D33 /* openURL.swift in Sources */,
 				F008FCA5287F736F00B2495D /* ViewController+UI.swift in Sources */,
+				F001B37A2A9E82B20048BD2F /* NotificationCoordinator+System.swift in Sources */,
 				F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
