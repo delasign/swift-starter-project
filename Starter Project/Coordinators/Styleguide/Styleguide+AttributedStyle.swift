@@ -30,7 +30,7 @@ extension Styleguide {
         paragraphStyle.lineSpacing = 1
         // Attributed Text
         let attributes: [NSAttributedString.Key: Any] = [
-            NSAttributedString.Key.foregroundColor: Styleguide.colors.white,
+            NSAttributedString.Key.foregroundColor: Styleguide.getPrimaryColor(),
             NSAttributedString.Key.font: UIFont(name: fonts.HelveticaNeue, size: 48) ?? "",
             NSAttributedString.Key.paragraphStyle: paragraphStyle
         ]

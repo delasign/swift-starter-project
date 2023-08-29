@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension ViewController {
+    // MARK: Constraints
     func updateConstraints() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -24,6 +25,16 @@ extension ViewController {
             self.view.layoutIfNeeded()
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Constraints")
 
+        }
+    }
+    
+    // MARK: Experience States
+    func onStateUpdate() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            // Hide and Show Relevant Screens
+            self.customView.isHidden = self.experienceState != .custom
+            // Other Relevant Functionality...
         }
     }
 }

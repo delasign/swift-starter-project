@@ -16,4 +16,22 @@ extension NotificationCoordinator {
             userInfo: nil
         )
     }
+    
+    public func sendOnExperienceStateUpdate() {
+        debugPrint("\(NotificationCoordinator.identifier) \(DebuggingIdentifiers.notificationSent) Sent onExperienceStateUpdate!")
+        NotificationCenter.default.post(
+            name: SystemNotifications.onExperienceStateUpdate,
+            object: nil,
+            userInfo: nil
+        )
+    }
+    
+    public func sendOnUpdatedData() {
+        debugPrint("\(NotificationCoordinator.identifier) \(DebuggingIdentifiers.notificationSent) Sent onUpdatedData!")
+        NotificationCenter.default.post(
+            name: SystemNotifications.onUpdatedData,
+            object: nil,
+            userInfo: nil
+        )
+    }
 }

@@ -12,6 +12,17 @@ class ViewController: UIViewController {
     static let identifier: String = "[ViewController]"
     static var safeAreaInsets: UIEdgeInsets = .zero
     static var orientation: UIDeviceOrientation = .portrait
+    // The Experience State is managed by the UIViewController - and initially is on a "custom" state
+    var experienceState: ExperienceStates = .custom {
+        didSet {
+            // Update the DataCoordinator so everyone knows
+            DataCoordinator.shared.experienceState = experienceState
+            // Notify the System
+            NotificationCoordinator.shared.sendOnExperienceStateUpdate()
+            // Perform relevant screen changes (i.e. hide/show)
+            self.onStateUpdate()
+        }
+    }
     // MARK: UI
     let customView: CustomUIView = CustomUIView()
     var customViewTopConstraint﻿: NSLayoutConstraint?

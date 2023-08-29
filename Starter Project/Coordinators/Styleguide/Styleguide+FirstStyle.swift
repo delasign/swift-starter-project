@@ -13,7 +13,7 @@ extension Styleguide {
     static func createFirstStyleLabel() -> UILabel {
         let label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = colors.white
+        label.textColor = Styleguide.getPrimaryColor()
         label.font = UIFont(name: fonts.HelveticaNeue, size: 40)
         return label
     }

@@ -13,6 +13,7 @@
 		F001B3752A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3742A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift */; };
 		F001B3782A9E82AB0048BD2F /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3772A9E82AB0048BD2F /* NotificationCoordinator.swift */; };
 		F001B37A2A9E82B20048BD2F /* NotificationCoordinator+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3792A9E82B20048BD2F /* NotificationCoordinator+System.swift */; };
+		F001B37C2A9E83AD0048BD2F /* ExperienceStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B37B2A9E83AD0048BD2F /* ExperienceStates.swift */; };
 		F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008F4D92885BA8D00E4841B /* CustomUIView.swift */; };
 		F008FC99287F440400B2495D /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC98287F440400B2495D /* en.json */; };
 		F008FC9B287F441500B2495D /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC9A287F441500B2495D /* es.json */; };
@@ -78,6 +79,7 @@
 		F001B3742A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GetBoundsWithoutSafeInsets.swift"; sourceTree = "<group>"; };
 		F001B3772A9E82AB0048BD2F /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
 		F001B3792A9E82B20048BD2F /* NotificationCoordinator+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCoordinator+System.swift"; sourceTree = "<group>"; };
+		F001B37B2A9E83AD0048BD2F /* ExperienceStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceStates.swift; sourceTree = "<group>"; };
 		F008F4D92885BA8D00E4841B /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		F008FC98287F440400B2495D /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
 		F008FC9A287F441500B2495D /* es.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		F00DDDEC287C937B0062AA1E /* States */ = {
 			isa = PBXGroup;
 			children = (
+				F001B37B2A9E83AD0048BD2F /* ExperienceStates.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */,
 				F0397F522885EEAD002AF19B /* CustomUIView+Touches.swift in Sources */,
 				F001B3782A9E82AB0048BD2F /* NotificationCoordinator.swift in Sources */,
+				F001B37C2A9E83AD0048BD2F /* ExperienceStates.swift in Sources */,
 				F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */,
 				F0397F502885EEA4002AF19B /* CustomUIView+Gestures.swift in Sources */,
 				F0397F5828861611002AF19B /* SystemNotifications.swift in Sources */,

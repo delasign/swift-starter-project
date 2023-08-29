@@ -14,6 +14,8 @@ class DataCoordinator: NSObject {
     static let identifier: String = "[DataCoordinator]"
     static let shared: DataCoordinator = DataCoordinator()
     let configuration: Configuration = Configuration()
+    // Experience initializes in the Custom State
+    var experienceState: ExperienceStates = .custom
 
     // MARK: Lifecycle
     func initialize() {
