@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     // MARK: Variables
     static let identifier: String = "[ViewController]"
     static var safeAreaInsets: UIEdgeInsets = .zero
+    static var orientation: UIDeviceOrientation = .portrait
     // MARK: UI
     let customView: CustomUIView = CustomUIView()
     var customViewTopConstraint﻿: NSLayoutConstraint?
@@ -21,16 +22,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = Styleguide.getBackgroundColor()
         ViewController.safeAreaInsets = self.view.safeAreaInsets
         self.setupCoordinators()
         self.setupUI()
-        getDeviceOrientation()
+        ViewController.orientation = getDeviceOrientation()
     }
 
     override func viewSafeAreaInsetsDidChange() {
+        // Update Insets
         ViewController.safeAreaInsets = self.view.safeAreaInsets
+        // Update Orientation
+        ViewController.orientation = getDeviceOrientation()
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Safe Area Insets: \(ViewController.safeAreaInsets)")
+        // Update Constraints
         self.updateConstraints()
     }
 

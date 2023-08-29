@@ -22,7 +22,7 @@ class CustomUIView: UIView {
         // Before calling your setup functions, call any visual functionality that may be required:
         // i.e. background color, isHidden, isUserInteractionEnabled or translatesAutoresizingMaskIntoConstraints.
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .black
+        self.backgroundColor = Styleguide.getBackgroundColor()
         // MARK: Functionality Setup
         self.setupUI()
         self.setupNotifications()
