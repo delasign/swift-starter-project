@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F001B36F2A9E81580048BD2F /* UIScreen+GetCurrentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B36E2A9E81580048BD2F /* UIScreen+GetCurrentScreen.swift */; };
+		F001B3712A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3702A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift */; };
+		F001B3732A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3722A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift */; };
+		F001B3752A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3742A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift */; };
 		F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008F4D92885BA8D00E4841B /* CustomUIView.swift */; };
 		F008FC99287F440400B2495D /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC98287F440400B2495D /* en.json */; };
 		F008FC9B287F441500B2495D /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC9A287F441500B2495D /* es.json */; };
@@ -66,6 +70,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F001B36E2A9E81580048BD2F /* UIScreen+GetCurrentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+GetCurrentScreen.swift"; sourceTree = "<group>"; };
+		F001B3702A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+GetCurrentScreenBounds.swift"; sourceTree = "<group>"; };
+		F001B3722A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+GetCurrentWindow.swift"; sourceTree = "<group>"; };
+		F001B3742A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GetBoundsWithoutSafeInsets.swift"; sourceTree = "<group>"; };
 		F008F4D92885BA8D00E4841B /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		F008FC98287F440400B2495D /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
 		F008FC9A287F441500B2495D /* es.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
@@ -137,6 +145,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F001B36B2A9E80FA0048BD2F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		F001B36C2A9E813A0048BD2F /* UIScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F001B36E2A9E81580048BD2F /* UIScreen+GetCurrentScreen.swift */,
+				F001B3702A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift */,
+			);
+			path = UIScreen;
+			sourceTree = "<group>";
+		};
+		F001B36D2A9E81400048BD2F /* UIWindow */ = {
+			isa = PBXGroup;
+			children = (
+				F001B3722A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift */,
+			);
+			path = UIWindow;
+			sourceTree = "<group>";
+		};
 		F008F4D82885BA8400E4841B /* CustomUIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +269,7 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F001B36B2A9E80FA0048BD2F /* Types */,
 				F03962002A0EF1F200713D33 /* UserDefaults */,
 				F0C79C6B28B2649F00C1DCAF /* API */,
 				F0C79C7228B26B2700C1DCAF /* Configuration */,
@@ -363,6 +396,8 @@
 		F0397F5B288846E6002AF19B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F001B36C2A9E813A0048BD2F /* UIScreen */,
+				F001B36D2A9E81400048BD2F /* UIWindow */,
 				F03961FD2A0EF1D300713D33 /* Bundle */,
 				F03961F52A0EF16300713D33 /* UIApplication */,
 				F0DD144829BA167E003122C8 /* UIView */,
@@ -460,6 +495,7 @@
 			children = (
 				F0DD144929BA1688003122C8 /* UIView+RemoveAllViews.swift */,
 				F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */,
+				F001B3742A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -570,8 +606,10 @@
 				F03962022A0EF1FF00713D33 /* UserDefaultKeys.swift in Sources */,
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
 				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
+				F001B3712A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,
+				F001B3732A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift in Sources */,
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,
 				F008FCAE287FA97A00B2495D /* Fonts.swift in Sources */,
@@ -583,6 +621,7 @@
 				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
+				F001B3752A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift in Sources */,
 				F0C79C6D28B2652900C1DCAF /* APIConfiguration.swift in Sources */,
 				F008FCAA287FA6CC00B2495D /* Colors.swift in Sources */,
 				F008FCA3287F480D00B2495D /* LanguageCoordinator+SetCurrentLanguage.swift in Sources */,
@@ -596,6 +635,7 @@
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
+				F001B36F2A9E81580048BD2F /* UIScreen+GetCurrentScreen.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */,
