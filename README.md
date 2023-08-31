@@ -37,17 +37,18 @@ Same as the above and select replace from the dropdown.
 
 # 📰 Guides
 
-1. <a href="https://delasign.com/blog/localize-apps-swift/?utm=swift-starter-project">How to localize iOS, MacOS, TVOS & WatchOS apps in XCode and Swift 🔗</a>
-2. <a href="https://delasign.com/blog/apple-app-store-ecommerce-business-guide">Apple App Store E-Commerce Business Guide 🔗</a>
-3. <a href="https://delasign.com/blog/e-commerce-fees-in-apple-app-store-apps">E-Commerce Fees in Apple App Store Apps 🔗</a>
-4. <a href="https://delasign.com/blog/apple-in-app-purchases-and-subscription-development-guide">Apple In-App Purchases and Subscriptions Development Guide 🔗</a>
-5. <a href="https://delasign.com/blog/apple-e-commerce-development">How to reduce risk when developing Apple e-commerce apps 🔗</a>
-6. <a href="https://delasign.com/blog/apple-ecommerce-business-guide">How to build an app that uses Apple In-App Purchases and Subscriptions 🔗</a>
-7. <a href="https://delasign.com/blog/free-open-source-apple-storekit-2-project">Free Open-Source Apple StoreKit 2 Swift Project 🔗</a>
-8. <a href="https://delasign.com/blog/smartappbanner/?utm=swift-starter-project">How to Create a Website Smart App Banner for your App & App Clip. 🔗</a>
-9. <a href="https://delasign.com/blog/ios-accessibility-resources-guide/?utm=swift-starter-project">iOS Accessibility Resource Guide 🔗</a>
-10. <a href="https://delasign.com/blog/xcode-debugging-in-console/?utm=swift-starter-project">Debugging recommendations for XCode & Swift (iOS) 🔗</a>
-11. <a href="https://delasign.com/blog/uiview-swift-recommendations/?utm=swift-starter-project">Recommendations for creating a structured custom UIView in Swift 🔗</a>
+1. <a href="https://delasign.com/blog/apple-launch-screen-best-practices/?utm=swift-starter-project">Apple App Launch Screen Best Practices 🔗</a>
+2. <a href="https://delasign.com/blog/localize-apps-swift/?utm=swift-starter-project">How to localize iOS, MacOS, TVOS & WatchOS apps in XCode and Swift 🔗</a>
+3. <a href="https://delasign.com/blog/apple-app-store-ecommerce-business-guide">Apple App Store E-Commerce Business Guide 🔗</a>
+4. <a href="https://delasign.com/blog/e-commerce-fees-in-apple-app-store-apps">E-Commerce Fees in Apple App Store Apps 🔗</a>
+5. <a href="https://delasign.com/blog/apple-in-app-purchases-and-subscription-development-guide">Apple In-App Purchases and Subscriptions Development Guide 🔗</a>
+6. <a href="https://delasign.com/blog/apple-e-commerce-development">How to reduce risk when developing Apple e-commerce apps 🔗</a>
+7. <a href="https://delasign.com/blog/apple-ecommerce-business-guide">How to build an app that uses Apple In-App Purchases and Subscriptions 🔗</a>
+8. <a href="https://delasign.com/blog/free-open-source-apple-storekit-2-project">Free Open-Source Apple StoreKit 2 Swift Project 🔗</a>
+9. <a href="https://delasign.com/blog/smartappbanner/?utm=swift-starter-project">How to Create a Website Smart App Banner for your App & App Clip. 🔗</a>
+10. <a href="https://delasign.com/blog/ios-accessibility-resources-guide/?utm=swift-starter-project">iOS Accessibility Resource Guide 🔗</a>
+11. <a href="https://delasign.com/blog/xcode-debugging-in-console/?utm=swift-starter-project">Debugging recommendations for XCode & Swift (iOS) 🔗</a>
+12. <a href="https://delasign.com/blog/uiview-swift-recommendations/?utm=swift-starter-project">Recommendations for creating a structured custom UIView in Swift 🔗</a>
 
 # 📚 Tutorials
 
@@ -56,6 +57,25 @@ Same as the above and select replace from the dropdown.
 ### Setup
 1. <a href="https://delasign.com/blog/swiftlint-enabled-swift-xcode-project/?utm=swift-starter-project">How to create a SwiftLint enabled Swift Xcode Project 🔗</a>
 2. <a href="https://delasign.com/blog/swift-package-manager-package-dependency/?utm=swift-starter-project">How to add a Swift Package Manager package dependency 🔗</a>
+
+### Splash Screen
+1. <a href="https://delasign.com/blog/apple-launch-screen-best-practices/?utm=swift-starter-project">Apple App Launch Screen Best Practices 🔗</a>
+2. <a href="https://delasign.com/blog/how-to-create-a-launch-screen-in-xcode/?utm=swift-starter-project">How to create a launch screen in XCode 🔗</a>
+3. <a href="https://delasign.com/blog/xcode-stop-build-at-splash/?utm=swift-starter-project">How to stop an App build at the Launch Screen in XCode 🔗</a>
+4. <a href="/?utm=swift-starter-project">How to make an iPhone, iPad or Mac show an updated launch screen 🔗</a>
+
+### Storyboard
+1. <a href="https://delasign.com/blog/xcode-storyboard-add-ui-component/?utm=swift-starter-project">How to add a UI component to a storyboard in XCode 🔗</a>
+2. <a href="https://delasign.com/blog/xcode-storyboard-use-image/?utm=swift-starter-project">How to use an image within a storyboard in XCode 🔗</a>
+3. <a href="https://delasign.com/blog/xcode-storyboard-constrain-ui-component/?utm=swift-starter-project">How to constrain a UI component in a storyboard in XCode 🔗</a>
+4. <a href="https://delasign.com/blog/xcode-storyboard-constrain-to-edges/?utm=swift-starter-project">How to constrain a UI component to the edges of a UIViewController 🔗</a>
+
+
+### Debugging
+1. <a href="https://delasign.com/blog/xcode-add-use-breakpoint/?utm=swift-starter-project">How to add and use a breakpoint in XCode 🔗</a>
+2. <a href="https://delasign.com/blog/xcode-view-all-breakpoint/?utm=swift-starter-project">How to view all breakpoints in XCode 🔗</a>
+3. <a href="https://delasign.com/blog/xcode-activate-or-deactivate-breakpoints/?utm=swift-starter-project">How to activate or deactivate breakpoints in XCode 🔗</a>
+4. <a href="https://delasign.com/blog/xcode-remove-breakpoint/?utm=swift-starter-project">How to remove a breakpoint in XCode 🔗</a>
 
 ### Design Systems
 1. <a href="https://delasign.com/blog/swift-singleton/?utm=swift-starter-project">How to create a singleton in Swift 🔗</a>
@@ -74,6 +94,7 @@ Same as the above and select replace from the dropdown.
 1. <a href="https://delasign.com/blog/swift-add-structure-local-images/?utm=swift-starter-project">How to add and structure local images in Swift 🔗</a>
 2. <a href="https://delasign.com/blog/swift-hosted-image/?utm=swift-starter-project">How to add a hosted image to a view in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-add-local-image-to-view/?utm=swift-starter-project">How to add a local image to a view in Swift 🔗</a>
+4. <a href="https://delasign.com/blog/xcode-add-local-images/?utm=swift-starter-project">How to add and use images as files instead of xcassets in XCode</a>
 
 ### UI Basics
 1. <a href="https://delasign.com/blog/swift-label/?utm=swift-starter-project">How to add a label to a view in Swift 🔗</a>
@@ -86,25 +107,25 @@ Same as the above and select replace from the dropdown.
 3. <a href="https://delasign.com/blog/swift-snap-to-position/?utm=swift-starter-project">How to snap a carousel to position in Swift 🔗</a>
 4. <a href="https://delasign.com/blog/swift-carousel-indicator/?utm=swift-starter-project">How to create a scroll indicator for a carousel in Swift 🔗</a>
 5. <a href="https://delasign.com/blog/swift-multi-section-uicollectionview/?utm=swift-starter-project">How to create a UICollectionView with multiple sections in Swift 🔗</a>
-6. <a href="https://delasign.com/blog/swift-dynamic-uicollectionviewcell/?utm=swift-starter-project">How to create a UICollectionView with cells that size to fit content 🔗</a>
-7. <a href="https://delasign.com/blog/swift-data-driven-uicollectionview/?utm=swift-starter-project">How to make a custom data driven UICollectionView 🔗</a>
-8. <a href="https://delasign.com/blog/swift-multi-section-uicollectionview-compositional-layout/?utm=swift-starter-project">How to create a multi-section UICollectionViewCompositionalLayout 🔗</a>
 
-### Advanced UI
+## Advanced UI
 1. <a href="https://delasign.com/blog/swift-dynamic-ui-view/?utm=swift-starter-project">How to create a UIView that dynamically adapts to its contents 🔗</a>
 2. <a href="https://delasign.com/blog/swift-searchbar/?utm=swift-starter-project">How to make a custom search bar in Swift. 🔗</a>
 3. <a href="https://delasign.com/blog/swift-filtered-search/?utm=swift-starter-project">How to create a filtered search experience in Swift 🔗</a>
+4. <a href="https://delasign.com/blog/swift-dynamic-uicollectionviewcell/?utm=swift-starter-project">How to create a UICollectionView with cells that size to fit content 🔗</a
+5. <a href="https://delasign.com/blog/swift-data-driven-uicollectionview/?utm=swift-starter-project">How to make a custom data driven UICollectionView 🔗</a>
+6. <a href="https://delasign.com/blog/swift-multi-section-uicollectionview-compositional-layout/?utm=swift-starter-project">How to create a multi-section UICollectionViewCompositionalLayout 🔗</a>
 
-### Async / Await
+## Async / Await
 1. <a href="https://delasign.com/blog/swift-async-await/?utm=swift-starter-project">How to use async and await in Swift projects 🔗</a>
 
-### Utilities
+## Utilities
 1. <a href="https://delasign.com/blog/swift-open-safari-url/?utm=swift-starter-project">How to open a URL in Safari in Swift 🔗</a>
 2. <a href="https://delasign.com/blog/swift-screensize-changes/?utm=swift-starter-project">How to observe changes in screen size in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-observe-device-orientation/?utm=swift-starter-project">How to observe device orientation changes in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-device-orientation/?utm=swift-starter-project">How to get the device orientation of an iPhone or iPad in Swift 🔗</a>
 
-### API / GraphQL
+## API / GraphQL
 1. <a href="https://delasign.com/blog/swift-setup-datacoordinator/?utm=swift-starter-project">How to setup a Swift project to make API calls in XCode. 🔗</a>
 2. <a href="https://delasign.com/blog/swift-graphql-call/?utm=swift-starter-project">How to make an GraphQL call in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-api-call/?utm=swift-starter-project">How to make an API call with a variable codable type in Swift 🔗</a>
@@ -128,6 +149,7 @@ Same as the above and select replace from the dropdown.
 2. <a href="https://delasign.com/blog/archive-firebase-cocoapods-macos/?utm=swift-starter-project">How to archive an app with Firebase SDK using CocoaPods (Mac Catalyst) 🔗</a>
 
 ## StoreKit
+
 ### Setup
 1. <a href="https://delasign.com/blog/xcode-storekit-coordinator/?utm=swift-starter-project">How to create a StoreKit Coordinator in Swift 🔗</a>
 2. <a href="https://delasign.com/blog/xcode-sync-storekit-app-store-connect">How to sync a StoreKit configuration file with App Store Connect 🔗</a>
