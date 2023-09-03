@@ -14,6 +14,7 @@
 		F001B3782A9E82AB0048BD2F /* NotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3772A9E82AB0048BD2F /* NotificationCoordinator.swift */; };
 		F001B37A2A9E82B20048BD2F /* NotificationCoordinator+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3792A9E82B20048BD2F /* NotificationCoordinator+System.swift */; };
 		F001B37C2A9E83AD0048BD2F /* ExperienceStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B37B2A9E83AD0048BD2F /* ExperienceStates.swift */; };
+		F001B38A2AA4EF240048BD2F /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001B3892AA4EF240048BD2F /* SFSymbols.swift */; };
 		F008F4DA2885BA8D00E4841B /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F008F4D92885BA8D00E4841B /* CustomUIView.swift */; };
 		F008FC99287F440400B2495D /* en.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC98287F440400B2495D /* en.json */; };
 		F008FC9B287F441500B2495D /* es.json in Resources */ = {isa = PBXBuildFile; fileRef = F008FC9A287F441500B2495D /* es.json */; };
@@ -54,7 +55,7 @@
 		F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F5E28884732002AF19B /* UIScrollView+UpdateContent.swift */; };
 		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */; };
-		F0397F6928888C0D002AF19B /* UIImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* UIImages.swift */; };
+		F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* SystemImages.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */; };
@@ -80,6 +81,7 @@
 		F001B3772A9E82AB0048BD2F /* NotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCoordinator.swift; sourceTree = "<group>"; };
 		F001B3792A9E82B20048BD2F /* NotificationCoordinator+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCoordinator+System.swift"; sourceTree = "<group>"; };
 		F001B37B2A9E83AD0048BD2F /* ExperienceStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceStates.swift; sourceTree = "<group>"; };
+		F001B3892AA4EF240048BD2F /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
 		F008F4D92885BA8D00E4841B /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
 		F008FC98287F440400B2495D /* en.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = en.json; sourceTree = "<group>"; };
 		F008FC9A287F441500B2495D /* es.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = es.json; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 		F0397F5E28884732002AF19B /* UIScrollView+UpdateContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UpdateContent.swift"; sourceTree = "<group>"; };
 		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSafeAreaInsets.swift; sourceTree = "<group>"; };
-		F0397F6828888C0D002AF19B /* UIImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImages.swift; sourceTree = "<group>"; };
+		F0397F6828888C0D002AF19B /* SystemImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImages.swift; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SizeToFit.swift"; sourceTree = "<group>"; };
@@ -347,8 +349,9 @@
 				F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */,
 				F008FCA9287FA6CC00B2495D /* Colors.swift */,
 				F008FCAD287FA97A00B2495D /* Fonts.swift */,
-				F0397F6828888C0D002AF19B /* UIImages.swift */,
+				F0397F6828888C0D002AF19B /* SystemImages.swift */,
 				F0ED1DC528A427600031B362 /* Constants.swift */,
+				F001B3892AA4EF240048BD2F /* SFSymbols.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -635,7 +638,7 @@
 				F0ED1DC628A427600031B362 /* Constants.swift in Sources */,
 				F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */,
 				F0DD144A29BA1688003122C8 /* UIView+RemoveAllViews.swift in Sources */,
-				F0397F6928888C0D002AF19B /* UIImages.swift in Sources */,
+				F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */,
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
 				F001B3752A9E81840048BD2F /* UIView+GetBoundsWithoutSafeInsets.swift in Sources */,
@@ -656,6 +659,7 @@
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */,
+				F001B38A2AA4EF240048BD2F /* SFSymbols.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
