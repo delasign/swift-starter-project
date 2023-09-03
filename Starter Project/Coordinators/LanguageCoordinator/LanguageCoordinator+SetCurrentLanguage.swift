@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension LanguageCoordinator {
-    public func determineCurrentLanguage(completionHandler:@escaping (() -> Void)) {
+    public func determineCurrentLanguage(completionHandler: @escaping (() -> Void)) {
         guard let languageCode = Locale.preferredLanguages.first?.prefix(2) else {
             debugPrint("\(LanguageCoordinator.identifier) determineCurrentLanguage \(DebuggingIdentifiers.actionOrEventFailed) Failed to find current language.")
             return

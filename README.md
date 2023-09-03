@@ -96,6 +96,9 @@ Same as the above and select replace from the dropdown.
 3. <a href="https://delasign.com/blog/swift-add-local-image-to-view/?utm=swift-starter-project">How to add a local image to a view in Swift 🔗</a>
 4. <a href="https://delasign.com/blog/xcode-add-local-images/?utm=swift-starter-project">How to add and use images as files instead of xcassets in XCode</a>
 
+### SF Symbols
+1. <a href="https://delasign.com/blog/xcode-swift-sf-symbols/?utm=swift-starter-project">How to use SF Symbols in Swift 🔗</a>
+
 ### UI Basics
 1. <a href="https://delasign.com/blog/swift-label/?utm=swift-starter-project">How to add a label to a view in Swift 🔗</a>
 2. <a href="https://delasign.com/blog/attributed-string-swift/?utm=swift-starter-project">How to create an attributed label in Swift 🔗</a>
