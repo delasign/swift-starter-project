@@ -13,7 +13,7 @@ class Styleguide: NSObject {
     static let identifier: String = "[Styleguide]"
     static let colors: Colors = Colors()
     static let fonts: Fonts = Fonts()
-    
+
     static let isDarkMode: Bool = {
         return UIScreen.main.traitCollection.userInterfaceStyle == .dark
     }()

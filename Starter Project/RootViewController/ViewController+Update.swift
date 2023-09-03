@@ -27,7 +27,7 @@ extension ViewController {
 
         }
     }
-    
+
     // MARK: Experience States
     func onStateUpdate() {
         DispatchQueue.main.async { [weak self] in
