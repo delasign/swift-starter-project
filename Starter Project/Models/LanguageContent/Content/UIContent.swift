@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 struct UIContent: Codable {
-    struct Sample: Codable {
-        let sampleString: String
+    struct Exercise: Codable {
+        let header: String
     }
 
-    let sample: Sample
+    let exercise: Exercise
 }
