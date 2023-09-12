@@ -11,6 +11,8 @@ extension CustomUIView {
     // The setupNotifications function should be the only publically available class in this extension.
     func setupNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.onSystemUpdatedContent), name: SystemNotifications.onContentUpdate, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.onUpdatedData), name: SystemNotifications.onUpdatedData, object: nil)
     }
     // MARK: Notification Setup Functionality
     @objc private func onSystemUpdatedContent(notification: Notification) {
@@ -20,5 +22,13 @@ extension CustomUIView {
         }
         debugPrint("\(CustomUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update with custom notification variable : \(customVariable)")
         self.onContentUpdate()
+    }
+    
+    @objc private func onUpdatedData() {
+        debugPrint("\(CustomUIView.identifier) onUpdatedData \(DebuggingIdentifiers.notificationRecieved) Recieved On Updated Data")
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.collectionView.reloadData()
+        }
     }
 }

@@ -13,6 +13,7 @@ class CustomUIView: UIView {
     static let identifier: String = "[CustomUIView]"
     // MARK: UI
     let label: UILabel = Styleguide.createAttributedStyle()
+    let button: ActionButton = ActionButton(type: .add)
     // Declare your UICollectionView
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

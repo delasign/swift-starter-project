@@ -25,11 +25,10 @@ extension CustomUIView {
     // onContentUpdate should be called when the LanguageCoordinator updates content.
     func onContentUpdate() {
         DispatchQueue.main.async { [weak self] in
-            guard let self = self, let currentContent = LanguageCoordinator.shared.currentContent else {
+            guard let _ = self, let currentContent = LanguageCoordinator.shared.currentContent else {
                 debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
                 return
             }
-            self.label.attributedText = Styleguide.attributedText(text: currentContent.sample.sampleString)
             debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }

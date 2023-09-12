@@ -31,13 +31,17 @@ class DataCoordinator: NSObject {
             fatalError("Failed to create a container")
         }
     }()
-    var sampleSwiftDataModels: [SampleSwiftDataModel] = []
+    var sampleSwiftDataModels: [SampleSwiftDataModel] = [] {
+        didSet {
+            NotificationCoordinator.shared.sendOnUpdatedData()
+        }
+    }
     // MARK: Lifecycle
     func initialize() {
         debugPrint("\(DataCoordinator.identifier) initialize \(DebuggingIdentifiers.actionOrEventInProgress) Initializing... \(DebuggingIdentifiers.actionOrEventInProgress)")
         // Intialize configuration
         self.configuration.initialize()
         // Get All SwiftData Objects
-        sampleSwiftDataModels = getAllObjects()
+        self.syncObjects()
     }
 }

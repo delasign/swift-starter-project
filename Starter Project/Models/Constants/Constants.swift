@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 import AVKit
 
+let kGutter: CGFloat = 10
 let kPadding: CGFloat = 20
 let kButtonDimension: CGFloat = 60
+let kShadowSize: CGFloat = 5
+let kBottomMargin: CGFloat = kPadding * 2 + kButtonDimension
 let kAnimationTime: TimeInterval = 0.67
+
