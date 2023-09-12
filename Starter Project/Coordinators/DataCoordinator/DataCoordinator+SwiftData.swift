@@ -34,9 +34,9 @@ extension DataCoordinator {
             }
             var descriptor = FetchDescriptor(predicate: predicate)
             descriptor.fetchLimit = 1
-            var wearable = try persistantContainer.mainContext.fetch(descriptor)
-            debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) getObject : \(wearable)")
-            return wearable.first
+            var object = try persistantContainer.mainContext.fetch(descriptor)
+            debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) getObject : \(object)")
+            return object.first
         } catch {
             debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventFailed) getObject : \(error)")
             return nil
