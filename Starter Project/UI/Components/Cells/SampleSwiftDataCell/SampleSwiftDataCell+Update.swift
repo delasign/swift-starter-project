@@ -31,7 +31,7 @@ extension SampleSwiftDataCell {
                 debugPrint("\(SampleSwiftDataCell.identifier) Delete item with Id : \(data.id)")
                 let result = DataCoordinator.shared.deleteAnObject(id: data.id)
                 switch result {
-                case .success(_):
+                case .success:
                     debugPrint("Succesfully deleted data : \(data.id)")
                     break
                 case .failure(let error):
@@ -41,15 +41,15 @@ extension SampleSwiftDataCell {
             }
         }
     }
-    
+
     @objc func onFlipSwitchToggle() {
         guard let data = data else { return }
         let result = DataCoordinator.shared.updateObject(id: data.id, boolean: !data.boolean)
         switch result {
-        case .success(_):
+        case .success:
             debugPrint("Succesfully updated model : \(data)")
             break
-        case .failure(_):
+        case .failure:
             debugPrint("Failed to update model : \(data)")
             break
         }

@@ -13,10 +13,11 @@ extension DataCoordinator {
     func syncObjects() {
         sampleSwiftDataModels = getAllObjects()
     }
-    
+
     // MARK: Get
     func getAllObjects() -> [SampleSwiftDataModel] {
         do {
+            // We have chosen to order it by "date" - the creation date - so that the UICollectionView maintains its order as we update the items.
             let data = try persistantContainer.mainContext.fetch(FetchDescriptor<SampleSwiftDataModel>(sortBy: [SortDescriptor(\.date)]))
                 debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) getAllObjects : \(data)")
                 return data
@@ -25,7 +26,7 @@ extension DataCoordinator {
             return []
         }
     }
-    
+
     func getObject(id: String) -> SampleSwiftDataModel? {
         do {
             var predicate = #Predicate<SampleSwiftDataModel> { object in
@@ -41,11 +42,11 @@ extension DataCoordinator {
             return nil
         }
     }
-    
+
     func doesObjectExist(id: String) -> Bool {
         return getObject(id: id) != nil
     }
-    
+
     // MARK: Add
     func addANewObject(id: String, number: Int, boolean: Bool) -> Result<SampleSwiftDataModel, SwiftDataError> {
         // Do not worry about saving, as SwiftData does it for you on UI related triggers.
@@ -64,7 +65,7 @@ extension DataCoordinator {
             return .failure(.objectAlreadyExists)
         }
     }
-    
+
     // MARK: Delete
     func deleteAnObject(id: String) -> Result<Bool, SwiftDataError> {
         // Do not worry about saving, as SwiftData does it for you on UI related triggers.
@@ -82,18 +83,18 @@ extension DataCoordinator {
             return .failure(.objectDoesntExist)
         }
     }
-    
+
     func deleteAllObjects() {
         debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) deleteAllObjects \(DebuggingIdentifiers.actionOrEventInProgress)")
         persistantContainer.mainContext.container.deleteAllData()
         debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) deleteAllObjects.")
     }
-    
+
     // MARK: Update
     // Update is as simple as updating the values on a SwiftData object.
     // Do not worry about saving, as SwiftData does it for you on UI related triggers.
     // The only cases where you want to save explicitly is if you're sharing the data or sending it over.
-    
+
     func updateObject(id: String, number: Int) -> Result<Bool, SwiftDataError> {
         debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) updateObjectNumber \(DebuggingIdentifiers.actionOrEventInProgress)")
         if let object = getObject(id: id) {
@@ -107,7 +108,7 @@ extension DataCoordinator {
             return .failure(.objectDoesntExist)
         }
     }
-    
+
     func updateObject(id: String, boolean: Bool) -> Result<Bool, SwiftDataError> {
         debugPrint("\(DataCoordinator.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) updateObjectBoolean \(DebuggingIdentifiers.actionOrEventInProgress)")
         if let object = getObject(id: id) {

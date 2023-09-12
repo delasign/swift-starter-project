@@ -22,14 +22,14 @@ extension CustomUIView {
     }
 
     // MARK: UI Setup Functionality
-    
+
     private func setupButton() {
         addSubview(button)
         button.right(to: self, offset: -kPadding)
         button.top(to: self, offset: kPadding)
-        
+
         button.onRelease = { [weak self] in
-            guard let self  = self else { return }
+            guard let self = self else { return }
             let result = DataCoordinator.shared.addANewObject(
                 id: self.randomString(length: 6),
                 number: DataCoordinator.shared.sampleSwiftDataModels.count,
@@ -45,12 +45,12 @@ extension CustomUIView {
             }
         }
     }
-    
+
     private func randomString(length: Int) -> String {
       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-      return String((0..<length).map{ _ in letters.randomElement()! })
+      return String((0..<length).map { _ in letters.randomElement()! })
     }
-    
+
     private func setupLabel() {
         guard let content = LanguageCoordinator.shared.currentContent else { return }
         // For more information about Language Content, consult the guide linked below:

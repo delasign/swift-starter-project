@@ -28,19 +28,19 @@ extension SampleSwiftDataCell {
         number.centerY(to: self)
         number.left(to: self, offset: kPadding)
     }
-    
+
     private func setupId() {
         addSubview(id)
         id.centerY(to: self)
         id.leftToRight(of: number, offset: kPadding)
     }
-    
+
     private func setupButton() {
         addSubview(button)
         button.centerY(to: self)
         button.right(to: self, offset: -kPadding)
     }
-    
+
     private func setupFlipSwitch() {
         flipSwitch.translatesAutoresizingMaskIntoConstraints = false
         addSubview(flipSwitch)

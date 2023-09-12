@@ -38,7 +38,7 @@ class ActionButton: UIView {
         self.layer.shadowOffset = CGSize(width: 0, height: kShadowSize)
         self.layer.shadowOpacity = 0.5
     }
-    
+
     convenience init(type: ActionButtonType) {
         self.init(frame: .zero)
         DispatchQueue.main.async { [weak self] in

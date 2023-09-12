@@ -39,7 +39,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         cell.update(data: DataCoordinator.shared.sampleSwiftDataModels[indexPath.row])
         return cell
     }
-    
+
     // MARK: Visual Parameters
     /*
      This function determines the size of the cell for each given indexPath (i.e. section and row).
@@ -48,7 +48,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         // Determine the frame
         let collectionViewFrame: CGRect = collectionView.frame
         let measuredWidth = collectionViewFrame.width
-        return CGSize(width: measuredWidth, height: kButtonDimension + kPadding*2)
+        return CGSize(width: measuredWidth, height: kButtonDimension + kPadding * 2)
     }
 
     /*
