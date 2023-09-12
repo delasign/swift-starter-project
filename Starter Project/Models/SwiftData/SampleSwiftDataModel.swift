@@ -14,7 +14,7 @@ final class SampleSwiftDataModel {
     var number: Int
     var boolean: Bool
     var date: Date
-    
+
     init(id: String, number: Int, boolean: Bool, date: Date) {
         self.id = id
         self.number = number

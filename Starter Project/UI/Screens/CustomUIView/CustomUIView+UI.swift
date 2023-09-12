@@ -26,7 +26,7 @@ extension CustomUIView {
         self.label.top(to: self, offset: kPadding)
         self.label.left(to: self, offset: kPadding)
     }
-    
+
     private func setupCollectionView() {
         self.addSubview(self.collectionView)
     }
