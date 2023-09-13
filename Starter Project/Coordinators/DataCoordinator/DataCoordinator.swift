@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+@MainActor
 class DataCoordinator: NSObject {
 
     // MARK: Variables
