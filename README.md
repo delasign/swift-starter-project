@@ -93,6 +93,8 @@ Same as the above and select replace from the dropdown.
 
 ### Errors
 1. <a href="https://delasign.com/blog/xcode-swift-custom-error/?utm=swift-starter-project">How to create custom errors in Swift 🔗</a>
+2. <a href="https://delasign.com/blog/xcode-sandbox-deny-file-read-data-error/?utm=swift-starter-project">How to resolve an XCode sandbox build error 🔗</a>
+
 
 ### Media
 1. <a href="https://delasign.com/blog/swift-add-structure-local-images/?utm=swift-starter-project">How to add and structure local images in Swift 🔗</a>

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 echo "*********************************************************"
 echo "Running git pre-commit hook. Making sure that its a valid branch..." 
 echo "*********************************************************"
