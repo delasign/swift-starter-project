@@ -151,6 +151,8 @@ Same as the above and select replace from the dropdown.
 2. <a href="https://delasign.com/blog/swift-graphql-call/?utm=swift-starter-project">How to make an GraphQL call in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-api-call/?utm=swift-starter-project">How to make an API call with a variable codable type in Swift 🔗</a>
 
+## Bluetooth
+1. <a href="https://delasign.com/blog/swift-bluetooth-hide-power-alert/?utm=swift-starter-project">How to hide the Bluetooth Alert in Swift 🔗</a>
 
 ## Speech Recognition (Voice)
 1. <a href="https://delasign.com/blog/swift-speech-recognition/?utm=swift-starter-project">How to setup speech recognition in Swift 🔗</a>
