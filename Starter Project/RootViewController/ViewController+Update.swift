@@ -14,12 +14,12 @@ extension ViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Create an update functionality similar to that below for all the views that use the safe area constraints.
-            // CustomUIView
+            // MetalView
             updateSafeAreaInsets(
-                topConstraint: self.customViewTopConstraint﻿,
-                rightConstraint: self.customViewRightConstraint﻿,
-                bottomConstraint: self.customViewBottomConstraint﻿,
-                leftConstraint: self.customViewLeftConstraint﻿
+                topConstraint: self.metalViewTopConstraint﻿,
+                rightConstraint: self.metalViewRightConstraint﻿,
+                bottomConstraint: self.metalViewBottomConstraint﻿,
+                leftConstraint: self.metalViewLeftConstraint﻿
             )
             // Layout Subviews
             self.view.layoutIfNeeded()
@@ -33,7 +33,7 @@ extension ViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Hide and Show Relevant Screens
-            self.customView.isHidden = self.experienceState != .custom
+//            self.customView.isHidden = self.experienceState != .custom
             // Other Relevant Functionality...
         }
     }

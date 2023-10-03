@@ -24,11 +24,18 @@ class ViewController: UIViewController {
         }
     }
     // MARK: UI
-    let customView: CustomUIView = CustomUIView()
-    var customViewTopConstraint﻿: NSLayoutConstraint?
-    var customViewRightConstraint﻿: NSLayoutConstraint?
-    var customViewBottomConstraint﻿: NSLayoutConstraint?
-    var customViewLeftConstraint﻿: NSLayoutConstraint?
+    // Custom View
+//    let customView: CustomUIView = CustomUIView()
+//    var customViewTopConstraint﻿: NSLayoutConstraint?
+//    var customViewRightConstraint﻿: NSLayoutConstraint?
+//    var customViewBottomConstraint﻿: NSLayoutConstraint?
+//    var customViewLeftConstraint﻿: NSLayoutConstraint?
+    // MetalView
+    let metalView: MetalUIView = MetalUIView()
+    var metalViewTopConstraint﻿: NSLayoutConstraint?
+    var metalViewRightConstraint﻿: NSLayoutConstraint?
+    var metalViewBottomConstraint﻿: NSLayoutConstraint?
+    var metalViewLeftConstraint﻿: NSLayoutConstraint?
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
