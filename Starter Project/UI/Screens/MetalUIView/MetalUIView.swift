@@ -33,7 +33,7 @@ class MetalUIView: UIView {
         // MARK: Functionality Setup
         self.setupUI()
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         DispatchQueue.main.async { [weak self] in

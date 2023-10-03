@@ -11,7 +11,7 @@ import Metal
 import MetalKit
 
 extension MetalUIView {
-    
+
     // The setupUI function should be the only publically available class in this extension.
     // This can be called refreshUI if your app removes and adds content periodically.
     func setupUI() {
@@ -28,10 +28,10 @@ extension MetalUIView {
         addSubview(metalView)
 
         commandQueue = device.makeCommandQueue()
-        
+
         // Define the vertices of the triangle
         let vertices: [Float] = [
-            0.0,  0.5, 0.0,
+            0.0, 0.5, 0.0,
            -0.5, -0.5, 0.0,
             0.5, -0.5, 0.0
         ]
