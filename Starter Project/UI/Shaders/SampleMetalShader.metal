@@ -2,13 +2,15 @@
 // For more information on libraries consult the link below
 // https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
 
+
 // Vertex function
 vertex float4 sample_vertex_main(uint vertexID [[vertex_id]]) {
     // Define the vertices of the triangle
-    float3 vertices[3] = {
+    float3 vertices[4] = {
         float3(0.0, 0.5, 0.0),   // Vertex 0: Top
         float3(-0.5, -0.5, 0.0), // Vertex 1: Bottom-left
-        float3(0.5, -0.5, 0.0)   // Vertex 2: Bottom-right
+        float3(0.5, -0.5, 0.0),  // Vertex 2: Bottom-right
+        float3(0.0, 0.5, 0.0),    // Vertex 4: Close the loop
     };
 
     // Retrieve the vertex position for the current vertex

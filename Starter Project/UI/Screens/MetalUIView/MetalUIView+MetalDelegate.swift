@@ -24,8 +24,7 @@ extension MetalUIView: MTKViewDelegate {
 
             renderEncoder.setRenderPipelineState(pipelineState)
             renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-//            renderEncoder.setVertexBuffer(constantsBuffer, offset: 0, index: 1)
-            renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
+            renderEncoder.drawPrimitives(type: .lineStrip, vertexStart: 0, vertexCount: 5)
             renderEncoder.endEncoding()
 
             commandBuffer.present(drawable)

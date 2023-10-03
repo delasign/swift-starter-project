@@ -33,7 +33,8 @@ extension MetalUIView {
         let vertices: [Float] = [
             0.0, 0.5, 0.0,
            -0.5, -0.5, 0.0,
-            0.5, -0.5, 0.0
+            0.5, -0.5, 0.0,
+            0.0, 0.5, 0.0
         ]
 
         // Create a vertex buffer for the triangle
