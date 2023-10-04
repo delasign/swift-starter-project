@@ -13,7 +13,7 @@ struct ScreenSize {
 vertex float4 sample_vertex_main(uint vertexID [[vertex_id]], constant float &redBuffer[[buffer(1)]], constant ScreenSize &screenSize[[buffer(2)]]) {
     // Sample use of buffer
     float screenWidth = screenSize.width;
-    float screenHeight = screenSize.width;
+    float screenHeight = screenSize.height;
     // Define the vertices of the triangle
     float3 vertices[3] = {
         float3(0.0, 0.5, 0.0),   // Vertex 0: Top
