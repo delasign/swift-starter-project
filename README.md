@@ -50,6 +50,7 @@ Same as the above and select replace from the dropdown.
 11. <a href="https://delasign.com/blog/ios-accessibility-resources-guide/?utm=swift-starter-project">iOS Accessibility Resource Guide 🔗</a>
 12. <a href="https://delasign.com/blog/xcode-debugging-in-console/?utm=swift-starter-project">Debugging recommendations for XCode & Swift (iOS) 🔗</a>
 13. <a href="https://delasign.com/blog/uiview-swift-recommendations/?utm=swift-starter-project">Recommendations for creating a structured custom UIView in Swift 🔗</a>
+14. <a href="https://delasign.com/blog/apple-metal-resources-guide/?utm=swift-starter-project">Apple Metal Resources Guide 🔗</a>
 
 # 📚 Tutorials
 
@@ -311,4 +312,13 @@ Same as the above and select replace from the dropdown.
 2. <a href="https://delasign.com/blog/apple-app-store-promotional-offers/?utm=swift-starter-project">What are Apple App Store Promotional Offers? 🔗</a>
 3. <a href="https://delasign.com/blog/apple-app-store-offer-codes/?utm=swift-starter-project">What are Apple App Store Custom Offer Codes? 🔗</a>
 4. <a href="https://delasign.com/blog/apple-app-store-combining-offers/?utm=swift-starter-project">Combining Offers in Apple App Store Apps 🔗</a>
+
+
+## Metal
+1. <a href="https://delasign.com/blog/what-is-metal/?utm=swift-starter-project">What is Metal in Apple's Ecosystem ? 🔗</a>
+2. <a href="https://delasign.com/blog/metal-uiview-triangle/?utm=swift-starter-project">How to use Metal with a UIView in Swift 🔗</a>
+3. <a href="https://delasign.com/blog/metal-triangle-outline/?utm=swift-starter-project">How to draw a stroke on a primitive in Metal 🔗</a>
+4. <a href="https://delasign.com/blog/metal-stroke-variable-thickness/?utm=swift-starter-project">How to set the line width of a stroke in Metal 🔗</a>
+5. <a href="https://delasign.com/blog/swift-metal-buffers/?utm=swift-starter-project">How to pass variables or data to a Metal Shader in XCode 🔗</a>
+6. <a href="https://delasign.com/blog/metal-pass-data-from-vertex-to-fragment/?utm=swift-starter-project">How to pass data from the vertex to the fragment function in Metal 🔗</a>
 
