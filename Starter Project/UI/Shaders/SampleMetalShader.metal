@@ -23,7 +23,7 @@ vertex float4 sample_vertex_main(uint vertexID [[vertex_id]]) {
 // Fragment function
 fragment half4 sample_fragment_main() {
     // Define the color for the triangle (in RGBA format)
-    half4 triangleColor = half4(1.0, 0.0, 0.0, 1.0); // Red color
+    half4 triangleColor = half4(1.0, 1.0, 1.0, 1.0); // White color
 
     // Return the color for the current fragment
     return triangleColor;
