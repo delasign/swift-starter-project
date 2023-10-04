@@ -2,8 +2,14 @@
 // For more information on libraries consult the link below
 // https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
 
+// Define the struct
+struct ScreenSize {
+    float width;
+    float height;
+};
+
 // Vertex function
-vertex float4 sample_vertex_main(uint vertexID [[vertex_id]]) {
+vertex float4 sample_vertex_main(uint vertexID [[vertex_id]], constant ScreenSize &screenSize[[buffer(1)]]) {
     // Define the vertices of the triangle
     float3 vertices[3] = {
         float3(0.0, 0.5, 0.0),   // Vertex 0: Top
@@ -19,7 +25,7 @@ vertex float4 sample_vertex_main(uint vertexID [[vertex_id]]) {
 }
 
 // Fragment function
-fragment half4 sample_fragment_main() {
+fragment half4 sample_fragment_main(constant ScreenSize &screenSize[[buffer(1)]]) {
     // Define the color for the triangle (in RGBA format)
     half4 triangleColor = half4(1.0, 0.0, 0.0, 1.0); // Red color
 
