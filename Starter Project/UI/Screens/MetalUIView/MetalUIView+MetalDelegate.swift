@@ -25,6 +25,20 @@ extension MetalUIView: MTKViewDelegate {
 
             renderEncoder.setRenderPipelineState(pipelineState)
             renderEncoder.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+            
+            
+            // Define the variable buffer
+            var red: Float = 0.5;
+            // Define the buffer
+            guard let redBuffer: MTLBuffer = device.makeBuffer(bytes: &red, length: MemoryLayout<Float>.stride, options: []) else { return
+            }
+            
+            // Set the buffer on the GPU.
+            redBuffer.label = "redBuffer"
+            // Pass the buffer to the vertex and fragment shader
+            renderEncoder.setVertexBuffer(redBuffer, offset: 0, index: 1)
+            renderEncoder.setFragmentBuffer(redBuffer, offset: 0, index: 1)
+            
 
             // Define the struct
             // Please note this should fall within its own file in the Models folder
@@ -32,17 +46,17 @@ extension MetalUIView: MTKViewDelegate {
                 let width: Float
                 let height: Float
             }
-
+            
             var screenSizeData: ScreenSize = ScreenSize(width: Float(self.bounds.width), height: Float(self.bounds.height))
-
+            // Define the buffer
             guard let screenSizeBuffer: MTLBuffer = device.makeBuffer(bytes: &screenSizeData, length: MemoryLayout<ScreenSize>.stride, options: []) else {
                 return
             }
             // Set the buffer on the GPU.
             screenSizeBuffer.label = "ScreenSizeBuffer"
             // Pass the buffer to the vertex and fragment shader
-            renderEncoder.setVertexBuffer(screenSizeBuffer, offset: 0, index: 1)
-            renderEncoder.setFragmentBuffer(screenSizeBuffer, offset: 0, index: 1)
+            renderEncoder.setVertexBuffer(screenSizeBuffer, offset: 0, index: 2)
+            renderEncoder.setFragmentBuffer(screenSizeBuffer, offset: 0, index: 2)
 
 //            renderEncoder.setVertexBuffer(constantsBuffer, offset: 0, index: 1)
             renderEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
