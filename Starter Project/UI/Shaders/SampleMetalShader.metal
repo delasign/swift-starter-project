@@ -2,27 +2,38 @@
 // For more information on libraries consult the link below
 // https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
 
+#include "metal_stdlib"
+using namespace metal;
+
+struct Uniforms {
+    float screenWidth;
+    float screenHeight;
+    float numberOfSides;
+    float radius;
+};
+
+
 // Vertex function
-vertex float4 sample_vertex_main(uint vertexID [[vertex_id]]) {
-    // Define the vertices of the triangle
-    float3 vertices[3] = {
-        float3(0.0, 0.5, 0.0),   // Vertex 0: Top
-        float3(-0.5, -0.5, 0.0), // Vertex 1: Bottom-left
-        float3(0.5, -0.5, 0.0)   // Vertex 2: Bottom-right
-    };
-
-    // Retrieve the vertex position for the current vertex
-    float3 position = vertices[vertexID];
-
+vertex float4 sample_vertex_main(uint vertexID [[vertex_id]], constant Uniforms &uniforms[[buffer(0)]]) {
+    // Update the vertex ID
+    float index = vertexID > uniforms.numberOfSides - 1 ? 0 : vertexID;
+    // Calculate the aspect ratio
+    float aspectRatio = uniforms.screenWidth/uniforms.screenHeight;
+    // Measure the radius in terms of pixels
+    float polygonRadius = uniforms.radius / uniforms.screenWidth;
+    // Calculate theta
+    float thetaInDegrees = 360 / uniforms.numberOfSides * index;
+    float thetaInRadians = thetaInDegrees * M_PI_F / 180;
+    float thetaMeasured = thetaInRadians;
+    
+    float x = polygonRadius * sin(thetaMeasured);
+    float y = polygonRadius * aspectRatio * cos(thetaMeasured);
     // Return the position as a homogeneous coordinate (with w = 1.0)
+    float3 position = float3(x,y,0);
     return float4(position, 1.0);
 }
 
 // Fragment function
-fragment half4 sample_fragment_main() {
-    // Define the color for the triangle (in RGBA format)
-    half4 triangleColor = half4(1.0, 0.0, 0.0, 1.0); // Red color
-
-    // Return the color for the current fragment
-    return triangleColor;
+fragment float4 sample_fragment_main() {
+    return float4(1.0, 1.0, 1.0, 1.0);
 }

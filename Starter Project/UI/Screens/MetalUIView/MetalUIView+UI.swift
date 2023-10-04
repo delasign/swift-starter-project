@@ -29,17 +29,6 @@ extension MetalUIView {
 
         commandQueue = device.makeCommandQueue()
 
-        // Define the vertices of the triangle
-        let vertices: [Float] = [
-            0.0, 0.5, 0.0,
-           -0.5, -0.5, 0.0,
-            0.5, -0.5, 0.0
-        ]
-
-        // Create a vertex buffer for the triangle
-        let vertexBufferSize = vertices.count * MemoryLayout<Float>.size
-        vertexBuffer = device.makeBuffer(bytes: vertices, length: vertexBufferSize, options: [])
-
         let defaultLibrary = device.makeDefaultLibrary()
         let vertexFunction = defaultLibrary?.makeFunction(name: "sample_vertex_main")
         let fragmentFunction = defaultLibrary?.makeFunction(name: "sample_fragment_main")
