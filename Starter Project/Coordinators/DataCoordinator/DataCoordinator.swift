@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Apollo
+import PokeAPI
 
 @MainActor
 class DataCoordinator: NSObject {
@@ -20,6 +21,11 @@ class DataCoordinator: NSObject {
     var experienceState: ExperienceStates = .custom
     // Apollo
     var apolloClient: ApolloClient?
+    var pokemonV2Data: [PokemonGraphQLCallQuery.Data.Pokemon_v2_pokemon] = [] {
+        didSet {
+            NotificationCoordinator.shared.sendOnPokemonV2DataWasUpdated()
+        }
+    }
 
     // MARK: Lifecycle
     func initialize() {

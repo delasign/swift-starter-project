@@ -21,6 +21,13 @@ extension DataCoordinator {
                case .success(let response):
                    // Please note that we only print the first one to avoid overloading the interface.
                    debugPrint("\(DataCoordinator.identifier) makePokemonGraphQLCall \(DebuggingIdentifiers.actionOrEventSucceded) Retrieved GraphQL Pokemon Data : \(response.data?.pokemon_v2_pokemon.first?.name).")
+                    // Check that the data exists
+                   guard let pokemonData = response.data?.pokemon_v2_pokemon else {
+                       debugPrint("\(DataCoordinator.identifier) makePokemonGraphQLCall \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather PokemonV2Data from the GraphQL response.")
+                       return
+                   }
+                   // Set the data
+                   self.pokemonV2Data = pokemonData
                case .failure(let error):
                    debugPrint("\(DataCoordinator.identifier) makePokemonGraphQLCall \(DebuggingIdentifiers.actionOrEventFailed) Failed to retrieve GraphQL Pokemon Data with error : \(error).")
                }

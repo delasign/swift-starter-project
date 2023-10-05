@@ -34,4 +34,15 @@ extension NotificationCoordinator {
             userInfo: nil
         )
     }
+    
+    public func sendOnPokemonV2DataWasUpdated() {
+        debugPrint("\(NotificationCoordinator.identifier) \(DebuggingIdentifiers.notificationSent) Sent onPokemonV2DataWasUpdated!")
+        NotificationCenter.default.post(
+            name: SystemNotifications.onPokemonV2DataWasUpdated,
+            object: nil,
+            userInfo: nil
+        )
+    }
+    
+    
 }

@@ -14,4 +14,6 @@ struct SystemNotifications {
     static let onExperienceStateUpdate: Notification.Name = Notification.Name("onExperienceStateUpdate")
     // When Data is Updated
     static let onUpdatedData: Notification.Name = Notification.Name("onUpdatedData")
+    // Send this notification when the DataCoordinator sets or updates the PokemonData
+    static let onPokemonV2DataWasUpdated: Notification.Name = Notification.Name("onPokemonV2DataWasUpdated")
 }

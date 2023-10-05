@@ -1,5 +1,10 @@
 {
     "sample": {
         "sampleString": "Una muestra de un string"
+    },
+    "pokemonV2": {
+        "type": "Tipo",
+        "height": "Altura",
+        "weight": "Peso"
     }
 }

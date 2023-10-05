@@ -12,7 +12,19 @@ class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedStyle()
+    // Declare your CollectionView
+    let collectionView: UICollectionView = {
+          let layout = UICollectionViewFlowLayout()
+          layout.scrollDirection = .vertical
+          layout.minimumLineSpacing = kPadding
+          layout.minimumInteritemSpacing = kPadding
+          let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+          collectionView.translatesAutoresizingMaskIntoConstraints = false
+          collectionView.backgroundColor = Styleguide.getBackgroundColor()
+
+          return collectionView
+      }()
+      let collectionViewCellHeight: CGFloat = 80
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
@@ -33,6 +45,15 @@ class CustomUIView: UIView {
     override func removeFromSuperview() {
         super.removeFromSuperview()
     }
+    
+    // This function gets called everytime a layout occurs either to this view or a subview of this view.
+        override func layoutSubviews() {
+            super.layoutSubviews()
+            DispatchQueue.main.async {
+                // Invalidate the carousel to make it lay itself out again.
+                self.collectionView.collectionViewLayout.invalidateLayout()
+            }
+        }
 
     // viewWillTransition should be called when the view resizes or changes orientation.
     func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

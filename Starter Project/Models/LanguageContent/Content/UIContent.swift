@@ -14,4 +14,12 @@ struct UIContent: Codable {
     }
 
     let sample: Sample
+    
+    struct PokemonV2: Codable {
+        let type: String
+        let height: String
+        let weight: String
+    }
+    
+    let pokemonV2: PokemonV2
 }
