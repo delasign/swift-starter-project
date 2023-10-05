@@ -53,6 +53,20 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         // Return the cell
         return cell
     }
+    
+    // MARK: Touch Functionality
+    /*
+     This function determines what should be done in
+     */
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // If the keyboard is active, dismiss the keyboard
+        if self.searchBar.keyboardIsActive {
+            self.searchBar.dismissKeyboard()
+        } else {
+            // Do something else
+        }
+    }
+    
     // MARK: Visual Parameters
     /*
      This function determines the size of the cell for each given indexPath (i.e. section and row).

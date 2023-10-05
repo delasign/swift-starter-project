@@ -12,6 +12,8 @@ class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
     // MARK: UI
+    // Declare your Searchbar
+    let searchBar: SearchBar = SearchBar()
     // Declare your CollectionView
     let collectionView: UICollectionView = {
           let layout = UICollectionViewFlowLayout()
