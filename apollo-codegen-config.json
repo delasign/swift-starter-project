@@ -2,10 +2,10 @@
   "schemaNamespace" : "pokeAPI",
   "input" : {
     "operationSearchPaths" : [
-      "**/**/*.graphql"
+      "**/*.graphql"
     ],
     "schemaSearchPaths" : [
-      "**/**/*.graphqls"
+      "**/*.graphqls"
     ]
   },
   "schemaDownloadConfiguration": {

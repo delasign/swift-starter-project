@@ -29,7 +29,7 @@ class DataCoordinator: NSObject {
         // Setup Apollo
         if let baseUrl = self.configuration.getBaseURL(), let url = URL(string: baseUrl) {
             // Initialize the client
-            self.apolloClient = ApolloClient(url: url);
+            self.apolloClient = ApolloClient(url: url)
             debugPrint("\(DataCoordinator.identifier) initialize \(DebuggingIdentifiers.actionOrEventSucceded) Successfully initialized the Apollo Client.")
             // Make the API call
             makePokemonGraphQLCall()
