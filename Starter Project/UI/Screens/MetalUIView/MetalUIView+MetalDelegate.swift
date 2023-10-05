@@ -22,11 +22,11 @@ extension MetalUIView: MTKViewDelegate {
            let device = self.metalView.device,
            let commandBuffer = device.makeCommandQueue()?.makeCommandBuffer(),
            let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) {
-            
+
             // Define the number of sides
             // Must be a var to be able to work with a buffer.
             let numberOfSides: Int = 5
-            
+
             // Define the struct
             // Please note this should fall within its own file in the Models folder
             struct Uniforms {
@@ -35,7 +35,7 @@ extension MetalUIView: MTKViewDelegate {
                 let numberOfSides: Float
                 let radius: Float // In Pixels
             }
-            
+
             let screenBounds = getCurrentScreenBounds()
 
             var uniforms: Uniforms = Uniforms(
@@ -52,7 +52,7 @@ extension MetalUIView: MTKViewDelegate {
             uniformsBuffer.label = "uniformsBuffer"
             // Pass the buffer to the vertex and fragment shader
             renderEncoder.setVertexBuffer(uniformsBuffer, offset: 0, index: 0)
-            
+
             // Define the vertices of the inner circle
             renderEncoder.setRenderPipelineState(pipelineState)
             renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: numberOfSides + 1)
@@ -63,24 +63,24 @@ extension MetalUIView: MTKViewDelegate {
 
        }
     }
-    
+
     func generateVertices(numberOfVertices: Int, radius: Float) -> [SIMD3<Float>] {
-        var vertices: [SIMD3<Float>] = [];
+        var vertices: [SIMD3<Float>] = []
         // Add the vertices
         // Please note that each vertex has 3 points (x,y,z).
-        
+
         for vertexIndex in 0...numberOfVertices {
-            let theta:Double = Double(360 / numberOfVertices) * Double(vertexIndex) * Double.pi * 2;
+            let theta: Double = Double(360 / numberOfVertices) * Double(vertexIndex) * Double.pi * 2
             // X
-            let x: Float = radius*Float(sin(theta));
+            let x: Float = radius * Float(sin(theta))
 //            // Y
-            let y: Float = radius*Float(cos(theta));
+            let y: Float = radius * Float(cos(theta))
             // Z (Always 0)
-            let z: Float = 0;
-            
-            vertices.append(SIMD3<Float>(x,y,z))
+            let z: Float = 0
+
+            vertices.append(SIMD3<Float>(x, y, z))
         }
-        
+
         return vertices
     }
 }
