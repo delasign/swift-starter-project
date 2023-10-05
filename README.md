@@ -59,6 +59,7 @@ Same as the above and select replace from the dropdown.
 ### Setup
 1. <a href="https://delasign.com/blog/swiftlint-enabled-swift-xcode-project/?utm=swift-starter-project">How to create a SwiftLint enabled Swift Xcode Project 🔗</a>
 2. <a href="https://delasign.com/blog/swift-package-manager-package-dependency/?utm=swift-starter-project">How to add a Swift Package Manager package dependency 🔗</a>
+3. <a href="https://delasign.com/blog/xcode-swift-package-manager-local/?utm=swift-starter-project">How to add a local Swift Package in XCode 🔗</a>
 
 ### Splash Screen
 1. <a href="https://delasign.com/blog/apple-launch-screen-best-practices/?utm=swift-starter-project">Apple App Launch Screen Best Practices 🔗</a>

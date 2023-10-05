@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,6 +56,7 @@
 		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */; };
 		F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* SystemImages.swift */; };
+		F07672E62ACF090C00A73251 /* DataCoordinator+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07672E52ACF090C00A73251 /* DataCoordinator+API.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */; };
@@ -83,6 +84,8 @@
 		F0EE66E82AB20CC600A7DBA0 /* NavigationButton+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */; };
 		F0EE66EA2AB20CCB00A7DBA0 /* NavigationButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */; };
 		F0EE66EC2AB20CD000A7DBA0 /* NavigationButton+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */; };
+		F0F8C5E52ACF2E9D00D329B4 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F0F8C5E42ACF2E9D00D329B4 /* Apollo */; };
+		F0F8C5F12ACF300900D329B4 /* PokeAPI in Frameworks */ = {isa = PBXBuildFile; productRef = F0F8C5F02ACF300900D329B4 /* PokeAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +139,7 @@
 		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSafeAreaInsets.swift; sourceTree = "<group>"; };
 		F0397F6828888C0D002AF19B /* SystemImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImages.swift; sourceTree = "<group>"; };
+		F07672E52ACF090C00A73251 /* DataCoordinator+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataCoordinator+API.swift"; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SizeToFit.swift"; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 		F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Touches.swift"; sourceTree = "<group>"; };
 		F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Animations.swift"; sourceTree = "<group>"; };
 		F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Update.swift"; sourceTree = "<group>"; };
+		F0F8C5E12ACF1D0700D329B4 /* schema.graphqls */ = {isa = PBXFileReference; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
+		F0F8C5E22ACF1F1C00D329B4 /* Pokemon.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Pokemon.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,7 +176,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F8C5F12ACF300900D329B4 /* PokeAPI in Frameworks */,
 				F00DDDEF287C93B70062AA1E /* TinyConstraints in Frameworks */,
+				F0F8C5E52ACF2E9D00D329B4 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +274,7 @@
 			children = (
 				F00DDDCB287C82480062AA1E /* Starter Project */,
 				F00DDDCA287C82480062AA1E /* Products */,
+				F079D6F02ACF14B800EC9F3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -310,6 +319,7 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F07673322ACF104A00A73251 /* GraphQL */,
 				F0EE66D12AB20B0400A7DBA0 /* Errors */,
 				F001B36B2A9E80FA0048BD2F /* Types */,
 				F03962002A0EF1F200713D33 /* UserDefaults */,
@@ -482,6 +492,22 @@
 			path = Constraints;
 			sourceTree = "<group>";
 		};
+		F07673322ACF104A00A73251 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8C5E12ACF1D0700D329B4 /* schema.graphqls */,
+				F0F8C5E22ACF1F1C00D329B4 /* Pokemon.graphql */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		F079D6F02ACF14B800EC9F3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0A96624287DFF6E000E5FCD /* LanguageCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C79C6928B25DE400C1DCAF /* DataCoordinator.swift */,
+				F07672E52ACF090C00A73251 /* DataCoordinator+API.swift */,
 			);
 			path = DataCoordinator;
 			sourceTree = "<group>";
@@ -615,6 +642,8 @@
 			name = "Starter Project";
 			packageProductDependencies = (
 				F00DDDEE287C93B70062AA1E /* TinyConstraints */,
+				F0F8C5E42ACF2E9D00D329B4 /* Apollo */,
+				F0F8C5F02ACF300900D329B4 /* PokeAPI */,
 			);
 			productName = "Starter Project";
 			productReference = F00DDDC9287C82480062AA1E /* Starter Project.app */;
@@ -646,6 +675,8 @@
 			mainGroup = F00DDDC0287C82480062AA1E;
 			packageReferences = (
 				F00DDDED287C93B70062AA1E /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				F0F8C5E32ACF2E9D00D329B4 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				F0F8C5EF2ACF300900D329B4 /* XCLocalSwiftPackageReference "pokeAPI" */,
 			);
 			productRefGroup = F00DDDCA287C82480062AA1E /* Products */;
 			projectDirPath = "";
@@ -764,6 +795,7 @@
 				F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */,
 				F008FC9D287F453200B2495D /* UIContent.swift in Sources */,
 				F03961F72A0EF16900713D33 /* openURL.swift in Sources */,
+				F07672E62ACF090C00A73251 /* DataCoordinator+API.swift in Sources */,
 				F008FCA5287F736F00B2495D /* ViewController+UI.swift in Sources */,
 				F001B37A2A9E82B20048BD2F /* NotificationCoordinator+System.swift in Sources */,
 				F008FCA1287F480000B2495D /* LanguageCoordinator+Generate.swift in Sources */,
@@ -987,6 +1019,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		F0F8C5EF2ACF300900D329B4 /* XCLocalSwiftPackageReference "pokeAPI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = pokeAPI;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		F00DDDED287C93B70062AA1E /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -996,6 +1035,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		F0F8C5E32ACF2E9D00D329B4 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1003,6 +1050,15 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F00DDDED287C93B70062AA1E /* XCRemoteSwiftPackageReference "TinyConstraints" */;
 			productName = TinyConstraints;
+		};
+		F0F8C5E42ACF2E9D00D329B4 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0F8C5E32ACF2E9D00D329B4 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		F0F8C5F02ACF300900D329B4 /* PokeAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PokeAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
