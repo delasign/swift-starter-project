@@ -22,4 +22,10 @@ struct UIContent: Codable {
     }
 
     let pokemonV2: PokemonV2
+    
+    struct SearchBar: Codable {
+        let search: String
+    }
+    
+    let searchBar: SearchBar
 }

@@ -6,5 +6,8 @@
         "type": "Type",
         "height": "Height",
         "weight": "Weight"
+    },
+    "searchBar": {
+        "search": "Search"
     }
 }

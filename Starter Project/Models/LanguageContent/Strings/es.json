@@ -6,5 +6,8 @@
         "type": "Tipo",
         "height": "Altura",
         "weight": "Peso"
+    },
+    "searchBar": {
+        "search": "Busca"
     }
 }
