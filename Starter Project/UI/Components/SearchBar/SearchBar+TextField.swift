@@ -14,16 +14,16 @@ extension SearchBar: UITextFieldDelegate {
         self.dismissKeyboard()
         return true
     }
-    
+
     // MARK: Text Editing Functionality
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.keyboardIsActive = true
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.keyboardIsActive = false
     }
-    
+
     // MARK: TextField Update Functionality
     @objc func onTextFieldTextDidUpdate(_ textField: UITextField) {
         debugPrint("\(SearchBar.identifier) onTextFieldTextDidUpdate \(DebuggingIdentifiers.actionOrEventSucceded) \(textField.text)")
