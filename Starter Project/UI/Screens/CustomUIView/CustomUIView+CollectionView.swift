@@ -53,7 +53,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         // Return the cell
         return cell
     }
-    
+
     // MARK: Touch Functionality
     /*
      This function determines what should be done in
@@ -66,7 +66,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
             // Do something else
         }
     }
-    
+
     // MARK: Visual Parameters
     /*
      This function determines the size of the cell for each given indexPath (i.e. section and row).

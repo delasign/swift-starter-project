@@ -28,7 +28,7 @@ extension CustomUIView {
         searchBar.right(to: self)
         searchBar.height(100)
     }
-    
+
     private func setupCollectionView() {
         // Add the UICollectionView to the View
         addSubview(collectionView)
@@ -43,6 +43,5 @@ extension CustomUIView {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
-    
+
 }

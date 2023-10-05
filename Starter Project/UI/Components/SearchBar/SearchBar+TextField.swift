@@ -16,22 +16,23 @@ extension SearchBar: UITextFieldDelegate {
     }
     
     // MARK: Text Editing Functionality
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            self.keyboardIsActive = true
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.keyboardIsActive = true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.keyboardIsActive = false
+    }
+    
+    // MARK: TextField Update Functionality
+    @objc func onTextFieldTextDidUpdate(_ textField: UITextField) {
+        debugPrint("\(SearchBar.identifier) onTextFieldTextDidUpdate \(DebuggingIdentifiers.actionOrEventSucceded) \(textField.text)")
+        switch textField.text {
+        case .none, "":
+            self.searchState = .pending
+            break
+        default:
+            self.searchState = .active
         }
-
-        func textFieldDidEndEditing(_ textField: UITextField) {
-            self.keyboardIsActive = false
-        }
-
-        // MARK: TextField Update Functionality
-        @objc func onTextFieldTextDidUpdate(_ textField: UITextField) {
-            debugPrint("\(SearchBar.identifier) onTextFieldTextDidUpdate \(DebuggingIdentifiers.actionOrEventSucceded) \(textField.text)")
-            switch textField.text {
-            case .none, "":
-                self.searchState = .pending
-                break
-            default:
-                self.searchState = .active
-            }
-        }
+    }
+}

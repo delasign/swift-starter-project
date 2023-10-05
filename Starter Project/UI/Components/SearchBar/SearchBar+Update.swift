@@ -21,7 +21,7 @@ extension SearchBar {
             debugPrint("\(SearchBar.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }
-    
+
     func dismissKeyboard() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
