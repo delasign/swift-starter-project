@@ -22,7 +22,7 @@ extension CustomUIView {
         debugPrint("\(CustomUIView.identifier) onSystemUpdatedContent \(DebuggingIdentifiers.notificationRecieved) Recieved On Content Update with custom notification variable : \(customVariable)")
         self.onContentUpdate()
     }
-    
+
     @objc private func onPokemonV2DataWasUpdated(notification: Notification) {
             debugPrint("\(CustomUIView.identifier) onPokemonV2DataWasUpdated \(DebuggingIdentifiers.notificationRecieved).")
             // Reload Data

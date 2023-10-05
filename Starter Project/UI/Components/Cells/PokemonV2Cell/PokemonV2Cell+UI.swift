@@ -15,7 +15,7 @@ extension PokemonV2Cell {
         setupHeight()
         setupWeight()
     }
-    
+
     private func setupHeader() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -24,7 +24,7 @@ extension PokemonV2Cell {
             self.header.top(to: self)
         }
     }
-    
+
     private func setupType() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -33,7 +33,7 @@ extension PokemonV2Cell {
             self.type.topToBottom(of: self.header)
         }
     }
-    
+
     private func setupHeight() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -42,7 +42,7 @@ extension PokemonV2Cell {
             self.height.topToBottom(of: self.type)
         }
     }
-    
+
     private func setupWeight() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }

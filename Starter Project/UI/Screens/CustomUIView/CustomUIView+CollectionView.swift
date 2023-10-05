@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
+
     // MARK: Number of Sections & Items
     /*
         This function determines the number of sections in your collectionview.
@@ -27,7 +27,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         // In this tutorial, we will want to use the DataCoordinator PokemonV2Data count.
         return DataCoordinator.shared.pokemonV2Data.count
     }
-    
+
     // MARK: Cell
     /*
         This function gets called everytime a cell needs to be rendered.
@@ -49,7 +49,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         } else {
             debugPrint("\(CustomUIView.identifier) cellForItemAt \(DebuggingIdentifiers.actionOrEventFailed) Failed to update cell as we could not gather the data.")
         }
-        
+
         // Return the cell
         return cell
     }

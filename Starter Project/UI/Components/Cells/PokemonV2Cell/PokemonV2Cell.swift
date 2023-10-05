@@ -16,7 +16,7 @@ class PokemonV2Cell: UICollectionViewCell {
     let type: UILabel = Styleguide.createMetricStyle()
     let weight: UILabel = Styleguide.createMetricStyle()
     let height: UILabel = Styleguide.createMetricStyle()
-    
+
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
     override init(frame: CGRect) {

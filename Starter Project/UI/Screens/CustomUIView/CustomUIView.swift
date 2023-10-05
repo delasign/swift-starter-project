@@ -45,7 +45,7 @@ class CustomUIView: UIView {
     override func removeFromSuperview() {
         super.removeFromSuperview()
     }
-    
+
     // This function gets called everytime a layout occurs either to this view or a subview of this view.
         override func layoutSubviews() {
             super.layoutSubviews()
