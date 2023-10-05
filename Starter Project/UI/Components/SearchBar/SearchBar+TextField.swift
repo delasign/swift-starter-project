@@ -34,5 +34,7 @@ extension SearchBar: UITextFieldDelegate {
         default:
             self.searchState = .active
         }
+        // Send the Notification
+        NotificationCoordinator.shared.sendOnSearchQueryWasUpdated()
     }
 }

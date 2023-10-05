@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import PokeAPI
 
 extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
@@ -25,7 +26,13 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
      */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // In this tutorial, we will want to use the DataCoordinator PokemonV2Data count.
-        return DataCoordinator.shared.pokemonV2Data.count
+        switch self.searchBar.searchState {
+        case .pending:
+            return DataCoordinator.shared.pokemonV2Data.count
+        case .active:
+            return self.filteredData.count
+        }
+        
     }
 
     // MARK: Cell
@@ -35,24 +42,34 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         Once it's reused, in this function, you can call functionality to tweak it to your desired visual.
      */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // Get the Cell
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PokemonV2Cell.identifier, for: indexPath) as? PokemonV2Cell else {
-            return UICollectionViewCell()
-        }
-        // Update the cell to match the data gathered from the GraphQL at this index
-        let pokemonData = DataCoordinator.shared.pokemonV2Data[indexPath.row]
-        if let type = pokemonData.pokemon_v2_pokemontypes.first?.pokemon_v2_type?.name,
-           let height = pokemonData.height,
-           let weight = pokemonData.weight {
-            debugPrint("\(CustomUIView.identifier) cellForItemAt \(DebuggingIdentifiers.actionOrEventSucceded) Succefully gathered data for indexpath \(indexPath.row).")
-            cell.update(header: pokemonData.name, type: type, height: "\(height)", weight: "\(weight)")
-        } else {
-            debugPrint("\(CustomUIView.identifier) cellForItemAt \(DebuggingIdentifiers.actionOrEventFailed) Failed to update cell as we could not gather the data.")
-        }
+            // Get the Cell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PokemonV2Cell.identifier, for: indexPath) as? PokemonV2Cell else {
+                return UICollectionViewCell()
+            }
+            // Use the datacoordinator dataset or the filtered dataset depending on the search state
+        let dataset: [PokemonGraphQLCallQuery.Data.Pokemon_v2_pokemon]
+            switch self.searchBar.searchState {
+            case .pending:
+                dataset = DataCoordinator.shared.pokemonV2Data
+            case .active:
+                dataset = self.filteredData
+            }
+            
+            
+            // Update the cell to match the data gathered from the GraphQL at this index
+            let pokemonData = dataset[indexPath.row]
+            if let type = pokemonData.pokemon_v2_pokemontypes.first?.pokemon_v2_type?.name,
+               let height = pokemonData.height,
+               let weight = pokemonData.weight {
+                debugPrint("\(CustomUIView.identifier) cellForItemAt \(DebuggingIdentifiers.actionOrEventSucceded) Succefully gathered data for indexpath \(indexPath.row).")
+                cell.update(header: pokemonData.name, type: type, height: "\(height)", weight: "\(weight)")
+            } else {
+                debugPrint("\(CustomUIView.identifier) cellForItemAt \(DebuggingIdentifiers.actionOrEventFailed) Failed to update cell as we could not gather the data.")
+            }
 
-        // Return the cell
-        return cell
-    }
+            // Return the cell
+            return cell
+        }
 
     // MARK: Touch Functionality
     /*

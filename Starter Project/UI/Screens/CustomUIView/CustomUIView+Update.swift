@@ -2,11 +2,12 @@
 //  CustomUIView+Update.swift
 //  Starter Project
 //
-//  Created by Oscar de la Hera Gomez on 7/18/22.
+//  Created by Oscar de la Hera Gomez on 10/05/23.
 //
 
 import Foundation
 import UIKit
+import PokeAPI
 
 extension CustomUIView {
     // MARK: Sample Update Functionality
@@ -35,6 +36,35 @@ extension CustomUIView {
             self.searchBar.onContentUpdate()
             debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
+    }
+    
+    // MARK: Filtered Data
+    func updateFilteredData() {
+        // Determine query
+        guard let query = self.searchBar.textField.text else {
+            debugPrint("\(CustomUIView.identifier) updateFilteredData \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather query.")
+            return
+        }
+        debugPrint("\(CustomUIView.identifier) updateFilteredData \(DebuggingIdentifiers.actionOrEventSucceded) Gathered Query : \(query)")
+        debugPrint("\(CustomUIView.identifier) updateFilteredData \(DebuggingIdentifiers.actionOrEventInProgress) Filtering data \(DebuggingIdentifiers.actionOrEventInProgress)")
+        // Declare a variable to capture the new data.
+        var newFilteredData: [PokemonGraphQLCallQuery.Data.Pokemon_v2_pokemon] = []
+        // Filter through the data and see if there's a match in the name or type.
+        for pokemon in DataCoordinator.shared.pokemonV2Data {
+            if pokemon.name.localizedLowercase.contains(query.localizedLowercase) {
+                newFilteredData.append(pokemon)
+            } else if let type = pokemon.pokemon_v2_pokemontypes.first?.pokemon_v2_type?.name, type.localizedLowercase.contains(query.localizedLowercase) {
+                newFilteredData.append(pokemon)
+            }
+        }
+        // Update the filtered data
+        self.filteredData = newFilteredData
+        // Reload CollectionView to display new data
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.collectionView.reloadData()
+        }
+        debugPrint("\(CustomUIView.identifier) updateFilteredData \(DebuggingIdentifiers.actionOrEventSucceded) Filtering Complete!")
     }
 
 }

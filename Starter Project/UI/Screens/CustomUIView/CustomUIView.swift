@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import PokeAPI
 
 class CustomUIView: UIView {
     // MARK: Variables
@@ -26,7 +27,9 @@ class CustomUIView: UIView {
 
           return collectionView
       }()
-      let collectionViewCellHeight: CGFloat = 80
+    let collectionViewCellHeight: CGFloat = 80
+    // Declare the Filtered Data
+    var filteredData: [PokemonGraphQLCallQuery.Data.Pokemon_v2_pokemon] = []
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
