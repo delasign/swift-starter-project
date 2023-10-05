@@ -18,5 +18,5 @@ struct SystemNotifications {
     static let onPokemonV2DataWasUpdated: Notification.Name = Notification.Name("onPokemonV2DataWasUpdated")
     // Send this notification when the search query gets updated
     static let onSearchQueryWasUpdated: Notification.Name = Notification.Name("onSearchQueryWasUpdated")
-    
+
 }

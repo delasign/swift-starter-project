@@ -32,7 +32,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         case .active:
             return self.filteredData.count
         }
-        
+
     }
 
     // MARK: Cell
@@ -54,8 +54,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
             case .active:
                 dataset = self.filteredData
             }
-            
-            
+
             // Update the cell to match the data gathered from the GraphQL at this index
             let pokemonData = dataset[indexPath.row]
             if let type = pokemonData.pokemon_v2_pokemontypes.first?.pokemon_v2_type?.name,

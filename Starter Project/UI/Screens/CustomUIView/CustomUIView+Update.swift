@@ -37,7 +37,7 @@ extension CustomUIView {
             debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }
-    
+
     // MARK: Filtered Data
     func updateFilteredData() {
         // Determine query

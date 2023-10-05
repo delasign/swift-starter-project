@@ -32,7 +32,7 @@ extension CustomUIView {
             self.collectionView.reloadData()
         }
     }
-    
+
     @objc private func onSearchQueryWasUpdated(notification: Notification) {
         debugPrint("\(CustomUIView.identifier) onSearchQueryWasUpdated \(DebuggingIdentifiers.notificationRecieved).")
         self.updateFilteredData()

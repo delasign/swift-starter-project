@@ -43,7 +43,7 @@ extension NotificationCoordinator {
             userInfo: nil
         )
     }
-    
+
     public func sendOnSearchQueryWasUpdated() {
         debugPrint("\(NotificationCoordinator.identifier) \(DebuggingIdentifiers.notificationSent) Sent onSearchQueryWasUpdated!")
         NotificationCenter.default.post(
@@ -52,7 +52,5 @@ extension NotificationCoordinator {
             userInfo: nil
         )
     }
-    
-    
 
 }
