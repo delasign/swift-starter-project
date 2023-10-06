@@ -26,9 +26,11 @@ extension MetalUIView: MTKViewDelegate {
             // Define the number of sides
             // Must be a var to be able to work with a buffer.
             let numberOfSides: Int = 360
-
+            // Gather the Bounds
             let screenBounds = getCurrentScreenBounds()
-
+            // Create the uniforms
+            // Must be a variable to be able to work with a MTLBuffer.
+            // For more information : https://delasign.com/blog/swift-metal-buffers/
             var uniforms: PolygonUniforms = PolygonUniforms(
                 screenWidth: Float(screenBounds.width),
                 screenHeight: Float(screenBounds.height),
