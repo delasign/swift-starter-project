@@ -52,7 +52,7 @@ extension MetalUIView: MTKViewDelegate {
                 vertexStart: 0,
                 vertexCount: uniforms.isFilled ? numberOfSides * 3 : numberOfSides + 1
             )
-            
+
             renderEncoder.endEncoding()
 
             commandBuffer.present(drawable)
