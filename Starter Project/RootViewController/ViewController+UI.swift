@@ -36,10 +36,7 @@ extension ViewController {
             // Add to subview
             self.view.addSubview(self.metalView)
             // Edges to Superview, with Safe Area Insets
-            self.metalViewTopConstraint﻿ = self.metalView.top(to: self.view, offset: ViewController.safeAreaInsets.top)
-            self.metalViewRightConstraint﻿ = self.metalView.right(to: self.view, offset: -ViewController.safeAreaInsets.right)
-            self.metalViewBottomConstraint﻿ = self.metalView.bottom(to: self.view, offset: -ViewController.safeAreaInsets.bottom)
-            self.metalViewLeftConstraint﻿ = self.metalView.left(to: self.view, offset: ViewController.safeAreaInsets.left)
+            self.metalView.edgesToSuperview()
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup Metal View!")
         }
     }

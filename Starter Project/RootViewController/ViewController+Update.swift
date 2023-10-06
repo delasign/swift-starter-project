@@ -14,13 +14,6 @@ extension ViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Create an update functionality similar to that below for all the views that use the safe area constraints.
-            // MetalView
-            updateSafeAreaInsets(
-                topConstraint: self.metalViewTopConstraint﻿,
-                rightConstraint: self.metalViewRightConstraint﻿,
-                bottomConstraint: self.metalViewBottomConstraint﻿,
-                leftConstraint: self.metalViewLeftConstraint﻿
-            )
             // Layout Subviews
             self.view.layoutIfNeeded()
             debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Updated Constraints")

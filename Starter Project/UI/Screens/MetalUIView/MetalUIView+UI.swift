@@ -30,8 +30,8 @@ extension MetalUIView {
         commandQueue = device.makeCommandQueue()
 
         let defaultLibrary = device.makeDefaultLibrary()
-        let vertexFunction = defaultLibrary?.makeFunction(name: "sample_vertex_main")
-        let fragmentFunction = defaultLibrary?.makeFunction(name: "sample_fragment_main")
+        let vertexFunction = defaultLibrary?.makeFunction(name: "polygon_vertex_main")
+        let fragmentFunction = defaultLibrary?.makeFunction(name: "polygon_fragment_main")
 
         let pipelineDescriptor = MTLRenderPipelineDescriptor()
         pipelineDescriptor.vertexFunction = vertexFunction

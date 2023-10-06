@@ -25,27 +25,19 @@ extension MetalUIView: MTKViewDelegate {
 
             // Define the number of sides
             // Must be a var to be able to work with a buffer.
-            let numberOfSides: Int = 5
-
-            // Define the struct
-            // Please note this should fall within its own file in the Models folder
-            struct Uniforms {
-                let screenWidth: Float
-                let screenHeight: Float
-                let numberOfSides: Float
-                let radius: Float // In Pixels
-            }
+            let numberOfSides: Int = 360
 
             let screenBounds = getCurrentScreenBounds()
 
-            var uniforms: Uniforms = Uniforms(
+            var uniforms: PolygonUniforms = PolygonUniforms(
                 screenWidth: Float(screenBounds.width),
                 screenHeight: Float(screenBounds.height),
                 numberOfSides: Float(numberOfSides),
-                radius: Float(200)
+                radius: Float(200),
+                isFilled: true
             )
             // Define the buffer
-            guard let uniformsBuffer: MTLBuffer = device.makeBuffer(bytes: &uniforms, length: MemoryLayout<Uniforms>.stride, options: []) else {
+            guard let uniformsBuffer: MTLBuffer = device.makeBuffer(bytes: &uniforms, length: MemoryLayout<PolygonUniforms>.stride, options: []) else {
                 return
             }
             // Set the buffer on the GPU.
@@ -55,7 +47,12 @@ extension MetalUIView: MTKViewDelegate {
 
             // Define the vertices of the inner circle
             renderEncoder.setRenderPipelineState(pipelineState)
-            renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: numberOfSides + 1)
+            renderEncoder.drawPrimitives(
+                type: uniforms.isFilled ? .triangle : .lineStrip,
+                vertexStart: 0,
+                vertexCount: uniforms.isFilled ? numberOfSides * 3 : numberOfSides + 1
+            )
+            
             renderEncoder.endEncoding()
 
             commandBuffer.present(drawable)

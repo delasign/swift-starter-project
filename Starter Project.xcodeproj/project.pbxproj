@@ -39,7 +39,7 @@
 		F01D8A6A2AC9D17D00D58AE0 /* MetalUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A692AC9D17D00D58AE0 /* MetalUIView.swift */; };
 		F01D8A6C2AC9D18B00D58AE0 /* MetalUIView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A6B2AC9D18B00D58AE0 /* MetalUIView+UI.swift */; };
 		F01D8A6E2AC9D2B400D58AE0 /* MetalUIView+MetalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A6D2AC9D2B400D58AE0 /* MetalUIView+MetalDelegate.swift */; };
-		F01D8A712AC9D35100D58AE0 /* SampleMetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A702AC9D35100D58AE0 /* SampleMetalShader.metal */; };
+		F01D8A712AC9D35100D58AE0 /* PolygonMetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A702AC9D35100D58AE0 /* PolygonMetalShader.metal */; };
 		F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */; };
 		F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */; };
 		F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */; };
@@ -87,6 +87,7 @@
 		F0EE66E82AB20CC600A7DBA0 /* NavigationButton+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */; };
 		F0EE66EA2AB20CCB00A7DBA0 /* NavigationButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */; };
 		F0EE66EC2AB20CD000A7DBA0 /* NavigationButton+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */; };
+		F0F8C6122AD051B400D329B4 /* PolygonUniforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8C6112AD051B400D329B4 /* PolygonUniforms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,7 +124,7 @@
 		F01D8A692AC9D17D00D58AE0 /* MetalUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalUIView.swift; sourceTree = "<group>"; };
 		F01D8A6B2AC9D18B00D58AE0 /* MetalUIView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetalUIView+UI.swift"; sourceTree = "<group>"; };
 		F01D8A6D2AC9D2B400D58AE0 /* MetalUIView+MetalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetalUIView+MetalDelegate.swift"; sourceTree = "<group>"; };
-		F01D8A702AC9D35100D58AE0 /* SampleMetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = SampleMetalShader.metal; sourceTree = "<group>"; };
+		F01D8A702AC9D35100D58AE0 /* PolygonMetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PolygonMetalShader.metal; sourceTree = "<group>"; };
 		F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDeviceOrientation.swift; sourceTree = "<group>"; };
 		F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateConstraints.swift; sourceTree = "<group>"; };
 		F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateConstraints.swift; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 		F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Touches.swift"; sourceTree = "<group>"; };
 		F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Animations.swift"; sourceTree = "<group>"; };
 		F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Update.swift"; sourceTree = "<group>"; };
+		F0F8C6112AD051B400D329B4 /* PolygonUniforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonUniforms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F0F8C6102AD051A800D329B4 /* Metal */,
 				F0EE66D12AB20B0400A7DBA0 /* Errors */,
 				F001B36B2A9E80FA0048BD2F /* Types */,
 				F03962002A0EF1F200713D33 /* UserDefaults */,
@@ -422,7 +425,7 @@
 		F01D8A6F2AC9D33A00D58AE0 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				F01D8A702AC9D35100D58AE0 /* SampleMetalShader.metal */,
+				F01D8A702AC9D35100D58AE0 /* PolygonMetalShader.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -624,6 +627,14 @@
 			path = NavigationButton;
 			sourceTree = "<group>";
 		};
+		F0F8C6102AD051A800D329B4 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8C6112AD051B400D329B4 /* PolygonUniforms.swift */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -763,7 +774,7 @@
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F03961F92A0EF17100713D33 /* openSettings.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
-				F01D8A712AC9D35100D58AE0 /* SampleMetalShader.metal in Sources */,
+				F01D8A712AC9D35100D58AE0 /* PolygonMetalShader.metal in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
@@ -774,6 +785,7 @@
 				F001B38A2AA4EF240048BD2F /* SFSymbols.swift in Sources */,
 				F01D8A6C2AC9D18B00D58AE0 /* MetalUIView+UI.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
+				F0F8C6122AD051B400D329B4 /* PolygonUniforms.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
 				F0EE66DB2AB20C0100A7DBA0 /* StandardButton+Touches.swift in Sources */,
