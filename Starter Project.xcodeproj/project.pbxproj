@@ -73,6 +73,8 @@
 		F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7928B2719500C1DCAF /* Configuration+Get.swift */; };
 		F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C7B28B35BC500C1DCAF /* APIClient.swift */; };
 		F0C79C8E28BA8EEC00C1DCAF /* APIRequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C79C8D28BA8EEC00C1DCAF /* APIRequestHeader.swift */; };
+		F0D299C92AD4805700C49F09 /* LineThicknessColorWheelPolygonMetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = F0D299C82AD4805700C49F09 /* LineThicknessColorWheelPolygonMetalShader.metal */; };
+		F0D299CB2AD4807800C49F09 /* OutlinedPolygonUniforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D299CA2AD4807800C49F09 /* OutlinedPolygonUniforms.swift */; };
 		F0DD144A29BA1688003122C8 /* UIView+RemoveAllViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DD144929BA1688003122C8 /* UIView+RemoveAllViews.swift */; };
 		F0ED1DC628A427600031B362 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0ED1DC528A427600031B362 /* Constants.swift */; };
 		F0EE66D32AB20B0F00A7DBA0 /* SampleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66D22AB20B0F00A7DBA0 /* SampleError.swift */; };
@@ -159,6 +161,8 @@
 		F0C79C7928B2719500C1DCAF /* Configuration+Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configuration+Get.swift"; sourceTree = "<group>"; };
 		F0C79C7B28B35BC500C1DCAF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F0C79C8D28BA8EEC00C1DCAF /* APIRequestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestHeader.swift; sourceTree = "<group>"; };
+		F0D299C82AD4805700C49F09 /* LineThicknessColorWheelPolygonMetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = LineThicknessColorWheelPolygonMetalShader.metal; sourceTree = "<group>"; };
+		F0D299CA2AD4807800C49F09 /* OutlinedPolygonUniforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedPolygonUniforms.swift; sourceTree = "<group>"; };
 		F0DD144929BA1688003122C8 /* UIView+RemoveAllViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RemoveAllViews.swift"; sourceTree = "<group>"; };
 		F0ED1DC528A427600031B362 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0EE66D22AB20B0F00A7DBA0 /* SampleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleError.swift; sourceTree = "<group>"; };
@@ -428,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				F01D8A702AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal */,
+				F0D299C82AD4805700C49F09 /* LineThicknessColorWheelPolygonMetalShader.metal */,
 				F0F8C6182AD4734300D329B4 /* InverseColorWheelMetalShader.metal */,
 			);
 			path = Shaders;
@@ -634,6 +639,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F8C6112AD051B400D329B4 /* PolygonUniforms.swift */,
+				F0D299CA2AD4807800C49F09 /* OutlinedPolygonUniforms.swift */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -760,6 +766,7 @@
 				F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */,
 				F0EE66E82AB20CC600A7DBA0 /* NavigationButton+Touches.swift in Sources */,
 				F0DD144A29BA1688003122C8 /* UIView+RemoveAllViews.swift in Sources */,
+				F0D299CB2AD4807800C49F09 /* OutlinedPolygonUniforms.swift in Sources */,
 				F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */,
 				F0EE66DF2AB20C0A00A7DBA0 /* StandardButton+Update.swift in Sources */,
 				F0F8C6192AD4734300D329B4 /* InverseColorWheelMetalShader.metal in Sources */,
@@ -784,6 +791,7 @@
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
 				F001B36F2A9E81580048BD2F /* UIScreen+GetCurrentScreen.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
+				F0D299C92AD4805700C49F09 /* LineThicknessColorWheelPolygonMetalShader.metal in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */,
 				F001B38A2AA4EF240048BD2F /* SFSymbols.swift in Sources */,
