@@ -25,7 +25,7 @@ extension MetalUIView: MTKViewDelegate {
 
             // Define the number of sides
             // Must be a var to be able to work with a buffer.
-            let numberOfSides: Int = 3
+            let numberOfSides: Int = 360
             // Gather the Bounds
             let screenBounds = getCurrentScreenBounds()
             // Create the uniforms
@@ -35,7 +35,7 @@ extension MetalUIView: MTKViewDelegate {
                 screenWidth: Float(screenBounds.width),
                 screenHeight: Float(screenBounds.height),
                 numberOfSides: Float(numberOfSides),
-                radius: Float(400),
+                radius: Float(250),
                 isFilled: true
             )
             // Define the buffer

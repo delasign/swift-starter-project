@@ -39,7 +39,7 @@
 		F01D8A6A2AC9D17D00D58AE0 /* MetalUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A692AC9D17D00D58AE0 /* MetalUIView.swift */; };
 		F01D8A6C2AC9D18B00D58AE0 /* MetalUIView+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A6B2AC9D18B00D58AE0 /* MetalUIView+UI.swift */; };
 		F01D8A6E2AC9D2B400D58AE0 /* MetalUIView+MetalDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A6D2AC9D2B400D58AE0 /* MetalUIView+MetalDelegate.swift */; };
-		F01D8A712AC9D35100D58AE0 /* PolygonMetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A702AC9D35100D58AE0 /* PolygonMetalShader.metal */; };
+		F01D8A712AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = F01D8A702AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal */; };
 		F02DBF062996C9B000A49E88 /* getDeviceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */; };
 		F02DBF082996CF6600A49E88 /* DeactivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */; };
 		F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */; };
@@ -124,7 +124,7 @@
 		F01D8A692AC9D17D00D58AE0 /* MetalUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalUIView.swift; sourceTree = "<group>"; };
 		F01D8A6B2AC9D18B00D58AE0 /* MetalUIView+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetalUIView+UI.swift"; sourceTree = "<group>"; };
 		F01D8A6D2AC9D2B400D58AE0 /* MetalUIView+MetalDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetalUIView+MetalDelegate.swift"; sourceTree = "<group>"; };
-		F01D8A702AC9D35100D58AE0 /* PolygonMetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PolygonMetalShader.metal; sourceTree = "<group>"; };
+		F01D8A702AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ColorWheelPolygonMetalShader.metal; sourceTree = "<group>"; };
 		F02DBF052996C9B000A49E88 /* getDeviceOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getDeviceOrientation.swift; sourceTree = "<group>"; };
 		F02DBF072996CF6600A49E88 /* DeactivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateConstraints.swift; sourceTree = "<group>"; };
 		F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateConstraints.swift; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 		F01D8A6F2AC9D33A00D58AE0 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				F01D8A702AC9D35100D58AE0 /* PolygonMetalShader.metal */,
+				F01D8A702AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -774,7 +774,7 @@
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F03961F92A0EF17100713D33 /* openSettings.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
-				F01D8A712AC9D35100D58AE0 /* PolygonMetalShader.metal in Sources */,
+				F01D8A712AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal in Sources */,
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
