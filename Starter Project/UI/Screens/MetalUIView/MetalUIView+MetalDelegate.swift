@@ -25,8 +25,8 @@ extension MetalUIView: MTKViewDelegate {
             // Gather the Bounds
             let screenBounds = getCurrentScreenBounds()
             // Draw the Shapes
-            drawPolygon(encoder: renderEncoder, numberOfSides: 360, x: screenBounds.width/2, y: screenBounds.height/2, radius: Float(100), isFilled: true);
-            drawPolygon(encoder: renderEncoder, numberOfSides: 5, x: 200, y: 200, radius: Float(250), isFilled: false);
+            drawPolygon(encoder: renderEncoder, numberOfSides: 360, x: screenBounds.width / 2, y: screenBounds.height / 2, radius: Float(100), isFilled: true)
+            drawPolygon(encoder: renderEncoder, numberOfSides: 5, x: 200, y: 200, radius: Float(250), isFilled: false)
             // End the Encoding
             renderEncoder.endEncoding()
             // Present
@@ -36,13 +36,13 @@ extension MetalUIView: MTKViewDelegate {
 
        }
     }
-    
+
     func drawPolygon(encoder: MTLRenderCommandEncoder, numberOfSides: Int, x: CGFloat, y: CGFloat, radius: Float, isFilled: Bool) {
         // Gather the Bounds
         let screenBounds = getCurrentScreenBounds()
         // Convert X and Y from Pixels to Metal Space
-        let proportionalX = x/screenBounds.width
-        let proportionalY = y/screenBounds.height
+        let proportionalX = x / screenBounds.width
+        let proportionalY = y / screenBounds.height
         // Normalize into metal coordinates
         let metalX: Float = Float(proportionalX * 2.0) - 1.0
         let metalY: Float = 1.0 - Float(proportionalY * 2.0)
