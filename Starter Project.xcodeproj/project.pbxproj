@@ -167,8 +167,6 @@
 		F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Touches.swift"; sourceTree = "<group>"; };
 		F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Animations.swift"; sourceTree = "<group>"; };
 		F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Update.swift"; sourceTree = "<group>"; };
-		F0F8C5E12ACF1D0700D329B4 /* schema.graphqls */ = {isa = PBXFileReference; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
-		F0F8C5E22ACF1F1C00D329B4 /* Pokemon.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Pokemon.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,7 +317,6 @@
 		F00DDDE1287C82B80062AA1E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F07673322ACF104A00A73251 /* GraphQL */,
 				F0EE66D12AB20B0400A7DBA0 /* Errors */,
 				F001B36B2A9E80FA0048BD2F /* Types */,
 				F03962002A0EF1F200713D33 /* UserDefaults */,
@@ -490,15 +487,6 @@
 				F02DBF092996CFAE00A49E88 /* ActivateConstraints.swift */,
 			);
 			path = Constraints;
-			sourceTree = "<group>";
-		};
-		F07673322ACF104A00A73251 /* GraphQL */ = {
-			isa = PBXGroup;
-			children = (
-				F0F8C5E12ACF1D0700D329B4 /* schema.graphqls */,
-				F0F8C5E22ACF1F1C00D329B4 /* Pokemon.graphql */,
-			);
-			path = GraphQL;
 			sourceTree = "<group>";
 		};
 		F079D6F02ACF14B800EC9F3B /* Frameworks */ = {
