@@ -22,45 +22,57 @@ extension MetalUIView: MTKViewDelegate {
            let device = self.metalView.device,
            let commandBuffer = device.makeCommandQueue()?.makeCommandBuffer(),
            let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) {
-
-            // Define the number of sides
-            // Must be a var to be able to work with a buffer.
-            let numberOfSides: Int = 360
             // Gather the Bounds
             let screenBounds = getCurrentScreenBounds()
-            // Create the uniforms
-            // Must be a variable to be able to work with a MTLBuffer.
-            // For more information : https://delasign.com/blog/swift-metal-buffers/
-            var uniforms: PolygonUniforms = PolygonUniforms(
-                screenWidth: Float(screenBounds.width),
-                screenHeight: Float(screenBounds.height),
-                numberOfSides: Float(numberOfSides),
-                radius: Float(250),
-                isFilled: true
-            )
-            // Define the buffer
-            guard let uniformsBuffer: MTLBuffer = device.makeBuffer(bytes: &uniforms, length: MemoryLayout<PolygonUniforms>.stride, options: []) else {
-                return
-            }
-            // Set the buffer on the GPU.
-            uniformsBuffer.label = "uniformsBuffer"
-            // Pass the buffer to the vertex and fragment shader
-            renderEncoder.setVertexBuffer(uniformsBuffer, offset: 0, index: 0)
-
-            // Define the vertices of the inner circle
-            renderEncoder.setRenderPipelineState(pipelineState)
-            renderEncoder.drawPrimitives(
-                type: uniforms.isFilled ? .triangle : .lineStrip,
-                vertexStart: 0,
-                vertexCount: uniforms.isFilled ? numberOfSides * 3 : numberOfSides + 1
-            )
-
+            // Draw the Shapes
+            drawPolygon(encoder: renderEncoder, numberOfSides: 360, x: screenBounds.width/2, y: screenBounds.height/2, radius: Float(100), isFilled: true);
+            drawPolygon(encoder: renderEncoder, numberOfSides: 5, x: 200, y: 200, radius: Float(250), isFilled: false);
+            // End the Encoding
             renderEncoder.endEncoding()
-
+            // Present
             commandBuffer.present(drawable)
+            // Commit
             commandBuffer.commit()
 
        }
+    }
+    
+    func drawPolygon(encoder: MTLRenderCommandEncoder, numberOfSides: Int, x: CGFloat, y: CGFloat, radius: Float, isFilled: Bool) {
+        // Gather the Bounds
+        let screenBounds = getCurrentScreenBounds()
+        // Convert X and Y from Pixels to Metal Space
+        let proportionalX = x/screenBounds.width
+        let proportionalY = y/screenBounds.height
+        // Normalize into metal coordinates
+        let metalX: Float = Float(proportionalX * 2.0) - 1.0
+        let metalY: Float = 1.0 - Float(proportionalY * 2.0)
+        // Create the uniforms
+        // Must be a variable to be able to work with a MTLBuffer.
+        // For more information : https://delasign.com/blog/swift-metal-buffers/
+        var uniforms: PolygonUniforms = PolygonUniforms(
+            origin: SIMD2(x: metalX, y: metalY),
+            screenWidth: Float(screenBounds.width),
+            screenHeight: Float(screenBounds.height),
+            numberOfSides: Float(numberOfSides),
+            radius: radius,
+            isFilled: isFilled
+        )
+        // Define the buffer
+        guard let uniformsBuffer: MTLBuffer = device.makeBuffer(bytes: &uniforms, length: MemoryLayout<PolygonUniforms>.stride, options: []) else {
+            return
+        }
+        // Set the buffer on the GPU.
+        uniformsBuffer.label = "uniformsBuffer"
+        // Pass the buffer to the vertex and fragment shader
+        encoder.setVertexBuffer(uniformsBuffer, offset: 0, index: 0)
+
+        // Define the vertices of the inner circle
+        encoder.setRenderPipelineState(pipelineState)
+        encoder.drawPrimitives(
+            type: uniforms.isFilled ? .triangle : .lineStrip,
+            vertexStart: 0,
+            vertexCount: uniforms.isFilled ? numberOfSides * 3 : numberOfSides + 1
+        )
     }
 
     func generateVertices(numberOfVertices: Int, radius: Float) -> [SIMD3<Float>] {

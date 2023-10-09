@@ -8,6 +8,7 @@
 import Foundation
 
 struct PolygonUniforms {
+    let origin: SIMD2<Float>
     let screenWidth: Float
     let screenHeight: Float
     let numberOfSides: Float

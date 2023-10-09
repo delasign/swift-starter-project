@@ -18,8 +18,6 @@ class MetalUIView: UIView {
     var device: MTLDevice!
     var commandQueue: MTLCommandQueue!
     var pipelineState: MTLRenderPipelineState!
-    var vertexBuffer: MTLBuffer!
-    var constantsBuffer: MTLBuffer!
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.

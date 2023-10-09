@@ -9,6 +9,7 @@ using namespace metal;
 // Step One: Define the Uniforms Struct
 // https://delasign.com/blog/swift-metal-buffers
 struct PolygonUniforms {
+    float2 origin;
     float screenWidth;
     float screenHeight;
     float numberOfSides;
@@ -48,6 +49,7 @@ vertex VertexOut polygon_vertex_main(uint vertexID [[vertex_id]], constant Polyg
     // Determine the constants
     float aspectRatio = uniforms.screenWidth/uniforms.screenHeight;
     float polygonRadius = uniforms.radius / uniforms.screenWidth;
+    float2 origin = uniforms.origin;
     
     // Define the output variables
     float3 position;
@@ -67,7 +69,7 @@ vertex VertexOut polygon_vertex_main(uint vertexID [[vertex_id]], constant Polyg
         bool isCenterPoint = vertexID % 3 == 0;
         if (isCenterPoint) {
             // Determine the position
-            position = float3(0,0,0);
+            position = float3(origin.x,origin.y,0);
             // Determine the color
             color = float4(1.0,1.0,1.0,1.0);
         } else {
@@ -79,8 +81,8 @@ vertex VertexOut polygon_vertex_main(uint vertexID [[vertex_id]], constant Polyg
             thetaInDegrees = 360 / uniforms.numberOfSides * index;
             thetaInRadians = thetaInDegrees * M_PI_F / 180;
             // Calculate the X and Y
-            x = polygonRadius * sin(thetaInRadians);
-            y = polygonRadius * aspectRatio * cos(thetaInRadians);
+            x = origin.x + polygonRadius * sin(thetaInRadians);
+            y = origin.y + polygonRadius * aspectRatio * cos(thetaInRadians);
             // Determine the position
             position = float3(x,y,0);
             // Determine the color
@@ -97,8 +99,8 @@ vertex VertexOut polygon_vertex_main(uint vertexID [[vertex_id]], constant Polyg
         thetaInDegrees = 360 / uniforms.numberOfSides * index;
         thetaInRadians = thetaInDegrees * M_PI_F / 180;
         // Calculate the X and Y
-        x = polygonRadius * sin(thetaInRadians);
-        y = polygonRadius * aspectRatio * cos(thetaInRadians);
+        x = origin.x + polygonRadius * sin(thetaInRadians);
+        y = origin.y + polygonRadius * aspectRatio * cos(thetaInRadians);
         // Determine the position
         position = float3(x,y,0);
         // Determine the color
