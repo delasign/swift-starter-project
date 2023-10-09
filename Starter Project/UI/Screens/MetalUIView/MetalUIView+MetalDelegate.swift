@@ -53,7 +53,7 @@ extension MetalUIView: MTKViewDelegate {
         } catch {
             fatalError("Failed to create pipeline state: \(error)")
         }
-        
+
         // Gather the Bounds
         let screenBounds = getCurrentScreenBounds()
         // Convert X and Y from Pixels to Metal Space
