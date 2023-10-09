@@ -1,4 +1,4 @@
-// Color Wheel Polygon Metal Shader
+// Inverse Color Wheel Polygon Metal Shader
 // For more information on libraries consult the link below
 // https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
 
@@ -29,23 +29,24 @@ struct VertexOut {
 // MARK: Helper Functions
 // Declare functions before the vertex and fragment functions
 // Please note that theta is in degrees and ranges from 0 -> 360
-float4 colorWheel(float theta) {
+float4 inverseColorWheel(float theta) {
     float normalizedTheta;
     if (theta < 120) {
         normalizedTheta = theta;
-        return float4((120-normalizedTheta)/120, normalizedTheta/120, 0.0, 1.0);
+        return float4(normalizedTheta/120, 0.0, (120-normalizedTheta)/120, 1.0);
     } else if (theta < 240) {
         normalizedTheta = theta - 120;
-        return float4(0.0,(120-normalizedTheta)/120, normalizedTheta/120 ,1.0);
+        return float4((120-normalizedTheta)/120, normalizedTheta/120, 0.0, 1.0);
+        
     } else {
         normalizedTheta = theta - 240;
-        return float4(normalizedTheta/120, 0.0, (120-normalizedTheta)/120, 1.0);
+        return float4(0.0,(120-normalizedTheta)/120, normalizedTheta/120 ,1.0);
     }
 }
 
 // MARK: Vertex Function
 // Step Four: Define the Vertex Function - it takes a PolygonUniform struct at Buffer 0.
-vertex VertexOut color_wheel_vertex_main(uint vertexID [[vertex_id]], constant PolygonUniforms &uniforms[[buffer(0)]]) {
+vertex VertexOut inverse_color_wheel_vertex_main(uint vertexID [[vertex_id]], constant PolygonUniforms &uniforms[[buffer(0)]]) {
     // Determine the constants
     float aspectRatio = uniforms.screenWidth/uniforms.screenHeight;
     float polygonRadius = uniforms.radius / uniforms.screenWidth;
@@ -86,7 +87,7 @@ vertex VertexOut color_wheel_vertex_main(uint vertexID [[vertex_id]], constant P
             // Determine the position
             position = float3(x,y,0);
             // Determine the color
-            color = colorWheel(thetaInDegrees);
+            color = inverseColorWheel(thetaInDegrees);
         }
     } else {
         // Update the vertex ID
@@ -104,7 +105,7 @@ vertex VertexOut color_wheel_vertex_main(uint vertexID [[vertex_id]], constant P
         // Determine the position
         position = float3(x,y,0);
         // Determine the color
-        color = colorWheel(thetaInDegrees);
+        color = inverseColorWheel(thetaInDegrees);
     }
     
     // Return the Vertex
@@ -115,6 +116,6 @@ vertex VertexOut color_wheel_vertex_main(uint vertexID [[vertex_id]], constant P
 
 // MARK: Fragment Function
 // Step Five: Define the Fragment Function
-fragment float4 color_wheel_fragment_main(VertexOut vertexOut [[stage_in]]) {
+fragment float4 inverse_color_wheel_fragment_main(VertexOut vertexOut [[stage_in]]) {
     return vertexOut.color;
 }

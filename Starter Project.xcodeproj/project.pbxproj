@@ -88,6 +88,7 @@
 		F0EE66EA2AB20CCB00A7DBA0 /* NavigationButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */; };
 		F0EE66EC2AB20CD000A7DBA0 /* NavigationButton+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */; };
 		F0F8C6122AD051B400D329B4 /* PolygonUniforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8C6112AD051B400D329B4 /* PolygonUniforms.swift */; };
+		F0F8C6192AD4734300D329B4 /* InverseColorWheelMetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = F0F8C6182AD4734300D329B4 /* InverseColorWheelMetalShader.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +174,7 @@
 		F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Animations.swift"; sourceTree = "<group>"; };
 		F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Update.swift"; sourceTree = "<group>"; };
 		F0F8C6112AD051B400D329B4 /* PolygonUniforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonUniforms.swift; sourceTree = "<group>"; };
+		F0F8C6182AD4734300D329B4 /* InverseColorWheelMetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = InverseColorWheelMetalShader.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				F01D8A702AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal */,
+				F0F8C6182AD4734300D329B4 /* InverseColorWheelMetalShader.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				F0DD144A29BA1688003122C8 /* UIView+RemoveAllViews.swift in Sources */,
 				F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */,
 				F0EE66DF2AB20C0A00A7DBA0 /* StandardButton+Update.swift in Sources */,
+				F0F8C6192AD4734300D329B4 /* InverseColorWheelMetalShader.metal in Sources */,
 				F0EE66DD2AB20C0600A7DBA0 /* StandardButton+Animations.swift in Sources */,
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,

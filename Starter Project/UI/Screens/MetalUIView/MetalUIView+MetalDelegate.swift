@@ -25,8 +25,8 @@ extension MetalUIView: MTKViewDelegate {
             // Gather the Bounds
             let screenBounds = getCurrentScreenBounds()
             // Draw the Shapes
-            drawPolygon(encoder: renderEncoder, numberOfSides: 360, x: screenBounds.width / 2, y: screenBounds.height / 2, radius: Float(100), isFilled: true)
-            drawPolygon(encoder: renderEncoder, numberOfSides: 5, x: 200, y: 200, radius: Float(250), isFilled: false)
+            drawPolygon(vertexShaderFunction: "color_wheel_vertex_main", fragmentShaderFunction: "color_wheel_fragment_main", encoder: renderEncoder, numberOfSides: 360, x: screenBounds.width / 2, y: screenBounds.height / 2, radius: Float(100), isFilled: true)
+            drawPolygon(vertexShaderFunction: "inverse_color_wheel_vertex_main", fragmentShaderFunction: "inverse_color_wheel_fragment_main", encoder: renderEncoder, numberOfSides: 5, x: 200, y: 200, radius: Float(250), isFilled: true)
             // End the Encoding
             renderEncoder.endEncoding()
             // Present
@@ -37,7 +37,23 @@ extension MetalUIView: MTKViewDelegate {
        }
     }
 
-    func drawPolygon(encoder: MTLRenderCommandEncoder, numberOfSides: Int, x: CGFloat, y: CGFloat, radius: Float, isFilled: Bool) {
+    func drawPolygon(vertexShaderFunction: String, fragmentShaderFunction: String, encoder: MTLRenderCommandEncoder, numberOfSides: Int, x: CGFloat, y: CGFloat, radius: Float, isFilled: Bool) {
+        // Set the Vertex
+        let defaultLibrary = device.makeDefaultLibrary()
+        let vertexFunction = defaultLibrary?.makeFunction(name: vertexShaderFunction)
+        let fragmentFunction = defaultLibrary?.makeFunction(name: fragmentShaderFunction)
+
+        let pipelineDescriptor = MTLRenderPipelineDescriptor()
+        pipelineDescriptor.vertexFunction = vertexFunction
+        pipelineDescriptor.fragmentFunction = fragmentFunction
+        pipelineDescriptor.colorAttachments[0].pixelFormat = metalView.colorPixelFormat
+
+        do {
+            pipelineState = try device.makeRenderPipelineState(descriptor: pipelineDescriptor)
+        } catch {
+            fatalError("Failed to create pipeline state: \(error)")
+        }
+        
         // Gather the Bounds
         let screenBounds = getCurrentScreenBounds()
         // Convert X and Y from Pixels to Metal Space

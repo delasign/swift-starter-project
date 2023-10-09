@@ -28,21 +28,5 @@ extension MetalUIView {
         addSubview(metalView)
 
         commandQueue = device.makeCommandQueue()
-
-        let defaultLibrary = device.makeDefaultLibrary()
-        let vertexFunction = defaultLibrary?.makeFunction(name: "polygon_vertex_main")
-        let fragmentFunction = defaultLibrary?.makeFunction(name: "polygon_fragment_main")
-
-        let pipelineDescriptor = MTLRenderPipelineDescriptor()
-        pipelineDescriptor.vertexFunction = vertexFunction
-        pipelineDescriptor.fragmentFunction = fragmentFunction
-        pipelineDescriptor.colorAttachments[0].pixelFormat = metalView.colorPixelFormat
-
-        do {
-            pipelineState = try device.makeRenderPipelineState(descriptor: pipelineDescriptor)
-        } catch {
-            fatalError("Failed to create pipeline state: \(error)")
-        }
-
     }
 }
