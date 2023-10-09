@@ -93,7 +93,7 @@ extension MetalUIView: MTKViewDelegate {
             vertexCount: uniforms.isFilled ? numberOfSides * 3 : numberOfSides + 1
         )
     }
-    
+
     func drawOutlinedPolygon(vertexShaderFunction: String, fragmentShaderFunction: String, encoder: MTLRenderCommandEncoder, numberOfSides: Int, x: CGFloat, y: CGFloat, radius: Float, lineThickness: CGFloat) {
         // Set the Vertex
         let defaultLibrary = device.makeDefaultLibrary()
@@ -119,9 +119,9 @@ extension MetalUIView: MTKViewDelegate {
         // Normalize into metal coordinates
         let metalX: Float = Float(proportionalX * 2.0) - 1.0
         let metalY: Float = 1.0 - Float(proportionalY * 2.0)
-        
+
         // Convert line thickness to metal
-        let metalLineThickness = Float(lineThickness/screenBounds.width)
+        let metalLineThickness = Float(lineThickness / screenBounds.width)
         // Create the uniforms
         // Must be a variable to be able to work with a MTLBuffer.
         // For more information : https://delasign.com/blog/swift-metal-buffers/
@@ -148,7 +148,7 @@ extension MetalUIView: MTKViewDelegate {
         encoder.drawPrimitives(
             type: .triangle,
             vertexStart: 0,
-            vertexCount: numberOfSides*6
+            vertexCount: numberOfSides * 6
         )
     }
 
