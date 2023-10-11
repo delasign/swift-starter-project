@@ -153,6 +153,10 @@ Same as the above and select replace from the dropdown.
 2. <a href="https://delasign.com/blog/swift-graphql-call/?utm=swift-starter-project">How to make an GraphQL call in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-api-call/?utm=swift-starter-project">How to make an API call with a variable codable type in Swift 🔗</a>
 
+## CADisplayLink
+1. <a href="https://delasign.com/blog/metal-animations-cadisplaylink/?utm=swift-starter-project">How to perform animations in Metal using a CADisplayLink 🔗</a>
+2. <a href="https://delasign.com/blog/swift-cadisplaylink-pause-resume-remove-invalidate/?utm=swift-starter-project">How to pause, resume, remove or invalidate a CADisplayLink in Swift 🔗</a>
+
 ## Bluetooth
 1. <a href="https://delasign.com/blog/swift-bluetooth-hide-power-alert/?utm=swift-starter-project">How to hide the Bluetooth Alert in Swift 🔗</a>
 
@@ -330,5 +334,6 @@ Same as the above and select replace from the dropdown.
 12. <a href="https://delasign.com/blog/metal-stroke-variable-thickness/?utm=swift-starter-project">How to draw an outlined shape with a line width in Metal 🔗</a>
 13. <a href="https://delasign.com/blog/metal-fragment-shader-alpha/?utm=swift-starter-project">How to make a Metal fragment shader change alpha transparency 🔗</a>
 14. <a href="https://delasign.com/blog/metal-start-stop-rendering/?utm=swift-starter-project">How to start and stop the rendering of a MTKView 🔗</a>
-
+15. <a href="https://delasign.com/blog/metal-animations-cadisplaylink/?utm=swift-starter-project">How to perform animations in Metal using a CADisplayLink 🔗</a>
+16. <a href="https://delasign.com/blog/metal-mtkview-control-anti-aliasing/?utm=swift-starter-project">How to control anti-aliasing of an MTKView in Swift 🔗</a>
 
