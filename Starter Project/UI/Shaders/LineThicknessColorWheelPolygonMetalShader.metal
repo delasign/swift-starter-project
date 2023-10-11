@@ -2,46 +2,13 @@
 // For more information on libraries consult the link below
 // https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf
 
-#include "metal_stdlib"
-#include "metal_math"
-using namespace metal;
-
-// Step One: Define the Uniforms Struct
-// https://delasign.com/blog/swift-metal-buffers
-struct OutlinedPolygonUniforms {
-    float2 origin;
-    float screenWidth;
-    float screenHeight;
-    float numberOfSides;
-    float radius;
-    float lineThickness;
-};
-
-// Step Two: Define the Vertex Out
-// https://delasign.com/blog/metal-pass-data-from-vertex-to-fragment
-struct VertexOut {
-    // This is required for it to function as expected
-    float4 position [[position]];
-    float4 color;
-};
+#include "Shared.h"
 
 // Step Three: Declare the helper functions
 // MARK: Helper Functions
 // Declare functions before the vertex and fragment functions
-// Please note that theta is in degrees and ranges from 0 -> 360
-float4 lineThicknessColorWheel(float theta) {
-    float normalizedTheta;
-    if (theta < 120) {
-        normalizedTheta = theta;
-        return float4((120-normalizedTheta)/120, normalizedTheta/120, 0.0, 1.0);
-    } else if (theta < 240) {
-        normalizedTheta = theta - 120;
-        return float4(0.0,(120-normalizedTheta)/120, normalizedTheta/120 ,1.0);
-    } else {
-        normalizedTheta = theta - 240;
-        return float4(normalizedTheta/120, 0.0, (120-normalizedTheta)/120, 1.0);
-    }
-}
+
+
 
 // MARK: Vertex Function
 // Step Four: Define the Vertex Function - it takes a PolygonUniform struct at Buffer 0.

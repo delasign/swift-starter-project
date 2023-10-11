@@ -60,6 +60,8 @@
 		F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F60288847BC002AF19B /* PrintSystemFonts.swift */; };
 		F0397F6728885DA0002AF19B /* UpdateSafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */; };
 		F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* SystemImages.swift */; };
+		F05654662AD6EA3100915861 /* Shared.h in Sources */ = {isa = PBXBuildFile; fileRef = F05654652AD6EA3100915861 /* Shared.h */; };
+		F05654692AD6F16900915861 /* Shared.metal in Sources */ = {isa = PBXBuildFile; fileRef = F05654672AD6F02000915861 /* Shared.metal */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */; };
@@ -148,6 +150,8 @@
 		F0397F60288847BC002AF19B /* PrintSystemFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintSystemFonts.swift; sourceTree = "<group>"; };
 		F0397F6628885DA0002AF19B /* UpdateSafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSafeAreaInsets.swift; sourceTree = "<group>"; };
 		F0397F6828888C0D002AF19B /* SystemImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImages.swift; sourceTree = "<group>"; };
+		F05654652AD6EA3100915861 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
+		F05654672AD6F02000915861 /* Shared.metal */ = {isa = PBXFileReference; explicitFileType = sourcecode.metal; path = Shared.metal; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SizeToFit.swift"; sourceTree = "<group>"; };
@@ -434,6 +438,8 @@
 				F01D8A702AC9D35100D58AE0 /* ColorWheelPolygonMetalShader.metal */,
 				F0D299C82AD4805700C49F09 /* LineThicknessColorWheelPolygonMetalShader.metal */,
 				F0F8C6182AD4734300D329B4 /* InverseColorWheelMetalShader.metal */,
+				F05654652AD6EA3100915861 /* Shared.h */,
+				F05654672AD6F02000915861 /* Shared.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -680,6 +686,7 @@
 				TargetAttributes = {
 					F00DDDC8287C82480062AA1E = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -770,6 +777,7 @@
 				F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */,
 				F0EE66DF2AB20C0A00A7DBA0 /* StandardButton+Update.swift in Sources */,
 				F0F8C6192AD4734300D329B4 /* InverseColorWheelMetalShader.metal in Sources */,
+				F05654662AD6EA3100915861 /* Shared.h in Sources */,
 				F0EE66DD2AB20C0600A7DBA0 /* StandardButton+Animations.swift in Sources */,
 				F0C79C7128B269DE00C1DCAF /* NetworkError.swift in Sources */,
 				F0C79C7628B26D1400C1DCAF /* Configuration.swift in Sources */,
@@ -782,6 +790,7 @@
 				F00DDDCD287C82480062AA1E /* AppDelegate.swift in Sources */,
 				F008FCAC287FA82B00B2495D /* Styleguide+FirstStyle.swift in Sources */,
 				F0C79C7828B26E6800C1DCAF /* ConfigurationKeys.swift in Sources */,
+				F05654692AD6F16900915861 /* Shared.metal in Sources */,
 				F00DDDCF287C82480062AA1E /* SceneDelegate.swift in Sources */,
 				F03961F92A0EF17100713D33 /* openSettings.swift in Sources */,
 				F0397F5A288741CB002AF19B /* ViewController+Update.swift in Sources */,
@@ -967,6 +976,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7A7MF4P2T9;
@@ -986,6 +996,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.delasign.Starter-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -996,6 +1007,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7A7MF4P2T9;
