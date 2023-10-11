@@ -62,6 +62,7 @@
 		F0397F6928888C0D002AF19B /* SystemImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0397F6828888C0D002AF19B /* SystemImages.swift */; };
 		F05654662AD6EA3100915861 /* Shared.h in Sources */ = {isa = PBXBuildFile; fileRef = F05654652AD6EA3100915861 /* Shared.h */; };
 		F05654692AD6F16900915861 /* Shared.metal in Sources */ = {isa = PBXBuildFile; fileRef = F05654672AD6F02000915861 /* Shared.metal */; };
+		F056546B2AD703EA00915861 /* MetalUIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056546A2AD703EA00915861 /* MetalUIView+Animations.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */; };
@@ -152,6 +153,7 @@
 		F0397F6828888C0D002AF19B /* SystemImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImages.swift; sourceTree = "<group>"; };
 		F05654652AD6EA3100915861 /* Shared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shared.h; sourceTree = "<group>"; };
 		F05654672AD6F02000915861 /* Shared.metal */ = {isa = PBXFileReference; explicitFileType = sourcecode.metal; path = Shared.metal; sourceTree = "<group>"; };
+		F056546A2AD703EA00915861 /* MetalUIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetalUIView+Animations.swift"; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SizeToFit.swift"; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				F01D8A692AC9D17D00D58AE0 /* MetalUIView.swift */,
 				F01D8A6B2AC9D18B00D58AE0 /* MetalUIView+UI.swift */,
 				F01D8A6D2AC9D2B400D58AE0 /* MetalUIView+MetalDelegate.swift */,
+				F056546A2AD703EA00915861 /* MetalUIView+Animations.swift */,
 			);
 			path = MetalUIView;
 			sourceTree = "<group>";
@@ -756,6 +759,7 @@
 			files = (
 				F03962022A0EF1FF00713D33 /* UserDefaultKeys.swift in Sources */,
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
+				F056546B2AD703EA00915861 /* MetalUIView+Animations.swift in Sources */,
 				F0EE66D72AB20BF800A7DBA0 /* StandardButton.swift in Sources */,
 				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
 				F001B3712A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift in Sources */,

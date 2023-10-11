@@ -26,10 +26,7 @@ extension MetalUIView: MTKViewDelegate {
             let screenBounds = getCurrentScreenBounds()
             // Draw the Shapes
             // Draw a Polygon (filled)
-            drawPolygon(vertexShaderFunction: "color_wheel_vertex_main", fragmentShaderFunction: "color_wheel_fragment_main", encoder: renderEncoder, numberOfSides: 360, x: screenBounds.width / 2, y: screenBounds.height / 2, radius: Float(100), isFilled: true)
-            // Draw an outline of a shape
-            // Please note that the lineThickness draws the line from the center of the line outwards.
-            drawOutlinedPolygon(vertexShaderFunction: "line_thickness_color_wheel_vertex_main", fragmentShaderFunction: "line_thickness_color_wheel_fragment_main", encoder: renderEncoder, numberOfSides: 3, x: screenBounds.width / 2, y: screenBounds.height / 2, radius: Float(210), lineThickness: 20)
+            drawPolygon(vertexShaderFunction: "color_wheel_vertex_main", fragmentShaderFunction: "color_wheel_fragment_main", encoder: renderEncoder, numberOfSides: 360, x: origin.x, y: origin.y, radius: Float(100), isFilled: true)
             // End the Encoding
             renderEncoder.endEncoding()
             // Present

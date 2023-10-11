@@ -18,6 +18,17 @@ class MetalUIView: UIView {
     var device: MTLDevice!
     var commandQueue: MTLCommandQueue!
     var pipelineState: MTLRenderPipelineState!
+    // Animation Variables
+    /// Declare the Display Link
+    var displayLink: CADisplayLink = CADisplayLink();
+    /// Declare a variable to track the refresh rate and set it to 60Hz to begin with.
+    var displayLinkRefreshRate: CGFloat = 1/60
+    /// Declare a magnitude variable that scales between 0 and 1
+    var magnitude: CGFloat = 0;
+    /// Declare a variable that tracks the direction of motion. In this case, if its going (0 -> 1) is true and (1 -> 0) is false;
+    var magnitudeIsGrowing: Bool = true;
+    /// Declare the origin that will be adapted as the magnitude changes. It is initially set to the center of the screen
+    var origin: CGPoint = CGPoint(x: getCurrentScreenBounds().width/2, y: getCurrentScreenBounds().height/2);
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
@@ -30,6 +41,7 @@ class MetalUIView: UIView {
 //        self.backgroundColor = Styleguide.getBackgroundColor()
         // MARK: Functionality Setup
         self.setupUI()
+        self.setupCADisplayLink()
     }
 
     override func layoutSubviews() {
