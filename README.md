@@ -335,5 +335,5 @@ Same as the above and select replace from the dropdown.
 13. <a href="https://delasign.com/blog/metal-fragment-shader-alpha/?utm=swift-starter-project">How to make a Metal fragment shader change alpha transparency 🔗</a>
 14. <a href="https://delasign.com/blog/metal-start-stop-rendering/?utm=swift-starter-project">How to start and stop the rendering of a MTKView 🔗</a>
 15. <a href="https://delasign.com/blog/metal-animations-cadisplaylink/?utm=swift-starter-project">How to perform animations in Metal using a CADisplayLink 🔗</a>
-16. <a href="https://delasign.com/blog/metal-mtkview-control-anti-aliasing/?utm=swift-starter-project">How to control anti-aliasing of an MTKView in Swift 🔗</a>
+16. <a href="https://delasign.com/blog/metal-mtkview-control-anti-aliasing/?utm=swift-starter-project">How to control the anti-aliasing of an MTKView in Swift 🔗</a>
 
