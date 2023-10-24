@@ -147,6 +147,8 @@ Same as the above and select replace from the dropdown.
 2. <a href="https://delasign.com/blog/swift-screensize-changes/?utm=swift-starter-project">How to observe changes in screen size in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-observe-device-orientation/?utm=swift-starter-project">How to observe device orientation changes in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-device-orientation/?utm=swift-starter-project">How to get the device orientation of an iPhone or iPad in Swift 🔗</a>
+4. <a href="https://delasign.com/blog/swift-json-to-data/?utm=swift-starter-project">How to convert a JSON string into data in Swift 🔗</a>
+5. <a href="https://delasign.com/blog/swift-data-json-string/?utm=swift-starter-project">How to convert Data into a JSON string in Swift 🔗</a>
 
 ## API / GraphQL
 1. <a href="https://delasign.com/blog/swift-setup-datacoordinator/?utm=swift-starter-project">How to setup a Swift project to make API calls in XCode. 🔗</a>
