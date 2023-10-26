@@ -121,15 +121,23 @@ Same as the above and select replace from the dropdown.
 
 ## SwiftData
 1. <a href="https://delasign.com/blog/xcode-swiftdata-guide/?utm=swift-starter-project">SwiftData Quick Start Guide 🔗</a>
-2. <a href="https://delasign.com/blog/xcode-swiftdata-persistant-container/?utm=swift-starter-project">How to create or access a SwiftData Persistent Container in Swift 🔗</a>
-3. <a href="https://delasign.com/blog/xcode-swiftdata-model/?utm=swift-starter-project">How to create a SwiftData Model in Swift 🔗</a>
-4. <a href="https://delasign.com/blog/xcode-swift-data-get-all/?utm=swift-starter-project">How to get all SwiftData objects in Swift 🔗</a>
-5. <a href="https://delasign.com/blog/xcode-swiftdata-get-object/?utm=swift-starter-project">How to get an object from SwiftData in Swift 🔗</a>
-6. <a href="https://delasign.com/blog/xcode-swiftdata-object-exists/?utm=swift-starter-project">How to know if an object already exists in SwiftData 🔗</a>
-7. <a href="https://delasign.com/blog/xcode-swiftdata-create-new/?utm=swift-starter-project">How to add an object to SwiftData in Swift 🔗</a>
-8. <a href="https://delasign.com/blog/xcode-swiftdata-delete/?utm=swift-starter-project">How to delete an object from SwiftData in Swift 🔗</a>
-9. <a href="https://delasign.com/blog/xcode-swiftdata-delete-all/?utm=swift-starter-project">How to delete all objects from SwiftData in Swift 🔗</a>
-10. <a href="https://delasign.com/blog/xcode-swiftdata-update/?utm=swift-starter-project">How to update an object in SwiftData in Swift 🔗</a>
+
+### Setup
+1. <a href="https://delasign.com/blog/xcode-swiftdata-persistant-container/?utm=swift-starter-project">How to create or access a SwiftData Persistent Container in Swift 🔗</a>
+
+### Modelling
+1. <a href="https://delasign.com/blog/xcode-swiftdata-model/?utm=swift-starter-project">How to create a SwiftData Model in Swift 🔗</a>
+1. <a href="https://delasign.com/blog/swift-data-complex-values/?utm=swift-starter-project">How to add complex values to SwiftData models 🔗</a>
+1. <a href="https://delasign.com/blog/xcode-swiftdata-non-persistant-variables/?utm=swift-starter-project">How to create a SwiftData model variable that does not persist 🔗</a>
+
+### Operations
+1. <a href="https://delasign.com/blog/xcode-swift-data-get-all/?utm=swift-starter-project">How to get all SwiftData objects in Swift 🔗</a>
+2. <a href="https://delasign.com/blog/xcode-swiftdata-get-object/?utm=swift-starter-project">How to get an object from SwiftData in Swift 🔗</a>
+3. <a href="https://delasign.com/blog/xcode-swiftdata-object-exists/?utm=swift-starter-project">How to know if an object already exists in SwiftData 🔗</a>
+4. <a href="https://delasign.com/blog/xcode-swiftdata-create-new/?utm=swift-starter-project">How to add an object to SwiftData in Swift 🔗</a>
+5. <a href="https://delasign.com/blog/xcode-swiftdata-delete/?utm=swift-starter-project">How to delete an object from SwiftData in Swift 🔗</a>
+6. <a href="https://delasign.com/blog/xcode-swiftdata-delete-all/?utm=swift-starter-project">How to delete all objects from SwiftData in Swift 🔗</a>
+7. <a href="https://delasign.com/blog/xcode-swiftdata-update/?utm=swift-starter-project">How to update an object in SwiftData in Swift 🔗</a>
 
 ## Advanced UI
 1. <a href="https://delasign.com/blog/swift-dynamic-ui-view/?utm=swift-starter-project">How to create a UIView that dynamically adapts to its contents 🔗</a>
