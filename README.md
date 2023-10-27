@@ -139,6 +139,9 @@ Same as the above and select replace from the dropdown.
 6. <a href="https://delasign.com/blog/xcode-swiftdata-delete-all/?utm=swift-starter-project">How to delete all objects from SwiftData in Swift 🔗</a>
 7. <a href="https://delasign.com/blog/xcode-swiftdata-update/?utm=swift-starter-project">How to update an object in SwiftData in Swift 🔗</a>
 
+### Errors
+1. <a href="https://delasign.com/blog/xcode-swiftdata-non-persistant-variables/?utm=swift-starter-project">How to create a SwiftData model variable that does not persist 🔗</a>
+
 ## Advanced UI
 1. <a href="https://delasign.com/blog/swift-dynamic-ui-view/?utm=swift-starter-project">How to create a UIView that dynamically adapts to its contents 🔗</a>
 2. <a href="https://delasign.com/blog/swift-searchbar/?utm=swift-starter-project">How to make a custom search bar in Swift. 🔗</a>
