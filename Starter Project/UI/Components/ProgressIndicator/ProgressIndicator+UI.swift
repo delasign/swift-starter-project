@@ -28,7 +28,7 @@ extension ProgressIndicator {
         circle.strokeColor = Styleguide.getPrimaryColor().cgColor
         circle.lineWidth = lineWidth
         circle.fillColor = nil
-        
+
         circle.strokeStart = 0.0
         circle.strokeEnd = 0.0
 

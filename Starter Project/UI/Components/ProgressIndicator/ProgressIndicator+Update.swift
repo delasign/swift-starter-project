@@ -29,15 +29,15 @@ extension ProgressIndicator {
     }
 
     func reset() {
-        
+
         self.isCurrentlyDrawingItselfForTheFirstTime = false
-        
+
         // Show No Circle
         self.strokeStart = 0.0
         self.circle.strokeStart = 0.0
         self.strokeEnd = 0.0
         self.circle.strokeEnd = 0.0
-        
+
         self.circle.fillColor = nil
         self.circle.removeAllAnimations()
         self.background.backgroundColor = Styleguide.getPrimaryColor()
