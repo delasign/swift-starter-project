@@ -15,15 +15,13 @@ extension CustomUIView {
     func setupUI() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.setupLabel()
+            self.setupProgressIndicator()
         }
     }
 
     // MARK: UI Setup Functionality
-    private func setupLabel() {
-        guard let content = LanguageCoordinator.shared.currentContent else { return }
-        label.attributedText = Styleguide.attributedText(text: content.sample.sampleString)
-        addSubview(label)
-        label.centerInSuperview()
+    private func setupProgressIndicator() {
+        addSubview(progressIndicator)
+        progressIndicator.centerInSuperview()
     }
 }
