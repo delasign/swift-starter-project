@@ -79,6 +79,8 @@ Same as the above and select replace from the dropdown.
 2. <a href="https://delasign.com/blog/xcode-view-all-breakpoint/?utm=swift-starter-project">How to view all breakpoints in XCode 🔗</a>
 3. <a href="https://delasign.com/blog/xcode-activate-or-deactivate-breakpoints/?utm=swift-starter-project">How to activate or deactivate breakpoints in XCode 🔗</a>
 4. <a href="https://delasign.com/blog/xcode-remove-breakpoint/?utm=swift-starter-project">How to remove a breakpoint in XCode 🔗</a>
+5. <a href="https://delasign.com/blog/xcode-instruments-profile-cpu/?utm=swift-starter-project">How to profile CPU usage using Instruments in XCode 🔗</a>
+6. <a href="https://delasign.com/blog/xcode-instruments-diagnose-cpu-memory/?utm=swift-starter-project">How to diagnose a hang, severe hang or freeze in XCode 🔗</a>
 
 ### Design Systems
 1. <a href="https://delasign.com/blog/swift-singleton/?utm=swift-starter-project">How to create a singleton in Swift 🔗</a>
@@ -149,6 +151,7 @@ Same as the above and select replace from the dropdown.
 4. <a href="https://delasign.com/blog/swift-dynamic-uicollectionviewcell/?utm=swift-starter-project">How to create a UICollectionView with cells that size to fit content 🔗</a
 5. <a href="https://delasign.com/blog/swift-data-driven-uicollectionview/?utm=swift-starter-project">How to make a custom data driven UICollectionView 🔗</a>
 6. <a href="https://delasign.com/blog/swift-multi-section-uicollectionview-compositional-layout/?utm=swift-starter-project">How to create a multi-section UICollectionViewCompositionalLayout 🔗</a>
+7. <a href="https://delasign.com/blog/swift-animated-progress-indicator/?utm=swift-starter-project">How to create an animated progress indicator in Swift 🔗</a>
 
 ## Async / Await
 1. <a href="https://delasign.com/blog/swift-async-await/?utm=swift-starter-project">How to use async and await in Swift projects 🔗</a>
