@@ -5,8 +5,8 @@
 	<key>environment</key>
 	<string>prod</string>
 	<key>baseURL</key>
-	<string>https://beta.pokeapi.co/graphql/v1beta</string>
+	<string></string>
 	<key>apiKey</key>
-	<string>your base API Key</string>
+	<string></string>
 </dict>
 </plist>
