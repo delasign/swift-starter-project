@@ -121,6 +121,12 @@ Same as the above and select replace from the dropdown.
 4. <a href="https://delasign.com/blog/swift-carousel-indicator/?utm=swift-starter-project">How to create a scroll indicator for a carousel in Swift 🔗</a>
 5. <a href="https://delasign.com/blog/swift-multi-section-uicollectionview/?utm=swift-starter-project">How to create a UICollectionView with multiple sections in Swift 🔗</a>
 
+## Actors
+
+1. <a href="https://delasign.com/blog/swift-global-actor/?utm=swift-starter-project">How to create and use a global actor in Swift 🔗</a>
+2. <a href="https://delasign.com/blog/swift-actor-properties-get-without-async/?utm=swift-starter-project">How to use actor properties from the main actor without async/await 🔗</a>
+3. <a href="https://delasign.com/blog/swift-actor-properties-write-without-async/?utm=swift-starter-project">How to update actor properties from the main actor 🔗</a>
+
 ## SwiftData
 1. <a href="https://delasign.com/blog/xcode-swiftdata-guide/?utm=swift-starter-project">SwiftData Quick Start Guide 🔗</a>
 

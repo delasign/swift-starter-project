@@ -15,12 +15,14 @@ class ViewController: UIViewController {
     // The Experience State is managed by the UIViewController - and initially is on a "custom" state
     var experienceState: ExperienceStates = .custom {
         didSet {
-            // Update the DataCoordinator so everyone knows
-            DataCoordinator.shared.experienceState = experienceState
-            // Notify the System
-            NotificationCoordinator.shared.sendOnExperienceStateUpdate()
-            // Perform relevant screen changes (i.e. hide/show)
-            self.onStateUpdate()
+            Task {
+                    // Update the DataCoordinator so everyone knows
+                DataCoordinator.shared.experienceState = experienceState
+                // Notify the System
+                await NotificationCoordinator.shared.sendOnExperienceStateUpdate()
+                // Perform relevant screen changes (i.e. hide/show)
+                self.onStateUpdate()
+            }
         }
     }
     // MARK: UI
