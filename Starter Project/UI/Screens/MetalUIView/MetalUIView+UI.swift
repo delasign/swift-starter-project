@@ -26,7 +26,7 @@ extension MetalUIView {
         metalView = MTKView(frame: bounds, device: device)
         metalView.delegate = self
         addSubview(metalView)
-        
+
         metalView.clearColor = MTLClearColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         metalView.isOpaque = false
         commandQueue = device.makeCommandQueue()
