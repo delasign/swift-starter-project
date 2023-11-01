@@ -336,21 +336,32 @@ Same as the above and select replace from the dropdown.
 
 
 ## Metal
+
+### Basics
 1. <a href="https://delasign.com/blog/what-is-metal/?utm=swift-starter-project">What is Metal in Apple's Ecosystem ? 🔗</a>
 2. <a href="https://delasign.com/blog/metal-structured-variables-functionality/?utm=swift-starter-project">How to structure variables & functionality in shared files in Metal 🔗</a>
 3. <a href="https://delasign.com/blog/metal-uiview-triangle/?utm=swift-starter-project">How to use Metal with a UIView in Swift 🔗</a>
 4. <a href="https://delasign.com/blog/metal-mtkview-background-color/?utm=swift-starter-project">How to change the background color of an MTKView in Swift 🔗</a>
 5. <a href="https://delasign.com/blog/metal-triangle-outline/?utm=swift-starter-project">How to draw a stroke on a primitive in Metal 🔗</a>
-6. <a href="https://delasign.com/blog/swift-metal-buffers/?utm=swift-starter-project">How to pass variables or data to a Metal Shader in XCode 🔗</a>
-7. <a href="https://delasign.com/blog/metal-pass-data-from-vertex-to-fragment/?utm=swift-starter-project">How to pass data from the vertex to the fragment function in Metal 🔗</a>
-8. <a href="https://delasign.com/blog/metal-swift-polygon-shader/?utm=swift-starter-project">How to draw a polygon in Metal 🔗</a>
-9. <a href="https://delasign.com/blog/metal-color-interpolation/?utm=swift-starter-project">How to use color interpolation in a Metal shader 🔗</a>
-10. <a href="https://delasign.com/blog/metal-helper-functions/?utm=swift-starter-project">How to include utility functions in a Metal shader 🔗</a>
-11. <a href="https://delasign.com/blog/metal-multiple-shapes/?utm=swift-starter-project">How to code a MTKView that draws multiple shapes 🔗</a>
-12. <a href="https://delasign.com/blog/metal-multiple-shaders/?utm=swift-starter-project">How to use multiple shaders to draw multiple shapes within a MTKView 🔗</a>
-13. <a href="https://delasign.com/blog/metal-stroke-variable-thickness/?utm=swift-starter-project">How to draw an outlined shape with a line width in Metal 🔗</a>
-14. <a href="https://delasign.com/blog/metal-fragment-shader-alpha/?utm=swift-starter-project">How to make a Metal fragment shader change alpha transparency 🔗</a>
-15. <a href="https://delasign.com/blog/metal-start-stop-rendering/?utm=swift-starter-project">How to start and stop the rendering of a MTKView 🔗</a>
-16. <a href="https://delasign.com/blog/metal-animations-cadisplaylink/?utm=swift-starter-project">How to perform animations in Metal using a CADisplayLink 🔗</a>
-17. <a href="https://delasign.com/blog/metal-mtkview-control-anti-aliasing/?utm=swift-starter-project">How to control the anti-aliasing of an MTKView in Swift 🔗</a>
+
+### Shaders
+1. <a href="https://delasign.com/blog/swift-metal-buffers/?utm=swift-starter-project">How to pass variables or data to a Metal Shader in XCode 🔗</a>
+2. <a href="https://delasign.com/blog/metal-pass-data-from-vertex-to-fragment/?utm=swift-starter-project">How to pass data from the vertex to the fragment function in Metal 🔗</a>
+3. <a href="https://delasign.com/blog/metal-color-interpolation/?utm=swift-starter-project">How to use color interpolation in a Metal shader 🔗</a>
+4. <a href="https://delasign.com/blog/metal-helper-functions/?utm=swift-starter-project">How to include utility functions in a Metal shader 🔗</a>
+
+### Drawing
+1. <a href="https://delasign.com/blog/metal-swift-polygon-shader/?utm=swift-starter-project">How to draw a polygon in Metal 🔗</a>
+2. <a href="https://delasign.com/blog/metal-multiple-shapes/?utm=swift-starter-project">How to code a MTKView that draws multiple shapes 🔗</a>
+3. <a href="https://delasign.com/blog/metal-multiple-shaders/?utm=swift-starter-project">How to use multiple shaders to draw multiple shapes within a MTKView 🔗</a>
+4. <a href="https://delasign.com/blog/metal-stroke-variable-thickness/?utm=swift-starter-project">How to draw an outlined shape with a line width in Metal 🔗</a>
+5. <a href="https://delasign.com/blog/metal-fragment-shader-alpha/?utm=swift-starter-project">How to make a Metal fragment shader change alpha transparency 🔗</a>
+6. <a href="https://delasign.com/blog/metal-mtkview-control-anti-aliasing/?utm=swift-starter-project">How to control the anti-aliasing of an MTKView in Swift 🔗</a>
+
+### Rendering & ANimations
+1. <a href="https://delasign.com/blog/metal-start-stop-rendering/?utm=swift-starter-project">How to start and stop the rendering of a MTKView 🔗</a>
+2. <a href="https://delasign.com/blog/metal-animations-cadisplaylink/?utm=swift-starter-project">How to perform animations in Metal using a CADisplayLink 🔗</a>
+
+### Errors
+1. <a href="https://delasign.com/blog/metal-mtkview-background-color-no-alpha/?utm=swift-starter-project">MTKView clearcolor doesn't change transparency 🔗</a>
 
