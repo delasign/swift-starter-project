@@ -21,7 +21,7 @@ extension CustomUIView: MFMailComposeViewControllerDelegate {
             // show failure alert
         }
     }
-    
+
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         DispatchQueue.main.async { [weak self] in
             guard let _ = self else { return }
