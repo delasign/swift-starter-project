@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class NotificationCoordinator: NSObject {
+@globalActor
+actor NotificationCoordinator {
     // MARK: Variables
     static let identifier: String = "[NotificationCoordinator]"
     static let shared: NotificationCoordinator = NotificationCoordinator()
