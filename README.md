@@ -169,6 +169,8 @@ Same as the above and select replace from the dropdown.
 3. <a href="https://delasign.com/blog/swift-device-orientation/?utm=swift-starter-project">How to get the device orientation of an iPhone or iPad in Swift 🔗</a>
 4. <a href="https://delasign.com/blog/swift-json-to-data/?utm=swift-starter-project">How to convert a JSON object into data in Swift 🔗</a>
 5. <a href="https://delasign.com/blog/swift-data-json-object/?utm=swift-starter-project">How to convert data into a JSON object in Swift 🔗</a>
+6. <a href="https://delasign.com/blog/swift-send-email/?utm=swift-starter-project">How to send an email from an app in Swift 🔗</a>
+
 
 ## API / GraphQL
 1. <a href="https://delasign.com/blog/swift-setup-datacoordinator/?utm=swift-starter-project">How to setup a Swift project to make API calls in XCode. 🔗</a>
