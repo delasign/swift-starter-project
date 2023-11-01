@@ -12,7 +12,7 @@ class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedStyle()
+    let button: StandardButton = StandardButton()
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.

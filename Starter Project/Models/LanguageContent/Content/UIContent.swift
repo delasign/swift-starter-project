@@ -11,6 +11,7 @@ import UIKit
 struct UIContent: Codable {
     struct Sample: Codable {
         let sampleString: String
+        let sendEmail: String
     }
 
     let sample: Sample

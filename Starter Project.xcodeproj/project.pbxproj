@@ -59,6 +59,7 @@
 		F06CADD82AE801D50069B136 /* JSONToData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06CADD72AE801D50069B136 /* JSONToData.swift */; };
 		F06CADDA2AE801E20069B136 /* DataToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06CADD92AE801E20069B136 /* DataToJSON.swift */; };
 		F06CADDD2AE802130069B136 /* generateRandomUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06CADDC2AE802130069B136 /* generateRandomUIColor.swift */; };
+		F07C55002AF2D25C00AF0808 /* CustomUIView+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07C54FF2AF2D25C00AF0808 /* CustomUIView+Email.swift */; };
 		F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */; };
 		F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */; };
 		F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */; };
@@ -142,6 +143,7 @@
 		F06CADD72AE801D50069B136 /* JSONToData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONToData.swift; sourceTree = "<group>"; };
 		F06CADD92AE801E20069B136 /* DataToJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataToJSON.swift; sourceTree = "<group>"; };
 		F06CADDC2AE802130069B136 /* generateRandomUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generateRandomUIColor.swift; sourceTree = "<group>"; };
+		F07C54FF2AF2D25C00AF0808 /* CustomUIView+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+Email.swift"; sourceTree = "<group>"; };
 		F0A96622287DF22C000E5FCD /* DebuggingIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingIdentifiers.swift; sourceTree = "<group>"; };
 		F0A96625287E0017000E5FCD /* LanguageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCoordinator.swift; sourceTree = "<group>"; };
 		F0B3AADD29E7262F00B0CCE5 /* UIView+SizeToFit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SizeToFit.swift"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				F0397F512885EEAD002AF19B /* CustomUIView+Touches.swift */,
 				F0397F532885EEB5002AF19B /* CustomUIView+Animations.swift */,
 				F0397F552885EEC8002AF19B /* CustomUIView+Update.swift */,
+				F07C54FF2AF2D25C00AF0808 /* CustomUIView+Email.swift */,
 			);
 			path = CustomUIView;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 				F0397F4C2885EE49002AF19B /* CustomUIView+UI.swift in Sources */,
 				F06CADD82AE801D50069B136 /* JSONToData.swift in Sources */,
 				F001B3732A9E81740048BD2F /* UIWindow+GetCurrentWindow.swift in Sources */,
+				F07C55002AF2D25C00AF0808 /* CustomUIView+Email.swift in Sources */,
 				F0397F542885EEB5002AF19B /* CustomUIView+Animations.swift in Sources */,
 				F0EE66E42AB20CB300A7DBA0 /* NavigationButton+UI.swift in Sources */,
 				F0397F4E2885EE65002AF19B /* CustomUIView+Notifications.swift in Sources */,

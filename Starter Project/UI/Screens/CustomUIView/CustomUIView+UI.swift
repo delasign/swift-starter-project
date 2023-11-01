@@ -15,15 +15,23 @@ extension CustomUIView {
     func setupUI() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.setupLabel()
+            self.setupButton()
         }
     }
 
     // MARK: UI Setup Functionality
-    private func setupLabel() {
-        guard let content = LanguageCoordinator.shared.currentContent else { return }
-        label.attributedText = Styleguide.attributedText(text: content.sample.sampleString)
-        addSubview(label)
-        label.centerInSuperview()
+    private func setupButton() {
+        guard let currentContent = LanguageCoordinator.shared.currentContent?.sample else { return }
+        button.update(text: currentContent.sendEmail)
+        addSubview(button)
+        button.left(to: self, offset: kPadding)
+        button.right(to: self, offset: -kPadding)
+        button.bottom(to: self, offset: -kPadding)
+        button.height(kButtonDimension)
+
+        button.onRelease = { [weak self] in
+            guard let self = self else { return }
+            self.sendEmail()
+        }
     }
 }
