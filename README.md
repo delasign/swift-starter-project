@@ -124,6 +124,8 @@ Same as the above and select replace from the dropdown.
 ## Actors
 
 1. <a href="https://delasign.com/blog/swift-global-actor/?utm=swift-starter-project">How to create and use a global actor in Swift 🔗</a>
+2. <a href="https://delasign.com/blog/swift-actor-properties-get-without-async/?utm=swift-starter-project">How to use actor properties from the main actor without async/await 🔗</a>
+3. <a href="https://delasign.com/blog/swift-actor-properties-write-without-async/?utm=swift-starter-project">How to update actor properties from the main actor 🔗</a>
 
 ## SwiftData
 1. <a href="https://delasign.com/blog/xcode-swiftdata-guide/?utm=swift-starter-project">SwiftData Quick Start Guide 🔗</a>

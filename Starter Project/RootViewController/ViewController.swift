@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var experienceState: ExperienceStates = .custom {
         didSet {
             Task {
-                // Update the DataCoordinator so everyone knows
+                    // Update the DataCoordinator so everyone knows
                 DataCoordinator.shared.experienceState = experienceState
                 // Notify the System
                 await NotificationCoordinator.shared.sendOnExperienceStateUpdate()
