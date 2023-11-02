@@ -48,7 +48,7 @@ class CustomUIView: UIView {
     override func removeFromSuperview() {
         super.removeFromSuperview()
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         DispatchQueue.main.async { [weak self] in
@@ -59,7 +59,7 @@ class CustomUIView: UIView {
 
     // viewWillTransition should be called when the view resizes or changes orientation.
     func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        
+
     }
 
     // This function is required for youa custom UIView.
