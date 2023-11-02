@@ -1,5 +1,6 @@
 {
     "sample": {
-        "sampleString": "A sample string"
+        "sampleString": "A sample string",
+        "addCell": "Add Cell"
     }
 }

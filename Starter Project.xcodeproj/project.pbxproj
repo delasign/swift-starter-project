@@ -86,6 +86,8 @@
 		F0EE66E82AB20CC600A7DBA0 /* NavigationButton+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */; };
 		F0EE66EA2AB20CCB00A7DBA0 /* NavigationButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */; };
 		F0EE66EC2AB20CD000A7DBA0 /* NavigationButton+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */; };
+		F0F8F3022AF41B1C00826FA5 /* CustomUIView+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8F3012AF41B1C00826FA5 /* CustomUIView+UICollectionView.swift */; };
+		F0F8F3052AF41B6100826FA5 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F8F3042AF41B6100826FA5 /* SampleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +171,8 @@
 		F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Touches.swift"; sourceTree = "<group>"; };
 		F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Animations.swift"; sourceTree = "<group>"; };
 		F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Update.swift"; sourceTree = "<group>"; };
+		F0F8F3012AF41B1C00826FA5 /* CustomUIView+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomUIView+UICollectionView.swift"; sourceTree = "<group>"; };
+		F0F8F3042AF41B6100826FA5 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 				F008F4D92885BA8D00E4841B /* CustomUIView.swift */,
 				F0397F4B2885EE49002AF19B /* CustomUIView+UI.swift */,
 				F0397F4D2885EE65002AF19B /* CustomUIView+Notifications.swift */,
+				F0F8F3012AF41B1C00826FA5 /* CustomUIView+UICollectionView.swift */,
 				F0397F4F2885EEA4002AF19B /* CustomUIView+Gestures.swift */,
 				F0397F512885EEAD002AF19B /* CustomUIView+Touches.swift */,
 				F0397F532885EEB5002AF19B /* CustomUIView+Animations.swift */,
@@ -600,6 +605,7 @@
 		F0EE66D42AB20B2A00A7DBA0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F0F8F3032AF41B5900826FA5 /* SampleCollectionViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -627,6 +633,14 @@
 				F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */,
 			);
 			path = NavigationButton;
+			sourceTree = "<group>";
+		};
+		F0F8F3032AF41B5900826FA5 /* SampleCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8F3042AF41B6100826FA5 /* SampleCollectionViewCell.swift */,
+			);
+			path = SampleCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -782,9 +796,11 @@
 				F06CADDD2AE802130069B136 /* generateRandomUIColor.swift in Sources */,
 				F008FCD62885AFA000B2495D /* Styleguide+AttributedStyle.swift in Sources */,
 				F0EE66DB2AB20C0100A7DBA0 /* StandardButton+Touches.swift in Sources */,
+				F0F8F3022AF41B1C00826FA5 /* CustomUIView+UICollectionView.swift in Sources */,
 				F0C79C7C28B35BC500C1DCAF /* APIClient.swift in Sources */,
 				F0A96626287E0017000E5FCD /* LanguageCoordinator.swift in Sources */,
 				F0EE66EC2AB20CD000A7DBA0 /* NavigationButton+Update.swift in Sources */,
+				F0F8F3052AF41B6100826FA5 /* SampleCollectionViewCell.swift in Sources */,
 				F0EE66D32AB20B0F00A7DBA0 /* SampleError.swift in Sources */,
 				F03961FF2A0EF1E100713D33 /* Bundle+AppReleaseInfo.swift in Sources */,
 				F0EE66EA2AB20CCB00A7DBA0 /* NavigationButton+Animations.swift in Sources */,

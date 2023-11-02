@@ -29,8 +29,45 @@ extension CustomUIView {
                 debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
                 return
             }
-            self.label.attributedText = Styleguide.attributedText(text: currentContent.sample.sampleString)
+            
             debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
+        }
+    }
+    
+    // MARK: Add / Remove Cell
+    func addCell() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            // Update Count by 1
+            self.numberOfCells += 1
+            // Add Cell at the last index
+            self.collectionView.insertItems(at: [
+                IndexPath(item: (self.numberOfCells - 1), section: 0)
+            ])
+        }
+    }
+    
+    func addCell(indexPath: IndexPath) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            // Update Count by 1
+            self.numberOfCells += 1
+            // Add Cell at the last index
+            self.collectionView.insertItems(at: [
+                indexPath
+            ])
+        }
+    }
+    
+    func removeCell(indexPath: IndexPath) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            // Update Count by -1
+            self.numberOfCells -= 1
+            // Add Cell at the last index
+            self.collectionView.deleteItems(at: [
+                indexPath
+            ])
         }
     }
 

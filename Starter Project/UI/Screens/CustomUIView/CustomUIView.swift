@@ -11,8 +11,23 @@ import UIKit
 class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
+    
+    var numberOfCells: Int = 0
+    
     // MARK: UI
-    let label: UILabel = Styleguide.createAttributedStyle()
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = kPadding
+        layout.minimumInteritemSpacing = kPadding
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = Styleguide.getBackgroundColor()
+
+        return collectionView
+    }()
+    
+    let addCellButton: StandardButton = StandardButton()
     // MARK: Callbacks
     // MARK: Lifecycle
     // This is the function that gets called when you initialize your view.
