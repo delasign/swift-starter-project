@@ -11,9 +11,9 @@ import UIKit
 class CustomUIView: UIView {
     // MARK: Variables
     static let identifier: String = "[CustomUIView]"
-    
+
     var numberOfCells: Int = 0
-    
+
     // MARK: UI
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -26,7 +26,7 @@ class CustomUIView: UIView {
 
         return collectionView
     }()
-    
+
     let addCellButton: StandardButton = StandardButton()
     // MARK: Callbacks
     // MARK: Lifecycle
@@ -48,10 +48,18 @@ class CustomUIView: UIView {
     override func removeFromSuperview() {
         super.removeFromSuperview()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.collectionView.collectionViewLayout.invalidateLayout()
+        }
+    }
 
     // viewWillTransition should be called when the view resizes or changes orientation.
     func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-
+        
     }
 
     // This function is required for youa custom UIView.

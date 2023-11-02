@@ -38,7 +38,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
         }
         return cell
     }
-    
+
     // MARK: Touches
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Delete the Cell
@@ -53,7 +53,7 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Determine the frame
         let collectionViewFrame: CGRect = collectionView.frame
-        let dimension = (collectionViewFrame.width - 2*kPadding)/3
+        let dimension = (collectionViewFrame.width - 2 * kPadding) / 3
         return CGSize(width: dimension, height: dimension)
     }
 
@@ -89,4 +89,3 @@ extension CustomUIView: UICollectionViewDelegateFlowLayout, UICollectionViewData
     }
 
 }
-

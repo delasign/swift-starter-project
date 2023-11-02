@@ -29,11 +29,11 @@ extension CustomUIView {
                 debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventFailed) Failed to update content, either the custom view does not exist or the current content is not available.")
                 return
             }
-            
+
             debugPrint("\(CustomUIView.identifier) onContentUpdate \(DebuggingIdentifiers.actionOrEventSucceded) Updated Content!")
         }
     }
-    
+
     // MARK: Add / Remove Cell
     func addCell() {
         DispatchQueue.main.async { [weak self] in
@@ -46,7 +46,7 @@ extension CustomUIView {
             ])
         }
     }
-    
+
     func addCell(indexPath: IndexPath) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -58,7 +58,7 @@ extension CustomUIView {
             ])
         }
     }
-    
+
     func removeCell(indexPath: IndexPath) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }

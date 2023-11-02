@@ -35,7 +35,7 @@ extension CustomUIView {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
+
     private func setupAddCellButton() {
         guard let currentContent = LanguageCoordinator.shared.currentContent?.sample else { return }
         addCellButton.update(text: currentContent.addCell)
@@ -44,7 +44,7 @@ extension CustomUIView {
         addCellButton.right(to: self, offset: -kPadding)
         addCellButton.bottom(to: self, offset: -kPadding)
         addCellButton.height(kButtonDimension)
-        
+
         addCellButton.onRelease = { [weak self] in
             guard let self = self else { return }
             // Add Cell
