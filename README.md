@@ -120,6 +120,7 @@ Same as the above and select replace from the dropdown.
 3. <a href="https://delasign.com/blog/swift-snap-to-position/?utm=swift-starter-project">How to snap a carousel to position in Swift 🔗</a>
 4. <a href="https://delasign.com/blog/swift-carousel-indicator/?utm=swift-starter-project">How to create a scroll indicator for a carousel in Swift 🔗</a>
 5. <a href="https://delasign.com/blog/swift-multi-section-uicollectionview/?utm=swift-starter-project">How to create a UICollectionView with multiple sections in Swift 🔗</a>
+6. <a href="https://delasign.com/blog/swift-animate-collectionview-changes/?utm=swift-starter-project">How to animate changes in a UICollectionView datasource in Swift 🔗</a>
 
 ## Actors
 
