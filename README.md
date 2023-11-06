@@ -143,7 +143,9 @@ Same as the above and select replace from the dropdown.
 7. <a href="https://delasign.com/blog/xcode-swiftdata-update/?utm=swift-starter-project">How to update an object in SwiftData in Swift 🔗</a>
 
 ### Errors
-1. <a href="https://delasign.com/blog/xcode-swiftdata-non-persistant-variables/?utm=swift-starter-project">How to create a SwiftData model variable that does not persist 🔗</a>
+
+1. <a href="https://delasign.com/blog/swiftdata-crashes-when-trying-to-access-a-deleted-object/?utm=swift-starter-project">SwiftData crashes when trying to access a deleted object 🔗</a>
+2. <a href="https://delasign.com/blog/swift-data-resolve-set-value-error/?utm=swift-starter-project">How to solve "No exact matches in call to instance method 'setValue'" 🔗</a>
 
 ## Advanced UI
 1. <a href="https://delasign.com/blog/swift-dynamic-ui-view/?utm=swift-starter-project">How to create a UIView that dynamically adapts to its contents 🔗</a>
