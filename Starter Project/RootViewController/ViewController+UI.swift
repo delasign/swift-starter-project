@@ -12,21 +12,21 @@ import TinyConstraints
 extension ViewController {
     func setupUI() {
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Setting Up UI.")
-        self.setupCustomUIView()
+        self.setupARCameraView()
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup UI.")
     }
 
-    private func setupCustomUIView() {
+    private func setupARCameraView() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Add to subview
-            self.view.addSubview(self.customView)
+            self.view.addSubview(self.arCameraView)
             // Edges to Superview, with Safe Area Insets
-            self.customViewTopConstraint﻿ = self.customView.top(to: self.view, offset: ViewController.safeAreaInsets.top)
-            self.customViewRightConstraint﻿ = self.customView.right(to: self.view, offset: -ViewController.safeAreaInsets.right)
-            self.customViewBottomConstraint﻿ = self.customView.bottom(to: self.view, offset: -ViewController.safeAreaInsets.bottom)
-            self.customViewLeftConstraint﻿ = self.customView.left(to: self.view, offset: ViewController.safeAreaInsets.left)
-            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup Custom View!")
+            self.arViewTopConstraint﻿ = self.arCameraView.top(to: self.view, offset: ViewController.safeAreaInsets.top)
+            self.arViewRightConstraint﻿ = self.arCameraView.right(to: self.view, offset: -ViewController.safeAreaInsets.right)
+            self.arViewBottomConstraint﻿ = self.arCameraView.bottom(to: self.view, offset: -ViewController.safeAreaInsets.bottom)
+            self.arViewLeftConstraint﻿ = self.arCameraView.left(to: self.view, offset: ViewController.safeAreaInsets.left)
+            debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventSucceded) Setup ARCamera View!")
         }
     }
 }

@@ -86,6 +86,8 @@
 		F0EE66E82AB20CC600A7DBA0 /* NavigationButton+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */; };
 		F0EE66EA2AB20CCB00A7DBA0 /* NavigationButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */; };
 		F0EE66EC2AB20CD000A7DBA0 /* NavigationButton+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */; };
+		F0F713882C5FE0A900445FC4 /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713872C5FE0A900445FC4 /* ARCameraView.swift */; };
+		F0F7138A2C5FE1DE00445FC4 /* ARCameraView+ARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +171,8 @@
 		F0EE66E72AB20CC600A7DBA0 /* NavigationButton+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Touches.swift"; sourceTree = "<group>"; };
 		F0EE66E92AB20CCB00A7DBA0 /* NavigationButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Animations.swift"; sourceTree = "<group>"; };
 		F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Update.swift"; sourceTree = "<group>"; };
+		F0F713872C5FE0A900445FC4 /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
+		F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCameraView+ARSession.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +346,7 @@
 		F00DDDE3287C82C10062AA1E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F0F713862C5FE09D00445FC4 /* ARCameraView */,
 				F008F4D82885BA8400E4841B /* CustomUIView */,
 			);
 			path = Screens;
@@ -629,6 +634,15 @@
 			path = NavigationButton;
 			sourceTree = "<group>";
 		};
+		F0F713862C5FE09D00445FC4 /* ARCameraView */ = {
+			isa = PBXGroup;
+			children = (
+				F0F713872C5FE0A900445FC4 /* ARCameraView.swift */,
+				F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */,
+			);
+			path = ARCameraView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -772,10 +786,12 @@
 				F008FC9F287F464900B2495D /* Language.swift in Sources */,
 				F0C79C7A28B2719500C1DCAF /* Configuration+Get.swift in Sources */,
 				F0397F5F28884732002AF19B /* UIScrollView+UpdateContent.swift in Sources */,
+				F0F7138A2C5FE1DE00445FC4 /* ARCameraView+ARSession.swift in Sources */,
 				F001B36F2A9E81580048BD2F /* UIScreen+GetCurrentScreen.swift in Sources */,
 				F0397F562885EEC8002AF19B /* CustomUIView+Update.swift in Sources */,
 				F0397F61288847BC002AF19B /* PrintSystemFonts.swift in Sources */,
 				F0B3AADE29E7262F00B0CCE5 /* UIView+SizeToFit.swift in Sources */,
+				F0F713882C5FE0A900445FC4 /* ARCameraView.swift in Sources */,
 				F001B38A2AA4EF240048BD2F /* SFSymbols.swift in Sources */,
 				F008FCA8287FA68900B2495D /* Styleguide.swift in Sources */,
 				F0A96623287DF22C000E5FCD /* DebuggingIdentifiers.swift in Sources */,

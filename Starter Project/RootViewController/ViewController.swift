@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import ARKit
 
 class ViewController: UIViewController {
     // MARK: Variables
     static let identifier: String = "[ViewController]"
     static var safeAreaInsets: UIEdgeInsets = .zero
     static var orientation: UIDeviceOrientation = .portrait
+    static var session = ARSession()
     // The Experience State is managed by the UIViewController - and initially is on a "custom" state
     var experienceState: ExperienceStates = .custom {
         didSet {
@@ -26,11 +28,11 @@ class ViewController: UIViewController {
         }
     }
     // MARK: UI
-    let customView: CustomUIView = CustomUIView()
-    var customViewTopConstraint﻿: NSLayoutConstraint?
-    var customViewRightConstraint﻿: NSLayoutConstraint?
-    var customViewBottomConstraint﻿: NSLayoutConstraint?
-    var customViewLeftConstraint﻿: NSLayoutConstraint?
+    let arCameraView: ARCameraView = ARCameraView()
+    var arViewTopConstraint﻿: NSLayoutConstraint?
+    var arViewRightConstraint﻿: NSLayoutConstraint?
+    var arViewBottomConstraint﻿: NSLayoutConstraint?
+    var arViewLeftConstraint﻿: NSLayoutConstraint?
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,23 @@ class ViewController: UIViewController {
         self.setupCoordinators()
         self.setupUI()
         ViewController.orientation = getDeviceOrientation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+
+        // Run the view's session
+        arCameraView.sceneView.session.run(configuration)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Pause the view's session
+        arCameraView.sceneView.session.pause()
     }
 
     override func viewSafeAreaInsetsDidChange() {

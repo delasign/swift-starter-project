@@ -16,10 +16,10 @@ extension ViewController {
             // Create an update functionality similar to that below for all the views that use the safe area constraints.
             // CustomUIView
             updateSafeAreaInsets(
-                topConstraint: self.customViewTopConstraint﻿,
-                rightConstraint: self.customViewRightConstraint﻿,
-                bottomConstraint: self.customViewBottomConstraint﻿,
-                leftConstraint: self.customViewLeftConstraint﻿
+                topConstraint: self.arViewTopConstraint﻿,
+                rightConstraint: self.arViewRightConstraint﻿,
+                bottomConstraint: self.arViewBottomConstraint﻿,
+                leftConstraint: self.arViewLeftConstraint﻿
             )
             // Layout Subviews
             self.view.layoutIfNeeded()
@@ -33,7 +33,7 @@ extension ViewController {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             // Hide and Show Relevant Screens
-            self.customView.isHidden = self.experienceState != .custom
+            self.arCameraView.isHidden = self.experienceState != .custom
             // Other Relevant Functionality...
         }
     }

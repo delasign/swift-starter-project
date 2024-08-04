@@ -26,5 +26,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>We need the camera for AR Sessions</string>
 </dict>
 </plist>
