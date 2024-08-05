@@ -25,10 +25,11 @@ class ARCameraView: UIView, ARSessionDelegate, ARSCNViewDelegate {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = Styleguide.getBackgroundColor()
         // MARK: Functionality Setup
-        sceneView.delegate = self
-        sceneView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(sceneView)
-        sceneView.edgesToSuperview()
+        setupScene()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+            guard let self = self else { return }
+            self.addModel()
+        })
     }
 
     // This is the function that gets called when you remove your view from its superview.

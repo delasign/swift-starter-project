@@ -90,6 +90,7 @@
 		F0F7138A2C5FE1DE00445FC4 /* ARCameraView+ARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */; };
 		F0F713AD2C600C0900445FC4 /* ARCameraView+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713AC2C600C0900445FC4 /* ARCameraView+Touches.swift */; };
 		F0F713B02C61270E00445FC4 /* Capoeira.dae in Resources */ = {isa = PBXBuildFile; fileRef = F0F713AF2C61270E00445FC4 /* Capoeira.dae */; };
+		F0F713B22C612ED300445FC4 /* ARCameraView+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713B12C612ED300445FC4 /* ARCameraView+Setup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +178,7 @@
 		F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCameraView+ARSession.swift"; sourceTree = "<group>"; };
 		F0F713AC2C600C0900445FC4 /* ARCameraView+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCameraView+Touches.swift"; sourceTree = "<group>"; };
 		F0F713AF2C61270E00445FC4 /* Capoeira.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Capoeira.dae; sourceTree = "<group>"; };
+		F0F713B12C612ED300445FC4 /* ARCameraView+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCameraView+Setup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -643,6 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F713872C5FE0A900445FC4 /* ARCameraView.swift */,
+				F0F713B12C612ED300445FC4 /* ARCameraView+Setup.swift */,
 				F0F713AC2C600C0900445FC4 /* ARCameraView+Touches.swift */,
 				F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */,
 			);
@@ -765,6 +768,7 @@
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
 				F0EE66D72AB20BF800A7DBA0 /* StandardButton.swift in Sources */,
 				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
+				F0F713B22C612ED300445FC4 /* ARCameraView+Setup.swift in Sources */,
 				F0F713AD2C600C0900445FC4 /* ARCameraView+Touches.swift in Sources */,
 				F001B3712A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
