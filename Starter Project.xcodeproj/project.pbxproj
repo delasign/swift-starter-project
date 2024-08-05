@@ -88,6 +88,8 @@
 		F0EE66EC2AB20CD000A7DBA0 /* NavigationButton+Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */; };
 		F0F713882C5FE0A900445FC4 /* ARCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713872C5FE0A900445FC4 /* ARCameraView.swift */; };
 		F0F7138A2C5FE1DE00445FC4 /* ARCameraView+ARSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */; };
+		F0F713AD2C600C0900445FC4 /* ARCameraView+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F713AC2C600C0900445FC4 /* ARCameraView+Touches.swift */; };
+		F0F713B02C61270E00445FC4 /* Capoeira.dae in Resources */ = {isa = PBXBuildFile; fileRef = F0F713AF2C61270E00445FC4 /* Capoeira.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +175,8 @@
 		F0EE66EB2AB20CD000A7DBA0 /* NavigationButton+Update.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationButton+Update.swift"; sourceTree = "<group>"; };
 		F0F713872C5FE0A900445FC4 /* ARCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCameraView.swift; sourceTree = "<group>"; };
 		F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCameraView+ARSession.swift"; sourceTree = "<group>"; };
+		F0F713AC2C600C0900445FC4 /* ARCameraView+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARCameraView+Touches.swift"; sourceTree = "<group>"; };
+		F0F713AF2C61270E00445FC4 /* Capoeira.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Capoeira.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +380,7 @@
 		F00DDDE6287C82DD0062AA1E /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0F713AE2C61270200445FC4 /* Models */,
 				F0BC948628C7B63E005FFF58 /* Videos */,
 				F0BC948528C7B639005FFF58 /* Fonts */,
 			);
@@ -638,9 +643,18 @@
 			isa = PBXGroup;
 			children = (
 				F0F713872C5FE0A900445FC4 /* ARCameraView.swift */,
+				F0F713AC2C600C0900445FC4 /* ARCameraView+Touches.swift */,
 				F0F713892C5FE1DE00445FC4 /* ARCameraView+ARSession.swift */,
 			);
 			path = ARCameraView;
+			sourceTree = "<group>";
+		};
+		F0F713AE2C61270200445FC4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0F713AF2C61270E00445FC4 /* Capoeira.dae */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -708,6 +722,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F713B02C61270E00445FC4 /* Capoeira.dae in Resources */,
 				F008FC99287F440400B2495D /* en.json in Resources */,
 				F00DDE01287C9B310062AA1E /* .swiftlint.yml in Resources */,
 				F0C79C7428B26B3D00C1DCAF /* Configuration.plist in Resources */,
@@ -750,6 +765,7 @@
 				F0C79C6F28B2693E00C1DCAF /* HTTPMethod.swift in Sources */,
 				F0EE66D72AB20BF800A7DBA0 /* StandardButton.swift in Sources */,
 				F02DBF0A2996CFAF00A49E88 /* ActivateConstraints.swift in Sources */,
+				F0F713AD2C600C0900445FC4 /* ARCameraView+Touches.swift in Sources */,
 				F001B3712A9E81650048BD2F /* UIScreen+GetCurrentScreenBounds.swift in Sources */,
 				F0C79C6A28B25DE400C1DCAF /* DataCoordinator.swift in Sources */,
 				F0EE66E62AB20CBA00A7DBA0 /* NavigationButton+Notifications.swift in Sources */,
