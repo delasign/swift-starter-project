@@ -39,7 +39,7 @@ Same as the above and select replace from the dropdown.
 
 You may be interested in our other open source projects.
 
-1. <a href="https://github.com/delasign/swift-starter-project">Swift (UIKit) 🔗</a>
+1. <a href="https://github.com/delasign/swiftui-starter-project">SwiftUI 🔗</a>
 2. <a href="https://github.com/delasign/vision-os-starter-project">SwiftUI (VisionOS) 🔗</a>
 
 # 📰 Guides
