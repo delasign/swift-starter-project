@@ -35,6 +35,13 @@ Command + Shift + F
 ##Find and Replace
 Same as the above and select replace from the dropdown.
 
+# 📁 Projects
+
+You may be interested in our other open source projects.
+
+1. <a href="https://github.com/delasign/swift-starter-project">Swift (UIKit) 🔗</a>
+2. <a href="https://github.com/delasign/vision-os-starter-project">SwiftUI (VisionOS) 🔗</a>
+
 # 📰 Guides
 
 1. <a href="https://delasign.com/blog/apple-launch-screen-best-practices/?utm=swift-starter-project">Apple App Launch Screen Best Practices 🔗</a>
