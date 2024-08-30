@@ -376,10 +376,14 @@ You may be interested in our other open source projects.
 5. <a href="https://delasign.com/blog/metal-fragment-shader-alpha/?utm=swift-starter-project">How to make a Metal fragment shader change alpha transparency 🔗</a>
 6. <a href="https://delasign.com/blog/metal-mtkview-control-anti-aliasing/?utm=swift-starter-project">How to control the anti-aliasing of an MTKView in Swift 🔗</a>
 
-### Rendering & ANimations
+### Rendering & Animations
 1. <a href="https://delasign.com/blog/metal-start-stop-rendering/?utm=swift-starter-project">How to start and stop the rendering of a MTKView 🔗</a>
 2. <a href="https://delasign.com/blog/metal-animations-cadisplaylink/?utm=swift-starter-project">How to perform animations in Metal using a CADisplayLink 🔗</a>
 
 ### Errors
 1. <a href="https://delasign.com/blog/metal-mtkview-background-color-no-alpha/?utm=swift-starter-project">MTKView clearcolor doesn't change transparency 🔗</a>
 
+
+## Other
+
+1. <a href="https://www.delasign.com/blog/how-to-check-if-an-app-is-in-the-simulator-in-swift/?utm=swift-starter-project">How to check if an app is in the Simulator in Swift 🔗</a>
