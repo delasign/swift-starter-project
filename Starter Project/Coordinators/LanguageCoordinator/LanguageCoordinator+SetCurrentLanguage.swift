@@ -20,13 +20,11 @@ extension LanguageCoordinator {
         let newLanguage: Language
 
         switch languageCode {
-        // US Spanish, Spanish, Catalan and Basque reset to spanish
+// US Spanish, Spanish, Catalan and Basque reset to spanish
         case "es", "eu", "ca", "es-US":
             newLanguage = .spanish
-            break
-        default:
+            default:
             newLanguage = .english
-            break
         }
 
         self.currentLanguage = newLanguage
