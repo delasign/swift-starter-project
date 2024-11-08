@@ -40,11 +40,6 @@ class StandardButton: UIView {
         self.layer.shadowOpacity = 0.5
     }
 
-    // This is the function that gets called when you remove your view from its superview.
-    override func removeFromSuperview() {
-        super.removeFromSuperview()
-    }
-
     // viewWillTransition should be called when the view resizes or changes orientation.
     func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 

@@ -13,7 +13,7 @@ extension LanguageCoordinator {
         var languageContentPackage: [[Language: UIContent]] = [[Language: UIContent]]()
         for language in languages {
 
-            if let languageContent = gatherLanguageContent(langugeCode: language.value) {
+            if let languageContent = gatherLanguageContent(languageCode: language.value) {
                 languageContentPackage.append([language.key: languageContent])
             }
         }
@@ -21,10 +21,18 @@ extension LanguageCoordinator {
         debugPrint("\(LanguageCoordinator.identifier) generateLanguageContent \(DebuggingIdentifiers.actionOrEventSucceded) Gathered Content")
     }
 
-    private func gatherLanguageContent(langugeCode: String) -> UIContent? {
-        debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventInProgress) Generating Content for : \(langugeCode)")
+    private func gatherLanguageContent(languageCode: String) -> UIContent? {
+        debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventInProgress) Generating Content for : \(languageCode)")
 
-        guard let languageJSON = Bundle.main.path(forResource: langugeCode, ofType: "json") else {
+        let path: String?
+
+        if isTestEnvironment {
+            path = Bundle(for: type(of: self)).path(forResource: languageCode, ofType: "json")
+        } else {
+            path = Bundle.main.path(forResource: languageCode, ofType: "json")
+        }
+
+        guard let languageJSON = path else {
             debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content: path does nto exist")
             return nil
         }
@@ -32,11 +40,11 @@ extension LanguageCoordinator {
         do {
             let jsondata = try Data(contentsOf: URL(fileURLWithPath: languageJSON), options: .mappedIfSafe)
             let data = try JSONDecoder().decode(UIContent.self, from: jsondata)
-            debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventSucceded) Generated Content for : \(langugeCode)")
+            debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventSucceded) Generated Content for : \(languageCode)")
             return data
 
         } catch {
-            debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content for : \(langugeCode)")
+            debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content for : \(languageCode)")
             return nil
         }
 

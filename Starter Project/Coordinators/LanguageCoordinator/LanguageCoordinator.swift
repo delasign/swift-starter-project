@@ -14,6 +14,8 @@ class LanguageCoordinator: NSObject {
     static let shared: LanguageCoordinator = LanguageCoordinator()
     static let contentPrefix = "ui_content_"
 
+    let isTestEnvironment: Bool
+
     var currentLanguage: Language = .english {
         didSet {
             if availableLanguages.keys.contains(currentLanguage) {
@@ -54,9 +56,13 @@ class LanguageCoordinator: NSObject {
 
     // MARK: Lifecycle
 
-    func initialize() {
+    init(languageCode: String? = nil, isTestEnvironment: Bool? = false) {
         debugPrint("\(LanguageCoordinator.identifier) initialize \(DebuggingIdentifiers.actionOrEventInProgress) Initializing.")
         // Generate Languages
+        self.isTestEnvironment = isTestEnvironment ?? false
+
+        super.init()
+
         self.determineCurrentLanguage { [weak self] in
             guard let self = self else { return }
             self.generateLanguageContent(languages: self.availableLanguages)

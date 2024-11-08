@@ -58,7 +58,5 @@ class ViewController: UIViewController {
         debugPrint("\(ViewController.identifier) \(DebuggingIdentifiers.actionOrEventInProgress) Setting Up Coordinators.")
         // DataCoordinator
         DataCoordinator.shared.initialize()
-        // LanguageCoordinator
-        LanguageCoordinator.shared.initialize()
     }
 }
