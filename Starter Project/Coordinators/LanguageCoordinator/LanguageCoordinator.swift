@@ -13,7 +13,7 @@ class LanguageCoordinator: NSObject {
     static let identifier: String = "[LanguageCoordinator]"
     static let shared: LanguageCoordinator = LanguageCoordinator()
     static let contentPrefix = "ui_content_"
-    
+
     let isTestEnvironment: Bool
 
     var currentLanguage: Language = .english {
@@ -60,9 +60,9 @@ class LanguageCoordinator: NSObject {
         debugPrint("\(LanguageCoordinator.identifier) initialize \(DebuggingIdentifiers.actionOrEventInProgress) Initializing.")
         // Generate Languages
         self.isTestEnvironment = isTestEnvironment ?? false
-        
+
         super.init()
-        
+
         self.determineCurrentLanguage { [weak self] in
             guard let self = self else { return }
             self.generateLanguageContent(languages: self.availableLanguages)

@@ -187,6 +187,14 @@ You may be interested in our other open source projects.
 2. <a href="https://delasign.com/blog/swift-graphql-call/?utm=swift-starter-project">How to make an GraphQL call in Swift 🔗</a>
 3. <a href="https://delasign.com/blog/swift-api-call/?utm=swift-starter-project">How to make an API call with a variable codable type in Swift 🔗</a>
 
+## Swift Testing
+1. <a href="https://www.delasign.com/blog/how-to-setup-swift-testing-in-swift-or-swiftui-project-in-xcode/?utm=swift-starter-project">How to setup Swift Testing in a Swift or SwiftUI project in Xcode 🔗</a>
+2. <a href="https://www.delasign.com/blog/how-to-import-a-project-into-swift-testing/?utm=swift-starter-project">How to import a project into Swift Testing 🔗</a>
+3. <a href="https://www.delasign.com/blog/how-to-add-the-languagecoordinator-to-swift-testing/?utm=swift-starter-project">How to add the LanguageCoordinator to Swift Testing 🔗</a>
+
+### Errors
+1. <a href="https://www.delasign.com/blog/error-cant-add-app-target-to-target-to-be-tested/?utm=swift-starter-project">Error: Can't add App Target to Target to be Tested. 🔗</a>
+
 ## CADisplayLink
 1. <a href="https://delasign.com/blog/metal-animations-cadisplaylink/?utm=swift-starter-project">How to perform animations in Metal using a CADisplayLink 🔗</a>
 2. <a href="https://delasign.com/blog/swift-cadisplaylink-pause-resume-remove-invalidate/?utm=swift-starter-project">How to pause, resume, remove or invalidate a CADisplayLink in Swift 🔗</a>

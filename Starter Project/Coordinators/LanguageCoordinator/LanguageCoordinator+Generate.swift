@@ -25,13 +25,13 @@ extension LanguageCoordinator {
         debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventInProgress) Generating Content for : \(languageCode)")
 
         let path: String?
-        
+
         if isTestEnvironment {
             path = Bundle(for: type(of: self)).path(forResource: languageCode, ofType: "json")
         } else {
             path = Bundle.main.path(forResource: languageCode, ofType: "json")
         }
-        
+
         guard let languageJSON = path else {
             debugPrint("\(LanguageCoordinator.identifier) gatherLanguageContent \(DebuggingIdentifiers.actionOrEventFailed) Failed to gather Content: path does nto exist")
             return nil
