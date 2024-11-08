@@ -10,6 +10,8 @@ import Starter_Project
 
 final class UITests: XCTestCase {
 
+    let languageCoordinator: LanguageCoordinator = LanguageCoordinator(isTestEnvironment: true)
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -29,7 +31,12 @@ final class UITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
 
+        guard let currentContent = languageCoordinator.currentContent else { return XCTFail("No current content")}
+
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let label = app.staticTexts.allElementsBoundByIndex.filter { $0.label == "\(currentContent.sample.sampleString)" }
+
+        XCTAssertEqual(label.count, 1, "There should be exactly one label whose text is exactly '\(currentContent.sample.sampleString)'")
     }
 
     @MainActor

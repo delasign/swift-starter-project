@@ -10,6 +10,8 @@ import Starter_Project
 
 final class UITestsLaunchTests: XCTestCase {
 
+    let languageCoordinator: LanguageCoordinator = LanguageCoordinator(isTestEnvironment: true)
+
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
