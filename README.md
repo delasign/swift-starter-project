@@ -191,6 +191,19 @@ You may be interested in our other open source projects.
 1. <a href="https://www.delasign.com/blog/how-to-setup-swift-testing-in-swift-or-swiftui-project-in-xcode/?utm=swift-starter-project">How to setup Swift Testing in a Swift or SwiftUI project in Xcode 🔗</a>
 2. <a href="https://www.delasign.com/blog/how-to-import-a-project-into-swift-testing/?utm=swift-starter-project">How to import a project into Swift Testing 🔗</a>
 3. <a href="https://www.delasign.com/blog/how-to-add-the-languagecoordinator-to-swift-testing/?utm=swift-starter-project">How to add the LanguageCoordinator to Swift Testing 🔗</a>
+3. <a href="https://www.delasign.com/blog/how-to-use-command-line-arguments-in-swift-testing/?utm=swift-starter-project">How to use Command Line Arguments in Swift Testing 🔗</a>
+4. <a href="https://www.delasign.com/blog/how-to-create-a-uitest-that-uses-swiftdata-thats-only-stored-in-memory/?utm=swift-starter-project">How to create a UITest that uses SwiftData thats only stored in memory 🔗</a>
+
+### Accessibility Identifiers
+1. <a href="https://www.delasign.com/blog/how-to-use-accessibility-identifiers-in-swift-testing/?utm=swift-starter-project">How to use accessibility identifiers in Swift Testing 🔗</a>
+2. <a href="https://www.delasign.com/blog/how-to-use-nested-accessibility-identifiers-in-swift-testing/?utm=swift-starter-project">How to use nested accessibility identifiers in Swift Testing 🔗</a>
+3. <a href="https://www.delasign.com/blog/how-to-find-a-view-using-an-accessibility-identifier-in-swift-testing/?utm=swift-starter-project">How to find a view using an accessibility identifier in Swift Testing 🔗</a>
+4. <a href="https://www.delasign.com/blog/how-to-debug-accessibility-identifiers-in-xcode/?utm=swift-starter-project">How to debug accessibility identifiers in XCode 🔗</a>
+
+### NSOpenPanel
+1. <a href="https://www.delasign.com/blog/how-to-find-the-nsopenpanel-in-a-swift-test/?utm=swift-starter-project">How to find the NSOpenPanel in a Swift UI Test 🔗</a>
+2. <a href="https://www.delasign.com/blog/how-to-automate-search-in-a-nsopenpanel-swift-test/?utm=swift-starter-project">How to automate search in a NSOpenPanel Swift UI Test 🔗</a>
+3. <a href="https://www.delasign.com/blog/how-to-select-a-folder-in-an-nsopenpanel-in-a-swift-test/?utm=swift-starter-project">How to open a folder in an NSOpenPanel in a Swift Test 🔗</a>
 
 ### Errors
 1. <a href="https://www.delasign.com/blog/error-cant-add-app-target-to-target-to-be-tested/?utm=swift-starter-project">Error: Can't add App Target to Target to be Tested. 🔗</a>
